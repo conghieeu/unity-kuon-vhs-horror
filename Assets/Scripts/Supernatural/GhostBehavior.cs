@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityStandardAssets.Characters.FirstPerson;
+using StarterAssets;
 
 public class GhostBehavior : MonoBehaviour
 {

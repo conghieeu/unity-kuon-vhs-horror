@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityStandardAssets.Characters.FirstPerson;
+using StarterAssets;
 
 public class LockPlayerWhenMenuOpen : MonoBehaviour
 {
@@ -7,7 +7,7 @@ public class LockPlayerWhenMenuOpen : MonoBehaviour
 
 	private void Start()
 	{
-		fpsController = Object.FindObjectOfType<FirstPersonController>();
+		fpsController = FindFirstObjectByType<FirstPersonController>();
 	}
 
 	private void Update()

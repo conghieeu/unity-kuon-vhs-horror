@@ -8,11 +8,11 @@ public class CarModelControl : MonoBehaviour
 
 	public CarMotor carMotor;
 
-	public MeshCollider collider;
+	public MeshCollider coll;
 
 	private void Start()
 	{
-		collider = GetComponent<MeshCollider>();
+		coll = GetComponent<MeshCollider>();
 		carMotor = GetComponent<CarMotor>();
 	}
 

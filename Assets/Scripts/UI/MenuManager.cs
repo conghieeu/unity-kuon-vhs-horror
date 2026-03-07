@@ -2,7 +2,7 @@ using Colorful;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
-using UnityStandardAssets.Characters.FirstPerson;
+using StarterAssets;
 
 public class MenuManager : MonoBehaviour
 {
@@ -35,8 +35,8 @@ public class MenuManager : MonoBehaviour
 
 	private void Awake()
 	{
-		fpsController = Object.FindObjectOfType<FirstPersonController>();
-		brightnessFX = Object.FindObjectOfType<BrightnessContrastGamma>();
+		fpsController = FindFirstObjectByType<FirstPersonController>();
+		brightnessFX = FindFirstObjectByType<BrightnessContrastGamma>();
 		GetPlayerPref();
 	}
 

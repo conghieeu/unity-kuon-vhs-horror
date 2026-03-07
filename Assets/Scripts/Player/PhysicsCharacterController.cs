@@ -65,7 +65,7 @@ public class PhysicsCharacterController : MonoBehaviour
 				ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 				for (int i = 0; i < cars.Length; i++)
 				{
-					if (!cars[i].collider.Raycast(ray, out hit, 500f))
+					if (!cars[i].coll.Raycast(ray, out hit, 500f))
 					{
 						continue;
 					}

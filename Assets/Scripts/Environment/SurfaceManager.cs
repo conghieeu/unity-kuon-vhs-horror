@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityStandardAssets.Characters.FirstPerson;
+using StarterAssets;
 
 public class SurfaceManager : MonoBehaviour
 {
