@@ -1,4 +1,4 @@
-﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+﻿// Converted from BRP to URP
 
 Shader "Hidden/postVHSPro_Tape" {
 	Properties {
@@ -7,17 +7,16 @@ Shader "Hidden/postVHSPro_Tape" {
 	SubShader {
 		Tags { "RenderType"="Opaque" }
 		LOD 200
-		ZTest Always Cull Off ZWrite Off Fog { Mode Off }
+		ZTest Always Cull Off ZWrite Off
 
 		Pass {
-			CGPROGRAM
+			HLSLPROGRAM
 
 				//#pragma exclude_renderers d3d11 xbox360			
 				#pragma vertex vert
 				#pragma fragment frag
 				#pragma target 3.0
-				#include "UnityCG.cginc"
-				#pragma glsl
+				#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
 
 				//properties
 				sampler2D _MainTex;
@@ -37,7 +36,7 @@ Shader "Hidden/postVHSPro_Tape" {
 
 				v2f vert (appdata i){
 				   	v2f o;
-				   	o.pos = UnityObjectToClipPos( i.vertex );
+				   	o.pos = TransformObjectToHClip( i.vertex.xyz );
 				   	o.uv = o.pos.xy/o.pos.w;
 				   	o.uvn = float4( i.texcoord.xy, 0.0, 0.0);
 				   	return o;
@@ -48,18 +47,18 @@ Shader "Hidden/postVHSPro_Tape" {
 
 				//uniforms
 				// #pragma multi_compile ___ VHS_TAPENOISE_ON
-				#pragma shader_feature VHS_TAPENOISE_ON
+				#pragma multi_compile_local _ VHS_TAPENOISE_ON
 				float tapeNoiseTH = 0.7; 
 				float tapeNoiseAmount = 1.0; 
 				float tapeNoiseSpeed = 1.0; 
 
 				// #pragma multi_compile ___ VHS_FILMGRAIN_ON
-				#pragma shader_feature VHS_FILMGRAIN_ON
+				#pragma multi_compile_local _ VHS_FILMGRAIN_ON
 				float filmGrainAmount = 16.0;
 				float filmGrainPower = 10.0;
 				
 				// #pragma multi_compile ___ VHS_LINENOISE_ON
-				#pragma shader_feature VHS_LINENOISE_ON
+				#pragma multi_compile_local _ VHS_LINENOISE_ON
 				float lineNoiseAmount = 1.0; 
 				float lineNoiseSpeed = 5.0; 
 
@@ -221,7 +220,7 @@ Shader "Hidden/postVHSPro_Tape" {
 
 
 				//MAIN
-				half4 frag( v2f i ) : COLOR {
+				half4 frag( v2f i ) : SV_Target {
 
 					float t = time_;//_Time.y;					
 					float2 p = i.uvn; // normalized tex coordnates 0..1 (gl_FragCoord.xy / iResolution.xy)
@@ -263,7 +262,7 @@ Shader "Hidden/postVHSPro_Tape" {
 
 				}
 
-			ENDCG
+			ENDHLSL
 		}
 	}
 }

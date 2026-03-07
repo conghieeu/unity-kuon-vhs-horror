@@ -105,7 +105,7 @@ public class CarMotor : MonoBehaviour
 		lastTime = Time.fixedTime;
 		lastPosition = base.transform.position;
 		velocity = 1f / num * num2 * 2.2369363f;
-		RBVelocity = 1f / num * body.velocity.magnitude / 50f * 2.2369363f;
+		RBVelocity = 1f / num * body.linearVelocity.magnitude / 50f * 2.2369363f;
 		wheelsUp = true;
 		for (int j = 0; j < wheels.Length; j++)
 		{

@@ -1,4 +1,4 @@
-﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+﻿// Converted from BRP to URP
 
 Shader "Hidden/postVHSPro_Third" {
 
@@ -10,17 +10,16 @@ Shader "Hidden/postVHSPro_Third" {
 	SubShader {
 		Tags { "RenderType"="Opaque" }
 		LOD 200
-		ZTest Always Cull Off ZWrite Off Fog { Mode Off }
+		ZTest Always Cull Off ZWrite Off
 
 		Pass {
-			CGPROGRAM
+			HLSLPROGRAM
 
 				//#pragma exclude_renderers d3d11 xbox360			
 				#pragma vertex vert
 				#pragma fragment frag
 				#pragma target 3.0
-				#include "UnityCG.cginc"
-				#pragma glsl
+				#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
 
 				//properties
 				sampler2D _MainTex;
@@ -42,7 +41,7 @@ Shader "Hidden/postVHSPro_Third" {
 
 				v2f vert (appdata i){
 			   	v2f o;
-			   	o.pos = UnityObjectToClipPos( i.vertex );
+			   	o.pos = TransformObjectToHClip( i.vertex.xyz );
 			   	o.uv = o.pos.xy/o.pos.w;
 			   	o.uvn = float4( i.texcoord.xy, 0, 0);			   	
 			   	return o;
@@ -63,7 +62,7 @@ Shader "Hidden/postVHSPro_Third" {
 
 				//main
 				//this shader re-generates feedback only 
-				half4 frag( v2f i ) : COLOR {
+				half4 frag( v2f i ) : SV_Target {
 					
 					float2 p = i.uvn;// gl_FragCoord.xy / iResolution.xy;
 					float one_x = 1.0/_ScreenParams.x;
@@ -94,7 +93,7 @@ Shader "Hidden/postVHSPro_Third" {
 
 				}
 
-			ENDCG
+			ENDHLSL
 		}
 	}
 }

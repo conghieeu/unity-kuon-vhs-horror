@@ -1,4 +1,4 @@
-// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+// Converted from BRP to URP
 
 	Shader "Hidden/postVHSPro_Second" {
 	Properties {
@@ -9,17 +9,16 @@
 	SubShader {
 		Tags { "RenderType"="Opaque" }
 		LOD 200
-		ZTest Always Cull Off ZWrite Off Fog { Mode Off }
+		ZTest Always Cull Off ZWrite Off
 
 		Pass {
-			CGPROGRAM
+			HLSLPROGRAM
 
 				//#pragma exclude_renderers d3d11 xbox360			
 				#pragma vertex vert
 				#pragma fragment frag
 				#pragma target 3.0
-				#include "UnityCG.cginc"
-				#pragma glsl
+				#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
 
 				//properties
 				sampler2D _MainTex;
@@ -40,7 +39,7 @@
 
 				v2f vert (appdata i){
 			   	v2f o;
-			   	o.pos = UnityObjectToClipPos( i.vertex );
+			   	o.pos = TransformObjectToHClip( i.vertex.xyz );
 			   	o.uv = o.pos.xy/o.pos.w;
 			   	o.uvn = float4( i.texcoord.xy, 0, 0 );
 			   	// o.uvn2 = float4( i.texcoord2.xy, 0, 0 );
@@ -55,21 +54,21 @@
 
 				//[CRT]
 				// #pragma multi_compile ___ VHS_BLEED_ON
-				#pragma shader_feature VHS_BLEED_ON
+				#pragma multi_compile_local _ VHS_BLEED_ON
 
 				// #pragma multi_compile VHS_OLD_THREE_PHASE VHS_THREE_PHASE VHS_TWO_PHASE
-				#pragma shader_feature VHS_OLD_THREE_PHASE
-				#pragma shader_feature VHS_THREE_PHASE
-				#pragma shader_feature VHS_TWO_PHASE
+				#pragma multi_compile_local _ VHS_OLD_THREE_PHASE
+				#pragma multi_compile_local _ VHS_THREE_PHASE
+				#pragma multi_compile_local _ VHS_TWO_PHASE
 
 				// #pragma multi_compile ___ VHS_FISHEYE_ON
-				#pragma shader_feature VHS_FISHEYE_ON 
-				#pragma shader_feature VHS_FISHEYE_HYPERSPACE
+				#pragma multi_compile_local _ VHS_FISHEYE_ON
+				#pragma multi_compile_local _ VHS_FISHEYE_HYPERSPACE
 				float fisheyeSize = 1.2; 
 				float fisheyeBend = 2.0; 
 
 				// #pragma multi_compile ___ VHS_VIGNETTE_ON
-				#pragma shader_feature VHS_VIGNETTE_ON
+				#pragma multi_compile_local _ VHS_VIGNETTE_ON
 				float vignetteAmount = 	1.0; 
 				float vignetteSpeed = 	1.0; 
 
@@ -78,8 +77,8 @@
 				//BLEED
 				// #pragma multi_compile ___ VHS_CUSTOM_BLEED_ON
 				// #pragma multi_compile ___ VHS_DEBUG_BLEEDING_ON
-				#pragma shader_feature VHS_CUSTOM_BLEED_ON
-				#pragma shader_feature VHS_DEBUG_BLEEDING_ON
+				#pragma multi_compile_local _ VHS_CUSTOM_BLEED_ON
+				#pragma multi_compile_local _ VHS_DEBUG_BLEEDING_ON
 
 				int bleedLength = 21;				
 				float4 curvesOffest = float4(0.0, 0.0, 0.0, 0.0); //custom curve ofest
@@ -89,7 +88,7 @@
 
 				//[Signal Tweak]
 				// #pragma multi_compile ___ VHS_SIGNAL_TWEAK_ON
-				#pragma shader_feature VHS_SIGNAL_TWEAK_ON
+				#pragma multi_compile_local _ VHS_SIGNAL_TWEAK_ON
 
 				float signalAdjustY = 0.0; 
 				float signalAdjustI = 0.0; 
@@ -203,7 +202,7 @@
 				#define get_t2d(offset, one_x) tex2D(_MainTex, p + (offset)*(one_x)).rgb;
 
 				//main
-				half4 frag( v2f i ) : COLOR {
+				half4 frag( v2f i ) : SV_Target {
 
 					float t = time_;//_Time.y;					
 					float2 p = i.uvn;// gl_FragCoord.xy / iResolution.xy;
@@ -413,7 +412,7 @@
 
 				}
 
-			ENDCG
+			ENDHLSL
 		}
 	}
 }

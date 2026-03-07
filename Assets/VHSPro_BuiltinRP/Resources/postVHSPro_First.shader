@@ -1,4 +1,4 @@
-﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+﻿// Converted from BRP to URP
 
 Shader "Hidden/postVHSPro_First" {
 	Properties {
@@ -7,17 +7,16 @@ Shader "Hidden/postVHSPro_First" {
 	SubShader {
 		Tags { "RenderType"="Opaque" }
 		LOD 200
-		ZTest Always Cull Off ZWrite Off Fog { Mode Off }
+		ZTest Always Cull Off ZWrite Off
 
 		Pass {
-			CGPROGRAM
+			HLSLPROGRAM
 
 				//#pragma exclude_renderers d3d11 xbox360			
 				#pragma vertex vert
 				#pragma fragment frag
 				#pragma target 3.0
-				#include "UnityCG.cginc"
-				#pragma glsl
+				#include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
 
 				//properties
 				sampler2D _MainTex;
@@ -27,7 +26,6 @@ Shader "Hidden/postVHSPro_First" {
 				struct appdata{
 				   float4 vertex : POSITION;
 				   float4 texcoord : TEXCOORD0;   	
-				   float4 texcoord2 : TEXCOORD3;   	
 				};
 
 				struct v2f {
@@ -38,7 +36,7 @@ Shader "Hidden/postVHSPro_First" {
 
 				v2f vert (appdata i){
 				   v2f o;
-				   o.pos = UnityObjectToClipPos( i.vertex );
+				   o.pos = TransformObjectToHClip( i.vertex.xyz );
 				   o.uv = o.pos.xy/o.pos.w;
 				   o.uvn = float4( i.texcoord.xy, 0.0, 0.0);
 				   return o;
@@ -56,7 +54,7 @@ Shader "Hidden/postVHSPro_First" {
 				
 				//for fisheye cutoff
 				// #pragma multi_compile ___ VHS_FISHEYE_ON
-				#pragma shader_feature VHS_FISHEYE_ON
+				#pragma multi_compile_local _ VHS_FISHEYE_ON
 				//TODO maybe remove params if define is off?
 	   		half cutoffX = 2.0;
 	   		half cutoffY = 3.0;			   		
@@ -71,44 +69,44 @@ Shader "Hidden/postVHSPro_First" {
 				// #pragma multi_compile ___ VHS_FILMGRAIN_ON
 				// #pragma multi_compile ___ VHS_LINENOISE_ON
 				// #pragma multi_compile ___ VHS_TAPENOISE_ON
-				#pragma shader_feature VHS_FILMGRAIN_ON
-				#pragma shader_feature VHS_LINENOISE_ON
-				#pragma shader_feature VHS_TAPENOISE_ON
+				#pragma multi_compile_local _ VHS_FILMGRAIN_ON
+				#pragma multi_compile_local _ VHS_LINENOISE_ON
+				#pragma multi_compile_local _ VHS_TAPENOISE_ON
 				float tapeNoiseAmount = 1.0;
 
 				// #pragma multi_compile ___ VHS_YIQNOISE_ON
-				#pragma shader_feature VHS_YIQNOISE_ON
+				#pragma multi_compile_local _ VHS_YIQNOISE_ON
 				float signalNoisePower = 1.0f;
 				float signalNoiseAmount = 1.0f;
 
 
 				//[twitch]
 				// #pragma multi_compile ___ VHS_LINESFLOAT_ON
-				#pragma shader_feature VHS_LINESFLOAT_ON
+				#pragma multi_compile_local _ VHS_LINESFLOAT_ON
 				float linesFloatSpeed = 1.0;
 
 				// #pragma multi_compile ___ VHS_SCANLINES_ON
-				#pragma shader_feature VHS_SCANLINES_ON
+				#pragma multi_compile_local _ VHS_SCANLINES_ON
 				float scanLineWidth = 10.0;
 				
 				// #pragma multi_compile ___ VHS_STRETCH_ON
-				#pragma shader_feature VHS_STRETCH_ON
+				#pragma multi_compile_local _ VHS_STRETCH_ON
 
 				// #pragma multi_compile ___ VHS_TWITCH_H_ON
-				#pragma shader_feature VHS_TWITCH_H_ON
+				#pragma multi_compile_local _ VHS_TWITCH_H_ON
 				float twitchHFreq = 1.0;
 
 				// #pragma multi_compile ___ VHS_TWITCH_V_ON
-				#pragma shader_feature VHS_TWITCH_V_ON
+				#pragma multi_compile_local _ VHS_TWITCH_V_ON
 				float twitchVFreq = 1.0; 
 
 				//[jitter]
 				// #pragma multi_compile ___ VHS_JITTER_H_ON
-				#pragma shader_feature VHS_JITTER_H_ON
+				#pragma multi_compile_local _ VHS_JITTER_H_ON
 				float jitterHAmount = 0.5; //default .5-1.
 
 				// #pragma multi_compile ___ VHS_JITTER_V_ON
-				#pragma shader_feature VHS_JITTER_V_ON
+				#pragma multi_compile_local _ VHS_JITTER_V_ON
 				float jitterVAmount = 1.0; 
 				float jitterVSpeed = 1.0;
 				
@@ -349,7 +347,7 @@ Shader "Hidden/postVHSPro_First" {
 				
 
 				//MAIN
-				half4 frag( v2f i ) : COLOR {
+				half4 frag( v2f i ) : SV_Target {
 
 					float t = time_;//_Time.y;					
 					float2 p = i.uvn; // normalized tex coordnates 0..1 (gl_FragCoord.xy / iResolution.xy)
@@ -610,7 +608,7 @@ Shader "Hidden/postVHSPro_First" {
 
 				}
 
-			ENDCG
+			ENDHLSL
 		}
 	}
 }

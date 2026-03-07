@@ -123,8 +123,6 @@ public class postVHSProEditor : Editor {
 	// SerializedProperty movieTex;
 
 
-	//Materials 
-	SerializedProperty mat;
 
 
 	SerializedObject so; 
@@ -251,8 +249,6 @@ public class postVHSProEditor : Editor {
 		// movieTex = 				so.FindProperty("movieTex");
 
 
-		//Materials
-		mat = 			so.FindProperty("mat");
 
 	}
 

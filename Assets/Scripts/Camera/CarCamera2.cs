@@ -29,14 +29,14 @@ public class CarCamera2 : MonoBehaviour
 
 	private void FixedUpdate()
 	{
-		currentVelocity = Vector3.Lerp(prevVelocity, target.root.GetComponent<Rigidbody>().velocity, velocityDamping * Time.deltaTime);
+		currentVelocity = Vector3.Lerp(prevVelocity, target.root.GetComponent<Rigidbody>().linearVelocity, velocityDamping * Time.deltaTime);
 		currentVelocity.y = 0f;
 		prevVelocity = currentVelocity;
 	}
 
 	private void LateUpdate()
 	{
-		float t = Mathf.Clamp01(target.root.GetComponent<Rigidbody>().velocity.magnitude / 70f);
+		float t = Mathf.Clamp01(target.root.GetComponent<Rigidbody>().linearVelocity.magnitude / 70f);
 		GetComponent<Camera>().fieldOfView = Mathf.Lerp(55f, 72f, t);
 		float num = Mathf.Lerp(distance, distance * 0.7f, t);
 		currentVelocity = currentVelocity.normalized;
