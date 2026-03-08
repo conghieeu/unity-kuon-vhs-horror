@@ -7,7 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: DecalBulletHole_B
-  m_Shader: {fileID: 4800000, guid: 92ca5e2da735edb4c80f21cd77dd9853, type: 3}
+  m_Shader: {fileID: 4800000, guid: c06c89a87d36f7e4f996e855fc0259c9, type: 3}
   m_ShaderKeywords: _ALPHABLEND_ON _EMISSION _NORMALMAP
   m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
