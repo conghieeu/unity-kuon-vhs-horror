@@ -6,11 +6,11 @@ LightingSettings:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: scene_demoSettings
+  m_Name: scene_target_pathSettings
   serializedVersion: 10
   m_EnableBakedLightmaps: 1
   m_EnableRealtimeLightmaps: 1
-  m_RealtimeEnvironmentLighting: 0
+  m_RealtimeEnvironmentLighting: 1
   m_BounceScale: 1
   m_AlbedoBoost: 1
   m_IndirectOutputScale: 1
@@ -19,9 +19,9 @@ LightingSettings:
   m_LightmapMaxSize: 1024
   m_LightmapSizeFixed: 0
   m_UseMipmapLimits: 1
-  m_BakeResolution: 50
+  m_BakeResolution: 80
   m_Padding: 2
-  m_LightmapCompression: 0
+  m_LightmapCompression: 3
   m_LightmapPackingMode: 1
   m_LightmapPackingMethod: 0
   m_XAtlasPackingAttempts: 16384
@@ -40,7 +40,7 @@ LightingSettings:
   m_ExportTrainingData: 0
   m_EnableWorkerProcessBaking: 1
   m_TrainingDataDestination: TrainingData
-  m_RealtimeResolution: 1
+  m_RealtimeResolution: 2
   m_ForceWhiteAlbedo: 0
   m_ForceUpdates: 0
   m_PVRCulling: 1
