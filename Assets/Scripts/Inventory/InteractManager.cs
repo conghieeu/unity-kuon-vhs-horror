@@ -7,7 +7,7 @@ public class InteractManager : MonoBehaviour
 	[Header("Raycast")]
 	public float RaycastRange = 3f;
 
-	public LayerMask cullLayers;
+	public LayerMask cullLayers; // là lớp mà raycast sẽ tương tác, có thể là "Interactable" hoặc bất kỳ lớp nào bạn muốn
 
 	public string InteractLayer;
 
