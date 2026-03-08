@@ -97,3 +97,13 @@ InitTestScene*.unity*
 
 # Auto-generated scenes by play mode tests
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
+
+# không push những file có đuôi .rar, .zip
+*.rar
+*.rar.meta
+*.zip
+*.zip.meta
+
+# không push file IT
+/[Aa]ssets/IT/*
+/[Aa]ssets/IT.meta
