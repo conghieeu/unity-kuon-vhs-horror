@@ -5,9 +5,7 @@ namespace ch.sycoforge.Decal.Demo
 	public class AdvancedBulletHoles : MonoBehaviour
 	{
 		public EasyDecal DecalPrefab;
-
 		public GameObject ImpactParticles;
-
 		public float CastRadius = 0.25f;
 
 		private void Start()

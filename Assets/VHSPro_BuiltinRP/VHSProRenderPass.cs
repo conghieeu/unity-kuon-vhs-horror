@@ -115,6 +115,7 @@ public class VHSProRenderPass : ScriptableRenderPass
     }
 
 #pragma warning disable CS0618 // Suppress obsolete warning for Execute (needed for compatibility mode)
+    [System.Obsolete]
     public override void Execute(ScriptableRenderContext context, ref RenderingData renderingData)
     {
         if (settings == null || !settings.enabled || !settings.gameObject.activeInHierarchy)

@@ -36,7 +36,9 @@ public class TimeSinceSceneLoad : MonoBehaviour
 	[DisplayAsString]
 	public bool tracking = true;
 
+#pragma warning disable CS0414
 	private bool trackingTime;
+#pragma warning restore CS0414
 
 	private void Awake()
 	{

@@ -41,7 +41,7 @@ public class CarMotor : MonoBehaviour
 	private void Start()
 	{
 		Physics.gravity = new Vector3(0f, -20.81f, 0f);
-		Transform[] array = Object.FindObjectsOfType<Transform>();
+		Transform[] array = Object.FindObjectsByType<Transform>(FindObjectsSortMode.None);
 		int num = 0;
 		for (int i = 0; i < array.Length; i++)
 		{

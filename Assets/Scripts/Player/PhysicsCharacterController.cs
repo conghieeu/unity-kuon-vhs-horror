@@ -42,7 +42,7 @@ public class PhysicsCharacterController : MonoBehaviour
 		animator = GetComponentInChildren<Animator>();
 		movementTargetPosition = base.transform.position;
 		lookAtPos = base.transform.position + base.transform.forward;
-		cars = Object.FindObjectsOfType<CarModelControl>();
+		cars = Object.FindObjectsByType<CarModelControl>(FindObjectsSortMode.None);
 	}
 
 	private void LateUpdate()

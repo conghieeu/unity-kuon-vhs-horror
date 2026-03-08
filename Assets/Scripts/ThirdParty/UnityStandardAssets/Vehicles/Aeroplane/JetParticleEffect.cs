@@ -22,16 +22,18 @@ namespace UnityStandardAssets.Vehicles.Aeroplane
 		{
 			m_Jet = FindAeroplaneParent();
 			m_System = GetComponent<ParticleSystem>();
-			m_OriginalLifetime = m_System.startLifetime;
-			m_OriginalStartSize = m_System.startSize;
-			m_OriginalStartColor = m_System.startColor;
+			var main = m_System.main;
+			m_OriginalLifetime = main.startLifetime.constant;
+			m_OriginalStartSize = main.startSize.constant;
+			m_OriginalStartColor = main.startColor.color;
 		}
 
 		private void Update()
 		{
-			m_System.startLifetime = Mathf.Lerp(0f, m_OriginalLifetime, m_Jet.Throttle);
-			m_System.startSize = Mathf.Lerp(m_OriginalStartSize * 0.3f, m_OriginalStartSize, m_Jet.Throttle);
-			m_System.startColor = Color.Lerp(minColour, m_OriginalStartColor, m_Jet.Throttle);
+			var main = m_System.main;
+			main.startLifetime = Mathf.Lerp(0f, m_OriginalLifetime, m_Jet.Throttle);
+			main.startSize = Mathf.Lerp(m_OriginalStartSize * 0.3f, m_OriginalStartSize, m_Jet.Throttle);
+			main.startColor = Color.Lerp(minColour, m_OriginalStartColor, m_Jet.Throttle);
 		}
 
 		private AeroplaneController FindAeroplaneParent()

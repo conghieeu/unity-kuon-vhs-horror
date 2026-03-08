@@ -13,6 +13,13 @@ namespace StarterAssets
 		public bool jump;
 		public bool sprint;
 
+		[Header("Gameplay Input Values")]
+		public bool interact;
+		public bool flashlight;
+		public bool dropItem;
+		public bool pause;
+		public bool zoom;
+
 		[Header("Movement Settings")]
 		public bool analogMovement;
 
@@ -43,6 +50,31 @@ namespace StarterAssets
 		{
 			SprintInput(value.isPressed);
 		}
+
+		public void OnInteract(InputValue value)
+		{
+			InteractInput(value.isPressed);
+		}
+
+		public void OnFlashlight(InputValue value)
+		{
+			FlashlightInput(value.isPressed);
+		}
+
+		public void OnDropItem(InputValue value)
+		{
+			DropItemInput(value.isPressed);
+		}
+
+		public void OnPause(InputValue value)
+		{
+			PauseInput(value.isPressed);
+		}
+
+		public void OnZoom(InputValue value)
+		{
+			ZoomInput(value.isPressed);
+		}
 #endif
 
 
@@ -65,7 +97,32 @@ namespace StarterAssets
 		{
 			sprint = newSprintState;
 		}
-		
+
+		public void InteractInput(bool newInteractState)
+		{
+			interact = newInteractState;
+		}
+
+		public void FlashlightInput(bool newFlashlightState)
+		{
+			flashlight = newFlashlightState;
+		}
+
+		public void DropItemInput(bool newDropItemState)
+		{
+			dropItem = newDropItemState;
+		}
+
+		public void PauseInput(bool newPauseState)
+		{
+			pause = newPauseState;
+		}
+
+		public void ZoomInput(bool newZoomState)
+		{
+			zoom = newZoomState;
+		}
+
 		private void OnApplicationFocus(bool hasFocus)
 		{
 			SetCursorState(cursorLocked);

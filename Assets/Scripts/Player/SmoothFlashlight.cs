@@ -1,4 +1,7 @@
 using UnityEngine;
+#if ENABLE_INPUT_SYSTEM
+using UnityEngine.InputSystem;
+#endif
 
 public class SmoothFlashlight : MonoBehaviour
 {
@@ -22,7 +25,16 @@ public class SmoothFlashlight : MonoBehaviour
 	{
 		base.transform.position = goFollow.transform.position + vectOffset;
 		base.transform.rotation = Quaternion.Slerp(base.transform.rotation, goFollow.transform.rotation, speed * Time.deltaTime);
-		if (Input.GetKeyDown(KeyCode.F))
+
+		bool flashlightToggle = false;
+#if ENABLE_INPUT_SYSTEM
+		if (Keyboard.current != null)
+			flashlightToggle = Keyboard.current.fKey.wasPressedThisFrame;
+#else
+		flashlightToggle = Input.GetKeyDown(KeyCode.F);
+#endif
+
+		if (flashlightToggle)
 		{
 			lite.enabled = !lite.enabled;
 		}

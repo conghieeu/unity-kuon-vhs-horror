@@ -18,7 +18,9 @@ public class CharacterDriverController : MonoBehaviour
 
 	public Vector3 lookAtPos;
 
+#pragma warning disable CS0414
 	private float gravity = 5f;
+#pragma warning restore CS0414
 
 	private RaycastHit hit;
 

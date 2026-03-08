@@ -449,7 +449,7 @@ namespace I2.Loc
 
 		public static void AutoLoadGlobalParamManagers()
 		{
-			LocalizationParamsManager[] array = UnityEngine.Object.FindObjectsOfType<LocalizationParamsManager>();
+			LocalizationParamsManager[] array = UnityEngine.Object.FindObjectsByType<LocalizationParamsManager>(FindObjectsSortMode.None);
 			foreach (LocalizationParamsManager localizationParamsManager in array)
 			{
 				if (localizationParamsManager._IsGlobalManager && !ParamManagers.Contains(localizationParamsManager))

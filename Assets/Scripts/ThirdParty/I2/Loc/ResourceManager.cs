@@ -22,7 +22,7 @@ namespace I2.Loc
 				bool flag = mInstance == null;
 				if (mInstance == null)
 				{
-					mInstance = (ResourceManager)UnityEngine.Object.FindObjectOfType(typeof(ResourceManager));
+					mInstance = (ResourceManager)FindFirstObjectByType<ResourceManager>();
 				}
 				if (mInstance == null)
 				{

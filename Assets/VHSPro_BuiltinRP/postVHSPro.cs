@@ -6,7 +6,9 @@ using System.Collections;
 public class postVHSPro : MonoBehaviour {
 
 	//main props
+#pragma warning disable CS0414
 	float time_ = 0.0f;
+#pragma warning restore CS0414
 
 	//properties will be assigned automatically 
 	public Shader shader1 = null; //1st pass  

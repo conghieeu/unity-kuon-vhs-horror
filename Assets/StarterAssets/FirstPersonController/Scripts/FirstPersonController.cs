@@ -5,6 +5,13 @@ using UnityEngine.InputSystem;
 
 namespace StarterAssets
 {
+	[System.Serializable]
+	public class MouseLookSettings
+	{
+		public float XSensitivity = 1f;
+		public float YSensitivity = 1f;
+	}
+
 	[RequireComponent(typeof(CharacterController))]
 #if ENABLE_INPUT_SYSTEM
 	[RequireComponent(typeof(PlayerInput))]
@@ -50,6 +57,19 @@ namespace StarterAssets
 		public float TopClamp = 90.0f;
 		[Tooltip("How far in degrees can you move the camera down")]
 		public float BottomClamp = -90.0f;
+
+		[Header("Legacy Compatibility")]
+		public AudioClip[] m_FootstepSounds;
+		public bool echoFootstep;
+		public bool m_UseHeadBob = true;
+		public MouseLookSettings m_MouseLook = new MouseLookSettings();
+
+		/// <summary>Walk speed property for legacy compatibility. Wraps MoveSpeed.</summary>
+		public float m_WalkSpeed
+		{
+			get => MoveSpeed;
+			set => MoveSpeed = value;
+		}
 
 		// cinemachine
 		private float _cinemachineTargetPitch;

@@ -47,7 +47,7 @@ public class LandingSpotController : MonoBehaviour
 		}
 		if (_flock == null)
 		{
-			_flock = (FlockController)Object.FindObjectOfType(typeof(FlockController));
+			_flock = Object.FindFirstObjectByType<FlockController>();
 			Debug.Log(string.Concat(this, " has no assigned FlockController, a random FlockController has been assigned"));
 		}
 		if (_landOnStart)
