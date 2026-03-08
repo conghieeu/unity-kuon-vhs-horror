@@ -1,0 +1,64 @@
+# Tổng hợp các tính năng từ thư mục Scripts (Kuon Project)
+
+Dựa vào cấu trúc và các kịch bản C# ([.cs](file:///d:/Unity3D/kuon/Assets/Scripts/AI/AI.cs)) nằm trong thư mục `Assets/Scripts`, dự án này được trang bị một hệ thống tính năng rất đa dạng và hoàn chỉnh, cực kỳ phù hợp cho một tựa game nhập vai, phiêu lưu hoặc kinh dị pha yếu tố giải đố và hành động lén lút.
+
+Dưới đây là danh sách chi tiết các **tính năng và hệ thống** mà dự án đang sở hữu:
+
+## 1. Hệ thống Trí Tuệ Nhân Tạo (AI) hoàn chỉnh
+*   **Máy Trạng Thái (State Machine):** Cho phép thiết lập các hành vi AI phức tạp thông qua các trạng thái (`State.cs`, `StateMachine.cs`).
+*   **Hành vi của Kẻ thù/NPC:** Bao gồm các trạng thái thực tế như:
+    *   Tuần tra (`Patrolling`)
+    *   Đứng yên (`Idling`)
+    *   Cảnh giác (`Alerted`)
+    *   Truy đuổi (`Chasing`)
+    *   Tấn công (`Attacking`)
+*   **Tầm Nhìn (Field of View):** Kịch bản `FieldOfView.cs` cấp cho kẻ địch khả năng phát hiện người chơi khi lọt vào vùng nhìn thấy.
+
+## 2. Hệ thống Camera đa dạng
+*   **Camera điều khiển tự do:** Hỗ trợ xoay, phóng to/thu nhỏ mượt mà (`SmoothCameraOrbit`, `MouseOrbit`, `CameraZoom`).
+*   **Điều hướng góc nhìn:** Tự động theo dõi hoặc tập trung vào một mục tiêu cụ thể (`LookAt`, `CamTarget`).
+*   **Nhận diện & Bắt nét khuôn mặt:** `CameraFaceDetection` (rất hữu ích cho các đoạn hội thoại hoặc cutscene tập trung vào biểu cảm).
+*   **Camera cho phương tiện:** Hệ thống camera bám theo xe cộ (`CarCamera`, `CarCamera2`).
+*   **Chuyển đổi Camera (Camera Switch):** Tính năng thiết yếu để xây dựng hệ thống camera góc nhìn cố định (fixed camera) mang phong cách game kinh dị cổ điển như Resident Evil, Silent Hill, hay Kuon.
+
+## 3. Hệ thống Giao tiếp và Hội thoại (Dialogue)
+*   **Quản lý Hội thoại:** Xây dựng các đoạn hội thoại, độc thoại cho nhân vật (`DialogueManager`, `Dialogue.cs`).
+*   **Lựa chọn tương tác:** Hỗ trợ đưa ra quyết định Có/Không (`DialogueYesNo.cs`).
+*   **Sự kiện Kích hoạt:** Tự động phát hội thoại khi người chơi đi vào một khu vực nhất định (`DialogueTrigger.cs`).
+*   **Âm thanh lồng tiếng (Gibberish):** Tạo tiếng lẩm bẩm hoặc âm thanh nhại lại giọng nói theo phong cách giả lập ngôn ngữ (`DialogueGibberList.cs`).
+
+## 4. Hệ thống Hành trang và Tương tác (Inventory & Interact)
+*   **Quản lý Túi đồ (Inventory):** Thu thập, kiểm tra và sử dụng vật phẩm (`SP_Inventory.cs`).
+*   **Tương tác Môi trường:** Tương tác với không gian như nhặt đồ, đẩy/kéo vật phẩm (`InteractManager.cs`, `ItemMove.cs`).
+*   **Vật phẩm cộng dồn:** Quản lý kho chứa các vật phẩm đếm được số lượng như Tiền xu/Đạn dược (`SP_CoinStackable.cs`).
+*   **Đọc Nhật ký/Tài liệu (Lore/Storytelling):** Tính năng nhặt và đọc văn bản trong game, cung cấp cốt truyện qua các tờ giấy/nhật ký rải rác (`ReadDiary.cs`).
+
+## 5. Môi trường và Hiệu ứng (Environment)
+*   **Tương tác Bề mặt (Surface Manager):** Tự động phát ra âm thanh bước chân hoặc tạo hiệu ứng hình ảnh (VFX) tương ứng với từng loại bề mặt mà nhân vật dẫm lên (gỗ, đá, thảm, cỏ...).
+*   **Chuyển đổi Âm thanh Môi trường (AudioMixer Changer):** Tự động thay đổi âm thanh nền (ambience) mượt mà khi người chơi di chuyển qua các không gian hoặc căn phòng khác nhau.
+*   **Hiệu ứng Môi trường Phụ:** Mô phỏng tương tác vật lý như gió thổi (`NM_Wind`) và xoay vật thể (`RotateAround`).
+
+## 6. Mô phỏng Bầy chim (Flocking / Birds System)
+Hệ thống AI chuyên biệt để tạo ra các bầy chim sống động giúp tăng tính chân thực và rùng rợn:
+*   Định vị khu vực đậu (`LandingSpot.cs`).
+*   Hệ thống cảnh giác hoảng sợ bay mất khi có tiếng động hoặc người chơi đến gần (`FlockScare.cs`).
+*   Bay theo đúng lộ trình được chỉ định sẵn (`FlockWaypointTrigger.cs`).
+
+## 7. Giải đố, Người chơi và Phương tiện (Puzzles, Player, Vehicle)
+*   **Giải đố (Puzzles):** Các kịch bản tạo ra cơ chế khóa, cửa ẩn hoặc cơ quan bí mật.
+*   **Nhân vật chính (Player):** Xử lý nhập liệu từ người chơi, quản lý di chuyển, hành động.
+*   **Phương tiện (Vehicle):** Cơ chế điều khiển các loại xe cộ cơ giới trong game.
+*   **Yếu tố Siêu nhiên (Supernatural):** Các tính năng này có khả năng dùng để tạo hiệu ứng Jumpscare, hù dọa hoặc các hiện tượng dị thường đặc trưng của game kinh dị.
+
+## 8. Quản lý Màn chơi & Giao diện (Scene Management & UI)
+*   Hệ thống điều hướng Menu, UI HUD hiển thị cho người chơi (`UI`).
+*   Cơ chế chuyển tiếp, tải (Load/Save) các màn chơi, căn phòng một cách mượt mà (`SceneManagement`).
+
+## 9. Tích hợp Steam (Steamworks.NET)
+*   Sẵn sàng cho việc kết nối API của Steam để hỗ trợ: Thành Tựu (Achievements), Lưu trữ Đám mây (Cloud Save), hoặc bảng xếp hạng, chứng tỏ game định hướng phát hành chuyên nghiệp trên PC.
+
+---
+
+**Kết Luận:**
+
+Thư mục `Scripts` này chứa **toàn bộ bộ khung cơ bản** để phát triển hoàn chỉnh một tựa game **phiêu lưu/kinh dị góc nhìn thứ ba (hoặc camera cố định) có yếu tố giải đố và hành động lén lút (stealth)**. Rất nhiều hệ thống từ AI rình rập, camera hù dọa, cho tới đọc cốt truyện qua các trang giấy đều đã có mặt, giúp giảm tải đáng kể công sức lập trình lại từ đầu.
