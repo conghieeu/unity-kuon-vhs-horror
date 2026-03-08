@@ -214,6 +214,7 @@ public class ActivationScript : MonoBehaviour
 				repeatable = false;
 			}
 		}
+		UnityLogger.Log("Activated: " + base.gameObject.name);
 		PlaySound();
 		if (!repeatable)
 		{
