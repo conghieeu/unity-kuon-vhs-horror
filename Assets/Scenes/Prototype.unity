@@ -1936,7 +1936,7 @@ MonoBehaviour:
   cars: []
   targetCar: {fileID: 0}
   usingCar: 0
-  insideVehicle: 0
+  insideVehicle: 1
   entryPoint: 0
   rightButtonDown: 0
 --- !u!114 &1553468737
