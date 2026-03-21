@@ -9,12 +9,13 @@ public class VHSProRendererFeature : ScriptableRendererFeature {
 
     public override void Create() {
         this.name = "VHSPro";
-        pass = new VHSProPass(settings.renderPassEvent); //settings.renderPassEvent, settings.shader
+        pass = new VHSProPass(settings.renderPassEvent);
     }
 
+    // This is used by Compatibility Mode (legacy path).
+    // In Render Graph mode, RecordRenderGraph on the pass is called directly.
     public override void AddRenderPasses(ScriptableRenderer renderer, ref RenderingData renderingData) {
         
-        // pass.Setup(renderer.cameraColorTarget); //we dont need this. we are grabbing it in the pass 
         renderer.EnqueuePass(pass);
     }
 

@@ -9,8 +9,8 @@ using UnityEngine.Rendering.Universal;
 using VladStorm;
 
 
-[Serializable, VolumeComponentMenuForRenderPipeline("Post-processing/VHS Pro", typeof(UniversalRenderPipeline))]
-public class VHSPro : VolumeComponent, IPostProcessComponent { 
+[Serializable, VolumeComponentMenu("Post-processing/VHS Pro")]
+public class VHSPro : VolumeComponent { 
 
    //Toggles
    public bool g_pixel = true;
@@ -159,7 +159,7 @@ public class VHSPro : VolumeComponent, IPostProcessComponent {
       return true;
    } 
 
-   public bool IsTileCompatible() => true; //?
+
 
 
 }
