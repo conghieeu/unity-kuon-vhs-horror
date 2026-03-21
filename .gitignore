@@ -107,3 +107,7 @@ InitTestScene*.unity*
 # không push file IT
 /[Aa]ssets/IT/*
 /[Aa]ssets/IT.meta
+
+# khong push ThunderWire Studio
+/[Aa]ssets/ThunderWire Studio/*
+/[Aa]ssets/ThunderWire Studio.meta
