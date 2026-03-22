@@ -7,16 +7,6 @@
       "dependencies": {},
       "hash": "052001cf62c44b1af3d8bd6339939f5f2c34966d"
     },
-    "com.coplaydev.unity-mcp": {
-      "version": "https://github.com/CoplayDev/unity-mcp.git?path=/MCPForUnity#main",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {
-        "com.unity.nuget.newtonsoft-json": "3.0.2",
-        "com.unity.test-framework": "1.1.31"
-      },
-      "hash": "f130dcb739cff2d72da2098078197de928b6d808"
-    },
     "com.unity.ai.navigation": {
       "version": "2.0.9",
       "depth": 0,
@@ -33,6 +23,16 @@
       "dependencies": {
         "com.unity.mathematics": "1.2.1",
         "com.unity.modules.jsonserialize": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.cinemachine": {
+      "version": "3.1.6",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.splines": "2.0.0",
+        "com.unity.modules.imgui": "1.0.0"
       },
       "url": "https://packages.unity.com"
     },
@@ -72,12 +72,19 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ide.visualstudio": {
-      "version": "2.0.26",
+      "version": "2.0.27",
       "depth": 0,
       "source": "registry",
       "dependencies": {
         "com.unity.test-framework": "1.1.33"
       },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.ide.vscode": {
+      "version": "1.2.5",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
       "url": "https://packages.unity.com"
     },
     "com.unity.inputsystem": {
@@ -113,7 +120,7 @@
     },
     "com.unity.nuget.newtonsoft-json": {
       "version": "3.2.2",
-      "depth": 1,
+      "depth": 0,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
@@ -157,6 +164,13 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+    "com.unity.settings-manager": {
+      "version": "2.1.1",
+      "depth": 2,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
     "com.unity.shadergraph": {
       "version": "17.3.0",
       "depth": 1,
@@ -166,9 +180,20 @@
         "com.unity.searcher": "4.9.3"
       }
     },
+    "com.unity.splines": {
+      "version": "2.8.2",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.mathematics": "1.2.1",
+        "com.unity.modules.imgui": "1.0.0",
+        "com.unity.settings-manager": "1.0.3"
+      },
+      "url": "https://packages.unity.com"
+    },
     "com.unity.test-framework": {
       "version": "1.6.0",
-      "depth": 0,
+      "depth": 1,
       "source": "builtin",
       "dependencies": {
         "com.unity.ext.nunit": "2.0.3",
@@ -208,7 +233,7 @@
       }
     },
     "com.unity.visualscripting": {
-      "version": "1.9.9",
+      "version": "1.9.11",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -316,7 +341,7 @@
     },
     "com.unity.modules.physics2d": {
       "version": "1.0.0",
-      "depth": 0,
+      "depth": 1,
       "source": "builtin",
       "dependencies": {}
     },
