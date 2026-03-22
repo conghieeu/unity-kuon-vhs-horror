@@ -36,6 +36,7 @@
   <Project Path="Unity.AI.Navigation.Updater.csproj" />
   <Project Path="Unity.AI.Navigation.Editor.csproj" />
   <Project Path="Unity.InputSystem.ForUI.csproj" />
+  <Project Path="VInspector.csproj" />
   <Project Path="com.rlabrecque.steamworks.net.editor.csproj" />
   <Project Path="Unity.AI.Navigation.csproj" />
   <Project Path="Unity.Collections.CodeGen.csproj" />
@@ -52,7 +53,9 @@
   <Project Path="QFSW.QC.UI.csproj" />
   <Project Path="Unity.CollabProxy.Editor.csproj" />
   <Project Path="QFSW.QC.Demo.csproj" />
+  <Project Path="Wingman.csproj" />
   <Project Path="QFSW.QC.Editor.Tools.csproj" />
+  <Project Path="Febucci.HierarchyIcons.csproj" />
   <Project Path="Unity.InputSystem.DocCodeSamples.csproj" />
   <Project Path="Sirenix.OdinInspector.Modules.UnityMathematics.csproj" />
   <Project Path="QFSW.QC.ScanRules.csproj" />
