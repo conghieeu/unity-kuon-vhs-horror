@@ -108,14 +108,14 @@ InitTestScene*.unity*
 /[Aa]ssets/IT/*
 /[Aa]ssets/IT.meta
 
-<<<<<<< HEAD
 # khong push ThunderWire Studio
-=======
-# không push file _Recovery
-/[Aa]ssets/_Recovery/*
-/[Aa]ssets/_Recovery.meta
-
-# không push file ThunderWire Studio
->>>>>>> experiment/cinemachine-trailer
 /[Aa]ssets/ThunderWire Studio/*
 /[Aa]ssets/ThunderWire Studio.meta
+
+# khong push Japanese City Megapack
+/[Aa]ssets/Japanese City Megapack/*
+/[Aa]ssets/Japanese City Megapack.meta
+
+# khong push _Recovery
+/[Aa]ssets/_Recovery/*
+/[Aa]ssets/_Recovery.meta
