@@ -1,0 +1,575 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdb2888f5a8a13b4db2fc1fa5bead655, type: 3}
+  m_Name: (Language) OLD
+  m_EditorClassIdentifier: 
+  LanguageName: English
+  Localizations:
+  - Section: input
+    Localizations:
+    - Key: action.movement.up
+      Text: Move Forward
+    - Key: action.movement.down
+      Text: Move Backward
+    - Key: action.movement.left
+      Text: Move Left
+    - Key: action.movement.right
+      Text: Move Right
+    - Key: action.sprint
+      Text: Sprint
+    - Key: action.jump
+      Text: Jump
+    - Key: action.crouch
+      Text: Crouch
+    - Key: action.use
+      Text: Use
+    - Key: action.examine
+      Text: Examine
+    - Key: action.fire
+      Text: Fire
+    - Key: action.reload
+      Text: Reload
+    - Key: action.ads
+      Text: ADS
+    - Key: action.equip1
+      Text: Equip 1
+    - Key: action.equip2
+      Text: Equip 2
+    - Key: action.equip3
+      Text: Equip 3
+    - Key: action.equip4
+      Text: Equip 4
+    - Key: action.unequip
+      Text: Unequip
+    - Key: action.lean.positive
+      Text: Lean Right
+    - Key: action.lean.negative
+      Text: Lean Left
+    - Key: action.flashlight
+      Text: Flashlight
+  - Section: menu
+    Localizations:
+    - Key: button.resume
+      Text: Resume
+    - Key: button.continue
+      Text: Continue
+    - Key: button.newgame
+      Text: New Game
+    - Key: button.loadgame
+      Text: Load Game
+    - Key: button.savegame
+      Text: Save Game
+    - Key: button.options
+      Text: Options
+    - Key: button.quit
+      Text: Quit
+    - Key: button.restart
+      Text: Restart
+    - Key: button.mainmenu
+      Text: Main Menu
+    - Key: button.back
+      Text: Back
+    - Key: button.apply
+      Text: Apply
+    - Key: tooltip.continue
+      Text: Resume your saved progress
+    - Key: tooltip.resume
+      Text: Continue playing game
+    - Key: tooltip.newgame
+      Text: Start a new game
+    - Key: tooltip.loadgame
+      Text: Load a previously saved games
+    - Key: tooltip.savegame
+      Text: Save your current progress
+    - Key: tooltip.options
+      Text: Adjust game settings and preferences
+    - Key: tooltip.quit
+      Text: Exit the game
+    - Key: tooltip.restart
+      Text: Start the game from your most recent saved data
+    - Key: tooltip.mainmenu
+      Text: Exit the game and go to the main menu
+    - Key: input.rebind
+      Text: Press Button
+    - Key: input.none
+      Text: None
+    - Key: panel.loadgame
+      Text: Load Game
+    - Key: panel.keybindings
+      Text: Key Bindings
+    - Key: panel.emptysaves
+      Text: There are currently no saved games available.
+    - Key: text.pause
+      Text: Pause Menu
+    - Key: text.died
+      Text: You have died
+  - Section: loading
+    Localizations:
+    - Key: description.demoscene
+      Text: In this demo scene, you will be able to witness and explore all the impressive
+        features that come with the kit. This scene has been specially designed to
+        showcase the full potential of the asset, so you can fully test its capabilities.
+    - Key: description.demoscene2
+      Text: In this interactive demo scene, you will have the opportunity to engage
+        firsthand with the elevator system, showcasing its seamless operation and
+        integration along with the other great features of the kit.
+    - Key: description.demoscene3
+      Text: It's raining outside, you can test how the raindrop effect works when
+        you're sheltered under a roof or not.
+  - Section: titles
+    Localizations:
+    - Key: putaway
+      Text: Put Away
+    - Key: take
+      Text: Take
+    - Key: rotate
+      Text: Rotate
+    - Key: loot
+      Text: Looted
+    - Key: inserttape
+      Text: Insert Tape
+    - Key: poweron
+      Text: Power On
+    - Key: poweroff
+      Text: Power Off
+    - Key: ejecttape
+      Text: Eject Tape
+    - Key: play
+      Text: Play
+    - Key: pause
+      Text: Pause
+    - Key: rewind
+      Text: Rewind
+    - Key: fastforward
+      Text: Fast Forward
+    - Key: lockpicks
+      Text: 'Lockpicks: [count]'
+  - Section: interactions
+    Localizations:
+    - Key: use
+      Text: Use
+    - Key: use.hold
+      Text: Use (Hold)
+    - Key: grab
+      Text: Grab
+    - Key: examine
+      Text: Examine
+    - Key: travel
+      Text: Travel
+    - Key: configure
+      Text: Configure
+    - Key: insertfuse
+      Text: Insert Fuse
+    - Key: code
+      Text: Enter Code
+    - Key: card
+      Text: Use Keycard
+    - Key: switch
+      Text: Switch
+    - Key: switchon
+      Text: Switch On
+    - Key: switchoff
+      Text: Switch Off
+    - Key: poweron
+      Text: Power On
+    - Key: poweroff
+      Text: Power Off
+    - Key: rotate
+      Text: Rotate
+    - Key: open
+      Text: Open
+    - Key: close
+      Text: Close
+    - Key: extinguish
+      Text: Extinguish
+    - Key: kindle
+      Text: Kindle (Hold)
+    - Key: refuel.hold
+      Text: Refuel (Hold)
+    - Key: hide
+      Text: Hide
+    - Key: unhide
+      Text: Get Out
+  - Section: objects
+    Localizations:
+    - Key: circuit
+      Text: Electric Circuit
+    - Key: fusebox
+      Text: Fusebox
+    - Key: keypad
+      Text: Keypad
+    - Key: keycard
+      Text: Keycard
+    - Key: padlock
+      Text: Padlock
+    - Key: lever
+      Text: Lever
+    - Key: paneldoor
+      Text: Panel Door
+    - Key: door
+      Text: Door
+    - Key: valve
+      Text: Valve
+    - Key: drawer
+      Text: Drawer
+    - Key: trunk
+      Text: Storage Trunk
+    - Key: backpack
+      Text: Backpack
+    - Key: crate
+      Text: Crate
+    - Key: barrel
+      Text: Barrel
+    - Key: brick
+      Text: Brick
+    - Key: pushable
+      Text: Pushable
+    - Key: ladder
+      Text: Ladder
+    - Key: zipline
+      Text: Zipline
+    - Key: paper
+      Text: Paper
+    - Key: chest
+      Text: Chest
+    - Key: lamp
+      Text: Lamp
+    - Key: generator
+      Text: Power Generator
+    - Key: radio
+      Text: Radio
+    - Key: locker
+      Text: Locker
+    - Key: bed
+      Text: Bed
+    - Key: floodlight
+      Text: Flood Light
+    - Key: maze
+      Text: Maze Puzzle
+  - Section: controls
+    Localizations:
+    - Key: name.exit
+      Text: Exit
+    - Key: name.close
+      Text: Close
+    - Key: name.move
+      Text: Move
+    - Key: name.rotate
+      Text: Rotate
+    - Key: name.select
+      Text: Select
+    - Key: name.zoom
+      Text: Zoom
+    - Key: name.drop
+      Text: Drop
+    - Key: name.throw
+      Text: Throw
+    - Key: name.take
+      Text: Take
+    - Key: name.read
+      Text: Read
+    - Key: name.putback
+      Text: Put Back
+    - Key: name.back
+      Text: Back
+  - Section: messages
+    Localizations:
+    - Key: backpack
+      Text: Your inventory slots have been expanded.
+    - Key: nofit
+      Text: This item does not fit there.
+    - Key: objective.added
+      Text: New objective
+    - Key: objective.completed
+      Text: Objective completed
+    - Key: kindle.lighter
+      Text: A lighter is needed to light the candle
+    - Key: no.canisters
+      Text: No fuel containers
+    - Key: notreq.canisters
+      Text: No refuelling required
+  - Section: papers
+    Localizations:
+    - Key: example
+      Text: 'This is an example text for a paper to demonstrate the examination system.
+        You can display the text on the paper using a texture or rewrite the text
+        as paper examination text.
+
+
+        - From Patrick'
+    - Key: crafting.ammo
+      Text: '9MM PISTOL AMMO
+
+        crafting guide
+
+
+        Recipe for making
+        10x 9mm Pistol Ammo. To make a Pistol Ammo you need to combine the following
+        materials:
+
+
+        5x Gunpowder
+
+        1x Scrap'
+    - Key: bloody
+      Text: 'IF YOU ARE READING THIS
+
+        DON''T LOOK BEHIND YOU'
+  - Section: inventory
+    Localizations:
+    - Key: context.use
+      Text: Use
+    - Key: context.examine
+      Text: Examine
+    - Key: context.combine
+      Text: Combine
+    - Key: context.shortcut
+      Text: Shortcut
+    - Key: context.drop
+      Text: Drop
+    - Key: context.discard
+      Text: Discard
+    - Key: prompt.shortcut
+      Text: Press the shortcut key to set the shortcut for the selected item.
+    - Key: prompt.combine
+      Text: Select the item you want to combine the current item with.
+  - Section: item
+    Localizations:
+    - Key: title.flashlight
+      Text: Flashlight
+    - Key: description.flashlight
+      Text: A powerful beam of light in a sturdy metal body, perfect for illuminating
+        dark areas and revealing hidden dangers.
+    - Key: title.camcorder
+      Text: Camcorder
+    - Key: description.camcorder
+      Text: Illuminate the darkness. Equipped with night vision technology, this
+        camcorder is perfect for exploring and documenting in low light conditions.
+    - Key: title.lantern
+      Text: Lantern
+    - Key: description.lantern
+      Text: A reliable source of light for any adventurer. Lantern flame is bright
+        and steady, providing a comforting glow that illuminates your surroundings.
+    - Key: title.lighter
+      Text: Lighter
+    - Key: description.lighter
+      Text: A reliable source of fire for any adventurer. With its compact size and
+        easy-to-use design, the lighter is a must-have item.
+    - Key: title.candle
+      Text: Candle
+    - Key: description.candle
+      Text: Compact, yet valuable for light and warmth in the darkness with its long-lasting
+        burn time.
+    - Key: title.axe
+      Text: Axe
+    - Key: description.axe
+      Text: 'Sturdy wood-handled tool with a sharp metal blade, ideal for chopping
+        and potential self-defense.     '
+    - Key: title.pocketknife
+      Text: Pocket Knife
+    - Key: description.pocketknife
+      Text: Compact folding blade, versatile for cutting tasks and close-quarters
+        defense. Always handy to have.
+    - Key: title.pistol
+      Text: Pistol
+    - Key: description.pistol
+      Text: A trusty sidearm for close-range combat. This powerful weapon packs a
+        punch and can be a lifesaver in dangerous situations.
+    - Key: title.thermometer
+      Text: Thermometer
+    - Key: description.thermometer
+      Text: Measures the temperature of your surroundings. Useful for detecting environmental
+        changes.
+    - Key: title.emfmeter
+      Text: EMF Meter
+    - Key: description.emfmeter
+      Text: Detects electromagnetic fields. Essential for identifying paranormal
+        activity or electronic disturbances. A must-have for ghost hunters and investigators.
+    - Key: title.firstaidkit
+      Text: First AID KIT
+    - Key: description.firstaidkit
+      Text: A vital survival tool packed with essential medical supplies. Use to
+        restore health and treat minor injuries. Useful in emergencies.
+    - Key: title.medicaloil
+      Text: Medical Oil
+    - Key: description.medicaloil
+      Text: Effective, fast-acting drug. It is used to alleviate a variety of illnesses,
+        increase the speed of recovery, and boost health at critical moments.
+    - Key: title.medicalherb
+      Text: Medical Herb
+    - Key: description.medicalherb
+      Text: Rare and powerful flora with healing properties. It is used to restore
+        a moderate amount of health or to make powerful healing potions and medicines.
+    - Key: title.healingpotion
+      Text: Healing Potion
+    - Key: description.healingpotion
+      Text: A powerful concoction made from Medical Oil and Medical Herb. Provides
+        quick and significant health boost.
+    - Key: title.alkalinebattery
+      Text: Alkaline Battery
+    - Key: description.alkalinebattery
+      Text: A compact and reliable source of power that provide long-lasting energy
+        and are perfect for powering flashlights, radios, and other essential items.
+    - Key: title.camerabattery
+      Text: Camera Battery
+    - Key: description.camerabattery
+      Text: Keep your camcorder camera powered up and ready to go with this reliable
+        battery. Designed to provide long-lasting energy.
+    - Key: title.petroloil
+      Text: Petrol Oil
+    - Key: description.petroloil
+      Text: A refined petroleum product commonly used as a fuel for lanterns and
+        lamps. It is a clear, colorless liquid that produces a bright, steady flame
+        when burned.
+    - Key: title.pistolammo
+      Text: Pistol Ammo
+    - Key: description.pistolammo
+      Text: Compatible with a variety of firearms. With its compact size and high
+        stopping power, 9mm ammo is perfect for close-range combat situations.
+    - Key: title.pistolflashlight
+      Text: Pistol Flashlight
+    - Key: description.pistolflashlight
+      Text: Shed some light on any situation with this tactical attachment for your
+        pistol. It illuminates your target and reveals hidden dangers in the darkness.
+    - Key: title.key01
+      Text: Key 01
+    - Key: description.key01
+      Text: A generic, yet mysterious key with an unknown use. Keep it on hand, as
+        it may unlock doors, chests, or secrets yet to be discovered.
+    - Key: title.key02
+      Text: Key 02
+    - Key: description.key02
+      Text: A generic, yet mysterious key with an unknown use. Keep it on hand, as
+        it may unlock doors, chests, or secrets yet to be discovered.
+    - Key: title.key03
+      Text: Key 03
+    - Key: description.key03
+      Text: A generic, yet mysterious key with an unknown use. Keep it on hand, as
+        it may unlock doors, chests, or secrets yet to be discovered.
+    - Key: title.key04
+      Text: Key 04
+    - Key: description.key04
+      Text: A generic, yet mysterious key with an unknown use. Keep it on hand, as
+        it may unlock doors, chests, or secrets yet to be discovered.
+    - Key: title.keys
+      Text: Keys
+    - Key: description.keys
+      Text: Assorted metal keys on a ring. Opens various locks. Essential for access
+        and exploration.
+    - Key: title.lockpick
+      Text: Lockpick
+    - Key: description.lockpick
+      Text: A handy tool for any adventurer, the lockpick can open a variety of locks
+        and doors.
+    - Key: title.fuse
+      Text: Fuse
+    - Key: description.fuse
+      Text: An essential item for fixing electrical equipment and powering machinery.
+        With its compact size, it's easy to carry in your inventory.
+    - Key: title.valve
+      Text: Valve
+    - Key: description.valve
+      Text: An essential component for controlling the flow of liquids and gases
+        in pipes and machinery.
+    - Key: title.vhscassette
+      Text: VHS Cassette
+    - Key: description.vhscassette
+      Text: 'Name: {name}
+
+        A classic, durable format for video recording
+        and archiving memories or documenting important events.'
+    - Key: title.redkeycard
+      Text: Red Keycard
+    - Key: description.redkeycard
+      Text: A high-security access card that grants entry to restricted areas.
+    - Key: title.greenkeycard
+      Text: Green Keycard
+    - Key: description.greenkeycard
+      Text: An access card that allows entry to various secure locations.
+    - Key: title.fuelcanister
+      Text: Fuel Canister
+    - Key: description.fuelcanister
+      Text: 'A durable, metal canister filled with a high-efficiency liquid fuel
+        designed specifically to refuel electric generators.
+
+        Fuel litres:
+        {fuel_litres}'
+    - Key: title.marbleball
+      Text: Marble Ball
+    - Key: description.marbleball
+      Text: A small, colorful glass ball often used in games. Can be thrown or rolled
+        to solve puzzles and activate mechanisms.
+    - Key: title.gunpowder
+      Text: Gunpowder
+    - Key: description.gunpowder
+      Text: A volatile black powder used for ammunition and explosives. Combine with
+        scrap to create a pistol ammo.
+    - Key: title.scrap
+      Text: Scrap
+    - Key: description.scrap
+      Text: A collection of miscellaneous metal pieces. Useful for crafting and repairs.
+  - Section: tips
+    Localizations:
+    - Key: tip1
+      Text: This is the first example of a tip.
+    - Key: tip2
+      Text: This is the second example of a tip.
+    - Key: tip3
+      Text: This is the third example of a tip.
+  - Section: options
+    Localizations:
+    - Key: brightness
+      Text: Brightness
+    - Key: camera.fov
+      Text: Camera FOV
+    - Key: look.sensitivity
+      Text: Look Sensitivity
+    - Key: look.smoothing
+      Text: Look Smoothing
+    - Key: smoothing.speed
+      Text: Smoothing Speed
+    - Key: show.fps
+      Text: Show FPS
+    - Key: display
+      Text: Display
+    - Key: display.mode
+      Text: Display Mode
+    - Key: screen.res
+      Text: Screen Resolution
+    - Key: frame.rate
+      Text: Frame Rate
+    - Key: vsync
+      Text: Vertical Synchronization
+    - Key: render.scale
+      Text: Render Scale
+    - Key: fsr
+      Text: FSR Sharpness
+    - Key: antialiasing
+      Text: Antialiasing
+    - Key: anisotropic
+      Text: Anisotropic Filtering
+    - Key: texture.quality
+      Text: Texture Quality
+    - Key: shadow.distance
+      Text: Shadow Distance
+    - Key: bloom
+      Text: Bloom
+    - Key: vignette
+      Text: Vignette
+    - Key: film.grain
+      Text: Film Grain
+    - Key: chromatic
+      Text: Chromatic Aberration
+    - Key: audio.general
+      Text: General Volume
+    - Key: audio.music
+      Text: Music Volume

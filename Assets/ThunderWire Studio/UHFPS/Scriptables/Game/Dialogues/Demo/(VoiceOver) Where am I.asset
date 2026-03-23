@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93cb5bd7e8a706a41b793e7440b34eea, type: 3}
+  m_Name: (VoiceOver) Where am I
+  m_EditorClassIdentifier: 
+  Dialogues:
+  - DialogueAudio: {fileID: 8300000, guid: 782faa4571fcb7d45add7e2407887902, type: 3}
+    SubtitleType: 1
+    SingleSubtitle:
+      Time: 0
+      Narrator: 
+      NarratorColor: {r: 1, g: 1, b: 1, a: 1}
+      Text:
+        GlocText: 
+        NormalText: 
+    Subtitles:
+    - rid: 5518344923532492865
+    - rid: 5518344923532492867
+  references:
+    version: 2
+    RefIds:
+    - rid: 5518344923532492865
+      type: {class: DialogueAsset/DialogueSubtitle, ns: UHFPS.Scriptable, asm: Assembly-CSharp}
+      data:
+        Time: 0
+        Narrator: Me
+        NarratorColor: {r: 0.7, g: 0.21000001, b: 0.21000001, a: 1}
+        Text:
+          GlocText: "*Where am I? This place...it\u2019s unlike anything I\u2019ve
+            ever seen. "
+          NormalText: 
+    - rid: 5518344923532492867
+      type: {class: DialogueAsset/DialogueSubtitle, ns: UHFPS.Scriptable, asm: Assembly-CSharp}
+      data:
+        Time: 5
+        Narrator: Me
+        NarratorColor: {r: 0.7, g: 0.21000001, b: 0.21000001, a: 1}
+        Text:
+          GlocText: "*But I can\u2019t stay...I have to find a way out. "
+          NormalText: 

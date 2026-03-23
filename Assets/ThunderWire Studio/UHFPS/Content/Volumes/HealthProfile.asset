@@ -1,0 +1,151 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8511001005541552458
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ee751481990022498d1a2a65160e587, type: 3}
+  m_Name: BloodDisortion
+  m_EditorClassIdentifier: 
+  active: 1
+  BlendColor:
+    m_OverrideState: 1
+    m_Value: {r: 1, g: 0, b: 0, a: 1}
+    hdr: 0
+  OverlayColor:
+    m_OverrideState: 1
+    m_Value: {r: 1, g: 0.7490196, b: 0.7490196, a: 1}
+    hdr: 0
+  BlendTexture:
+    m_OverrideState: 1
+    m_Value: {fileID: 2800000, guid: b946d1aa260dd4444a45f0570f6742e0, type: 3}
+  BumpTexture:
+    m_OverrideState: 1
+    m_Value: {fileID: 2800000, guid: 5c32083a96739ca4ea8de9b156efa475, type: 3}
+  BloodAmount:
+    m_OverrideState: 1
+    m_Value: 1
+  MinBloodAmount:
+    m_OverrideState: 1
+    m_Value: 0
+  MaxBloodAmount:
+    m_OverrideState: 1
+    m_Value: 0.25
+  EdgeSharpness:
+    m_OverrideState: 1
+    m_Value: 0.8
+  Distortion:
+    m_OverrideState: 1
+    m_Value: 1
+--- !u!114 &-7965065005970173467
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ee751481990022498d1a2a65160e587, type: 3}
+  m_Name: BloodDisortion
+  m_EditorClassIdentifier: 
+  active: 1
+  BlendColor:
+    m_OverrideState: 1
+    m_Value: {r: 1, g: 0, b: 0, a: 1}
+    hdr: 0
+  OverlayColor:
+    m_OverrideState: 1
+    m_Value: {r: 1, g: 0.7490196, b: 0.7490196, a: 1}
+    hdr: 0
+  BlendTexture:
+    m_OverrideState: 1
+    m_Value: {fileID: 2800000, guid: b946d1aa260dd4444a45f0570f6742e0, type: 3}
+  BumpTexture:
+    m_OverrideState: 1
+    m_Value: {fileID: 2800000, guid: 5c32083a96739ca4ea8de9b156efa475, type: 3}
+  BloodAmount:
+    m_OverrideState: 1
+    m_Value: 1
+  MinBloodAmount:
+    m_OverrideState: 1
+    m_Value: 0
+  MaxBloodAmount:
+    m_OverrideState: 1
+    m_Value: 0.25
+  EdgeSharpness:
+    m_OverrideState: 1
+    m_Value: 0.8
+  Distortion:
+    m_OverrideState: 1
+    m_Value: 1
+--- !u!114 &-4667289473775169120
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac04d2c95f7a6aa4681d48e2bbe16eed, type: 3}
+  m_Name: EyeBlink
+  m_EditorClassIdentifier: 
+  active: 1
+  Blink:
+    m_OverrideState: 1
+    m_Value: 0
+  VignetteOuterRing:
+    m_OverrideState: 1
+    m_Value: 0.4
+  VignetteInnerRing:
+    m_OverrideState: 1
+    m_Value: 1
+  VignetteAspectRatio:
+    m_OverrideState: 0
+    m_Value: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7fd9488000d3734a9e00ee676215985, type: 3}
+  m_Name: HealthProfile
+  m_EditorClassIdentifier: 
+  components:
+  - {fileID: -7965065005970173467}
+  - {fileID: -4667289473775169120}
+--- !u!114 &1313613158619034760
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac04d2c95f7a6aa4681d48e2bbe16eed, type: 3}
+  m_Name: EyeBlink
+  m_EditorClassIdentifier: 
+  active: 1
+  Blink:
+    m_OverrideState: 1
+    m_Value: 0
+  VignetteOuterRing:
+    m_OverrideState: 1
+    m_Value: 0.4
+  VignetteInnerRing:
+    m_OverrideState: 1
+    m_Value: 1
+  VignetteAspectRatio:
+    m_OverrideState: 0
+    m_Value: 1

@@ -1,0 +1,1055 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e99433e1eef4a964d98eb541d664ab70, type: 3}
+  m_Name: (Language) English
+  m_EditorClassIdentifier: 
+  LanguageName: English
+  Strings:
+  - EntryId: 15172027
+    SectionId: 40893112
+    Key: input.action.movement.up
+    Value: Move Forward
+  - EntryId: 48836686
+    SectionId: 40893112
+    Key: input.action.movement.down
+    Value: Move Backward
+  - EntryId: 42985932
+    SectionId: 40893112
+    Key: input.action.movement.left
+    Value: Move Left
+  - EntryId: 89388492
+    SectionId: 40893112
+    Key: input.action.movement.right
+    Value: Move Right
+  - EntryId: 91879250
+    SectionId: 40893112
+    Key: input.action.sprint
+    Value: Sprint
+  - EntryId: 72077938
+    SectionId: 40893112
+    Key: input.action.jump
+    Value: Jump
+  - EntryId: 26866831
+    SectionId: 40893112
+    Key: input.action.crouch
+    Value: Crouch
+  - EntryId: 71917174
+    SectionId: 40893112
+    Key: input.action.use
+    Value: Use
+  - EntryId: 99249963
+    SectionId: 40893112
+    Key: input.action.examine
+    Value: Examine
+  - EntryId: 13648412
+    SectionId: 40893112
+    Key: input.action.fire
+    Value: Fire
+  - EntryId: 85843821
+    SectionId: 40893112
+    Key: input.action.reload
+    Value: Reload
+  - EntryId: 81674536
+    SectionId: 40893112
+    Key: input.action.ads
+    Value: ADS
+  - EntryId: 31740936
+    SectionId: 40893112
+    Key: input.action.equip1
+    Value: Equip 1
+  - EntryId: 59043625
+    SectionId: 40893112
+    Key: input.action.equip2
+    Value: Equip 2
+  - EntryId: 40362316
+    SectionId: 40893112
+    Key: input.action.equip3
+    Value: Equip 3
+  - EntryId: 81721455
+    SectionId: 40893112
+    Key: input.action.equip4
+    Value: Equip 4
+  - EntryId: 81699452
+    SectionId: 40893112
+    Key: input.action.unequip
+    Value: Unequip
+  - EntryId: 74840067
+    SectionId: 40893112
+    Key: input.action.lean.positive
+    Value: Lean Right
+  - EntryId: 54335613
+    SectionId: 40893112
+    Key: input.action.lean.negative
+    Value: Lean Left
+  - EntryId: 72003672
+    SectionId: 40893112
+    Key: input.action.flashlight
+    Value: Flashlight
+  - EntryId: 12834590
+    SectionId: 84607436
+    Key: menu.title.loadgame
+    Value: Load Game
+  - EntryId: 19909919
+    SectionId: 84607436
+    Key: menu.title.options
+    Value: Options
+  - EntryId: 38947490
+    SectionId: 84607436
+    Key: menu.title.pause
+    Value: Pause Menu
+  - EntryId: 21255646
+    SectionId: 84607436
+    Key: menu.button.resume
+    Value: Resume
+  - EntryId: 67914274
+    SectionId: 84607436
+    Key: menu.button.continue
+    Value: Continue
+  - EntryId: 79667033
+    SectionId: 84607436
+    Key: menu.button.newgame
+    Value: New Game
+  - EntryId: 18226444
+    SectionId: 84607436
+    Key: menu.button.loadgame
+    Value: Load Game
+  - EntryId: 55566430
+    SectionId: 84607436
+    Key: menu.button.savegame
+    Value: Save Game
+  - EntryId: 31415227
+    SectionId: 84607436
+    Key: menu.button.options
+    Value: Options
+  - EntryId: 51656323
+    SectionId: 84607436
+    Key: menu.button.quit
+    Value: Quit
+  - EntryId: 86796110
+    SectionId: 84607436
+    Key: menu.button.restart
+    Value: Restart
+  - EntryId: 24352737
+    SectionId: 84607436
+    Key: menu.button.mainmenu
+    Value: Main Menu
+  - EntryId: 25663424
+    SectionId: 84607436
+    Key: menu.button.back
+    Value: Back
+  - EntryId: 33340621
+    SectionId: 84607436
+    Key: menu.button.load
+    Value: Load
+  - EntryId: 35886959
+    SectionId: 84607436
+    Key: menu.button.delete
+    Value: Delete
+  - EntryId: 48769564
+    SectionId: 84607436
+    Key: menu.button.apply
+    Value: Apply
+  - EntryId: 99361921
+    SectionId: 84607436
+    Key: menu.button.reset
+    Value: Reset
+  - EntryId: 78931432
+    SectionId: 84607436
+    Key: menu.tooltip.continue
+    Value: Resume your saved progress
+  - EntryId: 91768521
+    SectionId: 84607436
+    Key: menu.tooltip.resume
+    Value: Continue playing game
+  - EntryId: 85618282
+    SectionId: 84607436
+    Key: menu.tooltip.newgame
+    Value: Start a new game
+  - EntryId: 55974627
+    SectionId: 84607436
+    Key: menu.tooltip.loadgame
+    Value: Load a previously saved games
+  - EntryId: 21595021
+    SectionId: 84607436
+    Key: menu.tooltip.savegame
+    Value: Save your current progress
+  - EntryId: 30213956
+    SectionId: 84607436
+    Key: menu.tooltip.options
+    Value: Adjust game settings and preferences
+  - EntryId: 33214590
+    SectionId: 84607436
+    Key: menu.tooltip.quit
+    Value: Exit the game
+  - EntryId: 78530917
+    SectionId: 84607436
+    Key: menu.tooltip.restart
+    Value: Start the game from your most recent saved data
+  - EntryId: 81988112
+    SectionId: 84607436
+    Key: menu.tooltip.mainmenu
+    Value: Exit the game and go to the main menu
+  - EntryId: 34760757
+    SectionId: 84607436
+    Key: menu.input.rebind
+    Value: Press Button
+  - EntryId: 44010618
+    SectionId: 84607436
+    Key: menu.input.none
+    Value: None
+  - EntryId: 91370004
+    SectionId: 84607436
+    Key: menu.panel.loadgame
+    Value: Load Game
+  - EntryId: 66529808
+    SectionId: 84607436
+    Key: menu.panel.keybindings
+    Value: Key Bindings
+  - EntryId: 73309676
+    SectionId: 84607436
+    Key: menu.panel.emptysaves
+    Value: There are currently no saved games available.
+  - EntryId: 50945637
+    SectionId: 84607436
+    Key: menu.text.died
+    Value: You have died
+  - EntryId: 75562718
+    SectionId: 22328812
+    Key: loading.description.demoscene
+    Value: In this demo scene, you will be able to witness and explore all the impressive
+      features that come with the kit. This scene has been specially designed to
+      showcase the full potential of the asset, so you can fully test its capabilities.
+  - EntryId: 48298615
+    SectionId: 22328812
+    Key: loading.description.demoscene2
+    Value: In this interactive demo scene, you will have the opportunity to engage
+      firsthand with the elevator system, showcasing its seamless operation and integration
+      along with the other great features of the kit.
+  - EntryId: 99899103
+    SectionId: 22328812
+    Key: loading.description.demoscene3
+    Value: It's raining outside, you can test how the raindrop effect works when
+      you're sheltered under a roof or not.
+  - EntryId: 61351216
+    SectionId: 59169988
+    Key: titles.putaway
+    Value: Put Away
+  - EntryId: 36173073
+    SectionId: 59169988
+    Key: titles.take
+    Value: Take
+  - EntryId: 46183422
+    SectionId: 59169988
+    Key: titles.rotate
+    Value: Rotate
+  - EntryId: 17498606
+    SectionId: 59169988
+    Key: titles.loot
+    Value: Looted
+  - EntryId: 61429632
+    SectionId: 59169988
+    Key: titles.inserttape
+    Value: Insert Tape
+  - EntryId: 72865766
+    SectionId: 59169988
+    Key: titles.poweron
+    Value: Power On
+  - EntryId: 52157472
+    SectionId: 59169988
+    Key: titles.poweroff
+    Value: Power Off
+  - EntryId: 80313860
+    SectionId: 59169988
+    Key: titles.ejecttape
+    Value: Eject Tape
+  - EntryId: 66958135
+    SectionId: 59169988
+    Key: titles.play
+    Value: Play
+  - EntryId: 61574451
+    SectionId: 59169988
+    Key: titles.pause
+    Value: Pause
+  - EntryId: 30659339
+    SectionId: 59169988
+    Key: titles.rewind
+    Value: Rewind
+  - EntryId: 66300923
+    SectionId: 59169988
+    Key: titles.fastforward
+    Value: Fast Forward
+  - EntryId: 84772315
+    SectionId: 59169988
+    Key: titles.lockpicks
+    Value: 'Lockpicks: [count]'
+  - EntryId: 94577514
+    SectionId: 69673941
+    Key: interactions.use
+    Value: Use
+  - EntryId: 61453117
+    SectionId: 69673941
+    Key: interactions.use.hold
+    Value: Use (Hold)
+  - EntryId: 10293257
+    SectionId: 69673941
+    Key: interactions.grab
+    Value: Grab
+  - EntryId: 95058002
+    SectionId: 69673941
+    Key: interactions.examine
+    Value: Examine
+  - EntryId: 92590947
+    SectionId: 69673941
+    Key: interactions.travel
+    Value: Travel
+  - EntryId: 95255333
+    SectionId: 69673941
+    Key: interactions.configure
+    Value: Configure
+  - EntryId: 82492818
+    SectionId: 69673941
+    Key: interactions.insertfuse
+    Value: Insert Fuse
+  - EntryId: 28681382
+    SectionId: 69673941
+    Key: interactions.code
+    Value: Enter Code
+  - EntryId: 70511385
+    SectionId: 69673941
+    Key: interactions.card
+    Value: Use Keycard
+  - EntryId: 48925815
+    SectionId: 69673941
+    Key: interactions.switch
+    Value: Switch
+  - EntryId: 19195279
+    SectionId: 69673941
+    Key: interactions.switchon
+    Value: Switch On
+  - EntryId: 78764854
+    SectionId: 69673941
+    Key: interactions.switchoff
+    Value: Switch Off
+  - EntryId: 64575804
+    SectionId: 69673941
+    Key: interactions.poweron
+    Value: Power On
+  - EntryId: 86485218
+    SectionId: 69673941
+    Key: interactions.poweroff
+    Value: Power Off
+  - EntryId: 90802756
+    SectionId: 69673941
+    Key: interactions.rotate
+    Value: Rotate
+  - EntryId: 69712916
+    SectionId: 69673941
+    Key: interactions.open
+    Value: Open
+  - EntryId: 54189661
+    SectionId: 69673941
+    Key: interactions.close
+    Value: Close
+  - EntryId: 53506186
+    SectionId: 69673941
+    Key: interactions.extinguish
+    Value: Extinguish
+  - EntryId: 50724348
+    SectionId: 69673941
+    Key: interactions.kindle
+    Value: Kindle (Hold)
+  - EntryId: 24862863
+    SectionId: 69673941
+    Key: interactions.refuel.hold
+    Value: Refuel (Hold)
+  - EntryId: 89532940
+    SectionId: 69673941
+    Key: interactions.hide
+    Value: Hide
+  - EntryId: 17034738
+    SectionId: 69673941
+    Key: interactions.unhide
+    Value: Get Out
+  - EntryId: 68821941
+    SectionId: 11317371
+    Key: objects.circuit
+    Value: Electric Circuit
+  - EntryId: 14979172
+    SectionId: 11317371
+    Key: objects.fusebox
+    Value: Fusebox
+  - EntryId: 62776564
+    SectionId: 11317371
+    Key: objects.keypad
+    Value: Keypad
+  - EntryId: 14413967
+    SectionId: 11317371
+    Key: objects.keycard
+    Value: Keycard
+  - EntryId: 96136757
+    SectionId: 11317371
+    Key: objects.padlock
+    Value: Padlock
+  - EntryId: 24142317
+    SectionId: 11317371
+    Key: objects.lever
+    Value: Lever
+  - EntryId: 31363607
+    SectionId: 11317371
+    Key: objects.paneldoor
+    Value: Panel Door
+  - EntryId: 67919224
+    SectionId: 11317371
+    Key: objects.door
+    Value: Door
+  - EntryId: 20417118
+    SectionId: 11317371
+    Key: objects.valve
+    Value: Valve
+  - EntryId: 42204335
+    SectionId: 11317371
+    Key: objects.drawer
+    Value: Drawer
+  - EntryId: 10559435
+    SectionId: 11317371
+    Key: objects.trunk
+    Value: Storage Trunk
+  - EntryId: 71847511
+    SectionId: 11317371
+    Key: objects.backpack
+    Value: Backpack
+  - EntryId: 38384735
+    SectionId: 11317371
+    Key: objects.crate
+    Value: Crate
+  - EntryId: 83502262
+    SectionId: 11317371
+    Key: objects.barrel
+    Value: Barrel
+  - EntryId: 58655478
+    SectionId: 11317371
+    Key: objects.brick
+    Value: Brick
+  - EntryId: 28035682
+    SectionId: 11317371
+    Key: objects.pushable
+    Value: Pushable
+  - EntryId: 32820278
+    SectionId: 11317371
+    Key: objects.ladder
+    Value: Ladder
+  - EntryId: 33180263
+    SectionId: 11317371
+    Key: objects.zipline
+    Value: Zipline
+  - EntryId: 88094677
+    SectionId: 11317371
+    Key: objects.paper
+    Value: Paper
+  - EntryId: 63467271
+    SectionId: 11317371
+    Key: objects.chest
+    Value: Chest
+  - EntryId: 64633838
+    SectionId: 11317371
+    Key: objects.lamp
+    Value: Lamp
+  - EntryId: 15905899
+    SectionId: 11317371
+    Key: objects.generator
+    Value: Power Generator
+  - EntryId: 73080034
+    SectionId: 11317371
+    Key: objects.radio
+    Value: Radio
+  - EntryId: 11138211
+    SectionId: 11317371
+    Key: objects.locker
+    Value: Locker
+  - EntryId: 59323032
+    SectionId: 11317371
+    Key: objects.bed
+    Value: Bed
+  - EntryId: 57301135
+    SectionId: 11317371
+    Key: objects.floodlight
+    Value: Flood Light
+  - EntryId: 84384165
+    SectionId: 11317371
+    Key: objects.maze
+    Value: Maze Puzzle
+  - EntryId: 94725535
+    SectionId: 78183135
+    Key: controls.name.exit
+    Value: Exit
+  - EntryId: 62676786
+    SectionId: 78183135
+    Key: controls.name.close
+    Value: Close
+  - EntryId: 34189899
+    SectionId: 78183135
+    Key: controls.name.move
+    Value: Move
+  - EntryId: 70552896
+    SectionId: 78183135
+    Key: controls.name.rotate
+    Value: Rotate
+  - EntryId: 88288613
+    SectionId: 78183135
+    Key: controls.name.select
+    Value: Select
+  - EntryId: 58955362
+    SectionId: 78183135
+    Key: controls.name.zoom
+    Value: Zoom
+  - EntryId: 90823624
+    SectionId: 78183135
+    Key: controls.name.drop
+    Value: Drop
+  - EntryId: 68512386
+    SectionId: 78183135
+    Key: controls.name.throw
+    Value: Throw
+  - EntryId: 79525535
+    SectionId: 78183135
+    Key: controls.name.take
+    Value: Take
+  - EntryId: 71771340
+    SectionId: 78183135
+    Key: controls.name.read
+    Value: Read
+  - EntryId: 55932111
+    SectionId: 78183135
+    Key: controls.name.putback
+    Value: Put Back
+  - EntryId: 95942159
+    SectionId: 78183135
+    Key: controls.name.back
+    Value: Back
+  - EntryId: 46809840
+    SectionId: 51993595
+    Key: messages.backpack
+    Value: Your inventory slots have been expanded.
+  - EntryId: 22626659
+    SectionId: 51993595
+    Key: messages.nofit
+    Value: This item does not fit there.
+  - EntryId: 10728042
+    SectionId: 51993595
+    Key: messages.objective.added
+    Value: New objective
+  - EntryId: 20529774
+    SectionId: 51993595
+    Key: messages.objective.completed
+    Value: Objective completed
+  - EntryId: 41489829
+    SectionId: 51993595
+    Key: messages.kindle.lighter
+    Value: A lighter is needed to light the candle
+  - EntryId: 27587268
+    SectionId: 51993595
+    Key: messages.no.canisters
+    Value: No fuel containers
+  - EntryId: 20042218
+    SectionId: 51993595
+    Key: messages.notreq.canisters
+    Value: No refuelling required
+  - EntryId: 63376783
+    SectionId: 14790497
+    Key: papers.example
+    Value: 'This is an example text for a paper to demonstrate the examination system.
+      You can display the text on the paper using a texture or rewrite the text as
+      paper examination text.
+
+
+      - From Patrick'
+  - EntryId: 24767859
+    SectionId: 14790497
+    Key: papers.crafting.ammo
+    Value: '9MM PISTOL AMMO
+
+      crafting guide
+
+
+      Recipe for making 10x 9mm
+      Pistol Ammo. To make a Pistol Ammo you need to combine the following materials:
+
+
+      5x
+      Gunpowder
+
+      1x Scrap'
+  - EntryId: 96893407
+    SectionId: 14790497
+    Key: papers.bloody
+    Value: 'IF YOU ARE READING THIS
+
+      DON''T LOOK BEHIND YOU'
+  - EntryId: 18324474
+    SectionId: 91710314
+    Key: inventory.context.use
+    Value: Use
+  - EntryId: 72200280
+    SectionId: 91710314
+    Key: inventory.context.examine
+    Value: Examine
+  - EntryId: 29617865
+    SectionId: 91710314
+    Key: inventory.context.combine
+    Value: Combine
+  - EntryId: 23266649
+    SectionId: 91710314
+    Key: inventory.context.shortcut
+    Value: Shortcut
+  - EntryId: 31139243
+    SectionId: 91710314
+    Key: inventory.context.drop
+    Value: Drop
+  - EntryId: 41837702
+    SectionId: 91710314
+    Key: inventory.context.discard
+    Value: Discard
+  - EntryId: 35466172
+    SectionId: 91710314
+    Key: inventory.prompt.shortcut
+    Value: Press the shortcut key to set the shortcut for the selected item.
+  - EntryId: 85741619
+    SectionId: 91710314
+    Key: inventory.prompt.combine
+    Value: Select the item you want to combine the current item with.
+  - EntryId: 86483556
+    SectionId: 24283221
+    Key: item.title.flashlight
+    Value: Flashlight
+  - EntryId: 66394995
+    SectionId: 24283221
+    Key: item.description.flashlight
+    Value: A powerful beam of light in a sturdy metal body, perfect for illuminating
+      dark areas and revealing hidden dangers.
+  - EntryId: 27479224
+    SectionId: 24283221
+    Key: item.title.camcorder
+    Value: Camcorder
+  - EntryId: 13199872
+    SectionId: 24283221
+    Key: item.description.camcorder
+    Value: Illuminate the darkness. Equipped with night vision technology, this camcorder
+      is perfect for exploring and documenting in low light conditions.
+  - EntryId: 52214045
+    SectionId: 24283221
+    Key: item.title.lantern
+    Value: Lantern
+  - EntryId: 10453279
+    SectionId: 24283221
+    Key: item.description.lantern
+    Value: A reliable source of light for any adventurer. Lantern flame is bright
+      and steady, providing a comforting glow that illuminates your surroundings.
+  - EntryId: 58743985
+    SectionId: 24283221
+    Key: item.title.lighter
+    Value: Lighter
+  - EntryId: 35147977
+    SectionId: 24283221
+    Key: item.description.lighter
+    Value: A reliable source of fire for any adventurer. With its compact size and
+      easy-to-use design, the lighter is a must-have item.
+  - EntryId: 47759722
+    SectionId: 24283221
+    Key: item.title.candle
+    Value: Candle
+  - EntryId: 88800642
+    SectionId: 24283221
+    Key: item.description.candle
+    Value: Compact, yet valuable for light and warmth in the darkness with its long-lasting
+      burn time.
+  - EntryId: 64813928
+    SectionId: 24283221
+    Key: item.title.axe
+    Value: Axe
+  - EntryId: 81754557
+    SectionId: 24283221
+    Key: item.description.axe
+    Value: 'Sturdy wood-handled tool with a sharp metal blade, ideal for chopping
+      and potential self-defense.     '
+  - EntryId: 29595890
+    SectionId: 24283221
+    Key: item.title.pocketknife
+    Value: Pocket Knife
+  - EntryId: 10912878
+    SectionId: 24283221
+    Key: item.description.pocketknife
+    Value: Compact folding blade, versatile for cutting tasks and close-quarters
+      defense. Always handy to have.
+  - EntryId: 53741014
+    SectionId: 24283221
+    Key: item.title.pistol
+    Value: Pistol
+  - EntryId: 19660599
+    SectionId: 24283221
+    Key: item.description.pistol
+    Value: A trusty sidearm for close-range combat. This powerful weapon packs a
+      punch and can be a lifesaver in dangerous situations.
+  - EntryId: 61872019
+    SectionId: 24283221
+    Key: item.title.thermometer
+    Value: Thermometer
+  - EntryId: 78303727
+    SectionId: 24283221
+    Key: item.description.thermometer
+    Value: Measures the temperature of your surroundings. Useful for detecting environmental
+      changes.
+  - EntryId: 58318911
+    SectionId: 24283221
+    Key: item.title.emfmeter
+    Value: EMF Meter
+  - EntryId: 33905725
+    SectionId: 24283221
+    Key: item.description.emfmeter
+    Value: Detects electromagnetic fields. Essential for identifying paranormal activity
+      or electronic disturbances. A must-have for ghost hunters and investigators.
+  - EntryId: 34833445
+    SectionId: 24283221
+    Key: item.title.firstaidkit
+    Value: First AID KIT
+  - EntryId: 95076873
+    SectionId: 24283221
+    Key: item.description.firstaidkit
+    Value: A vital survival tool packed with essential medical supplies. Use to restore
+      health and treat minor injuries. Useful in emergencies.
+  - EntryId: 44235869
+    SectionId: 24283221
+    Key: item.title.medicaloil
+    Value: Medical Oil
+  - EntryId: 59674130
+    SectionId: 24283221
+    Key: item.description.medicaloil
+    Value: Effective, fast-acting drug. It is used to alleviate a variety of illnesses,
+      increase the speed of recovery, and boost health at critical moments.
+  - EntryId: 39924894
+    SectionId: 24283221
+    Key: item.title.medicalherb
+    Value: Medical Herb
+  - EntryId: 10202328
+    SectionId: 24283221
+    Key: item.description.medicalherb
+    Value: Rare and powerful flora with healing properties. It is used to restore
+      a moderate amount of health or to make powerful healing potions and medicines.
+  - EntryId: 63867823
+    SectionId: 24283221
+    Key: item.title.healingpotion
+    Value: Healing Potion
+  - EntryId: 42067171
+    SectionId: 24283221
+    Key: item.description.healingpotion
+    Value: A powerful concoction made from Medical Oil and Medical Herb. Provides
+      quick and significant health boost.
+  - EntryId: 16895552
+    SectionId: 24283221
+    Key: item.title.alkalinebattery
+    Value: Alkaline Battery
+  - EntryId: 88078736
+    SectionId: 24283221
+    Key: item.description.alkalinebattery
+    Value: A compact and reliable source of power that provide long-lasting energy
+      and are perfect for powering flashlights, radios, and other essential items.
+  - EntryId: 31902149
+    SectionId: 24283221
+    Key: item.title.camerabattery
+    Value: Camera Battery
+  - EntryId: 14597581
+    SectionId: 24283221
+    Key: item.description.camerabattery
+    Value: Keep your camcorder camera powered up and ready to go with this reliable
+      battery. Designed to provide long-lasting energy.
+  - EntryId: 68908540
+    SectionId: 24283221
+    Key: item.title.petroloil
+    Value: Petrol Oil
+  - EntryId: 10772658
+    SectionId: 24283221
+    Key: item.description.petroloil
+    Value: A refined petroleum product commonly used as a fuel for lanterns and lamps.
+      It is a clear, colorless liquid that produces a bright, steady flame when burned.
+  - EntryId: 26904931
+    SectionId: 24283221
+    Key: item.title.pistolammo
+    Value: Pistol Ammo
+  - EntryId: 10323082
+    SectionId: 24283221
+    Key: item.description.pistolammo
+    Value: Compatible with a variety of firearms. With its compact size and high
+      stopping power, 9mm ammo is perfect for close-range combat situations.
+  - EntryId: 89377779
+    SectionId: 24283221
+    Key: item.title.pistolflashlight
+    Value: Pistol Flashlight
+  - EntryId: 31912480
+    SectionId: 24283221
+    Key: item.description.pistolflashlight
+    Value: Shed some light on any situation with this tactical attachment for your
+      pistol. It illuminates your target and reveals hidden dangers in the darkness.
+  - EntryId: 25768964
+    SectionId: 24283221
+    Key: item.title.key01
+    Value: Key 01
+  - EntryId: 54686469
+    SectionId: 24283221
+    Key: item.description.key01
+    Value: A generic, yet mysterious key with an unknown use. Keep it on hand, as
+      it may unlock doors, chests, or secrets yet to be discovered.
+  - EntryId: 77523233
+    SectionId: 24283221
+    Key: item.title.key02
+    Value: Key 02
+  - EntryId: 93838456
+    SectionId: 24283221
+    Key: item.description.key02
+    Value: A generic, yet mysterious key with an unknown use. Keep it on hand, as
+      it may unlock doors, chests, or secrets yet to be discovered.
+  - EntryId: 85398988
+    SectionId: 24283221
+    Key: item.title.key03
+    Value: Key 03
+  - EntryId: 95447991
+    SectionId: 24283221
+    Key: item.description.key03
+    Value: A generic, yet mysterious key with an unknown use. Keep it on hand, as
+      it may unlock doors, chests, or secrets yet to be discovered.
+  - EntryId: 68643809
+    SectionId: 24283221
+    Key: item.title.key04
+    Value: Key 04
+  - EntryId: 94144278
+    SectionId: 24283221
+    Key: item.description.key04
+    Value: A generic, yet mysterious key with an unknown use. Keep it on hand, as
+      it may unlock doors, chests, or secrets yet to be discovered.
+  - EntryId: 68278997
+    SectionId: 24283221
+    Key: item.title.keys
+    Value: Keys
+  - EntryId: 50121884
+    SectionId: 24283221
+    Key: item.description.keys
+    Value: Assorted metal keys on a ring. Opens various locks. Essential for access
+      and exploration.
+  - EntryId: 90527509
+    SectionId: 24283221
+    Key: item.title.lockpick
+    Value: Lockpick
+  - EntryId: 45644899
+    SectionId: 24283221
+    Key: item.description.lockpick
+    Value: A handy tool for any adventurer, the lockpick can open a variety of locks
+      and doors.
+  - EntryId: 34472722
+    SectionId: 24283221
+    Key: item.title.fuse
+    Value: Fuse
+  - EntryId: 94677487
+    SectionId: 24283221
+    Key: item.description.fuse
+    Value: An essential item for fixing electrical equipment and powering machinery.
+      With its compact size, it's easy to carry in your inventory.
+  - EntryId: 79554516
+    SectionId: 24283221
+    Key: item.title.valve
+    Value: Valve
+  - EntryId: 36922670
+    SectionId: 24283221
+    Key: item.description.valve
+    Value: An essential component for controlling the flow of liquids and gases in
+      pipes and machinery.
+  - EntryId: 95253859
+    SectionId: 24283221
+    Key: item.title.vhscassette
+    Value: VHS Cassette
+  - EntryId: 19573478
+    SectionId: 24283221
+    Key: item.description.vhscassette
+    Value: 'Name: {name}
+
+      A classic, durable format for video recording and
+      archiving memories or documenting important events.'
+  - EntryId: 99621160
+    SectionId: 24283221
+    Key: item.title.redkeycard
+    Value: Red Keycard
+  - EntryId: 97596299
+    SectionId: 24283221
+    Key: item.description.redkeycard
+    Value: A high-security access card that grants entry to restricted areas.
+  - EntryId: 88852542
+    SectionId: 24283221
+    Key: item.title.greenkeycard
+    Value: Green Keycard
+  - EntryId: 84344411
+    SectionId: 24283221
+    Key: item.description.greenkeycard
+    Value: An access card that allows entry to various secure locations.
+  - EntryId: 44840908
+    SectionId: 24283221
+    Key: item.title.fuelcanister
+    Value: Fuel Canister
+  - EntryId: 90153658
+    SectionId: 24283221
+    Key: item.description.fuelcanister
+    Value: 'A durable, metal canister filled with a high-efficiency liquid fuel designed
+      specifically to refuel electric generators.
+
+      Fuel litres: {fuel_litres}'
+  - EntryId: 15052282
+    SectionId: 24283221
+    Key: item.title.marbleball
+    Value: Marble Ball
+  - EntryId: 83898129
+    SectionId: 24283221
+    Key: item.description.marbleball
+    Value: A small, colorful glass ball often used in games. Can be thrown or rolled
+      to solve puzzles and activate mechanisms.
+  - EntryId: 82617294
+    SectionId: 24283221
+    Key: item.title.gunpowder
+    Value: Gunpowder
+  - EntryId: 94969246
+    SectionId: 24283221
+    Key: item.description.gunpowder
+    Value: A volatile black powder used for ammunition and explosives. Combine with
+      scrap to create a pistol ammo.
+  - EntryId: 45238631
+    SectionId: 24283221
+    Key: item.title.scrap
+    Value: Scrap
+  - EntryId: 38802640
+    SectionId: 24283221
+    Key: item.description.scrap
+    Value: A collection of miscellaneous metal pieces. Useful for crafting and repairs.
+  - EntryId: 31030455
+    SectionId: 90694169
+    Key: tips.tip1
+    Value: This is the first example of a tip.
+  - EntryId: 69403660
+    SectionId: 90694169
+    Key: tips.tip2
+    Value: This is the second example of a tip.
+  - EntryId: 75937617
+    SectionId: 90694169
+    Key: tips.tip3
+    Value: This is the third example of a tip.
+  - EntryId: 35326416
+    SectionId: 70584943
+    Key: options.language
+    Value: Language
+  - EntryId: 36164037
+    SectionId: 70584943
+    Key: options.brightness
+    Value: Brightness
+  - EntryId: 12736807
+    SectionId: 70584943
+    Key: options.camera.fov
+    Value: Camera FOV
+  - EntryId: 39446919
+    SectionId: 70584943
+    Key: options.look.sensitivity
+    Value: Look Sensitivity
+  - EntryId: 93278971
+    SectionId: 70584943
+    Key: options.look.smoothing
+    Value: Look Smoothing
+  - EntryId: 44422523
+    SectionId: 70584943
+    Key: options.smoothing.speed
+    Value: Smoothing Speed
+  - EntryId: 42806252
+    SectionId: 70584943
+    Key: options.show.fps
+    Value: Show FPS
+  - EntryId: 16191567
+    SectionId: 70584943
+    Key: options.display
+    Value: Display
+  - EntryId: 72339037
+    SectionId: 70584943
+    Key: options.display.mode
+    Value: Display Mode
+  - EntryId: 32918443
+    SectionId: 70584943
+    Key: options.screen.res
+    Value: Screen Resolution
+  - EntryId: 10092527
+    SectionId: 70584943
+    Key: options.frame.rate
+    Value: Frame Rate
+  - EntryId: 67230680
+    SectionId: 70584943
+    Key: options.vsync
+    Value: Vertical Synchronization
+  - EntryId: 34415215
+    SectionId: 70584943
+    Key: options.render.scale
+    Value: Render Scale
+  - EntryId: 26280178
+    SectionId: 70584943
+    Key: options.fsr
+    Value: FSR Sharpness
+  - EntryId: 82063294
+    SectionId: 70584943
+    Key: options.antialiasing
+    Value: Antialiasing
+  - EntryId: 27231692
+    SectionId: 70584943
+    Key: options.antialiasing.quality
+    Value: Antialiasing Quality
+  - EntryId: 63942947
+    SectionId: 70584943
+    Key: options.anisotropic
+    Value: Anisotropic Filtering
+  - EntryId: 33876895
+    SectionId: 70584943
+    Key: options.texture.quality
+    Value: Texture Quality
+  - EntryId: 24740572
+    SectionId: 70584943
+    Key: options.shadow.distance
+    Value: Shadow Distance
+  - EntryId: 78091521
+    SectionId: 70584943
+    Key: options.bloom
+    Value: Bloom
+  - EntryId: 51192724
+    SectionId: 70584943
+    Key: options.vignette
+    Value: Vignette
+  - EntryId: 26771590
+    SectionId: 70584943
+    Key: options.film.grain
+    Value: Film Grain
+  - EntryId: 58595067
+    SectionId: 70584943
+    Key: options.chromatic
+    Value: Chromatic Aberration
+  - EntryId: 16363080
+    SectionId: 70584943
+    Key: options.audio.general
+    Value: General Volume
+  - EntryId: 15022705
+    SectionId: 70584943
+    Key: options.audio.music
+    Value: Music Volume
+  - EntryId: 75698164
+    SectionId: 70584943
+    Key: options.separator.video
+    Value: Video Settings
+  - EntryId: 62116141
+    SectionId: 70584943
+    Key: options.separator.pp
+    Value: Post Processing

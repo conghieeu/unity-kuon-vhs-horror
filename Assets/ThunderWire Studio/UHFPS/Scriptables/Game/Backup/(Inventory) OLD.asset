@@ -1,0 +1,1242 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f103652c3a01e8e4384704fbaec673b6, type: 3}
+  m_Name: (Inventory) OLD
+  m_EditorClassIdentifier: 
+  Items:
+  - guid: ba53a6ad76bb4513ba434a3b7542345a
+    item:
+      Title: Flashlight
+      Description: A powerful beam of light in a sturdy metal body, perfect for illuminating
+        dark areas and revealing hidden dangers.
+      Width: 2
+      Height: 1
+      Orientation: 0
+      FlipDirection: 0
+      Icon: {fileID: 21300000, guid: 2010aed8a8346634fa6873acedec8e34, type: 3}
+      ItemObject:
+        GUID: 
+        Object: {fileID: 0}
+      Settings:
+        isUsable: 1
+        isStackable: 0
+        isExaminable: 0
+        isCombinable: 0
+        isDroppable: 0
+        isDiscardable: 0
+        canBindShortcut: 1
+        alwaysShowQuantity: 0
+      UsableSettings:
+        usableType: 0
+        playerItemIndex: 4
+        healthPoints: 0
+        removeOnUse: 0
+        customData:
+          JsonData: 
+      Properties:
+        maxStack: 0
+      CombineSettings: []
+      LocalizationSettings:
+        titleKey: item.title.flashlight
+        descriptionKey: item.description.flashlight
+  - guid: 7a7939d3388c4c829637c9a69ed25442
+    item:
+      Title: Camcorder
+      Description: Illuminate the darkness. Equipped with night vision technology,
+        this camcorder is perfect for exploring and documenting in low light conditions.
+      Width: 2
+      Height: 2
+      Orientation: 0
+      FlipDirection: 0
+      Icon: {fileID: 21300000, guid: b866a89c768b95a459229b911f48a96f, type: 3}
+      ItemObject:
+        GUID: 
+        Object: {fileID: 0}
+      Settings:
+        isUsable: 1
+        isStackable: 0
+        isExaminable: 0
+        isCombinable: 0
+        isDroppable: 0
+        isDiscardable: 0
+        canBindShortcut: 1
+        alwaysShowQuantity: 0
+      UsableSettings:
+        usableType: 0
+        playerItemIndex: 0
+        healthPoints: 0
+        removeOnUse: 0
+        customData:
+          JsonData: 
+      Properties:
+        maxStack: 0
+      CombineSettings: []
+      LocalizationSettings:
+        titleKey: item.title.camcorder
+        descriptionKey: item.description.camcorder
+  - guid: cc6f1cc8ccdc4588b87a90062377e156
+    item:
+      Title: Lantern
+      Description: A reliable source of light for any adventurer. Lantern flame is
+        bright and steady, providing a comforting glow that illuminates your surroundings.
+      Width: 2
+      Height: 2
+      Orientation: 0
+      FlipDirection: 0
+      Icon: {fileID: 21300000, guid: fd04296af6404204491e5b6e2119a6fb, type: 3}
+      ItemObject:
+        GUID: 
+        Object: {fileID: 0}
+      Settings:
+        isUsable: 1
+        isStackable: 0
+        isExaminable: 0
+        isCombinable: 0
+        isDroppable: 0
+        isDiscardable: 0
+        canBindShortcut: 1
+        alwaysShowQuantity: 0
+      UsableSettings:
+        usableType: 0
+        playerItemIndex: 5
+        healthPoints: 0
+        removeOnUse: 0
+        customData:
+          JsonData: 
+      Properties:
+        maxStack: 0
+      CombineSettings: []
+      LocalizationSettings:
+        titleKey: item.title.lantern
+        descriptionKey: item.description.lantern
+  - guid: 0a1961f017ee421e9060b9c97dd2ef76
+    item:
+      Title: Lighter
+      Description: A reliable source of fire for any adventurer. With its compact
+        size and easy-to-use design, the lighter is a must-have item.
+      Width: 1
+      Height: 1
+      Orientation: 0
+      FlipDirection: 0
+      Icon: {fileID: 21300000, guid: ed20367e5ffe0564599c2199d5484b98, type: 3}
+      ItemObject:
+        GUID: 
+        Object: {fileID: 0}
+      Settings:
+        isUsable: 1
+        isStackable: 0
+        isExaminable: 0
+        isCombinable: 1
+        isDroppable: 0
+        isDiscardable: 0
+        canBindShortcut: 1
+        alwaysShowQuantity: 0
+      UsableSettings:
+        usableType: 0
+        playerItemIndex: 1
+        healthPoints: 0
+        removeOnUse: 0
+        customData:
+          JsonData: 
+      Properties:
+        maxStack: 0
+      CombineSettings:
+      - requiredCurrentAmount: 0
+        requiredSecondAmount: 0
+        resultItemAmount: 0
+        combineWithID: 6993e34dac744c23966afbcbba685cf9
+        resultCombineID: 
+        playerItemIndex: 2
+        inheritCustomData: 0
+        inheritFromSecond: 0
+        inheritKey: 
+        customData:
+          JsonData: 
+        isCrafting: 0
+        keepAfterCombine: 1
+        removeSecondItem: 0
+        eventAfterCombine: 0
+        selectAfterCombine: 1
+        haveCustomData: 0
+      LocalizationSettings:
+        titleKey: item.title.lighter
+        descriptionKey: item.description.lighter
+  - guid: 6993e34dac744c23966afbcbba685cf9
+    item:
+      Title: Candle
+      Description: Compact, yet valuable for light and warmth in the darkness with
+        its long-lasting burn time.
+      Width: 1
+      Height: 2
+      Orientation: 0
+      FlipDirection: 0
+      Icon: {fileID: 21300000, guid: db5b4c70b71ff85459b719ef8777186e, type: 3}
+      ItemObject:
+        GUID: 
+        Object: {fileID: 0}
+      Settings:
+        isUsable: 0
+        isStackable: 0
+        isExaminable: 0
+        isCombinable: 0
+        isDroppable: 0
+        isDiscardable: 0
+        canBindShortcut: 0
+        alwaysShowQuantity: 0
+      UsableSettings:
+        usableType: 0
+        playerItemIndex: 2
+        healthPoints: 0
+        removeOnUse: 0
+        customData:
+          JsonData: 
+      Properties:
+        maxStack: 0
+      CombineSettings: []
+      LocalizationSettings:
+        titleKey: item.title.candle
+        descriptionKey: item.description.candle
+  - guid: 5396a15e94a147a8832fda331a093529
+    item:
+      Title: Axe
+      Description: 'Sturdy wood-handled tool with a sharp metal blade, ideal for
+        chopping and potential self-defense.     '
+      Width: 1
+      Height: 2
+      Orientation: 0
+      FlipDirection: 0
+      Icon: {fileID: 21300000, guid: e2aeb4f88ac7d834db2ff041d526eab5, type: 3}
+      ItemObject:
+        GUID: 
+        Object: {fileID: 0}
+      Settings:
+        isUsable: 1
+        isStackable: 0
+        isExaminable: 0
+        isCombinable: 0
+        isDroppable: 0
+        isDiscardable: 0
+        canBindShortcut: 1
+        alwaysShowQuantity: 0
+      UsableSettings:
+        usableType: 0
+        playerItemIndex: 6
+        healthPoints: 0
+        removeOnUse: 0
+        customData:
+          JsonData: 
+      Properties:
+        maxStack: 0
+      CombineSettings: []
+      LocalizationSettings:
+        titleKey: item.title.axe
+        descriptionKey: item.description.axe
+  - guid: 59f0dbf8d803402380b5342aff68f188
+    item:
+      Title: Pocket Knife
+      Description: Compact folding blade, versatile for cutting tasks and close-quarters
+        defense. Always handy to have.
+      Width: 1
+      Height: 2
+      Orientation: 0
+      FlipDirection: 0
+      Icon: {fileID: 21300000, guid: 7d0057e1e4d7df746aac9f9414560d70, type: 3}
+      ItemObject:
+        GUID: 
+        Object: {fileID: 0}
+      Settings:
+        isUsable: 1
+        isStackable: 0
+        isExaminable: 0
+        isCombinable: 0
+        isDroppable: 0
+        isDiscardable: 0
+        canBindShortcut: 1
+        alwaysShowQuantity: 0
+      UsableSettings:
+        usableType: 0
+        playerItemIndex: 7
+        healthPoints: 0
+        removeOnUse: 0
+        customData:
+          JsonData: 
+      Properties:
+        maxStack: 0
+      CombineSettings: []
+      LocalizationSettings:
+        titleKey: item.title.pocketknife
+        descriptionKey: item.description.pocketknife
+  - guid: 896bd5e3b27745d884a827b90ce02fb7
+    item:
+      Title: Pistol
+      Description: A trusty sidearm for close-range combat. This powerful weapon
+        packs a punch and can be a lifesaver in dangerous situations.
+      Width: 3
+      Height: 2
+      Orientation: 0
+      FlipDirection: 0
+      Icon: {fileID: 21300000, guid: cd0a26acb9fb4544ca768220c625af0b, type: 3}
+      ItemObject:
+        GUID: 
+        Object: {fileID: 0}
+      Settings:
+        isUsable: 1
+        isStackable: 0
+        isExaminable: 0
+        isCombinable: 0
+        isDroppable: 0
+        isDiscardable: 0
+        canBindShortcut: 1
+        alwaysShowQuantity: 1
+      UsableSettings:
+        usableType: 0
+        playerItemIndex: 3
+        healthPoints: 0
+        removeOnUse: 0
+        customData:
+          JsonData: 
+      Properties:
+        maxStack: 0
+      CombineSettings: []
+      LocalizationSettings:
+        titleKey: item.title.pistol
+        descriptionKey: item.description.pistol
+  - guid: e504d12d72e249a898b3ae4b65604ae0
+    item:
+      Title: Alkaline Battery
+      Description: A compact and reliable source of power that provide long-lasting
+        energy and are perfect for powering flashlights, radios, and other essential
+        items.
+      Width: 1
+      Height: 1
+      Orientation: 0
+      FlipDirection: 0
+      Icon: {fileID: 21300000, guid: a7e637b8b4a1f904d920a7105e3f87c2, type: 3}
+      ItemObject:
+        GUID: 
+        Object: {fileID: 0}
+      Settings:
+        isUsable: 0
+        isStackable: 1
+        isExaminable: 0
+        isCombinable: 1
+        isDroppable: 0
+        isDiscardable: 0
+        canBindShortcut: 0
+        alwaysShowQuantity: 0
+      UsableSettings:
+        usableType: 0
+        playerItemIndex: -1
+        healthPoints: 0
+        removeOnUse: 0
+        customData:
+          JsonData: 
+      Properties:
+        maxStack: 0
+      CombineSettings:
+      - requiredCurrentAmount: 0
+        requiredSecondAmount: 0
+        resultItemAmount: 0
+        combineWithID: ba53a6ad76bb4513ba434a3b7542345a
+        resultCombineID: 
+        playerItemIndex: 0
+        inheritCustomData: 0
+        inheritFromSecond: 0
+        inheritKey: 
+        customData:
+          JsonData: 
+        isCrafting: 0
+        keepAfterCombine: 1
+        removeSecondItem: 0
+        eventAfterCombine: 1
+        selectAfterCombine: 0
+        haveCustomData: 0
+      LocalizationSettings:
+        titleKey: item.title.alkalinebattery
+        descriptionKey: item.description.alkalinebattery
+  - guid: 65b57fdc935246ad80bc2fe5a2434e54
+    item:
+      Title: Camera Battery
+      Description: Keep your camcorder camera powered up and ready to go with this
+        reliable battery. Designed to provide long-lasting energy.
+      Width: 1
+      Height: 1
+      Orientation: 0
+      FlipDirection: 0
+      Icon: {fileID: 21300000, guid: a1b524b63b24e2e489bcd255d778a348, type: 3}
+      ItemObject:
+        GUID: 
+        Object: {fileID: 0}
+      Settings:
+        isUsable: 0
+        isStackable: 1
+        isExaminable: 0
+        isCombinable: 1
+        isDroppable: 0
+        isDiscardable: 0
+        canBindShortcut: 0
+        alwaysShowQuantity: 0
+      UsableSettings:
+        usableType: 0
+        playerItemIndex: -1
+        healthPoints: 0
+        removeOnUse: 0
+        customData:
+          JsonData: 
+      Properties:
+        maxStack: 0
+      CombineSettings:
+      - requiredCurrentAmount: 0
+        requiredSecondAmount: 0
+        resultItemAmount: 0
+        combineWithID: 7a7939d3388c4c829637c9a69ed25442
+        resultCombineID: 
+        playerItemIndex: 0
+        inheritCustomData: 0
+        inheritFromSecond: 0
+        inheritKey: 
+        customData:
+          JsonData: 
+        isCrafting: 0
+        keepAfterCombine: 1
+        removeSecondItem: 0
+        eventAfterCombine: 1
+        selectAfterCombine: 0
+        haveCustomData: 0
+      LocalizationSettings:
+        titleKey: item.title.camerabattery
+        descriptionKey: item.description.camerabattery
+  - guid: 3905d98ae65b4984a9b8fe2e994d6ead
+    item:
+      Title: Petrol Oil
+      Description: A refined petroleum product commonly used as a fuel for lanterns
+        and lamps. It is a clear, colorless liquid that produces a bright, steady
+        flame when burned.
+      Width: 1
+      Height: 2
+      Orientation: 0
+      FlipDirection: 0
+      Icon: {fileID: 21300000, guid: cbc3de1cb9e937749926fc4135d0d565, type: 3}
+      ItemObject:
+        GUID: d1967a3246bd9e047b17fb288b68cccf
+        Object: {fileID: 3497057729131411850, guid: d1967a3246bd9e047b17fb288b68cccf, type: 3}
+      Settings:
+        isUsable: 0
+        isStackable: 1
+        isExaminable: 1
+        isCombinable: 1
+        isDroppable: 1
+        isDiscardable: 0
+        canBindShortcut: 0
+        alwaysShowQuantity: 0
+      UsableSettings:
+        usableType: 0
+        playerItemIndex: -1
+        healthPoints: 0
+        removeOnUse: 0
+        customData:
+          JsonData: 
+      Properties:
+        maxStack: 0
+      CombineSettings:
+      - requiredCurrentAmount: 0
+        requiredSecondAmount: 0
+        resultItemAmount: 0
+        combineWithID: cc6f1cc8ccdc4588b87a90062377e156
+        resultCombineID: 
+        playerItemIndex: 0
+        inheritCustomData: 0
+        inheritFromSecond: 0
+        inheritKey: 
+        customData:
+          JsonData: 
+        isCrafting: 0
+        keepAfterCombine: 1
+        removeSecondItem: 0
+        eventAfterCombine: 1
+        selectAfterCombine: 0
+        haveCustomData: 0
+      LocalizationSettings:
+        titleKey: item.title.petroloil
+        descriptionKey: item.description.petroloil
+  - guid: a89400ede61f4e26aae37610a18b01c9
+    item:
+      Title: Pistol Ammo
+      Description: Compatible with a variety of firearms. With its compact size and
+        high stopping power, 9mm ammo is perfect for close-range combat situations.
+      Width: 2
+      Height: 1
+      Orientation: 0
+      FlipDirection: 0
+      Icon: {fileID: 21300000, guid: 6e58a3349bfbf664f9cac314f2c04b18, type: 3}
+      ItemObject:
+        GUID: 
+        Object: {fileID: 0}
+      Settings:
+        isUsable: 0
+        isStackable: 1
+        isExaminable: 0
+        isCombinable: 0
+        isDroppable: 0
+        isDiscardable: 0
+        canBindShortcut: 0
+        alwaysShowQuantity: 1
+      UsableSettings:
+        usableType: 0
+        playerItemIndex: -1
+        healthPoints: 0
+        removeOnUse: 0
+        customData:
+          JsonData: 
+      Properties:
+        maxStack: 64
+      CombineSettings: []
+      LocalizationSettings:
+        titleKey: item.title.pistolammo
+        descriptionKey: item.description.pistolammo
+  - guid: 3f96ba077954472e85e3efd7ba5d650f
+    item:
+      Title: Pistol Flashlight
+      Description: Shed some light on any situation with this tactical attachment
+        for your pistol. It illuminates your target and reveals hidden dangers in
+        the darkness.
+      Width: 1
+      Height: 1
+      Orientation: 0
+      FlipDirection: 0
+      Icon: {fileID: 21300000, guid: f0e654fa74c042f41bb077085b17b0cf, type: 3}
+      ItemObject:
+        GUID: 
+        Object: {fileID: 0}
+      Settings:
+        isUsable: 0
+        isStackable: 0
+        isExaminable: 0
+        isCombinable: 1
+        isDroppable: 0
+        isDiscardable: 0
+        canBindShortcut: 0
+        alwaysShowQuantity: 0
+      UsableSettings:
+        usableType: 0
+        playerItemIndex: -1
+        healthPoints: 0
+        removeOnUse: 0
+        customData:
+          JsonData: 
+      Properties:
+        maxStack: 0
+      CombineSettings:
+      - requiredCurrentAmount: 0
+        requiredSecondAmount: 0
+        resultItemAmount: 0
+        combineWithID: 896bd5e3b27745d884a827b90ce02fb7
+        resultCombineID: 
+        playerItemIndex: 0
+        inheritCustomData: 0
+        inheritFromSecond: 0
+        inheritKey: 
+        customData:
+          JsonData: 
+        isCrafting: 0
+        keepAfterCombine: 1
+        removeSecondItem: 0
+        eventAfterCombine: 1
+        selectAfterCombine: 0
+        haveCustomData: 0
+      LocalizationSettings:
+        titleKey: item.title.pistolflashlight
+        descriptionKey: item.description.pistolflashlight
+  - guid: 9c45e9931ae9492dba1cf41854f95de0
+    item:
+      Title: Lockpick
+      Description: A handy tool for any adventurer, the lockpick can open a variety
+        of locks and doors.
+      Width: 1
+      Height: 1
+      Orientation: 0
+      FlipDirection: 0
+      Icon: {fileID: 21300000, guid: 03830137119a4c74bb36000faee0dfeb, type: 3}
+      ItemObject:
+        GUID: 
+        Object: {fileID: 0}
+      Settings:
+        isUsable: 0
+        isStackable: 1
+        isExaminable: 0
+        isCombinable: 0
+        isDroppable: 0
+        isDiscardable: 0
+        canBindShortcut: 0
+        alwaysShowQuantity: 0
+      UsableSettings:
+        usableType: 0
+        playerItemIndex: -1
+        healthPoints: 0
+        removeOnUse: 0
+        customData:
+          JsonData: 
+      Properties:
+        maxStack: 0
+      CombineSettings: []
+      LocalizationSettings:
+        titleKey: item.title.lockpick
+        descriptionKey: item.description.lockpick
+  - guid: 277b6aee2d4b47aaa655f284bf75bf94
+    item:
+      Title: Fuse
+      Description: An essential item for fixing electrical equipment and powering
+        machinery. With its compact size, it's easy to carry in your inventory.
+      Width: 1
+      Height: 2
+      Orientation: 0
+      FlipDirection: 0
+      Icon: {fileID: 21300000, guid: 2eb70c48ee788e840b4f64fcc4df4cad, type: 3}
+      ItemObject:
+        GUID: 
+        Object: {fileID: 0}
+      Settings:
+        isUsable: 0
+        isStackable: 1
+        isExaminable: 0
+        isCombinable: 0
+        isDroppable: 0
+        isDiscardable: 0
+        canBindShortcut: 0
+        alwaysShowQuantity: 0
+      UsableSettings:
+        usableType: 0
+        playerItemIndex: -1
+        healthPoints: 0
+        removeOnUse: 0
+        customData:
+          JsonData: 
+      Properties:
+        maxStack: 0
+      CombineSettings: []
+      LocalizationSettings:
+        titleKey: item.title.fuse
+        descriptionKey: item.description.fuse
+  - guid: 57b275c2799549b2b64d8f3dc6eeeda4
+    item:
+      Title: Valve
+      Description: An essential component for controlling the flow of liquids and
+        gases in pipes and machinery.
+      Width: 2
+      Height: 2
+      Orientation: 0
+      FlipDirection: 0
+      Icon: {fileID: 21300000, guid: 5cba04aee5011fa459f4b4f6cd9cf73b, type: 3}
+      ItemObject:
+        GUID: 
+        Object: {fileID: 0}
+      Settings:
+        isUsable: 0
+        isStackable: 0
+        isExaminable: 0
+        isCombinable: 0
+        isDroppable: 0
+        isDiscardable: 0
+        canBindShortcut: 0
+        alwaysShowQuantity: 0
+      UsableSettings:
+        usableType: 0
+        playerItemIndex: -1
+        healthPoints: 0
+        removeOnUse: 0
+        customData:
+          JsonData: 
+      Properties:
+        maxStack: 0
+      CombineSettings: []
+      LocalizationSettings:
+        titleKey: item.title.valve
+        descriptionKey: item.description.valve
+  - guid: 2e96a8436e6e4cc1a3238e1a70f4ee2e
+    item:
+      Title: VHS Cassette
+      Description: A classic, durable format for video recording and archiving memories
+        or documenting important events.
+      Width: 1
+      Height: 1
+      Orientation: 0
+      FlipDirection: 0
+      Icon: {fileID: 21300000, guid: 536374a5adf6d2d48a1f7fc84f1c60b5, type: 3}
+      ItemObject:
+        GUID: 
+        Object: {fileID: 0}
+      Settings:
+        isUsable: 0
+        isStackable: 0
+        isExaminable: 0
+        isCombinable: 0
+        isDroppable: 0
+        isDiscardable: 0
+        canBindShortcut: 0
+        alwaysShowQuantity: 0
+      UsableSettings:
+        usableType: 0
+        playerItemIndex: -1
+        healthPoints: 0
+        removeOnUse: 0
+        customData:
+          JsonData: 
+      Properties:
+        maxStack: 0
+      CombineSettings: []
+      LocalizationSettings:
+        titleKey: item.title.vhscassette
+        descriptionKey: item.description.vhscassette
+  - guid: 21cc6375d5614192aac1fedce6147cfa
+    item:
+      Title: Red Keycard
+      Description: A high-security access card that grants entry to restricted areas.
+      Width: 1
+      Height: 1
+      Orientation: 0
+      FlipDirection: 0
+      Icon: {fileID: 21300000, guid: ad0e8064004559d42bf4fc0f706648cb, type: 3}
+      ItemObject:
+        GUID: 
+        Object: {fileID: 0}
+      Settings:
+        isUsable: 0
+        isStackable: 0
+        isExaminable: 0
+        isCombinable: 0
+        isDroppable: 0
+        isDiscardable: 0
+        canBindShortcut: 0
+        alwaysShowQuantity: 0
+      UsableSettings:
+        usableType: 0
+        playerItemIndex: -1
+        healthPoints: 0
+        removeOnUse: 0
+        customData:
+          JsonData: 
+      Properties:
+        maxStack: 0
+      CombineSettings: []
+      LocalizationSettings:
+        titleKey: item.title.redkeycard
+        descriptionKey: item.description.redkeycard
+  - guid: 96cdd54e574046aeb73adf165af2a6f5
+    item:
+      Title: Green Keycard
+      Description: An access card that allows entry to various secure locations.
+      Width: 1
+      Height: 1
+      Orientation: 0
+      FlipDirection: 0
+      Icon: {fileID: 21300000, guid: e1c7e22c95805a8458fef07138e95615, type: 3}
+      ItemObject:
+        GUID: 
+        Object: {fileID: 0}
+      Settings:
+        isUsable: 0
+        isStackable: 0
+        isExaminable: 0
+        isCombinable: 0
+        isDroppable: 0
+        isDiscardable: 0
+        canBindShortcut: 0
+        alwaysShowQuantity: 0
+      UsableSettings:
+        usableType: 0
+        playerItemIndex: -1
+        healthPoints: 0
+        removeOnUse: 0
+        customData:
+          JsonData: 
+      Properties:
+        maxStack: 0
+      CombineSettings: []
+      LocalizationSettings:
+        titleKey: item.title.greenkeycard
+        descriptionKey: item.description.greenkeycard
+  - guid: b904b6ac01b946cab96443b9c4a75eb4
+    item:
+      Title: Gunpowder
+      Description: A volatile black powder used for ammunition and explosives. Combine
+        with scrap to create a pistol ammo.
+      Width: 1
+      Height: 1
+      Orientation: 0
+      FlipDirection: 0
+      Icon: {fileID: 21300000, guid: d8b1febfc96a01f4b856070d3ceebd44, type: 3}
+      ItemObject:
+        GUID: 
+        Object: {fileID: 0}
+      Settings:
+        isUsable: 0
+        isStackable: 1
+        isExaminable: 0
+        isCombinable: 1
+        isDroppable: 0
+        isDiscardable: 1
+        canBindShortcut: 0
+        alwaysShowQuantity: 0
+      UsableSettings:
+        usableType: 0
+        playerItemIndex: -1
+        healthPoints: 0
+        removeOnUse: 0
+        customData:
+          JsonData: 
+      Properties:
+        maxStack: 64
+      CombineSettings:
+      - requiredCurrentAmount: 5
+        requiredSecondAmount: 1
+        resultItemAmount: 10
+        combineWithID: 29901ad3ad2a4edf828062ef0684be91
+        resultCombineID: a89400ede61f4e26aae37610a18b01c9
+        playerItemIndex: 0
+        inheritCustomData: 0
+        inheritFromSecond: 0
+        inheritKey: 
+        customData:
+          JsonData: 
+        isCrafting: 1
+        keepAfterCombine: 0
+        removeSecondItem: 0
+        eventAfterCombine: 0
+        selectAfterCombine: 0
+        haveCustomData: 0
+      LocalizationSettings:
+        titleKey: item.title.gunpowder
+        descriptionKey: item.description.gunpowder
+  - guid: 29901ad3ad2a4edf828062ef0684be91
+    item:
+      Title: Scrap
+      Description: A collection of miscellaneous metal pieces. Useful for crafting
+        and repairs.
+      Width: 1
+      Height: 1
+      Orientation: 0
+      FlipDirection: 0
+      Icon: {fileID: 21300000, guid: cdd9523cd2fa1454b8705c9a9c661c5a, type: 3}
+      ItemObject:
+        GUID: 
+        Object: {fileID: 0}
+      Settings:
+        isUsable: 0
+        isStackable: 1
+        isExaminable: 0
+        isCombinable: 0
+        isDroppable: 0
+        isDiscardable: 1
+        canBindShortcut: 0
+        alwaysShowQuantity: 0
+      UsableSettings:
+        usableType: 0
+        playerItemIndex: -1
+        healthPoints: 0
+        removeOnUse: 0
+        customData:
+          JsonData: 
+      Properties:
+        maxStack: 64
+      CombineSettings: []
+      LocalizationSettings:
+        titleKey: item.title.scrap
+        descriptionKey: item.description.scrap
+  - guid: 79d887af99bb41599d26603efb8d704f
+    item:
+      Title: First AID KIT
+      Description: A vital survival tool packed with essential medical supplies.
+        Use to restore health and treat minor injuries. Useful in emergencies.
+      Width: 2
+      Height: 2
+      Orientation: 0
+      FlipDirection: 0
+      Icon: {fileID: 21300000, guid: ad2689bf3d9781c4d987816a8af5b48a, type: 3}
+      ItemObject:
+        GUID: 
+        Object: {fileID: 0}
+      Settings:
+        isUsable: 1
+        isStackable: 1
+        isExaminable: 0
+        isCombinable: 0
+        isDroppable: 0
+        isDiscardable: 1
+        canBindShortcut: 0
+        alwaysShowQuantity: 0
+      UsableSettings:
+        usableType: 1
+        playerItemIndex: -1
+        healthPoints: 100
+        removeOnUse: 0
+        customData:
+          JsonData: 
+      Properties:
+        maxStack: 2
+      CombineSettings: []
+      LocalizationSettings:
+        titleKey: item.title.firstaidkit
+        descriptionKey: item.description.firstaidkit
+  - guid: 4361f4a241d64621a30135a552163296
+    item:
+      Title: Medical Oil
+      Description: Effective, fast-acting drug. It is used to alleviate a variety
+        of illnesses, increase the speed of recovery, and boost health at critical
+        moments.
+      Width: 1
+      Height: 2
+      Orientation: 0
+      FlipDirection: 0
+      Icon: {fileID: 21300000, guid: 599331f07ca38f74792556254a78fe15, type: 3}
+      ItemObject:
+        GUID: 
+        Object: {fileID: 0}
+      Settings:
+        isUsable: 1
+        isStackable: 1
+        isExaminable: 0
+        isCombinable: 1
+        isDroppable: 0
+        isDiscardable: 1
+        canBindShortcut: 0
+        alwaysShowQuantity: 0
+      UsableSettings:
+        usableType: 1
+        playerItemIndex: -1
+        healthPoints: 35
+        removeOnUse: 0
+        customData:
+          JsonData: 
+      Properties:
+        maxStack: 3
+      CombineSettings:
+      - requiredCurrentAmount: 0
+        requiredSecondAmount: 0
+        resultItemAmount: 0
+        combineWithID: cf13f3bc791848a8aea27460ef8698b2
+        resultCombineID: 4705720836b0423c85205c0451f666a1
+        playerItemIndex: 0
+        inheritCustomData: 0
+        inheritFromSecond: 0
+        inheritKey: 
+        customData:
+          JsonData: 
+        isCrafting: 0
+        keepAfterCombine: 0
+        removeSecondItem: 0
+        eventAfterCombine: 0
+        selectAfterCombine: 0
+        haveCustomData: 0
+      LocalizationSettings:
+        titleKey: item.title.medicaloil
+        descriptionKey: item.description.medicaloil
+  - guid: cf13f3bc791848a8aea27460ef8698b2
+    item:
+      Title: Medical Herb
+      Description: Rare and powerful flora with healing properties. It is used to
+        restore a moderate amount of health or to make powerful healing potions and
+        medicines.
+      Width: 1
+      Height: 2
+      Orientation: 0
+      FlipDirection: 0
+      Icon: {fileID: 21300000, guid: f2734ea81e9dcd741870851508bd3592, type: 3}
+      ItemObject:
+        GUID: 
+        Object: {fileID: 0}
+      Settings:
+        isUsable: 1
+        isStackable: 1
+        isExaminable: 0
+        isCombinable: 1
+        isDroppable: 0
+        isDiscardable: 1
+        canBindShortcut: 0
+        alwaysShowQuantity: 0
+      UsableSettings:
+        usableType: 1
+        playerItemIndex: -1
+        healthPoints: 15
+        removeOnUse: 0
+        customData:
+          JsonData: 
+      Properties:
+        maxStack: 5
+      CombineSettings:
+      - requiredCurrentAmount: 0
+        requiredSecondAmount: 0
+        resultItemAmount: 0
+        combineWithID: 4361f4a241d64621a30135a552163296
+        resultCombineID: 4705720836b0423c85205c0451f666a1
+        playerItemIndex: 0
+        inheritCustomData: 0
+        inheritFromSecond: 0
+        inheritKey: 
+        customData:
+          JsonData: 
+        isCrafting: 0
+        keepAfterCombine: 0
+        removeSecondItem: 0
+        eventAfterCombine: 0
+        selectAfterCombine: 0
+        haveCustomData: 0
+      LocalizationSettings:
+        titleKey: item.title.medicalherb
+        descriptionKey: item.description.medicalherb
+  - guid: 4705720836b0423c85205c0451f666a1
+    item:
+      Title: Healing Potion
+      Description: A powerful concoction made from Medical Oil and Medical Herb.
+        Provides quick and significant health boost.
+      Width: 1
+      Height: 2
+      Orientation: 0
+      FlipDirection: 0
+      Icon: {fileID: 21300000, guid: 72e0a50274940f24e9f97a26002c9a46, type: 3}
+      ItemObject:
+        GUID: 
+        Object: {fileID: 0}
+      Settings:
+        isUsable: 1
+        isStackable: 1
+        isExaminable: 0
+        isCombinable: 0
+        isDroppable: 0
+        isDiscardable: 1
+        canBindShortcut: 0
+        alwaysShowQuantity: 0
+      UsableSettings:
+        usableType: 1
+        playerItemIndex: -1
+        healthPoints: 75
+        removeOnUse: 0
+        customData:
+          JsonData: 
+      Properties:
+        maxStack: 4
+      CombineSettings: []
+      LocalizationSettings:
+        titleKey: item.title.healingpotion
+        descriptionKey: item.description.healingpotion
+  - guid: b70a06636e824c48a8631756ccb04b3c
+    item:
+      Title: Key 01
+      Description: A generic, yet mysterious key with an unknown use. Keep it on
+        hand, as it may unlock doors, chests, or secrets yet to be discovered.
+      Width: 1
+      Height: 1
+      Orientation: 0
+      FlipDirection: 0
+      Icon: {fileID: 21300000, guid: 5bbd29b842d27754596feeb5f711b24a, type: 3}
+      ItemObject:
+        GUID: 
+        Object: {fileID: 0}
+      Settings:
+        isUsable: 0
+        isStackable: 0
+        isExaminable: 0
+        isCombinable: 0
+        isDroppable: 0
+        isDiscardable: 1
+        canBindShortcut: 0
+        alwaysShowQuantity: 0
+      UsableSettings:
+        usableType: 0
+        playerItemIndex: -1
+        healthPoints: 0
+        removeOnUse: 0
+        customData:
+          JsonData: 
+      Properties:
+        maxStack: 0
+      CombineSettings: []
+      LocalizationSettings:
+        titleKey: item.title.key
+        descriptionKey: item.description.key
+  - guid: 12bb84ecda3946579a8db52385d1f86b
+    item:
+      Title: Key 02
+      Description: A generic, yet mysterious key with an unknown use. Keep it on
+        hand, as it may unlock doors, chests, or secrets yet to be discovered.
+      Width: 1
+      Height: 1
+      Orientation: 0
+      FlipDirection: 0
+      Icon: {fileID: 21300000, guid: af115a1c0c170204f8bde12e8c626416, type: 3}
+      ItemObject:
+        GUID: 
+        Object: {fileID: 0}
+      Settings:
+        isUsable: 0
+        isStackable: 0
+        isExaminable: 0
+        isCombinable: 0
+        isDroppable: 0
+        isDiscardable: 1
+        canBindShortcut: 0
+        alwaysShowQuantity: 0
+      UsableSettings:
+        usableType: 0
+        playerItemIndex: -1
+        healthPoints: 0
+        removeOnUse: 0
+        customData:
+          JsonData: 
+      Properties:
+        maxStack: 0
+      CombineSettings: []
+      LocalizationSettings:
+        titleKey: item.title.key
+        descriptionKey: item.description.key
+  - guid: eb63b2ffe5af4b8cb8396f2d6eae67e5
+    item:
+      Title: Key 03
+      Description: A generic, yet mysterious key with an unknown use. Keep it on
+        hand, as it may unlock doors, chests, or secrets yet to be discovered.
+      Width: 1
+      Height: 1
+      Orientation: 0
+      FlipDirection: 0
+      Icon: {fileID: 21300000, guid: 17b81cd23576da14699ba19b583cd910, type: 3}
+      ItemObject:
+        GUID: 
+        Object: {fileID: 0}
+      Settings:
+        isUsable: 0
+        isStackable: 0
+        isExaminable: 0
+        isCombinable: 0
+        isDroppable: 0
+        isDiscardable: 1
+        canBindShortcut: 0
+        alwaysShowQuantity: 0
+      UsableSettings:
+        usableType: 0
+        playerItemIndex: -1
+        healthPoints: 0
+        removeOnUse: 0
+        customData:
+          JsonData: 
+      Properties:
+        maxStack: 0
+      CombineSettings: []
+      LocalizationSettings:
+        titleKey: item.title.key
+        descriptionKey: item.description.key
+  - guid: 1a62d00e739445248211bcfbc6189138
+    item:
+      Title: Key 04
+      Description: A generic, yet mysterious key with an unknown use. Keep it on
+        hand, as it may unlock doors, chests, or secrets yet to be discovered.
+      Width: 1
+      Height: 1
+      Orientation: 0
+      FlipDirection: 0
+      Icon: {fileID: 21300000, guid: 7944d3858274a354fbf45199a2681de7, type: 3}
+      ItemObject:
+        GUID: 
+        Object: {fileID: 0}
+      Settings:
+        isUsable: 0
+        isStackable: 0
+        isExaminable: 0
+        isCombinable: 0
+        isDroppable: 0
+        isDiscardable: 1
+        canBindShortcut: 0
+        alwaysShowQuantity: 0
+      UsableSettings:
+        usableType: 0
+        playerItemIndex: -1
+        healthPoints: 0
+        removeOnUse: 0
+        customData:
+          JsonData: 
+      Properties:
+        maxStack: 0
+      CombineSettings: []
+      LocalizationSettings:
+        titleKey: item.title.key
+        descriptionKey: item.description.key
+  - guid: 355bd6991b46488ba4407ea02506ee95
+    item:
+      Title: Keys
+      Description: Assorted metal keys on a ring. Opens various locks. Essential
+        for access and exploration.
+      Width: 1
+      Height: 1
+      Orientation: 0
+      FlipDirection: 0
+      Icon: {fileID: 21300000, guid: 210db75816f8a53468416f0fa4c51acd, type: 3}
+      ItemObject:
+        GUID: 
+        Object: {fileID: 0}
+      Settings:
+        isUsable: 0
+        isStackable: 0
+        isExaminable: 0
+        isCombinable: 0
+        isDroppable: 0
+        isDiscardable: 1
+        canBindShortcut: 0
+        alwaysShowQuantity: 0
+      UsableSettings:
+        usableType: 0
+        playerItemIndex: -1
+        healthPoints: 0
+        removeOnUse: 0
+        customData:
+          JsonData: 
+      Properties:
+        maxStack: 0
+      CombineSettings: []
+      LocalizationSettings:
+        titleKey: item.title.keys
+        descriptionKey: item.description.keys
+  - guid: 0044e6e7fcbd4fd0925756aea0f621ab
+    item:
+      Title: Fuel Canister
+      Description: 'A durable, metal canister filled with a high-efficiency liquid
+        fuel designed specifically to refuel electric generators.
+
+        Fuel litres:
+        {fuel_litres}'
+      Width: 2
+      Height: 2
+      Orientation: 0
+      FlipDirection: 0
+      Icon: {fileID: 21300000, guid: 06efbcfe479b7c947addcab06f055d24, type: 3}
+      ItemObject:
+        GUID: 6c3b42d9375604c4dbd796f63544133e
+        Object: {fileID: 7243635044483938932, guid: 6c3b42d9375604c4dbd796f63544133e, type: 3}
+      Settings:
+        isUsable: 0
+        isStackable: 0
+        isExaminable: 0
+        isCombinable: 0
+        isDroppable: 1
+        isDiscardable: 0
+        canBindShortcut: 0
+        alwaysShowQuantity: 0
+      UsableSettings:
+        usableType: 0
+        playerItemIndex: -1
+        healthPoints: 0
+        removeOnUse: 0
+        customData:
+          JsonData: 
+      Properties:
+        maxStack: 0
+      CombineSettings: []
+      LocalizationSettings:
+        titleKey: item.title.fuel
+        descriptionKey: item.description.fuel

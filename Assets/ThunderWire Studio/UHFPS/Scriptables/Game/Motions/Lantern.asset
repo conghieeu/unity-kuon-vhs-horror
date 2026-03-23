@@ -1,0 +1,216 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1c82194d6ca39a41bf53b0beaccf10d, type: 3}
+  m_Name: Lantern
+  m_EditorClassIdentifier: 
+  StateMotions:
+  - StateID: Default
+    Motions:
+    - rid: 9014944253931421715
+    - rid: 9014944253931421717
+    - rid: 9014944253931421718
+    - rid: 9014944253931421719
+    - rid: 8816070111072354308
+  - StateID: Walk
+    Motions:
+    - rid: 9014944253931421720
+  - StateID: Run
+    Motions:
+    - rid: 9014944253931421721
+  - StateID: Crouch
+    Motions:
+    - rid: 9014944253931421722
+  references:
+    version: 2
+    RefIds:
+    - rid: 8816070111072354308
+      type: {class: LookMotion, ns: UHFPS.Runtime, asm: Assembly-CSharp}
+      data:
+        Weight: 1
+        PositionSpringSettings:
+          Damping: 10
+          Stiffness: 80
+          Mass: 1
+          Speed: 1
+        RotationSpringSettings:
+          Damping: 15
+          Stiffness: 80
+          Mass: 1
+          Speed: 1
+        MaxSwayLength: 2
+        PositionSway: {x: 0.35, y: 0.3, z: 0}
+        PositionMultiplier: 1.5
+        RotationSway: {x: 5, y: 2, z: 2}
+        RotationMultiplier: 2
+    - rid: 9014944253931421715
+      type: {class: BreathMotion, ns: UHFPS.Runtime, asm: Assembly-CSharp}
+      data:
+        Weight: 1
+        breathingPattern:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 0
+            inSlope: 2
+            outSlope: 2
+            tangentMode: 34
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 0.5
+            value: 1
+            inSlope: -1.5
+            outSlope: -1.5
+            tangentMode: 34
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 0.8
+            value: -0.5
+            inSlope: -2
+            outSlope: -2
+            tangentMode: 34
+            weightedMode: 0
+            inWeight: 0.33333334
+            outWeight: 0.33333334
+          - serializedVersion: 3
+            time: 1.3
+            value: 0
+            inSlope: 2.160538
+            outSlope: 2.160538
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0.16874075
+            outWeight: 0.33333334
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        breathingRate: 0.4
+        breathingIntensity: 0.002
+    - rid: 9014944253931421717
+      type: {class: NoiseMotion, ns: UHFPS.Runtime, asm: Assembly-CSharp}
+      data:
+        Weight: 1
+        PositionSpringSettings:
+          Damping: 10
+          Stiffness: 100
+          Mass: 1
+          Speed: 1
+        RotationSpringSettings:
+          Damping: 10
+          Stiffness: 100
+          Mass: 1
+          Speed: 1
+        noiseSpeed: 0.75
+        noiseJitter: 0.5
+        positionAmplitude: {x: 0, y: 0, z: 0}
+        rotationAmplitude: {x: 1, y: 1, z: 1}
+    - rid: 9014944253931421718
+      type: {class: JumpMotion, ns: UHFPS.Runtime, asm: Assembly-CSharp}
+      data:
+        Weight: 1
+        PositionSpringSettings:
+          Damping: 12
+          Stiffness: 100
+          Mass: 1
+          Speed: 1
+        RotationSpringSettings:
+          Damping: 12
+          Stiffness: 100
+          Mass: 1
+          Speed: 1
+        jumpSettings:
+          positionOffset: {x: 0, y: -0.05, z: 0}
+          rotationOffset: {x: 10, y: 0, z: 0}
+          duration: 0.1
+    - rid: 9014944253931421719
+      type: {class: LandMotion, ns: UHFPS.Runtime, asm: Assembly-CSharp}
+      data:
+        Weight: 1
+        PositionSpringSettings:
+          Damping: 10
+          Stiffness: 100
+          Mass: 1
+          Speed: 1
+        RotationSpringSettings:
+          Damping: 10
+          Stiffness: 100
+          Mass: 1
+          Speed: 1
+        landSettings:
+          positionOffset: {x: 0, y: -0.025, z: 0}
+          rotationOffset: {x: 0, y: 0, z: 0}
+          duration: 0.1
+        minActivateAirTime: 0.5
+        maxImpactAirTime: 0.25
+        positionMultiplier: 1
+        rotationMultiplier: 1
+    - rid: 9014944253931421720
+      type: {class: BobMotion, ns: UHFPS.Runtime, asm: Assembly-CSharp}
+      data:
+        Weight: 0.1
+        PositionSpringSettings:
+          Damping: 10
+          Stiffness: 175
+          Mass: 1
+          Speed: 1
+        RotationSpringSettings:
+          Damping: 10
+          Stiffness: 175
+          Mass: 1
+          Speed: 1
+        bobbingSpeed: 4.75
+        resetSpeed: 10
+        playerStopSpeed: 0.5
+        positionAmplitude: {x: 0.025, y: 0.025, z: 0}
+        rotationAmplitude: {x: -0.2, y: 0.05, z: 0.2}
+    - rid: 9014944253931421721
+      type: {class: BobMotion, ns: UHFPS.Runtime, asm: Assembly-CSharp}
+      data:
+        Weight: 1
+        PositionSpringSettings:
+          Damping: 12
+          Stiffness: 175
+          Mass: 1
+          Speed: 1
+        RotationSpringSettings:
+          Damping: 10
+          Stiffness: 175
+          Mass: 1
+          Speed: 1
+        bobbingSpeed: 8.75
+        resetSpeed: 2
+        playerStopSpeed: 0.5
+        positionAmplitude: {x: 0.005, y: 0.0085, z: 0}
+        rotationAmplitude: {x: 0, y: 0.05, z: 0}
+    - rid: 9014944253931421722
+      type: {class: BobMotion, ns: UHFPS.Runtime, asm: Assembly-CSharp}
+      data:
+        Weight: 1
+        PositionSpringSettings:
+          Damping: 10
+          Stiffness: 75
+          Mass: 1
+          Speed: 1
+        RotationSpringSettings:
+          Damping: 10
+          Stiffness: 75
+          Mass: 1
+          Speed: 1
+        bobbingSpeed: 2.75
+        resetSpeed: 2
+        playerStopSpeed: 0.5
+        positionAmplitude: {x: 0.003, y: 0.004, z: 0}
+        rotationAmplitude: {x: -1, y: 0.1, z: 0.5}
