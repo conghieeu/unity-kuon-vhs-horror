@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d312663c8cd23642992b5d25cd832bb, type: 3}
+  m_Name: (Surface) Flesh
+  m_EditorClassIdentifier: 
+  SurfaceTag:
+    tag: Flesh
+  SurfaceTextures: []
+  SurfaceFriction: 1
+  FootstepsVolume: 1
+  SurfaceFootsteps: []
+  LandStepsVolume: 1
+  SurfaceLandSteps: []
+  BulletImpactVolume: 1
+  SurfaceBulletImpact: []
+  MeleeImpactVolume: 1
+  SurfaceMeleeImpact:
+  - {fileID: 8300000, guid: c7446043023e09d42b26d64fe9b11f69, type: 3}
+  SurfaceBulletmarks:
+  - {fileID: 1600271068352839550, guid: 09a3afe6e0f921e4dae0109afdc9ebd6, type: 3}
+  SurfaceMeleemarks:
+  - {fileID: 2696424158191817664, guid: 06070a6140793ef45af1b1db95b72a8d, type: 3}

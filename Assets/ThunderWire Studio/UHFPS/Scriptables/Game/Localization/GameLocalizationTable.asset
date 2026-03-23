@@ -1,0 +1,546 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b8003079a7f4c54f9326bd1838f057e, type: 3}
+  m_Name: GameLocalizationTable
+  m_EditorClassIdentifier: 
+  Languages:
+  - {fileID: 11400000, guid: 19feb369ac522004699427d321f002d5, type: 2}
+  TableSheet:
+  - Id: 40893112
+    SectionName: input
+    SectionSheet:
+    - Id: 15172027
+      Key: action.movement.up
+    - Id: 48836686
+      Key: action.movement.down
+    - Id: 42985932
+      Key: action.movement.left
+    - Id: 89388492
+      Key: action.movement.right
+    - Id: 91879250
+      Key: action.sprint
+    - Id: 72077938
+      Key: action.jump
+    - Id: 26866831
+      Key: action.crouch
+    - Id: 71917174
+      Key: action.use
+    - Id: 99249963
+      Key: action.examine
+    - Id: 13648412
+      Key: action.fire
+    - Id: 85843821
+      Key: action.reload
+    - Id: 81674536
+      Key: action.ads
+    - Id: 31740936
+      Key: action.equip1
+    - Id: 59043625
+      Key: action.equip2
+    - Id: 40362316
+      Key: action.equip3
+    - Id: 81721455
+      Key: action.equip4
+    - Id: 81699452
+      Key: action.unequip
+    - Id: 74840067
+      Key: action.lean.positive
+    - Id: 54335613
+      Key: action.lean.negative
+    - Id: 72003672
+      Key: action.flashlight
+  - Id: 84607436
+    SectionName: menu
+    SectionSheet:
+    - Id: 12834590
+      Key: title.loadgame
+    - Id: 19909919
+      Key: title.options
+    - Id: 38947490
+      Key: title.pause
+    - Id: 21255646
+      Key: button.resume
+    - Id: 67914274
+      Key: button.continue
+    - Id: 79667033
+      Key: button.newgame
+    - Id: 18226444
+      Key: button.loadgame
+    - Id: 55566430
+      Key: button.savegame
+    - Id: 31415227
+      Key: button.options
+    - Id: 51656323
+      Key: button.quit
+    - Id: 86796110
+      Key: button.restart
+    - Id: 24352737
+      Key: button.mainmenu
+    - Id: 25663424
+      Key: button.back
+    - Id: 33340621
+      Key: button.load
+    - Id: 35886959
+      Key: button.delete
+    - Id: 48769564
+      Key: button.apply
+    - Id: 99361921
+      Key: button.reset
+    - Id: 78931432
+      Key: tooltip.continue
+    - Id: 91768521
+      Key: tooltip.resume
+    - Id: 85618282
+      Key: tooltip.newgame
+    - Id: 55974627
+      Key: tooltip.loadgame
+    - Id: 21595021
+      Key: tooltip.savegame
+    - Id: 30213956
+      Key: tooltip.options
+    - Id: 33214590
+      Key: tooltip.quit
+    - Id: 78530917
+      Key: tooltip.restart
+    - Id: 81988112
+      Key: tooltip.mainmenu
+    - Id: 34760757
+      Key: input.rebind
+    - Id: 44010618
+      Key: input.none
+    - Id: 91370004
+      Key: panel.loadgame
+    - Id: 66529808
+      Key: panel.keybindings
+    - Id: 73309676
+      Key: panel.emptysaves
+    - Id: 50945637
+      Key: text.died
+  - Id: 22328812
+    SectionName: loading
+    SectionSheet:
+    - Id: 75562718
+      Key: description.demoscene
+    - Id: 48298615
+      Key: description.demoscene2
+    - Id: 99899103
+      Key: description.demoscene3
+  - Id: 59169988
+    SectionName: titles
+    SectionSheet:
+    - Id: 61351216
+      Key: putaway
+    - Id: 36173073
+      Key: take
+    - Id: 46183422
+      Key: rotate
+    - Id: 17498606
+      Key: loot
+    - Id: 61429632
+      Key: inserttape
+    - Id: 72865766
+      Key: poweron
+    - Id: 52157472
+      Key: poweroff
+    - Id: 80313860
+      Key: ejecttape
+    - Id: 66958135
+      Key: play
+    - Id: 61574451
+      Key: pause
+    - Id: 30659339
+      Key: rewind
+    - Id: 66300923
+      Key: fastforward
+    - Id: 84772315
+      Key: lockpicks
+  - Id: 69673941
+    SectionName: interactions
+    SectionSheet:
+    - Id: 94577514
+      Key: use
+    - Id: 61453117
+      Key: use.hold
+    - Id: 10293257
+      Key: grab
+    - Id: 95058002
+      Key: examine
+    - Id: 92590947
+      Key: travel
+    - Id: 95255333
+      Key: configure
+    - Id: 82492818
+      Key: insertfuse
+    - Id: 28681382
+      Key: code
+    - Id: 70511385
+      Key: card
+    - Id: 48925815
+      Key: switch
+    - Id: 19195279
+      Key: switchon
+    - Id: 78764854
+      Key: switchoff
+    - Id: 64575804
+      Key: poweron
+    - Id: 86485218
+      Key: poweroff
+    - Id: 90802756
+      Key: rotate
+    - Id: 69712916
+      Key: open
+    - Id: 54189661
+      Key: close
+    - Id: 53506186
+      Key: extinguish
+    - Id: 50724348
+      Key: kindle
+    - Id: 24862863
+      Key: refuel.hold
+    - Id: 89532940
+      Key: hide
+    - Id: 17034738
+      Key: unhide
+  - Id: 11317371
+    SectionName: objects
+    SectionSheet:
+    - Id: 68821941
+      Key: circuit
+    - Id: 14979172
+      Key: fusebox
+    - Id: 62776564
+      Key: keypad
+    - Id: 14413967
+      Key: keycard
+    - Id: 96136757
+      Key: padlock
+    - Id: 24142317
+      Key: lever
+    - Id: 31363607
+      Key: paneldoor
+    - Id: 67919224
+      Key: door
+    - Id: 20417118
+      Key: valve
+    - Id: 42204335
+      Key: drawer
+    - Id: 10559435
+      Key: trunk
+    - Id: 71847511
+      Key: backpack
+    - Id: 38384735
+      Key: crate
+    - Id: 83502262
+      Key: barrel
+    - Id: 58655478
+      Key: brick
+    - Id: 28035682
+      Key: pushable
+    - Id: 32820278
+      Key: ladder
+    - Id: 33180263
+      Key: zipline
+    - Id: 88094677
+      Key: paper
+    - Id: 63467271
+      Key: chest
+    - Id: 64633838
+      Key: lamp
+    - Id: 15905899
+      Key: generator
+    - Id: 73080034
+      Key: radio
+    - Id: 11138211
+      Key: locker
+    - Id: 59323032
+      Key: bed
+    - Id: 57301135
+      Key: floodlight
+    - Id: 84384165
+      Key: maze
+  - Id: 78183135
+    SectionName: controls
+    SectionSheet:
+    - Id: 94725535
+      Key: name.exit
+    - Id: 62676786
+      Key: name.close
+    - Id: 34189899
+      Key: name.move
+    - Id: 70552896
+      Key: name.rotate
+    - Id: 88288613
+      Key: name.select
+    - Id: 58955362
+      Key: name.zoom
+    - Id: 90823624
+      Key: name.drop
+    - Id: 68512386
+      Key: name.throw
+    - Id: 79525535
+      Key: name.take
+    - Id: 71771340
+      Key: name.read
+    - Id: 55932111
+      Key: name.putback
+    - Id: 95942159
+      Key: name.back
+  - Id: 51993595
+    SectionName: messages
+    SectionSheet:
+    - Id: 46809840
+      Key: backpack
+    - Id: 22626659
+      Key: nofit
+    - Id: 10728042
+      Key: objective.added
+    - Id: 20529774
+      Key: objective.completed
+    - Id: 41489829
+      Key: kindle.lighter
+    - Id: 27587268
+      Key: no.canisters
+    - Id: 20042218
+      Key: notreq.canisters
+  - Id: 14790497
+    SectionName: papers
+    SectionSheet:
+    - Id: 63376783
+      Key: example
+    - Id: 24767859
+      Key: crafting.ammo
+    - Id: 96893407
+      Key: bloody
+  - Id: 91710314
+    SectionName: inventory
+    SectionSheet:
+    - Id: 18324474
+      Key: context.use
+    - Id: 72200280
+      Key: context.examine
+    - Id: 29617865
+      Key: context.combine
+    - Id: 23266649
+      Key: context.shortcut
+    - Id: 31139243
+      Key: context.drop
+    - Id: 41837702
+      Key: context.discard
+    - Id: 35466172
+      Key: prompt.shortcut
+    - Id: 85741619
+      Key: prompt.combine
+  - Id: 24283221
+    SectionName: item
+    SectionSheet:
+    - Id: 86483556
+      Key: title.flashlight
+    - Id: 66394995
+      Key: description.flashlight
+    - Id: 27479224
+      Key: title.camcorder
+    - Id: 13199872
+      Key: description.camcorder
+    - Id: 52214045
+      Key: title.lantern
+    - Id: 10453279
+      Key: description.lantern
+    - Id: 58743985
+      Key: title.lighter
+    - Id: 35147977
+      Key: description.lighter
+    - Id: 47759722
+      Key: title.candle
+    - Id: 88800642
+      Key: description.candle
+    - Id: 64813928
+      Key: title.axe
+    - Id: 81754557
+      Key: description.axe
+    - Id: 29595890
+      Key: title.pocketknife
+    - Id: 10912878
+      Key: description.pocketknife
+    - Id: 53741014
+      Key: title.pistol
+    - Id: 19660599
+      Key: description.pistol
+    - Id: 61872019
+      Key: title.thermometer
+    - Id: 78303727
+      Key: description.thermometer
+    - Id: 58318911
+      Key: title.emfmeter
+    - Id: 33905725
+      Key: description.emfmeter
+    - Id: 34833445
+      Key: title.firstaidkit
+    - Id: 95076873
+      Key: description.firstaidkit
+    - Id: 44235869
+      Key: title.medicaloil
+    - Id: 59674130
+      Key: description.medicaloil
+    - Id: 39924894
+      Key: title.medicalherb
+    - Id: 10202328
+      Key: description.medicalherb
+    - Id: 63867823
+      Key: title.healingpotion
+    - Id: 42067171
+      Key: description.healingpotion
+    - Id: 16895552
+      Key: title.alkalinebattery
+    - Id: 88078736
+      Key: description.alkalinebattery
+    - Id: 31902149
+      Key: title.camerabattery
+    - Id: 14597581
+      Key: description.camerabattery
+    - Id: 68908540
+      Key: title.petroloil
+    - Id: 10772658
+      Key: description.petroloil
+    - Id: 26904931
+      Key: title.pistolammo
+    - Id: 10323082
+      Key: description.pistolammo
+    - Id: 89377779
+      Key: title.pistolflashlight
+    - Id: 31912480
+      Key: description.pistolflashlight
+    - Id: 25768964
+      Key: title.key01
+    - Id: 54686469
+      Key: description.key01
+    - Id: 77523233
+      Key: title.key02
+    - Id: 93838456
+      Key: description.key02
+    - Id: 85398988
+      Key: title.key03
+    - Id: 95447991
+      Key: description.key03
+    - Id: 68643809
+      Key: title.key04
+    - Id: 94144278
+      Key: description.key04
+    - Id: 68278997
+      Key: title.keys
+    - Id: 50121884
+      Key: description.keys
+    - Id: 90527509
+      Key: title.lockpick
+    - Id: 45644899
+      Key: description.lockpick
+    - Id: 34472722
+      Key: title.fuse
+    - Id: 94677487
+      Key: description.fuse
+    - Id: 79554516
+      Key: title.valve
+    - Id: 36922670
+      Key: description.valve
+    - Id: 95253859
+      Key: title.vhscassette
+    - Id: 19573478
+      Key: description.vhscassette
+    - Id: 99621160
+      Key: title.redkeycard
+    - Id: 97596299
+      Key: description.redkeycard
+    - Id: 88852542
+      Key: title.greenkeycard
+    - Id: 84344411
+      Key: description.greenkeycard
+    - Id: 44840908
+      Key: title.fuelcanister
+    - Id: 90153658
+      Key: description.fuelcanister
+    - Id: 15052282
+      Key: title.marbleball
+    - Id: 83898129
+      Key: description.marbleball
+    - Id: 82617294
+      Key: title.gunpowder
+    - Id: 94969246
+      Key: description.gunpowder
+    - Id: 45238631
+      Key: title.scrap
+    - Id: 38802640
+      Key: description.scrap
+  - Id: 90694169
+    SectionName: tips
+    SectionSheet:
+    - Id: 31030455
+      Key: tip1
+    - Id: 69403660
+      Key: tip2
+    - Id: 75937617
+      Key: tip3
+  - Id: 70584943
+    SectionName: options
+    SectionSheet:
+    - Id: 35326416
+      Key: language
+    - Id: 36164037
+      Key: brightness
+    - Id: 12736807
+      Key: camera.fov
+    - Id: 39446919
+      Key: look.sensitivity
+    - Id: 93278971
+      Key: look.smoothing
+    - Id: 44422523
+      Key: smoothing.speed
+    - Id: 42806252
+      Key: show.fps
+    - Id: 16191567
+      Key: display
+    - Id: 72339037
+      Key: display.mode
+    - Id: 32918443
+      Key: screen.res
+    - Id: 10092527
+      Key: frame.rate
+    - Id: 67230680
+      Key: vsync
+    - Id: 34415215
+      Key: render.scale
+    - Id: 26280178
+      Key: fsr
+    - Id: 82063294
+      Key: antialiasing
+    - Id: 27231692
+      Key: antialiasing.quality
+    - Id: 63942947
+      Key: anisotropic
+    - Id: 33876895
+      Key: texture.quality
+    - Id: 24740572
+      Key: shadow.distance
+    - Id: 78091521
+      Key: bloom
+    - Id: 51192724
+      Key: vignette
+    - Id: 26771590
+      Key: film.grain
+    - Id: 58595067
+      Key: chromatic
+    - Id: 16363080
+      Key: audio.general
+    - Id: 15022705
+      Key: audio.music
+    - Id: 75698164
+      Key: separator.video
+    - Id: 62116141
+      Key: separator.pp

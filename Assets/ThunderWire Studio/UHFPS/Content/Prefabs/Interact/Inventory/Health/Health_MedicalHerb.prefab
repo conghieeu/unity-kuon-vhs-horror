@@ -1,0 +1,232 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &720378334311032064
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2232658050541033472}
+  - component: {fileID: 8207260054964306685}
+  - component: {fileID: 2552196099932881422}
+  m_Layer: 6
+  m_Name: Health_MedicalHerb
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2232658050541033472
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720378334311032064}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1925872316683607314}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &8207260054964306685
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720378334311032064}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.15, y: 0.05, z: 0.4}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2552196099932881422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720378334311032064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1193cc42578b51349ae91df02822e87c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <UniqueID>k__BackingField:
+    Id: 788f8c09a62a495ab998cfbe50f4b738
+  InteractableType: 1
+  MessageType: 2
+  ExamineType: 1
+  ExamineRotate: 3
+  DisableType: 1
+  PickupItem:
+    m_GUID: cf13f3bc791848a8aea27460ef8698b2
+    m_Item:
+      Name: Medical Herb
+      GUID: cf13f3bc791848a8aea27460ef8698b2
+      Icon: {fileID: 2800000, guid: f2734ea81e9dcd741870851508bd3592, type: 3}
+    m_Section:
+      Name: Healing Items
+      GUID: bc38a49db3da43c8928dfbde7c7d1f1c
+  ItemCustomData:
+    JsonData: 
+  InteractTitle:
+    GlocText: 
+    NormalText: 
+  ExamineTitle:
+    GlocText: 
+    NormalText: 
+  PaperText:
+    GlocText: 
+    NormalText: 
+  HintMessage:
+    GlocText: 
+    NormalText: 
+  MessageTime: 3
+  Quantity: 1
+  SlotsToExpand: 1
+  ExpandRows: 0
+  UseInventoryTitle: 1
+  ExamineInventoryTitle: 1
+  ShowExamineTitle: 1
+  ShowFloatingIcon: 0
+  TakeFromExamine: 0
+  AllowCursorExamine: 0
+  IsPaper: 0
+  AutoShortcut: 0
+  AutoEquip: 0
+  UseExamineZooming: 1
+  ExamineZoomLimits:
+    min: 0.4
+    max: 0.5
+  ExamineDistance: 0.5
+  UseFaceRotation: 1
+  FaceRotation: {x: 90, y: 180, z: 0}
+  UseControlPoint: 1
+  ControlPoint: {x: 0, y: 0.1, z: 0}
+  CollidersEnable: []
+  CollidersDisable: []
+  ExamineHotspot:
+    HotspotTransform: {fileID: 0}
+    Enabled: 1
+    ResetHotspot: 0
+    HotspotAction:
+      m_PersistentCalls:
+        m_Calls: []
+  PickupSound:
+    audioClip: {fileID: 8300000, guid: ad444517cf25aec4195aaad9fbc0eeaa, type: 3}
+    volume: 0.35
+  ExamineSound:
+    audioClip: {fileID: 0}
+    volume: 0
+  ExamineHintSound:
+    audioClip: {fileID: 0}
+    volume: 0
+  OnTakeEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnExamineStartEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnExamineEndEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  IsExamined: 0
+--- !u!1 &5767454236869911959
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1925872316683607314}
+  - component: {fileID: 1535314545855978090}
+  - component: {fileID: 8437391950140225569}
+  m_Layer: 6
+  m_Name: MedicalHerb
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1925872316683607314
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5767454236869911959}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.054625712, y: -0, z: -0, w: 0.99850696}
+  m_LocalPosition: {x: 0, y: 0, z: -0.049999952}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 2232658050541033472}
+  m_LocalEulerAnglesHint: {x: 6.263, y: 0, z: 0}
+--- !u!33 &1535314545855978090
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5767454236869911959}
+  m_Mesh: {fileID: 1382088886925742562, guid: 60dfa719b22002e4dbb40a253f6fb6ec, type: 3}
+--- !u!23 &8437391950140225569
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5767454236869911959}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: fb3959575a8d01346b0f8055e5aeb340, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}

@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-4824162209256752504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 477928472f4e28244b9c7556828f5bf5, type: 3}
+  m_Name: Patrol
+  m_EditorClassIdentifier: 
+  Patrol: 1
+  PatrolType: 1
+  PatrolTime: 3
+  WalkSpeed: 0.5
+  PatrolStoppingDistance: 1
+  VeryClosePlayerDetection: 3
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d0431efc0b995646896f9ad148de9b5, type: 3}
+  m_Name: (States) ZombieAI
+  m_EditorClassIdentifier: 
+  AIStates:
+  - StateAsset: {fileID: -4824162209256752504}
+    IsEnabled: 1
+  - StateAsset: {fileID: 8407762149507097960}
+    IsEnabled: 1
+  - StateAsset: {fileID: 939958431482384129}
+    IsEnabled: 1
+  IdleParameter: Idle
+  WalkParameter: Walk
+  RunParameter: Run
+  PatrolParameter: Patrol
+  AttackTrigger: Attack
+  AttackState: Attack 01
+  DamageRange:
+    min: 20
+    max: 40
+--- !u!114 &939958431482384129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a29b764a967434d8716e578793a178, type: 3}
+  m_Name: Player Hide
+  m_EditorClassIdentifier: 
+  SeePlayerDamage: 10
+  HidingCloseDistance: 2
+  PatrolTime: 5
+--- !u!114 &8407762149507097960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10150eac725ec0e43ac5b8e14da2cfdd, type: 3}
+  m_Name: Chase
+  m_EditorClassIdentifier: 
+  RunSpeed: 3
+  ChaseStoppingDistance: 1
+  LostPlayerPatrolTime: 5
+  LostPlayerPredictTime: 0.5
+  VeryClosePlayerDetection: 2
+  AttackFOV: 30
+  AttackDistance: 2

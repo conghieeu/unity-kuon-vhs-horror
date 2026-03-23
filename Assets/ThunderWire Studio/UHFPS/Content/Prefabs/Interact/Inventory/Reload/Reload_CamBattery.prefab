@@ -1,0 +1,235 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2886193873245158963
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2886193873245158966}
+  - component: {fileID: 2886193873245158967}
+  - component: {fileID: 2886193873245158964}
+  m_Layer: 6
+  m_Name: Battery
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2886193873245158966
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2886193873245158963}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.007392548, z: -0.02839329}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3653046604308867777}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 180}
+--- !u!33 &2886193873245158967
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2886193873245158963}
+  m_Mesh: {fileID: -2159965483007997719, guid: 6d60ed39e1755144bbe23cb9a1724a04, type: 3}
+--- !u!23 &2886193873245158964
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2886193873245158963}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 941a432521af143438b4b0809e417fa1, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &2951042414169662646
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3653046604308867777}
+  - component: {fileID: 2598583292499628444}
+  - component: {fileID: 3995150232726530869}
+  m_Layer: 6
+  m_Name: Reload_CamBattery
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3653046604308867777
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2951042414169662646}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2886193873245158966}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &2598583292499628444
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2951042414169662646}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.040331613, y: 0.029396562, z: 0.05678657}
+  m_Center: {x: -0.0000009536743, y: 0, z: 0}
+--- !u!114 &3995150232726530869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2951042414169662646}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1193cc42578b51349ae91df02822e87c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <UniqueID>k__BackingField:
+    Id: d3f9dc336e6845859c8842f86eb33dae
+  InteractableType: 1
+  MessageType: 2
+  ExamineType: 1
+  ExamineRotate: 3
+  DisableType: 1
+  PickupItem:
+    m_GUID: 65b57fdc935246ad80bc2fe5a2434e54
+    m_Item:
+      Name: Camera Battery
+      GUID: 65b57fdc935246ad80bc2fe5a2434e54
+      Icon: {fileID: 2800000, guid: a1b524b63b24e2e489bcd255d778a348, type: 3}
+    m_Section:
+      Name: Reload Items
+      GUID: 401b335b9c9c4c5588e0ec76a2faef23
+  ItemCustomData:
+    JsonData: 
+  InteractTitle:
+    GlocText: 
+    NormalText: 
+  ExamineTitle:
+    GlocText: 
+    NormalText: 
+  PaperText:
+    GlocText: 
+    NormalText: 
+  HintMessage:
+    GlocText: 
+    NormalText: 
+  MessageTime: 3
+  Quantity: 1
+  SlotsToExpand: 1
+  ExpandRows: 0
+  UseInventoryTitle: 1
+  ExamineInventoryTitle: 1
+  ShowExamineTitle: 1
+  ShowFloatingIcon: 0
+  TakeFromExamine: 0
+  AllowCursorExamine: 0
+  IsPaper: 0
+  AutoShortcut: 0
+  AutoEquip: 0
+  UseExamineZooming: 1
+  ExamineZoomLimits:
+    min: 0.3
+    max: 0.4
+  ExamineDistance: 0.4
+  UseFaceRotation: 0
+  FaceRotation: {x: 0, y: 0, z: 0}
+  UseControlPoint: 1
+  ControlPoint: {x: 0, y: 0.1, z: 0}
+  CollidersEnable: []
+  CollidersDisable: []
+  ExamineHotspot:
+    HotspotTransform: {fileID: 0}
+    Enabled: 1
+    ResetHotspot: 0
+    HotspotAction:
+      m_PersistentCalls:
+        m_Calls: []
+  PickupSound:
+    audioClip: {fileID: 8300000, guid: ad444517cf25aec4195aaad9fbc0eeaa, type: 3}
+    volume: 0.6
+  ExamineSound:
+    audioClip: {fileID: 0}
+    volume: 0
+  ExamineHintSound:
+    audioClip: {fileID: 0}
+    volume: 0
+  OnTakeEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnExamineStartEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnExamineEndEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  IsExamined: 0

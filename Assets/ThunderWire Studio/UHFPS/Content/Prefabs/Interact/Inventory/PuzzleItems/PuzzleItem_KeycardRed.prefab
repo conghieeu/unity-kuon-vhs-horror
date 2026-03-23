@@ -1,0 +1,203 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &848614388204731826
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7393187263638339606}
+  - component: {fileID: 5898606536736080720}
+  - component: {fileID: 8498038510665580697}
+  - component: {fileID: 848614388204731836}
+  - component: {fileID: 848614388204731837}
+  m_Layer: 6
+  m_Name: PuzzleItem_KeycardRed
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7393187263638339606
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 848614388204731826}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &5898606536736080720
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 848614388204731826}
+  m_Mesh: {fileID: 5697637368414676610, guid: a36da3fa6b64a7844b5cc092d6ad972b, type: 3}
+--- !u!23 &8498038510665580697
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 848614388204731826}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 9b0bbf3ccfbe4fd4683f8a8d2e636273, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &848614388204731836
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 848614388204731826}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.06, y: 0.11, z: 0.002}
+  m_Center: {x: 0, y: 0, z: 0.001}
+--- !u!114 &848614388204731837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 848614388204731826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1193cc42578b51349ae91df02822e87c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <UniqueID>k__BackingField:
+    Id: 7d899f2720b14cc3a89676c62ca78118
+  InteractableType: 1
+  MessageType: 2
+  ExamineType: 1
+  ExamineRotate: 3
+  DisableType: 1
+  PickupItem:
+    m_GUID: 21cc6375d5614192aac1fedce6147cfa
+    m_Item:
+      Name: Red Keycard
+      GUID: 21cc6375d5614192aac1fedce6147cfa
+      Icon: {fileID: 2800000, guid: ad0e8064004559d42bf4fc0f706648cb, type: 3}
+    m_Section:
+      Name: Usables
+      GUID: be7f17ba3cb145e6883bea6a70f0deb7
+  ItemCustomData:
+    JsonData: "{\n\tlevel: \"red\"\n}"
+  InteractTitle:
+    GlocText: 
+    NormalText: 
+  ExamineTitle:
+    GlocText: 
+    NormalText: 
+  PaperText:
+    GlocText: 
+    NormalText: 
+  HintMessage:
+    GlocText: 
+    NormalText: 
+  MessageTime: 3
+  Quantity: 1
+  SlotsToExpand: 1
+  ExpandRows: 0
+  UseInventoryTitle: 1
+  ExamineInventoryTitle: 1
+  ShowExamineTitle: 1
+  ShowFloatingIcon: 0
+  TakeFromExamine: 0
+  AllowCursorExamine: 0
+  IsPaper: 0
+  AutoShortcut: 0
+  AutoEquip: 0
+  UseExamineZooming: 1
+  ExamineZoomLimits:
+    min: 0.3
+    max: 0.4
+  ExamineDistance: 0.4
+  UseFaceRotation: 0
+  FaceRotation: {x: 0, y: 0, z: 0}
+  UseControlPoint: 1
+  ControlPoint: {x: 0, y: 0.1, z: 0}
+  CollidersEnable: []
+  CollidersDisable: []
+  ExamineHotspot:
+    HotspotTransform: {fileID: 0}
+    Enabled: 0
+    ResetHotspot: 0
+    HotspotAction:
+      m_PersistentCalls:
+        m_Calls: []
+  PickupSound:
+    audioClip: {fileID: 8300000, guid: 50e7747ddc09d584fb8dde1e2243d25e, type: 3}
+    volume: 1
+  ExamineSound:
+    audioClip: {fileID: 0}
+    volume: 0
+  ExamineHintSound:
+    audioClip: {fileID: 0}
+    volume: 0
+  OnTakeEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnExamineStartEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnExamineEndEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  IsExamined: 0

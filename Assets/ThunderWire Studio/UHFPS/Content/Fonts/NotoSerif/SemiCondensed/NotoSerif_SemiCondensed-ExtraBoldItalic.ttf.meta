@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 418e1a4f09d2c2b459e16025cbac3ce2
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Noto Serif SemiCondensed
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 013b23dd2e5b044429180c7e086e533f, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

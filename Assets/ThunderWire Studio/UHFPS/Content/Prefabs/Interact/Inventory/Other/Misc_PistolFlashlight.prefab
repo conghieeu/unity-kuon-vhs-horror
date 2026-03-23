@@ -1,0 +1,285 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1111198998049589959
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 297260894582493309}
+  - component: {fileID: 3715415404952903640}
+  - component: {fileID: 1471333379498289938}
+  - component: {fileID: 3715415404952903642}
+  - component: {fileID: 3715415404952903641}
+  m_Layer: 6
+  m_Name: Misc_PistolFlashlight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &297260894582493309
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1111198998049589959}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7941413773978081750}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &3715415404952903640
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1111198998049589959}
+  m_Mesh: {fileID: 119302499102753868, guid: 60e153301605a52459936b5d45a6eb13, type: 3}
+--- !u!23 &1471333379498289938
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1111198998049589959}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 8b563745169f1c445b7ee468be63e3db, type: 2}
+  - {fileID: 2100000, guid: 31c646baa6a264546b9185f6a620ac7b, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3715415404952903642
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1111198998049589959}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.027930437, y: 0.041052684, z: 0.07662822}
+  m_Center: {x: -7.4940044e-16, y: -9.3132163e-10, z: 0.000000005587937}
+--- !u!114 &3715415404952903641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1111198998049589959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1193cc42578b51349ae91df02822e87c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <UniqueID>k__BackingField:
+    Id: dede702a84c0474cb6b0ce482ab773d0
+  InteractableType: 1
+  MessageType: 2
+  ExamineType: 1
+  ExamineRotate: 3
+  DisableType: 1
+  PickupItem:
+    m_GUID: 3f96ba077954472e85e3efd7ba5d650f
+    m_Item:
+      Name: Pistol Flashlight
+      GUID: 3f96ba077954472e85e3efd7ba5d650f
+      Icon: {fileID: 2800000, guid: f0e654fa74c042f41bb077085b17b0cf, type: 3}
+    m_Section:
+      Name: Attachments
+      GUID: 1c8a94e2ba1b4ecea9171599ad9bce5e
+  ItemCustomData:
+    JsonData: 
+  InteractTitle:
+    GlocText: 
+    NormalText: 
+  ExamineTitle:
+    GlocText: 
+    NormalText: 
+  PaperText:
+    GlocText: 
+    NormalText: 
+  HintMessage:
+    GlocText: 
+    NormalText: 
+  MessageTime: 3
+  Quantity: 1
+  SlotsToExpand: 1
+  ExpandRows: 0
+  UseInventoryTitle: 1
+  ExamineInventoryTitle: 1
+  ShowExamineTitle: 1
+  ShowFloatingIcon: 0
+  TakeFromExamine: 0
+  AllowCursorExamine: 0
+  IsPaper: 0
+  AutoShortcut: 0
+  AutoEquip: 0
+  UseExamineZooming: 1
+  ExamineZoomLimits:
+    min: 0.45
+    max: 0.55
+  ExamineDistance: 0.3
+  UseFaceRotation: 1
+  FaceRotation: {x: 180, y: -90, z: 0}
+  UseControlPoint: 1
+  ControlPoint: {x: 0, y: 0.1, z: 0}
+  CollidersEnable: []
+  CollidersDisable: []
+  ExamineHotspot:
+    HotspotTransform: {fileID: 0}
+    Enabled: 0
+    ResetHotspot: 0
+    HotspotAction:
+      m_PersistentCalls:
+        m_Calls: []
+  PickupSound:
+    audioClip: {fileID: 8300000, guid: a823b338feb6e7948bc22a95bae481d6, type: 3}
+    volume: 0.7
+  ExamineSound:
+    audioClip: {fileID: 0}
+    volume: 0
+  ExamineHintSound:
+    audioClip: {fileID: 0}
+    volume: 0
+  OnTakeEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnExamineStartEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  OnExamineEndEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  IsExamined: 0
+--- !u!1 &6703215337551794410
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7941413773978081750}
+  - component: {fileID: 4586676696213918077}
+  - component: {fileID: 3616715952315215748}
+  m_Layer: 6
+  m_Name: Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7941413773978081750
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6703215337551794410}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.00000004371139, y: -0.000000043711385, z: 0.000000043711392, w: 1}
+  m_LocalPosition: {x: 0.0000009667873, y: 0.005171642, z: -0.025249442}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 297260894582493309}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &4586676696213918077
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6703215337551794410}
+  m_Mesh: {fileID: -5447036705194824928, guid: 60e153301605a52459936b5d45a6eb13, type: 3}
+--- !u!23 &3616715952315215748
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6703215337551794410}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 8b563745169f1c445b7ee468be63e3db, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}

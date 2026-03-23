@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93cb5bd7e8a706a41b793e7440b34eea, type: 3}
+  m_Name: (Narration) Welcome
+  m_EditorClassIdentifier: 
+  Dialogues:
+  - DialogueAudio: {fileID: 8300000, guid: dd7097938c8985c46af6646be4efe04e, type: 3}
+    SubtitleType: 1
+    SingleSubtitle:
+      Time: 0
+      Narrator: 
+      NarratorColor: {r: 1, g: 1, b: 1, a: 1}
+      Text:
+        GlocText: 
+        NormalText: 
+    Subtitles:
+    - rid: 5518344923532492868
+    - rid: 5518344923532492869
+    - rid: 5518344923532492870
+    - rid: 5518344923532492871
+  references:
+    version: 2
+    RefIds:
+    - rid: 5518344923532492868
+      type: {class: DialogueAsset/DialogueSubtitle, ns: UHFPS.Scriptable, asm: Assembly-CSharp}
+      data:
+        Time: 0
+        Narrator: Narrator
+        NarratorColor: {r: 1, g: 1, b: 1, a: 1}
+        Text:
+          GlocText: '*Welcome to the Ultimate Horror FPS KIT demo level, where fear
+            becomes your playground. '
+          NormalText: 
+    - rid: 5518344923532492869
+      type: {class: DialogueAsset/DialogueSubtitle, ns: UHFPS.Scriptable, asm: Assembly-CSharp}
+      data:
+        Time: 5.804573
+        Narrator: Narrator
+        NarratorColor: {r: 1, g: 1, b: 1, a: 1}
+        Text:
+          GlocText: '*Step into this demo and interact with the best features of
+            this asset. '
+          NormalText: 
+    - rid: 5518344923532492870
+      type: {class: DialogueAsset/DialogueSubtitle, ns: UHFPS.Scriptable, asm: Assembly-CSharp}
+      data:
+        Time: 10.49763
+        Narrator: Narrator
+        NarratorColor: {r: 1, g: 1, b: 1, a: 1}
+        Text:
+          GlocText: '*Whether you''re a seasoned developer or horror genre newcomer '
+          NormalText: 
+    - rid: 5518344923532492871
+      type: {class: DialogueAsset/DialogueSubtitle, ns: UHFPS.Scriptable, asm: Assembly-CSharp}
+      data:
+        Time: 14.57318
+        Narrator: Narrator
+        NarratorColor: {r: 1, g: 1, b: 1, a: 1}
+        Text:
+          GlocText: '*delve into terror and unleash your creativity in this ultimate
+            horror game-building experience.'
+          NormalText: 
