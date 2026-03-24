@@ -138,7 +138,7 @@ MonoBehaviour:
     m_Value: 1
   smoothness:
     m_OverrideState: 1
-    m_Value: 0.871
+    m_Value: 1
   rounded:
     m_OverrideState: 1
     m_Value: 1
@@ -163,10 +163,10 @@ MonoBehaviour:
     m_Value: 2
   intensity:
     m_OverrideState: 1
-    m_Value: 0.458
+    m_Value: 1
   clamp:
     m_OverrideState: 1
-    m_Value: 0.05
+    m_Value: 0.2
 --- !u!114 &4444542620034876205
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -191,7 +191,7 @@ MonoBehaviour:
     m_Value: 30
   gaussianMaxRadius:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 1.5
   highQualitySampling:
     m_OverrideState: 1
     m_Value: 0

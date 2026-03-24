@@ -947,10 +947,10 @@ MonoBehaviour:
   g_extra: 0
   g_bypass: 0
   pixelOn:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0
   screenResPresetId:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 2
   screenWidth:
     m_OverrideState: 0

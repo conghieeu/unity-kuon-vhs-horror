@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "com.antigravity.ide": "https://github.com/prithvi-bharadwaj/Antigravity-IDE.git",
+    "com.coplaydev.unity-mcp": "https://github.com/CoplayDev/unity-mcp.git?path=/MCPForUnity#main",
     "com.febucci.custom-hierarchy": "https://github.com/febucci/unitypackage-custom-hierarchy.git",
     "com.unity.ai.navigation": "2.0.12",
     "com.unity.cinemachine": "3.1.6",
