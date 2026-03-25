@@ -14,6 +14,7 @@ using UHFPS.Scriptable;
 using UHFPS.Runtime;
 using ThunderWire.Attributes;
 using NameAndParameters = UnityEngine.InputSystem.Utilities.NameAndParameters;
+using PixelCrushers;
 
 namespace UHFPS.Input
 {
@@ -89,6 +90,11 @@ namespace UHFPS.Input
             foreach (var map in inputActions.actionMaps)
             {
                 actionMap.Add(map.name, new ActionMap(map));
+    
+                foreach (var action in map.actions)
+                {
+                    PixelCrushers.InputDeviceManager.RegisterInputAction(action.name, action);
+                }
             }
 
             if (File.Exists(InputsPath))

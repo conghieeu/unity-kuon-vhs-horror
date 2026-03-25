@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - Flesh
+  - NPC
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - Ground
   - Slope
   - World UI
-  - 
+  - Actors
   - 
   - 
   - 
