@@ -1,9 +1,9 @@
 ﻿<Solution>
   <Project Path="Unity.Timeline.csproj" />
   <Project Path="Unity.PlasticSCM.Editor.csproj" />
-  <Project Path="Assembly-CSharp-firstpass.csproj" />
+  <Project Path="DialogueSystem.csproj" />
   <Project Path="MCPForUnity.Runtime.csproj" />
-  <Project Path="Assembly-CSharp-Editor-firstpass.csproj" />
+  <Project Path="DialogueSystemEditor.csproj" />
   <Project Path="Unity.Mathematics.csproj" />
   <Project Path="Unity.Timeline.Editor.csproj" />
   <Project Path="Unity.Cinemachine.Editor.csproj" />
@@ -20,7 +20,9 @@
   <Project Path="Assembly-CSharp-Editor.csproj" />
   <Project Path="Unity.InputSystem.csproj" />
   <Project Path="MCPForUnity.Editor.csproj" />
+  <Project Path="PixelCrushers.csproj" />
   <Project Path="QFSW.QC.csproj" />
+  <Project Path="PixelCrushersEditor.csproj" />
   <Project Path="Unity.Searcher.Editor.csproj" />
   <Project Path="Wooshii.HierarchyDecorator.Editor.csproj" />
   <Project Path="Unity.VisualScripting.Core.csproj" />
