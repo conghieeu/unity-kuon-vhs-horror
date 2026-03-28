@@ -66,6 +66,7 @@
   <Project Path="Unity.CollabProxy.Editor.csproj" />
   <Project Path="QFSW.QC.Demo.csproj" />
   <Project Path="QFSW.QC.Editor.Tools.csproj" />
+  <Project Path="VFavorites.csproj" />
   <Project Path="Febucci.HierarchyIcons.csproj" />
   <Project Path="Unity.InputSystem.DocCodeSamples.csproj" />
   <Project Path="Sirenix.OdinInspector.Modules.UnityMathematics.csproj" />
