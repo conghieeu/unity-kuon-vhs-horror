@@ -18,6 +18,7 @@ MonoBehaviour:
     - 7206c517113c2c44bad4deef78561b00
     - 4025bc72181ff58488fe3ce82e79e1fe
     - 57338117d990a3b4fa315065c9bd9c18
+    - 33bdb7ffb20fc124687397064b5297e0
     values:
     - iconNameOrGuid: TextAsset Icon
       colorIndex: 0
@@ -32,6 +33,10 @@ MonoBehaviour:
       isIconRecursive: 0
       isColorRecursive: 0
     - iconNameOrGuid: SceneAsset Icon
+      colorIndex: 0
+      isIconRecursive: 0
+      isColorRecursive: 0
+    - iconNameOrGuid: Mesh Icon
       colorIndex: 0
       isIconRecursive: 0
       isColorRecursive: 0
