@@ -29679,7 +29679,7 @@ MonoBehaviour:
   ItemPrefab: {fileID: 1800450479}
   QuantityOverride: 1
   TargetShortcutSlot: 1
-  AutoEquipOnHands: 0
+  AutoEquipOnHands: 1
 --- !u!4 &498696994
 Transform:
   m_ObjectHideFlags: 0
