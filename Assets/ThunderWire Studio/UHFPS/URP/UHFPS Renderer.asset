@@ -42,21 +42,6 @@ MonoBehaviour:
       restoreCamera: 1
       offset: {x: 0, y: 0, z: 0, w: 0}
       cameraFieldOfView: 60
---- !u!114 &-6721149389126507699
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c8d6ac66772e4185bd13920192d54b3, type: 3}
-  m_Name: VHSPro
-  m_EditorClassIdentifier: Assembly-CSharp::VHSProRendererFeature
-  m_Active: 1
-  settings:
-    renderPassEvent: 550
 --- !u!114 &-4940235740929321130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,15 +154,11 @@ MonoBehaviour:
   - {fileID: 2268158402696016896}
   - {fileID: -673136233803236382}
   - {fileID: 5345043836648238542}
-  - {fileID: -6721149389126507699}
-  m_RendererFeatureMap: 8a72284266ccca07561738a3c4c170bb998f24e3cb2eb7c77d22e7d657e792439ee3058277bd7901f6570e8f52b08084007403cf0c1e7a1fe2bbb66a298aa8f6ce2d4fd80c692d4a4de3c7a23daeb9a2
+  m_RendererFeatureMap: 8a72284266ccca07561738a3c4c170bb998f24e3cb2eb7c77d22e7d657e792439ee3058277bd7901f6570e8f52b08084007403cf0c1e7a1fe2bbb66a298aa8f6ce2d4fd80c692d4a
   m_UseNativeRenderPass: 1
   xrSystemData: {fileID: 0}
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
-  m_AssetVersion: 3
-  m_PrepassLayerMask:
-    serializedVersion: 2
-    m_Bits: 7935
+  m_AssetVersion: 2
   m_OpaqueLayerMask:
     serializedVersion: 2
     m_Bits: 7935

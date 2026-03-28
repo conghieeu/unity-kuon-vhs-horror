@@ -85,7 +85,7 @@ Material:
     - _AlphaToMask: 0
     - _Blend: 0
     - _BlendModePreserveSpecular: 1
-    - _Blink: 0.436
+    - _Blink: 1
     - _BlinkAmount: 1
     - _BumpScale: 1
     - _ClearCoatMask: 0
@@ -114,7 +114,7 @@ Material:
     - _SrcBlendAlpha: 1
     - _Surface: 0
     - _VignetteAspectRatio: 1
-    - _VignetteInnerRing: 0.5
+    - _VignetteInnerRing: 1
     - _VignetteOuterRing: 0.4
     - _WorkflowMode: 1
     - _ZWrite: 1

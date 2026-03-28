@@ -7,9 +7,9 @@
   <Project Path="Unity.Mathematics.csproj" />
   <Project Path="Unity.Timeline.Editor.csproj" />
   <Project Path="Unity.Cinemachine.Editor.csproj" />
+  <Project Path="SingularityGroup.HotReload.Editor.csproj" />
   <Project Path="Unity.Collections.csproj" />
   <Project Path="Assembly-CSharp.csproj" />
-  <Project Path="SingularityGroup.HotReload.Editor.csproj" />
   <Project Path="Unity.VisualScripting.Core.Editor.csproj" />
   <Project Path="Unity.PerformanceTesting.Editor.csproj" />
   <Project Path="Unity.Splines.csproj" />

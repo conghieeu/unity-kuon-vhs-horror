@@ -13,7 +13,6 @@ Material:
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - _ALPHAPREMULTIPLY_ON
-  - _EMISSION
   - _METALLICSPECGLOSSMAP
   - _NORMALMAP
   - _SURFACE_TYPE_TRANSPARENT
@@ -122,7 +121,6 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AddPrecomputedVelocity: 0
     - _AlphaClip: 0
     - _AlphaToMask: 0
     - _BASE_COLOR_WEIGHT: 1
@@ -163,7 +161,6 @@ Material:
     - _TRANSPARENCY: 0
     - _UVSec: 0
     - _WorkflowMode: 1
-    - _XRMotionVectorsPass: 1
     - _ZWrite: 0
     m_Colors:
     - _BASE_COLOR: {r: 0.8, g: 0.8, b: 0.8, a: 1}
