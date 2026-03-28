@@ -9,6 +9,7 @@
   <Project Path="Unity.Cinemachine.Editor.csproj" />
   <Project Path="Unity.Collections.csproj" />
   <Project Path="Assembly-CSharp.csproj" />
+  <Project Path="SingularityGroup.HotReload.Editor.csproj" />
   <Project Path="Unity.VisualScripting.Core.Editor.csproj" />
   <Project Path="Unity.PerformanceTesting.Editor.csproj" />
   <Project Path="Unity.Splines.csproj" />
@@ -49,12 +50,14 @@
   <Project Path="com.rlabrecque.steamworks.net.editor.csproj" />
   <Project Path="Unity.AI.Navigation.csproj" />
   <Project Path="Unity.Collections.CodeGen.csproj" />
+  <Project Path="SingularityGroup.HotReload.Runtime.Public.csproj" />
   <Project Path="Unity.Mathematics.Editor.csproj" />
   <Project Path="Unity.VisualScripting.SettingsProvider.Editor.csproj" />
   <Project Path="Antigravity.Ide.Editor.csproj" />
   <Project Path="QFSW.QC.Serializers.csproj" />
   <Project Path="Unity.VSCode.Editor.csproj" />
   <Project Path="Wingman.csproj" />
+  <Project Path="SingularityGroup.HotReload.Runtime.csproj" />
   <Project Path="QFSW.QC.Suggestors.csproj" />
   <Project Path="Unity.Settings.Editor.csproj" />
   <Project Path="QFSW.QC.QGUI.csproj" />

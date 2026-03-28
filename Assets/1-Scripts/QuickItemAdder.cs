@@ -23,7 +23,7 @@ namespace Kuon
 
         void Start()
         {
-            AddAndEquipItem();
+            // AddAndEquipItem();
         }
 
         /// <summary>
