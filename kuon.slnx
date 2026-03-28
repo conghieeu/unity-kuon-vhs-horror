@@ -20,6 +20,7 @@
   <Project Path="Assembly-CSharp-Editor.csproj" />
   <Project Path="Unity.InputSystem.csproj" />
   <Project Path="MCPForUnity.Editor.csproj" />
+  <Project Path="BetterHierarchy.csproj" />
   <Project Path="PixelCrushers.csproj" />
   <Project Path="QFSW.QC.csproj" />
   <Project Path="PixelCrushersEditor.csproj" />
@@ -29,6 +30,7 @@
   <Project Path="QFSW.QC.Grammar.csproj" />
   <Project Path="Unity.AI.Navigation.Editor.ConversionSystem.csproj" />
   <Project Path="Unity.VisualScripting.State.Editor.csproj" />
+  <Project Path="VTabs.csproj" />
   <Project Path="Unity.Burst.CodeGen.csproj" />
   <Project Path="Unity.Cinemachine.csproj" />
   <Project Path="QFSW.QC.Editor.csproj" />
@@ -39,10 +41,11 @@
   <Project Path="Unity.Burst.Editor.csproj" />
   <Project Path="Unity.Rider.Editor.csproj" />
   <Project Path="Unity.VisualScripting.State.csproj" />
+  <Project Path="VFolders.csproj" />
   <Project Path="Unity.AI.Navigation.Updater.csproj" />
   <Project Path="Unity.AI.Navigation.Editor.csproj" />
+  <Project Path="Assembly-CSharp-firstpass.csproj" />
   <Project Path="Unity.InputSystem.ForUI.csproj" />
-  <Project Path="VInspector.csproj" />
   <Project Path="com.rlabrecque.steamworks.net.editor.csproj" />
   <Project Path="Unity.AI.Navigation.csproj" />
   <Project Path="Unity.Collections.CodeGen.csproj" />
@@ -51,15 +54,17 @@
   <Project Path="Antigravity.Ide.Editor.csproj" />
   <Project Path="QFSW.QC.Serializers.csproj" />
   <Project Path="Unity.VSCode.Editor.csproj" />
+  <Project Path="Wingman.csproj" />
   <Project Path="QFSW.QC.Suggestors.csproj" />
   <Project Path="Unity.Settings.Editor.csproj" />
   <Project Path="QFSW.QC.QGUI.csproj" />
   <Project Path="Unity.InputSystem.TestFramework.csproj" />
   <Project Path="Unity.VisualScripting.Shared.Editor.csproj" />
+  <Project Path="VInspector.csproj" />
   <Project Path="QFSW.QC.UI.csproj" />
+  <Project Path="Assembly-CSharp-Editor-firstpass.csproj" />
   <Project Path="Unity.CollabProxy.Editor.csproj" />
   <Project Path="QFSW.QC.Demo.csproj" />
-  <Project Path="Wingman.csproj" />
   <Project Path="QFSW.QC.Editor.Tools.csproj" />
   <Project Path="Febucci.HierarchyIcons.csproj" />
   <Project Path="Unity.InputSystem.DocCodeSamples.csproj" />
