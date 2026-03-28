@@ -20,6 +20,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/ThunderWire Studio/UHFPS/_Demo/Scenes/Raining.unity
     guid: 5d02e5420369bbe42bc168890153f297
+  - enabled: 1
+    path: Assets/Plugins/Pixel Crushers/Dialogue System/Demo/Scenes/DemoScene1.unity
+    guid: 955abf6400389cf4f8e68ac194db83e0
+  - enabled: 1
+    path: Assets/Plugins/Pixel Crushers/Dialogue System/Demo/Scenes/DemoScene2.unity
+    guid: d94b3c97c9dfe0d4e8ff547bb0406174
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: ae838b1c970aab641bb8e4643590df24, type: 2}
     com.unity.input.settings: {fileID: 11400000, guid: ce68c4c37abec5347801e4204a280574, type: 2}

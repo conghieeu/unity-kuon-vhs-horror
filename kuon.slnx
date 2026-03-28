@@ -28,9 +28,9 @@
   <Project Path="Wooshii.HierarchyDecorator.Editor.csproj" />
   <Project Path="Unity.VisualScripting.Core.csproj" />
   <Project Path="QFSW.QC.Grammar.csproj" />
-  <Project Path="Unity.AI.Navigation.Editor.ConversionSystem.csproj" />
-  <Project Path="Unity.VisualScripting.State.Editor.csproj" />
   <Project Path="VTabs.csproj" />
+  <Project Path="Unity.VisualScripting.State.Editor.csproj" />
+  <Project Path="Unity.AI.Navigation.Editor.ConversionSystem.csproj" />
   <Project Path="Unity.Burst.CodeGen.csproj" />
   <Project Path="Unity.Cinemachine.csproj" />
   <Project Path="QFSW.QC.Editor.csproj" />
