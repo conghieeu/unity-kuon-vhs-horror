@@ -3,6 +3,7 @@
   <Project Path="Unity.PlasticSCM.Editor.csproj" />
   <Project Path="DialogueSystem.csproj" />
   <Project Path="MCPForUnity.Runtime.csproj" />
+  <Project Path="Unity.ProBuilder.csproj" />
   <Project Path="DialogueSystemEditor.csproj" />
   <Project Path="Unity.Mathematics.csproj" />
   <Project Path="Unity.Timeline.Editor.csproj" />
@@ -10,12 +11,14 @@
   <Project Path="SingularityGroup.HotReload.Editor.csproj" />
   <Project Path="Unity.Collections.csproj" />
   <Project Path="Assembly-CSharp.csproj" />
+  <Project Path="Unity.ProBuilder.Poly2Tri.csproj" />
   <Project Path="Unity.VisualScripting.Core.Editor.csproj" />
   <Project Path="Unity.PerformanceTesting.Editor.csproj" />
   <Project Path="Unity.Splines.csproj" />
   <Project Path="com.rlabrecque.steamworks.net.csproj" />
   <Project Path="Unity.Burst.csproj" />
   <Project Path="Unity.VisualScripting.Flow.Editor.csproj" />
+  <Project Path="Unity.ProBuilder.Csg.csproj" />
   <Project Path="QFSW.QC.Extras.csproj" />
   <Project Path="Unity.VisualStudio.Editor.csproj" />
   <Project Path="Assembly-CSharp-Editor.csproj" />
@@ -27,6 +30,7 @@
   <Project Path="PixelCrushersEditor.csproj" />
   <Project Path="Unity.Searcher.Editor.csproj" />
   <Project Path="Wooshii.HierarchyDecorator.Editor.csproj" />
+  <Project Path="Unity.ProBuilder.Editor.csproj" />
   <Project Path="Unity.VisualScripting.Core.csproj" />
   <Project Path="QFSW.QC.Grammar.csproj" />
   <Project Path="VTabs.csproj" />
@@ -46,6 +50,8 @@
   <Project Path="Unity.AI.Navigation.Updater.csproj" />
   <Project Path="Unity.AI.Navigation.Editor.csproj" />
   <Project Path="Assembly-CSharp-firstpass.csproj" />
+  <Project Path="Unity.ProBuilder.KdTree.csproj" />
+  <Project Path="Unity.ProBuilder.AddOns.Editor.csproj" />
   <Project Path="Unity.InputSystem.ForUI.csproj" />
   <Project Path="com.rlabrecque.steamworks.net.editor.csproj" />
   <Project Path="Unity.AI.Navigation.csproj" />
@@ -57,6 +63,7 @@
   <Project Path="QFSW.QC.Serializers.csproj" />
   <Project Path="Unity.VSCode.Editor.csproj" />
   <Project Path="Wingman.csproj" />
+  <Project Path="Unity.ProBuilder.AssetIdRemapUtility.csproj" />
   <Project Path="SingularityGroup.HotReload.Runtime.csproj" />
   <Project Path="QFSW.QC.Suggestors.csproj" />
   <Project Path="Unity.Settings.Editor.csproj" />
@@ -73,6 +80,7 @@
   <Project Path="Febucci.HierarchyIcons.csproj" />
   <Project Path="Unity.InputSystem.DocCodeSamples.csproj" />
   <Project Path="Sirenix.OdinInspector.Modules.UnityMathematics.csproj" />
+  <Project Path="Unity.ProBuilder.Stl.csproj" />
   <Project Path="QFSW.QC.ScanRules.csproj" />
   <Project Path="Unity.VisualScripting.DocCodeExamples.csproj" />
   <Project Path="Unity.PlasticSCM.Editor.Entities.csproj" />
