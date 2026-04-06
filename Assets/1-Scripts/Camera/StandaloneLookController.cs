@@ -529,6 +529,28 @@ public class StandaloneLookController : MonoBehaviour
     }
 
     // ──────────────────────────────────────────────
+    // Cursor Management
+    // ──────────────────────────────────────────────
+
+    /// <summary>
+    /// Hiển thị cursor ra màn hình.
+    /// </summary>
+    public void ShowCursor()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
+    /// <summary>
+    /// Ẩn cursor đi.
+    /// </summary>
+    public void HideCursor()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+    }
+
+    // ──────────────────────────────────────────────
     // Coroutines
     // ──────────────────────────────────────────────
 
