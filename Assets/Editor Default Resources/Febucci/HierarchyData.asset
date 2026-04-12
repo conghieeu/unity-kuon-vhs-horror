@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: HierarchyData
   m_EditorClassIdentifier: Febucci.HierarchyIcons::Febucci.HierarchyData.HierarchyData
   enabled: 1
-  updateInPlayMode: 1
-  drawActivationToggle: 1
+  updateInPlayMode: 0
+  drawActivationToggle: 0
   icons:
-    enabled: 1
+    enabled: 0
     aligned: 0
     pairs: []
   prefabsData:
@@ -24,14 +24,14 @@ MonoBehaviour:
     prefabs: []
   alternatingBackground:
     enabled: 1
-    color: {r: 0, g: 0, b: 0, a: 0.08}
+    color: {r: 0, g: 0, b: 0, a: 0.11372549}
   separator:
-    enabled: 1
+    enabled: 0
     startString: '>'
     color: {r: 0, g: 1, b: 1, a: 0.15}
   tree:
-    enabled: 1
-    drawOverlayOnColoredPrefabs: 1
+    enabled: 0
+    drawOverlayOnColoredPrefabs: 0
     dividerHeigth: 1
     baseLevelColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     branches:

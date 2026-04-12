@@ -81,3 +81,8 @@ InitTestScene*.unity*
 
 # Addressables default ignores, before user customizations
 /ServerData
+
+/[Aa]ssets/ThirdParty
+
+// khong up cac file co duoi .rar
+*.rar
