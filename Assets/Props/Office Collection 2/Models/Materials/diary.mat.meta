@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 5288e290efb562c459ffb93b2c3e388b
+timeCreated: 1518379973
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112464
+  packageName: Office Collection 2
+  packageVersion: 1.2
+  assetPath: Assets/Office Collection 2/Models/Materials/diary.mat
+  uploadId: 616840

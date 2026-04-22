@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 33e901ce9a89aa744928e54b4cf2cc1e
+timeCreated: 1518679667
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112464
+  packageName: Office Collection 2
+  packageVersion: 1.2
+  assetPath: Assets/Office Collection 2/Prefabs/Coffee.prefab
+  uploadId: 616840

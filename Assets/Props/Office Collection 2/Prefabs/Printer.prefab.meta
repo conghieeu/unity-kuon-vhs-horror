@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 9f456a9140ca3574b908bc11c14d3b78
+timeCreated: 1519373086
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112464
+  packageName: Office Collection 2
+  packageVersion: 1.2
+  assetPath: Assets/Office Collection 2/Prefabs/Printer.prefab
+  uploadId: 616840

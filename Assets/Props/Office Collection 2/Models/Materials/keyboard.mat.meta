@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 9a9717a2c9867264189106df9943ed2d
+timeCreated: 1518689613
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112464
+  packageName: Office Collection 2
+  packageVersion: 1.2
+  assetPath: Assets/Office Collection 2/Models/Materials/keyboard.mat
+  uploadId: 616840

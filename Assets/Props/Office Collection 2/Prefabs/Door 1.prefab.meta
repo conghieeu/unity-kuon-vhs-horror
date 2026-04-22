@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: c3b40a1e5b7f888448cb36a941b6f1b5
+timeCreated: 1519405685
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112464
+  packageName: Office Collection 2
+  packageVersion: 1.2
+  assetPath: Assets/Office Collection 2/Prefabs/Door 1.prefab
+  uploadId: 616840

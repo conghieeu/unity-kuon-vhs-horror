@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 3ddc989cad3ac8f4a8bc5bbad1a5ffb8
+timeCreated: 1519229078
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112464
+  packageName: Office Collection 2
+  packageVersion: 1.2
+  assetPath: Assets/Office Collection 2/Models/Materials/fabric chair 2.mat
+  uploadId: 616840

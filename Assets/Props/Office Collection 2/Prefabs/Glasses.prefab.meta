@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: ea3d272e5b7775d4e8876435e715d253
+timeCreated: 1518691116
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112464
+  packageName: Office Collection 2
+  packageVersion: 1.2
+  assetPath: Assets/Office Collection 2/Prefabs/Glasses.prefab
+  uploadId: 616840

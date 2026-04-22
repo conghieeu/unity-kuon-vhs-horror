@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: eb6bb34af9b042b40ade03d84a5ccde4
+timeCreated: 1518510991
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112464
+  packageName: Office Collection 2
+  packageVersion: 1.2
+  assetPath: Assets/Office Collection 2/Models/Materials/leaf 1.mat
+  uploadId: 616840

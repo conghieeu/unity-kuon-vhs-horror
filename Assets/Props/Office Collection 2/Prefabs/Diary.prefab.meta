@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 857f99b7e159f4c4ea60fbd4cfe22e94
+timeCreated: 1518380101
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112464
+  packageName: Office Collection 2
+  packageVersion: 1.2
+  assetPath: Assets/Office Collection 2/Prefabs/Diary.prefab
+  uploadId: 616840

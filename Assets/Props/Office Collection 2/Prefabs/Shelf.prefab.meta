@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: f3d2ffd8eae3c7448a29226b7961e213
+timeCreated: 1519550369
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112464
+  packageName: Office Collection 2
+  packageVersion: 1.2
+  assetPath: Assets/Office Collection 2/Prefabs/Shelf.prefab
+  uploadId: 616840

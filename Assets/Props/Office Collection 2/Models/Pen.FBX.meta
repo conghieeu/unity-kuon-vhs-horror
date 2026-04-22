@@ -1,0 +1,518 @@
+fileFormatVersion: 2
+guid: ef365c77191d07040932b11e36336409
+timeCreated: 1518368587
+licenseType: Store
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: arch20_027_07
+    100002: arch24_049_01
+    100004: arch24_049_01 1
+    100006: arch24_049_01 2
+    100008: arch24_049_01 3
+    100010: arch24_050_00
+    100012: arch24_050_00 1
+    100014: arch24_050_00 2
+    100016: arch24_050_00 3
+    100018: arch24_051_01
+    100020: arch24_051_01 1
+    100022: arch24_051_01 2
+    100024: arch24_051_01 3
+    100026: arch24_052_00
+    100028: arch24_052_00 1
+    100030: arch24_052_00 2
+    100032: arch24_052_00 3
+    100034: arch24_052_01
+    100036: arch24_052_01 1
+    100038: arch24_052_01 2
+    100040: arch24_052_01 3
+    100042: arch24_052_02
+    100044: arch24_052_02 1
+    100046: arch24_052_02 2
+    100048: arch24_052_02 3
+    100050: arch24_058_00
+    100052: arch24_059_00
+    100054: arch24_060_17
+    100056: arch24_062_00
+    100058: arch24_062_00 1
+    100060: arch24_062_00 2
+    100062: arch24_062_00 3
+    100064: arch24_062_00 4
+    100066: arch24_062_00 5
+    100068: arch24_062_01
+    100070: arch24_062_01 1
+    100072: arch24_062_01 2
+    100074: arch24_062_01 3
+    100076: arch24_062_01 4
+    100078: arch24_062_01 5
+    100080: arch24_063_05
+    100082: arch24_063_05 1
+    100084: arch24_063_05 2
+    100086: arch24_063_05 3
+    100088: arch24_063_05 4
+    100090: arch24_063_05 5
+    100092: Arch46_056_1
+    100094: Arch46_057_1
+    100096: Arch46_057_1 1
+    100098: Arch46_057_1 2
+    100100: Arch46_060_1
+    100102: Arch46_061_1
+    100104: ArchInteriors_12_03_obj_106
+    100106: ArchInteriors_12_03_obj_107
+    100108: ArchInteriors_12_07_obj_21
+    100110: ArchInteriors_12_07_obj_21 1
+    100112: ArchInteriors_12_07_obj_21 2
+    100114: ArchInteriors_12_07_obj_21 3
+    100116: ArchInteriors_12_07_obj_21 4
+    100118: ArchInteriors_12_07_obj_22
+    100120: ArchInteriors_12_07_obj_22 1
+    100122: ArchInteriors_12_07_obj_22 2
+    100124: ArchInteriors_12_07_obj_22 3
+    100126: ArchInteriors_12_07_obj_22 4
+    100128: ArchInteriors_12_07_obj_23
+    100130: ArchInteriors_12_07_obj_23 1
+    100132: ArchInteriors_12_07_obj_23 2
+    100134: ArchInteriors_12_07_obj_23 3
+    100136: ArchInteriors_12_07_obj_23 4
+    100138: ArchInteriors_12_07_obj_24
+    100140: ArchInteriors_12_07_obj_24 1
+    100142: ArchInteriors_12_07_obj_24 2
+    100144: ArchInteriors_12_07_obj_24 3
+    100146: ArchInteriors_12_07_obj_24 4
+    100148: ArchInteriors_12_07_obj_242
+    100150: ArchInteriors_12_07_obj_242 1
+    100152: ArchInteriors_12_07_obj_242 2
+    100154: ArchInteriors_12_07_obj_242 3
+    100156: ArchInteriors_12_07_obj_242 4
+    100158: ArchInteriors_12_07_obj_243
+    100160: ArchInteriors_12_07_obj_243 1
+    100162: ArchInteriors_12_07_obj_243 2
+    100164: ArchInteriors_12_07_obj_243 3
+    100166: ArchInteriors_12_07_obj_243 4
+    100168: ArchInteriors_12_07_obj_244
+    100170: ArchInteriors_12_07_obj_244 1
+    100172: ArchInteriors_12_07_obj_244 2
+    100174: ArchInteriors_12_07_obj_244 3
+    100176: ArchInteriors_12_07_obj_244 4
+    100178: ArchInteriors_12_07_obj_245
+    100180: ArchInteriors_12_07_obj_245 1
+    100182: ArchInteriors_12_07_obj_245 2
+    100184: ArchInteriors_12_07_obj_245 3
+    100186: ArchInteriors_12_07_obj_245 4
+    100188: ArchInteriors_12_07_obj_246
+    100190: ArchInteriors_12_07_obj_246 1
+    100192: ArchInteriors_12_07_obj_246 2
+    100194: ArchInteriors_12_07_obj_246 3
+    100196: ArchInteriors_12_07_obj_246 4
+    100198: ArchInteriors_12_07_obj_247
+    100200: ArchInteriors_12_07_obj_247 1
+    100202: ArchInteriors_12_07_obj_247 2
+    100204: ArchInteriors_12_07_obj_247 3
+    100206: ArchInteriors_12_07_obj_247 4
+    100208: ArchInteriors_12_07_obj_248
+    100210: ArchInteriors_12_07_obj_248 1
+    100212: ArchInteriors_12_07_obj_248 2
+    100214: ArchInteriors_12_07_obj_248 3
+    100216: ArchInteriors_12_07_obj_248 4
+    100218: ArchInteriors_12_07_obj_249
+    100220: ArchInteriors_12_07_obj_249 1
+    100222: ArchInteriors_12_07_obj_249 2
+    100224: ArchInteriors_12_07_obj_249 3
+    100226: ArchInteriors_12_07_obj_249 4
+    100228: ArchInteriors_12_07_obj_25
+    100230: ArchInteriors_12_07_obj_25 1
+    100232: ArchInteriors_12_07_obj_25 2
+    100234: ArchInteriors_12_07_obj_25 3
+    100236: ArchInteriors_12_07_obj_25 4
+    100238: ArchInteriors_12_07_obj_250
+    100240: ArchInteriors_12_07_obj_250 1
+    100242: ArchInteriors_12_07_obj_250 2
+    100244: ArchInteriors_12_07_obj_250 3
+    100246: ArchInteriors_12_07_obj_250 4
+    100248: ArchInteriors_12_07_obj_251
+    100250: ArchInteriors_12_07_obj_251 1
+    100252: ArchInteriors_12_07_obj_251 2
+    100254: ArchInteriors_12_07_obj_251 3
+    100256: ArchInteriors_12_07_obj_251 4
+    100258: ArchInteriors_12_07_obj_252
+    100260: ArchInteriors_12_07_obj_252 1
+    100262: ArchInteriors_12_07_obj_252 2
+    100264: ArchInteriors_12_07_obj_252 3
+    100266: ArchInteriors_12_07_obj_252 4
+    100268: ArchInteriors_12_07_obj_253
+    100270: ArchInteriors_12_07_obj_253 1
+    100272: ArchInteriors_12_07_obj_253 2
+    100274: ArchInteriors_12_07_obj_253 3
+    100276: ArchInteriors_12_07_obj_253 4
+    100278: ArchInteriors_12_07_obj_255
+    100280: ArchInteriors_12_07_obj_255 1
+    100282: ArchInteriors_12_07_obj_255 2
+    100284: ArchInteriors_12_07_obj_255 3
+    100286: ArchInteriors_12_07_obj_255 4
+    100288: ArchInteriors_12_07_obj_256
+    100290: ArchInteriors_12_07_obj_256 1
+    100292: ArchInteriors_12_07_obj_256 2
+    100294: ArchInteriors_12_07_obj_256 3
+    100296: ArchInteriors_12_07_obj_256 4
+    100298: ArchInteriors_12_07_obj_26
+    100300: ArchInteriors_12_07_obj_26 1
+    100302: ArchInteriors_12_07_obj_26 2
+    100304: ArchInteriors_12_07_obj_26 3
+    100306: ArchInteriors_12_07_obj_26 4
+    100308: ArchInteriors_12_07_obj_27
+    100310: ArchInteriors_12_07_obj_27 1
+    100312: ArchInteriors_12_07_obj_27 2
+    100314: ArchInteriors_12_07_obj_27 3
+    100316: ArchInteriors_12_07_obj_27 4
+    100318: ArchInteriors_12_07_obj_28
+    100320: ArchInteriors_12_07_obj_28 1
+    100322: ArchInteriors_12_07_obj_28 2
+    100324: ArchInteriors_12_07_obj_28 3
+    100326: ArchInteriors_12_07_obj_28 4
+    100328: ArchInteriors_12_07_obj_29
+    100330: ArchInteriors_12_07_obj_29 1
+    100332: ArchInteriors_12_07_obj_29 2
+    100334: ArchInteriors_12_07_obj_29 3
+    100336: ArchInteriors_12_07_obj_29 4
+    100338: ArchInteriors_12_07_obj_30
+    100340: ArchInteriors_12_07_obj_30 1
+    100342: ArchInteriors_12_07_obj_30 2
+    100344: ArchInteriors_12_07_obj_30 3
+    100346: ArchInteriors_12_07_obj_30 4
+    100348: ArchInteriors_12_07_obj_31
+    100350: ArchInteriors_12_07_obj_31 1
+    100352: ArchInteriors_12_07_obj_31 2
+    100354: ArchInteriors_12_07_obj_31 3
+    100356: ArchInteriors_12_07_obj_31 4
+    100358: ArchInteriors_12_07_obj_32
+    100360: ArchInteriors_12_07_obj_32 1
+    100362: ArchInteriors_12_07_obj_32 2
+    100364: ArchInteriors_12_07_obj_32 3
+    100366: ArchInteriors_12_07_obj_32 4
+    100368: ArchInteriors_12_07_obj_33
+    100370: ArchInteriors_12_07_obj_33 1
+    100372: ArchInteriors_12_07_obj_33 2
+    100374: ArchInteriors_12_07_obj_33 3
+    100376: ArchInteriors_12_07_obj_33 4
+    100378: ArchInteriors_12_07_obj_34
+    100380: ArchInteriors_12_07_obj_34 1
+    100382: ArchInteriors_12_07_obj_34 2
+    100384: ArchInteriors_12_07_obj_34 3
+    100386: ArchInteriors_12_07_obj_34 4
+    100388: Archmodels55_31_arch20_027_07
+    100390: Archmodels55_31_arch20_027_07 1
+    100392: Particle View 01
+    100394: Particle View 01 1
+    100396: Particle View 01 2
+    100398: Particle View 01 3
+    100400: Particle View 01 4
+    100402: Particle View 01 5
+    100404: Particle View 01 6
+    100406: Particle View 01 7
+    100408: Particle View 01 8
+    100410: Particle View01
+    100412: //RootNode
+    100414: pen
+    400000: arch20_027_07
+    400002: arch24_049_01
+    400004: arch24_049_01 1
+    400006: arch24_049_01 2
+    400008: arch24_049_01 3
+    400010: arch24_050_00
+    400012: arch24_050_00 1
+    400014: arch24_050_00 2
+    400016: arch24_050_00 3
+    400018: arch24_051_01
+    400020: arch24_051_01 1
+    400022: arch24_051_01 2
+    400024: arch24_051_01 3
+    400026: arch24_052_00
+    400028: arch24_052_00 1
+    400030: arch24_052_00 2
+    400032: arch24_052_00 3
+    400034: arch24_052_01
+    400036: arch24_052_01 1
+    400038: arch24_052_01 2
+    400040: arch24_052_01 3
+    400042: arch24_052_02
+    400044: arch24_052_02 1
+    400046: arch24_052_02 2
+    400048: arch24_052_02 3
+    400050: arch24_058_00
+    400052: arch24_059_00
+    400054: arch24_060_17
+    400056: arch24_062_00
+    400058: arch24_062_00 1
+    400060: arch24_062_00 2
+    400062: arch24_062_00 3
+    400064: arch24_062_00 4
+    400066: arch24_062_00 5
+    400068: arch24_062_01
+    400070: arch24_062_01 1
+    400072: arch24_062_01 2
+    400074: arch24_062_01 3
+    400076: arch24_062_01 4
+    400078: arch24_062_01 5
+    400080: arch24_063_05
+    400082: arch24_063_05 1
+    400084: arch24_063_05 2
+    400086: arch24_063_05 3
+    400088: arch24_063_05 4
+    400090: arch24_063_05 5
+    400092: Arch46_056_1
+    400094: Arch46_057_1
+    400096: Arch46_057_1 1
+    400098: Arch46_057_1 2
+    400100: Arch46_060_1
+    400102: Arch46_061_1
+    400104: ArchInteriors_12_03_obj_106
+    400106: ArchInteriors_12_03_obj_107
+    400108: ArchInteriors_12_07_obj_21
+    400110: ArchInteriors_12_07_obj_21 1
+    400112: ArchInteriors_12_07_obj_21 2
+    400114: ArchInteriors_12_07_obj_21 3
+    400116: ArchInteriors_12_07_obj_21 4
+    400118: ArchInteriors_12_07_obj_22
+    400120: ArchInteriors_12_07_obj_22 1
+    400122: ArchInteriors_12_07_obj_22 2
+    400124: ArchInteriors_12_07_obj_22 3
+    400126: ArchInteriors_12_07_obj_22 4
+    400128: ArchInteriors_12_07_obj_23
+    400130: ArchInteriors_12_07_obj_23 1
+    400132: ArchInteriors_12_07_obj_23 2
+    400134: ArchInteriors_12_07_obj_23 3
+    400136: ArchInteriors_12_07_obj_23 4
+    400138: ArchInteriors_12_07_obj_24
+    400140: ArchInteriors_12_07_obj_24 1
+    400142: ArchInteriors_12_07_obj_24 2
+    400144: ArchInteriors_12_07_obj_24 3
+    400146: ArchInteriors_12_07_obj_24 4
+    400148: ArchInteriors_12_07_obj_242
+    400150: ArchInteriors_12_07_obj_242 1
+    400152: ArchInteriors_12_07_obj_242 2
+    400154: ArchInteriors_12_07_obj_242 3
+    400156: ArchInteriors_12_07_obj_242 4
+    400158: ArchInteriors_12_07_obj_243
+    400160: ArchInteriors_12_07_obj_243 1
+    400162: ArchInteriors_12_07_obj_243 2
+    400164: ArchInteriors_12_07_obj_243 3
+    400166: ArchInteriors_12_07_obj_243 4
+    400168: ArchInteriors_12_07_obj_244
+    400170: ArchInteriors_12_07_obj_244 1
+    400172: ArchInteriors_12_07_obj_244 2
+    400174: ArchInteriors_12_07_obj_244 3
+    400176: ArchInteriors_12_07_obj_244 4
+    400178: ArchInteriors_12_07_obj_245
+    400180: ArchInteriors_12_07_obj_245 1
+    400182: ArchInteriors_12_07_obj_245 2
+    400184: ArchInteriors_12_07_obj_245 3
+    400186: ArchInteriors_12_07_obj_245 4
+    400188: ArchInteriors_12_07_obj_246
+    400190: ArchInteriors_12_07_obj_246 1
+    400192: ArchInteriors_12_07_obj_246 2
+    400194: ArchInteriors_12_07_obj_246 3
+    400196: ArchInteriors_12_07_obj_246 4
+    400198: ArchInteriors_12_07_obj_247
+    400200: ArchInteriors_12_07_obj_247 1
+    400202: ArchInteriors_12_07_obj_247 2
+    400204: ArchInteriors_12_07_obj_247 3
+    400206: ArchInteriors_12_07_obj_247 4
+    400208: ArchInteriors_12_07_obj_248
+    400210: ArchInteriors_12_07_obj_248 1
+    400212: ArchInteriors_12_07_obj_248 2
+    400214: ArchInteriors_12_07_obj_248 3
+    400216: ArchInteriors_12_07_obj_248 4
+    400218: ArchInteriors_12_07_obj_249
+    400220: ArchInteriors_12_07_obj_249 1
+    400222: ArchInteriors_12_07_obj_249 2
+    400224: ArchInteriors_12_07_obj_249 3
+    400226: ArchInteriors_12_07_obj_249 4
+    400228: ArchInteriors_12_07_obj_25
+    400230: ArchInteriors_12_07_obj_25 1
+    400232: ArchInteriors_12_07_obj_25 2
+    400234: ArchInteriors_12_07_obj_25 3
+    400236: ArchInteriors_12_07_obj_25 4
+    400238: ArchInteriors_12_07_obj_250
+    400240: ArchInteriors_12_07_obj_250 1
+    400242: ArchInteriors_12_07_obj_250 2
+    400244: ArchInteriors_12_07_obj_250 3
+    400246: ArchInteriors_12_07_obj_250 4
+    400248: ArchInteriors_12_07_obj_251
+    400250: ArchInteriors_12_07_obj_251 1
+    400252: ArchInteriors_12_07_obj_251 2
+    400254: ArchInteriors_12_07_obj_251 3
+    400256: ArchInteriors_12_07_obj_251 4
+    400258: ArchInteriors_12_07_obj_252
+    400260: ArchInteriors_12_07_obj_252 1
+    400262: ArchInteriors_12_07_obj_252 2
+    400264: ArchInteriors_12_07_obj_252 3
+    400266: ArchInteriors_12_07_obj_252 4
+    400268: ArchInteriors_12_07_obj_253
+    400270: ArchInteriors_12_07_obj_253 1
+    400272: ArchInteriors_12_07_obj_253 2
+    400274: ArchInteriors_12_07_obj_253 3
+    400276: ArchInteriors_12_07_obj_253 4
+    400278: ArchInteriors_12_07_obj_255
+    400280: ArchInteriors_12_07_obj_255 1
+    400282: ArchInteriors_12_07_obj_255 2
+    400284: ArchInteriors_12_07_obj_255 3
+    400286: ArchInteriors_12_07_obj_255 4
+    400288: ArchInteriors_12_07_obj_256
+    400290: ArchInteriors_12_07_obj_256 1
+    400292: ArchInteriors_12_07_obj_256 2
+    400294: ArchInteriors_12_07_obj_256 3
+    400296: ArchInteriors_12_07_obj_256 4
+    400298: ArchInteriors_12_07_obj_26
+    400300: ArchInteriors_12_07_obj_26 1
+    400302: ArchInteriors_12_07_obj_26 2
+    400304: ArchInteriors_12_07_obj_26 3
+    400306: ArchInteriors_12_07_obj_26 4
+    400308: ArchInteriors_12_07_obj_27
+    400310: ArchInteriors_12_07_obj_27 1
+    400312: ArchInteriors_12_07_obj_27 2
+    400314: ArchInteriors_12_07_obj_27 3
+    400316: ArchInteriors_12_07_obj_27 4
+    400318: ArchInteriors_12_07_obj_28
+    400320: ArchInteriors_12_07_obj_28 1
+    400322: ArchInteriors_12_07_obj_28 2
+    400324: ArchInteriors_12_07_obj_28 3
+    400326: ArchInteriors_12_07_obj_28 4
+    400328: ArchInteriors_12_07_obj_29
+    400330: ArchInteriors_12_07_obj_29 1
+    400332: ArchInteriors_12_07_obj_29 2
+    400334: ArchInteriors_12_07_obj_29 3
+    400336: ArchInteriors_12_07_obj_29 4
+    400338: ArchInteriors_12_07_obj_30
+    400340: ArchInteriors_12_07_obj_30 1
+    400342: ArchInteriors_12_07_obj_30 2
+    400344: ArchInteriors_12_07_obj_30 3
+    400346: ArchInteriors_12_07_obj_30 4
+    400348: ArchInteriors_12_07_obj_31
+    400350: ArchInteriors_12_07_obj_31 1
+    400352: ArchInteriors_12_07_obj_31 2
+    400354: ArchInteriors_12_07_obj_31 3
+    400356: ArchInteriors_12_07_obj_31 4
+    400358: ArchInteriors_12_07_obj_32
+    400360: ArchInteriors_12_07_obj_32 1
+    400362: ArchInteriors_12_07_obj_32 2
+    400364: ArchInteriors_12_07_obj_32 3
+    400366: ArchInteriors_12_07_obj_32 4
+    400368: ArchInteriors_12_07_obj_33
+    400370: ArchInteriors_12_07_obj_33 1
+    400372: ArchInteriors_12_07_obj_33 2
+    400374: ArchInteriors_12_07_obj_33 3
+    400376: ArchInteriors_12_07_obj_33 4
+    400378: ArchInteriors_12_07_obj_34
+    400380: ArchInteriors_12_07_obj_34 1
+    400382: ArchInteriors_12_07_obj_34 2
+    400384: ArchInteriors_12_07_obj_34 3
+    400386: ArchInteriors_12_07_obj_34 4
+    400388: Archmodels55_31_arch20_027_07
+    400390: Archmodels55_31_arch20_027_07 1
+    400392: Particle View 01
+    400394: Particle View 01 1
+    400396: Particle View 01 2
+    400398: Particle View 01 3
+    400400: Particle View 01 4
+    400402: Particle View 01 5
+    400404: Particle View 01 6
+    400406: Particle View 01 7
+    400408: Particle View 01 8
+    400410: Particle View01
+    400412: //RootNode
+    400414: pen
+    2300000: pen
+    2300002: //RootNode
+    3300000: pen
+    3300002: //RootNode
+    4300000: pen
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #209'
+    second: {fileID: 2100000, guid: 230a25b62ad3d884f829a0f1855862d3, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112464
+  packageName: Office Collection 2
+  packageVersion: 1.2
+  assetPath: Assets/Office Collection 2/Models/Pen.FBX
+  uploadId: 616840

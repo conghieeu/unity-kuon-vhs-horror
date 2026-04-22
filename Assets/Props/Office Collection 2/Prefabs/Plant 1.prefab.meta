@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 1a2b8059155b4b3418820f9f5ab2653d
+timeCreated: 1519550407
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112464
+  packageName: Office Collection 2
+  packageVersion: 1.2
+  assetPath: Assets/Office Collection 2/Prefabs/Plant 1.prefab
+  uploadId: 616840

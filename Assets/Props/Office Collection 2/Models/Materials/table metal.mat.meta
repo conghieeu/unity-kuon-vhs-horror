@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: a15bd3154f138ce49ac5da8e2dff4a9d
+timeCreated: 1519239988
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112464
+  packageName: Office Collection 2
+  packageVersion: 1.2
+  assetPath: Assets/Office Collection 2/Models/Materials/table metal.mat
+  uploadId: 616840

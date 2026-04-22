@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: aa4e1a8cab5d7d24bb41f9ea67c9c68c
+timeCreated: 1519239987
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112464
+  packageName: Office Collection 2
+  packageVersion: 1.2
+  assetPath: Assets/Office Collection 2/Models/Materials/table glass.mat
+  uploadId: 616840

@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 6a953c7cbf0b76a49a2c0bc1cef35647
+timeCreated: 1519404558
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112464
+  packageName: Office Collection 2
+  packageVersion: 1.2
+  assetPath: Assets/Office Collection 2/Models/Materials/firealarm.mat
+  uploadId: 616840

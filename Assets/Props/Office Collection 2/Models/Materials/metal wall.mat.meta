@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 93985c788e71a5646a62636d005803a5
+timeCreated: 1519573326
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112464
+  packageName: Office Collection 2
+  packageVersion: 1.2
+  assetPath: Assets/Office Collection 2/Models/Materials/metal wall.mat
+  uploadId: 616840

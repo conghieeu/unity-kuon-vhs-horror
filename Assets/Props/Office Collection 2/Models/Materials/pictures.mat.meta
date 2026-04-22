@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: ef8def7d8171a8b4a90a7816a709e156
+timeCreated: 1518364168
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112464
+  packageName: Office Collection 2
+  packageVersion: 1.2
+  assetPath: Assets/Office Collection 2/Models/Materials/pictures.mat
+  uploadId: 616840

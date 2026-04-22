@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: b38732072a50e5f4582a75cb5eb95663
+timeCreated: 1519320594
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112464
+  packageName: Office Collection 2
+  packageVersion: 1.2
+  assetPath: Assets/Office Collection 2/Models/Materials/box 1.mat
+  uploadId: 616840

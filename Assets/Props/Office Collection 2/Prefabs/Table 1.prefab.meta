@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 81d30d7610aade6429fd0d320e3e465b
+timeCreated: 1519286432
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112464
+  packageName: Office Collection 2
+  packageVersion: 1.2
+  assetPath: Assets/Office Collection 2/Prefabs/Table 1.prefab
+  uploadId: 616840

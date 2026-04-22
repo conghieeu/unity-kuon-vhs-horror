@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: e34765db933d4c841b35c52a22a624fd
+timeCreated: 1518690310
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112464
+  packageName: Office Collection 2
+  packageVersion: 1.2
+  assetPath: Assets/Office Collection 2/Models/Materials/monitor.mat
+  uploadId: 616840

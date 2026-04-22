@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 1d30eec89df4b52419581e6d2c98f012
+timeCreated: 1519404373
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112464
+  packageName: Office Collection 2
+  packageVersion: 1.2
+  assetPath: Assets/Office Collection 2/Prefabs/Fire Hose.prefab
+  uploadId: 616840

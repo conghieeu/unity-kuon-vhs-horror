@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: ef3f33f5a80d0304cb6ab84a6032e970
+timeCreated: 1519372809
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112464
+  packageName: Office Collection 2
+  packageVersion: 1.2
+  assetPath: Assets/Office Collection 2/Prefabs/Fax.prefab
+  uploadId: 616840

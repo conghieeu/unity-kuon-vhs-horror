@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: a9990065cba85dd4bbf33d1021641ebb
+timeCreated: 1518680072
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112464
+  packageName: Office Collection 2
+  packageVersion: 1.2
+  assetPath: Assets/Office Collection 2/Models/Materials/chair 1 fabric.mat
+  uploadId: 616840

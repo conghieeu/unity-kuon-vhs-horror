@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 7b20153ec7e51734aa5cdbbaa5d051cd
+timeCreated: 1518359342
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112464
+  packageName: Office Collection 2
+  packageVersion: 1.2
+  assetPath: Assets/Office Collection 2/Models/Materials/Notebook 2.mat
+  uploadId: 616840

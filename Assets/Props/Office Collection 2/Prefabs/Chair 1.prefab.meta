@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 856ad74adbda28e47ab474ca75513409
+timeCreated: 1518690686
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112464
+  packageName: Office Collection 2
+  packageVersion: 1.2
+  assetPath: Assets/Office Collection 2/Prefabs/Chair 1.prefab
+  uploadId: 616840

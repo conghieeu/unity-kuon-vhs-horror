@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 8b09e87d48c57cb46a2d470efdcd1aeb
+timeCreated: 1519372726
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112464
+  packageName: Office Collection 2
+  packageVersion: 1.2
+  assetPath: Assets/Office Collection 2/Models/Materials/printer.mat
+  uploadId: 616840

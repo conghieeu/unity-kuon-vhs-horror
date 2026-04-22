@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 82b2023f2d78b4f46ac049adf1314963
+timeCreated: 1519669339
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112464
+  packageName: Office Collection 2
+  packageVersion: 1.2
+  assetPath: Assets/Office Collection 2/Prefabs/Posit.prefab
+  uploadId: 616840

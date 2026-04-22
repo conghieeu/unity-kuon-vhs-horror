@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: c6edf1126aefc6d449c66d4ef00248e1
+timeCreated: 1519304703
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112464
+  packageName: Office Collection 2
+  packageVersion: 1.2
+  assetPath: Assets/Office Collection 2/Models/Materials/skirting material.mat
+  uploadId: 616840

@@ -1022,7 +1022,7 @@ MonoBehaviour:
   g_bypass: 0
   pixelOn:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   screenResPresetId:
     m_OverrideState: 1
     m_Value: 2
@@ -1034,7 +1034,7 @@ MonoBehaviour:
     m_Value: 480
   colorOn:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   colorMode:
     m_OverrideState: 1
     m_Value: 2
@@ -1052,25 +1052,25 @@ MonoBehaviour:
     m_Value: 2
   bitsSynced:
     m_OverrideState: 1
-    m_Value: 2
+    m_Value: 255
   bitsGray:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 255
   grayscaleColor:
     m_OverrideState: 1
     m_Value: {r: 1, g: 1, b: 1, a: 1}
   ditherOn:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   ditherMode:
     m_OverrideState: 1
     m_Value: 3
   ditherAmount:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 3
   paletteOn:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   paletteId:
     m_OverrideState: 1
     m_Value: 0
@@ -1086,7 +1086,7 @@ MonoBehaviour:
   paletteCustomInit: 0
   bleedOn:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   crtMode:
     m_OverrideState: 1
     m_Value: 0
@@ -1104,13 +1104,13 @@ MonoBehaviour:
     m_Value: 480
   filmgrainOn:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   filmGrainAmount:
     m_OverrideState: 1
-    m_Value: 0.016
+    m_Value: 1
   signalNoiseOn:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   signalNoiseAmount:
     m_OverrideState: 1
     m_Value: 0.3
@@ -1119,7 +1119,7 @@ MonoBehaviour:
     m_Value: 0.83
   lineNoiseOn:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   lineNoiseAmount:
     m_OverrideState: 1
     m_Value: 1
@@ -1128,7 +1128,7 @@ MonoBehaviour:
     m_Value: 5
   tapeNoiseOn:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   tapeNoiseTH:
     m_OverrideState: 1
     m_Value: 0.63
@@ -1140,28 +1140,28 @@ MonoBehaviour:
     m_Value: 1
   scanLinesOn:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   scanLineWidth:
     m_OverrideState: 1
     m_Value: 10
   linesFloatOn:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   linesFloatSpeed:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 3
   stretchOn:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   jitterHOn:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   jitterHAmount:
     m_OverrideState: 1
-    m_Value: 0.5
+    m_Value: 5
   jitterVOn:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   jitterVAmount:
     m_OverrideState: 1
     m_Value: 1
@@ -1170,28 +1170,28 @@ MonoBehaviour:
     m_Value: 1
   twitchHOn:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   twitchHFreq:
     m_OverrideState: 1
     m_Value: 1
   twitchVOn:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   twitchVFreq:
     m_OverrideState: 1
     m_Value: 1
   signalTweakOn:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   signalAdjustY:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 0.166
   signalAdjustI:
     m_OverrideState: 1
     m_Value: 0
   signalAdjustQ:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 0.25
   signalShiftY:
     m_OverrideState: 1
     m_Value: 1
@@ -1203,7 +1203,7 @@ MonoBehaviour:
     m_Value: 1
   feedbackOn:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   feedbackThresh:
     m_OverrideState: 1
     m_Value: 0.1
@@ -1218,11 +1218,11 @@ MonoBehaviour:
     m_Value: {r: 1, g: 0.5, b: 0, a: 1}
   feedbackDebugOn:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   feedbackMode: 0
   independentTimeOn:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   bypassOn:
     m_OverrideState: 1
     m_Value: 0

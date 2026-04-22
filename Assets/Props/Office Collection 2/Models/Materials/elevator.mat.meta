@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: ef8483539e365144f9ca75c4d6d6bab0
+timeCreated: 1519550968
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112464
+  packageName: Office Collection 2
+  packageVersion: 1.2
+  assetPath: Assets/Office Collection 2/Models/Materials/elevator.mat
+  uploadId: 616840

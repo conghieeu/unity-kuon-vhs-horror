@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 5766d9438edd302409e47d5f2f5f6d53
+timeCreated: 1518691074
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112464
+  packageName: Office Collection 2
+  packageVersion: 1.2
+  assetPath: Assets/Office Collection 2/Models/Materials/glasses.mat
+  uploadId: 616840

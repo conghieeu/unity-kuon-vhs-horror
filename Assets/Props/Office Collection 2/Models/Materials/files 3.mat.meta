@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 86f24a32713203c458f2af877b6492be
+timeCreated: 1518706445
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112464
+  packageName: Office Collection 2
+  packageVersion: 1.2
+  assetPath: Assets/Office Collection 2/Models/Materials/files 3.mat
+  uploadId: 616840

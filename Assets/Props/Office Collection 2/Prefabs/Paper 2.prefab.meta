@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 68bbb968920911342967d09d1a9ef85e
+timeCreated: 1518370520
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112464
+  packageName: Office Collection 2
+  packageVersion: 1.2
+  assetPath: Assets/Office Collection 2/Prefabs/Paper 2.prefab
+  uploadId: 616840

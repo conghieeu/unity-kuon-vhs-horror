@@ -1,0 +1,184 @@
+fileFormatVersion: 2
+guid: c361b62c79a21594196bc108bd7f6be9
+ModelImporter:
+  serializedVersion: 25
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: //RootNode
+  - first:
+      1: 100002
+    second: AE_House_07_LOD0
+  - first:
+      1: 100004
+    second: AE_House_07_LOD1
+  - first:
+      4: 400000
+    second: //RootNode
+  - first:
+      4: 400002
+    second: AE_House_07_LOD0
+  - first:
+      4: 400004
+    second: AE_House_07_LOD1
+  - first:
+      21: 2100000
+    second: AE_Concrete
+  - first:
+      21: 2100002
+    second: AE_Tilling material_01
+  - first:
+      21: 2100004
+    second: AE_Door_01
+  - first:
+      21: 2100006
+    second: AE_Grass_02
+  - first:
+      21: 2100008
+    second: AE_Window
+  - first:
+      21: 2100010
+    second: AE_Decal_01
+  - first:
+      23: 2300000
+    second: AE_House_07_LOD0
+  - first:
+      23: 2300002
+    second: AE_House_07_LOD1
+  - first:
+      33: 3300000
+    second: AE_House_07_LOD0
+  - first:
+      33: 3300002
+    second: AE_House_07_LOD1
+  - first:
+      43: 4300000
+    second: AE_House_07_LOD0
+  - first:
+      43: 4300002
+    second: AE_House_07_LOD1
+  - first:
+      205: 20500000
+    second: //RootNode
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: AE_Concrete
+    second: {fileID: 2100000, guid: a5a899d89bcfd2940ab455b3033d0010, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: AE_Decal_01
+    second: {fileID: 2100000, guid: c3dfd8a17ef15804aa600cca88c0962c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: AE_Door_01
+    second: {fileID: 2100000, guid: 4d5a66ee756595746993da7ec89af360, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: AE_Grass_02
+    second: {fileID: 2100000, guid: f950cc174b6fafe4ab7014200e986a9c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: AE_Tilling material_01
+    second: {fileID: 2100000, guid: 3a645760f06b7134a815d466263a642c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: AE_Window
+    second: {fileID: 2100000, guid: 527979957669e564a954e130960fd5e3, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties:
+    - '#BAKERY{"meshName":["AE_House_07_LOD0","AE_House_07_LOD1"],"padding":[13,13],"unwrapper":[0,0]}'
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages:
+    - 0.25
+    - 0.01
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 1
+    secondaryUVAngleDistortion: 24
+    secondaryUVAreaDistortion: 26
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 54
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

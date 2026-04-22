@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 3b6464896c997ae4d99e71dc56d2c50b
+timeCreated: 1518532565
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112464
+  packageName: Office Collection 2
+  packageVersion: 1.2
+  assetPath: Assets/Office Collection 2/Models/Materials/Clock.mat
+  uploadId: 616840

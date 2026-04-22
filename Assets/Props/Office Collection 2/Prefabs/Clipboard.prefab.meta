@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 90abe216c6b666a4e80d96ecc6bb76f8
+timeCreated: 1518453209
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112464
+  packageName: Office Collection 2
+  packageVersion: 1.2
+  assetPath: Assets/Office Collection 2/Prefabs/Clipboard.prefab
+  uploadId: 616840

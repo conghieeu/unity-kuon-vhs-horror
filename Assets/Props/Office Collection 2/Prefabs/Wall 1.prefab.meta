@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 2c13689ba25756745a2f6e03c56adb56
+timeCreated: 1519576193
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 100100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112464
+  packageName: Office Collection 2
+  packageVersion: 1.2
+  assetPath: Assets/Office Collection 2/Prefabs/Wall 1.prefab
+  uploadId: 616840

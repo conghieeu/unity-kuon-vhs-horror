@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: f07e54476ebca5e408ee3b78d556228f
+timeCreated: 1519648363
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112464
+  packageName: Office Collection 2
+  packageVersion: 1.2
+  assetPath: Assets/Office Collection 2/Models/Materials/Asphalt.mat
+  uploadId: 616840

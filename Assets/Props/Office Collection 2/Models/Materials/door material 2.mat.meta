@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 8db38b921d0b3c742b46ef6c9880c858
+timeCreated: 1519403914
+licenseType: Store
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 112464
+  packageName: Office Collection 2
+  packageVersion: 1.2
+  assetPath: Assets/Office Collection 2/Models/Materials/door material 2.mat
+  uploadId: 616840
