@@ -16,8 +16,8 @@
   <Project Path="Unity.VisualScripting.Core.Editor.csproj" />
   <Project Path="Unity.PerformanceTesting.Editor.csproj" />
   <Project Path="Assembly-CSharp.csproj" />
-  <Project Path="QFSW.QC.csproj" />
   <Project Path="Unity.Splines.csproj" />
+  <Project Path="QFSW.QC.csproj" />
   <Project Path="Unity.Burst.csproj" />
   <Project Path="PixelCrushers.csproj" />
   <Project Path="Unity.VisualScripting.Flow.Editor.csproj" />
@@ -32,8 +32,8 @@
   <Project Path="com.rlabrecque.steamworks.net.csproj" />
   <Project Path="Unity.VisualScripting.Core.csproj" />
   <Project Path="Unity.VisualScripting.State.Editor.csproj" />
-  <Project Path="Unity.AI.Navigation.Editor.ConversionSystem.csproj" />
   <Project Path="ParadoxNotion.csproj" />
+  <Project Path="Unity.AI.Navigation.Editor.ConversionSystem.csproj" />
   <Project Path="Unity.Burst.CodeGen.csproj" />
   <Project Path="Unity.Cinemachine.csproj" />
   <Project Path="Unity.VisualScripting.Flow.csproj" />

@@ -14,7 +14,7 @@ namespace SingularityGroup.HotReload {
         public Text textSuggestion;
         public InputField ipInput;
         
-        [Tooltip("Ẩn theo mặc định")]
+        [Tooltip("Hidden by default")]
         public Text textForDebugging;
         
         [Header("For HotReload Devs")]

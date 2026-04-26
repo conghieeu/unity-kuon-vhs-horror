@@ -15,7 +15,7 @@ namespace SingularityGroup.HotReload {
         public GameObject questionPrompt;
         
         [Header("Other")]
-        [Tooltip("Được sử dụng khi dự án không tạo EventSystem sớm đủ")]
+        [Tooltip("Used when project does not create an EventSystem early enough")]
         public GameObject fallbackEventSystem;
         
         #region Singleton

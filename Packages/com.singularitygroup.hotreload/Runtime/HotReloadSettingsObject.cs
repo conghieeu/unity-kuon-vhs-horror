@@ -121,7 +121,7 @@ namespace SingularityGroup.HotReload {
         // put the stored settings here
 
         [Header("Build Settings")]
-        [Tooltip("Có nên bao gồm Hot Reload runtime trong các build phát triển không? HotReload không bao giờ được bao gồm trong build phát hành.")]
+        [Tooltip("Should the Hot Reload runtime be included in development builds? HotReload is never included in release builds.")]
         public bool IncludeInBuild = true;
 
         [Header("Player Settings")]
