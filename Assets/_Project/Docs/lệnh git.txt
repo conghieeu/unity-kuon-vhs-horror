@@ -1,0 +1,7 @@
+git branch -f main HEAD
+git checkout main
+git push origin main
+
+git stash
+git stash pop
+git stash list

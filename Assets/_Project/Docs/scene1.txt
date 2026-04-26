@@ -1,0 +1,15 @@
+CẢNH 1: CHUYẾN TAXI ĐẾN TAKAYAGI
+Môi trường: Nội thất xe Taxi, trời nhá nhem tối, ánh đèn đường lướt qua cửa sổ. Góc máy: POV (Góc nhìn thứ nhất), người chơi ngồi ghế sau.
+
+    [Dialogue Tree] 
+Tài xế: "Cậu lần đầu tiên mới đến đây đúng không? Trông cậu không giống người ở vùng này."
+    Lựa chọn 1: "Tất nhiên là cháu ở đây rồi." (Phản hồi: Tài xế cười hoài nghi).
+    Lựa chọn 2 [Cầu tiến]: "Xin lỗi, cháu không phải người Nhật. Cháu sang đây để bắt đầu cuộc sống mới, muốn học hỏi từ một nơi phát triển như thế này."
+    Lựa chọn 3: [Im lặng].
+Tài xế (Tiếp tục): "Thị trấn này... từng là một nơi linh thiêng đấy. Nhưng cũng có nhiều hiện tượng kỳ lạ xảy ra mà người trẻ bây giờ ít khi tin." Người chơi: (Force Im lặng). Tài xế: (Cười gục đầu kiểu Nhật) "Trông cháu có vẻ ít nói nhỉ."
+
+    [Action: Arriving]
+Xe dừng trước chung cư cũ. UI hiện lên yêu cầu thanh toán.
+Trigger: Người chơi chọn phương thức thanh toán.
+    Chuyển khoản: -15 (Thành công).
+    Tiền mặt: Thông báo "Không đủ tiền mặt".

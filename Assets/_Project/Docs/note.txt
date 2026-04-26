@@ -1,0 +1,133 @@
+TODO1: Kích hoạt đổi dialog sang tính tiền
+
+------------------------------------------
+vấn đề là backage horror sử dụng hệ thống save riêng nên xóa cái này đổi lại easy save để đồng bộ
+    => cần hiểu được cách thức hoạt động của nó để thay
+        => lập kế hoạch và thực hiện
+            => lập kế hoạch cho các mục tiêu lớn cần thực hiện
+                => phân rã mục tiêu lớn thành các mục tiêu nhỏ hơn
+                    => thực hiện từng mục tiêu nhỏ
+                        => kiểm tra kết quả
+                            => lặp lại
+
+* đồng bộ hệ thống Localization
+vấn đề là backage Dialogue System sử dụng hệ thống Localization riêng, và cái này ta không nên tác động vào được 
+    => vấn đề là làm sao để đồng bộ hệ thống https://github.com/PicoShot/Localization-Unity thay cho hệ thống Localization của Dialogue System mà không sửa code của nó (Synchronization Plan: PicoShot Localization & Dialogue System
+This plan outlines the creation of a bridge system to use PicoShot/Localization-Unity as the primary localization provider for the Pixel Crushers Dialogue System, replacing its built-in localization mechanism.
+User Review Required
+IMPORTANT
+This approach treats the Dialogue Text field in your Dialogue Database as a Localization Key. For example, if you enter MSG_INTRO_01 in the Dialogue Editor, this script will look up that key in PicoShot and display the actual translated text.
+WARNING
+This will apply to ALL conversations. If some lines are already written as final text (not keys), they will still be passed through PicoShot. If PicoShot doesn't find a translation, it usually returns the key itself (or the original text), so it should be backwards compatible.
+Proposed Changes
+Integration Bridge
+[NEW] 
+DialogueSystemLocalizationBridge.cs
+A new script that hooks into Dialogue System events.
+OnConversationLine(Subtitle subtitle): Intercepts NPC and PC lines. It will take subtitle.formattedText.text, treat it as a key, and replace it with the localized string from LocalizationManager.GetText().
+OnConversationResponseMenu(Response[] responses): Intercepts player choices. Iterates through all responses and replaces their formattedText.text with localized versions.
+Language Synchronization: Subscribes to LocalizationManager.OnLanguageChanged to update the Dialogue System's internal language setting for consistency (e.g., for built-in time/date formatting if used).
+Open Questions
+Automatic Key Conversion: Do you want actor names (the names of NPCs) to also be localized through this bridge?
+Fallback Behavior: If a key is not found in PicoShot, should it display the "key" as is, or should we log a warning?
+UI Components: Do you use any specific Dialogue System UI components that might need direct PicoShot integration (e.g., Quest Journal)? If so, we might need a separate component for those.
+Verification Plan
+Manual Verification
+Create a test conversation with a line like TEST_GREETING.
+Add TEST_GREETING to PicoShot Localization with translations for English and Vietnamese.
+Run the game and verify the text changes when the language is switched in PicoShot.
+Verify player choice menus are also localized correctly.)
+
+------------------------------------------
+CÁC HỆ THỐNG BỊ TRÙNG LẬP
+    - Save/Load, trùng lập 4, Easy Save 3, UHFPS Save, Dialogue System Save, PlayerPrefs. (DONE)
+    - Localization, trùng lập 3, PicoShot, UHFPS GLoc, Dialogue System Localization. (DONE)
+    - Dialogue (Hội thoại), trùng lập 3, Pixel Crushers DS, UHFPS Dialogue, NodeCanvas DialogueTrees. (DONE)
+    - Quest/Objective	2	UHFPS ObjectiveManager, Dialogue System Quest.	
+    - AI/Logic	3	NodeCanvas, UHFPS AI, Unity Visual Scripting.
+    - Sự kiện (Messaging)	4	UHFPS Events, DS Message System, QFSW, Unity Events.
+    - Input (Điều khiển)	2+	UHFPS Input Manager, Dialogue System Input Handlers.
+
+GIẢI PHÁP Ở ĐÂY LÀ GÌ
+- Localization, trùng lập 3, PicoShot, UHFPS GLoc, Dialogue System Localization.
+    trong các cái này đâu là cái tốt nhất
+    đó có phải là PicoShot không
+    lập kế hoạch 
+    sửa lại code các hệ thống cũ,viết code đóng băng nó lại để tránh lỗi
+    chúng ta sẽ sử dụng thứ tốt nhất linh hoạt nhất
+
+rà soát tất cả trong dự án này có bao nhiêu hệ thống bị trùng lập 
+=> đóng băng và dùng cái mới đè lên viết script Bridge
+=> sử dụng save easy, tạo script mới save cái nào cần nên save
+
+------------------------------------------
+các thành phần cần save của game là gì ví dụ tiếng trình độ, tiền, vật phẩm, nhiệm vụ, vị trí, máu, năng lượng, v.v
+    1. Trạng thái Nhân vật (Player State)
+        Vị trí & Xoay (Position & Rotation): Lưu tọa độ XYZ và hướng nhìn để người chơi xuất hiện đúng chỗ khi Load.
+        Máu (Health): Chỉ số HP hiện tại.
+        Stamina/Năng lượng: Nếu game có cơ chế chạy nhanh hoặc thể lực.
+        Thiết bị đang cầm (Equipped Item): Ví dụ: người chơi đang cầm đèn pin hay đang tay không.
+        Pin/Nhiên liệu (Flashlight Battery): Lượng pin còn lại của đèn pin (rất quan trọng trong game horror).
+    2. Hành trang (Inventory System)
+        Danh sách vật phẩm (Items List): Tên/ID các vật phẩm người chơi đang có.
+        Số lượng (Quantity): Số lượng đạn, thuốc, hoặc vật phẩm tiêu hao.
+        Phím tắt (Hotbar/Shortcut slots): Các vật phẩm được gán vào phím nhanh 1, 2, 3...
+        Dữ liệu mở rộng (Item Data): Ví dụ: số đạn còn trong băng của một khẩu súng cụ thể.
+    3. Cốt truyện & Nhiệm vụ (Narrative & Quests)   
+        Biến Dialogue System (Lua Variables): Các lựa chọn hội thoại, thái độ của NPC đối với người chơi. (Hệ thống Pixel Crushers có cơ chế Persistent Data để lưu cái này).
+        Nhiệm vụ (Objectives): Nhiệm vụ nào đã xong, nhiệm vụ nào đang thực hiện.
+        Ghi chú/Tài liệu (Notes/Documents): Các mẩu tin nhắn, thư từ người chơi đã đọc/nhặt được để xem lại trong menu.
+    4. Trạng thái Thế giới (World Persistence)
+        Vật phẩm đã nhặt (Picked up items): Đảm bảo các món đồ đã nhặt sẽ không xuất hiện lại trong cảnh.
+        Trạng thái Cửa (Doors): Cửa nào đã mở, cửa nào đã được mở khóa bằng chìa.
+        Puzzle: Các mảnh ghép đã đặt vào vị trí, mật mã đã nhập vào két sắt.
+        Vị trí Vật thể Động (Dynamic Objects): Ví dụ: một cái tủ đã kéo ra, một van nước đã vặn.
+    5. Cài đặt & Thống kê (Global/Settings)
+        Settings: Âm lượng, độ nhạy chuột, cường độ hiệu ứng VHS (Lưu riêng trong Config file).
+        Thống kê (Statistics): Thời gian chơi tổng cộng, số lần chết, số lần Jumpscare đã gặp (thường dùng cho Achievements Steam).
+
+------------------------------------------
+Thay vì để mỗi plugin (UHFPS, Dialogue System) tự lưu file riêng lẻ (dễ dẫn đến việc file save bị rời rạc, khó quản lý hoặc không đồng bộ), nên sử dụng Easy Save 3 (ES3) làm "trụ cột" chính.
+
+CÓ NÊN SỬA CODE, ĐÓNG BĂNG HỆ THỐNG BỊ TRÙNG LẬP KHÔNG, HAY ĐỂ NGUYÊN ĐÓ
+(Architecture Strategy: Redundant Systems Management
+This plan proposes a strategy for handling the multiple, overlapping systems currently active in the project (Save/Load, Localization, Dialogue, etc.).
+User Review Required
+IMPORTANT
+The central question is whether to actively modify the code of third-party systems to "freeze" them, or to leave them as-is.
+My recommendation is to MODIFY the code to "freeze" them.
+Why modify the code?
+Conflict Prevention: Some systems (like UHFPS Save) automatically trigger on scene transitions or application exit. If not disabled in code, they will continue to create unwanted save files and potentially conflict with Easy Save 3.
+Performance: Background tasks, event listeners, and data-polling in multiple redundant managers waste CPU cycles.
+Debugging Clarity: It's much easier to debug when you are 100% sure only ONE system is handling the data.
+Proposed Changes: "Safe Freezing"
+Instead of deleting code or entirely replacing components (which breaks third-party updates), we will implement a Feature Flag system.
+[Component] 
+ThunderWire (UHFPS)
+[MODIFY] 
+SaveGameManager.cs
+Add a boolean flag public bool useNativeSaveSystem = false;.
+Wrap the logic in Awake(), Start(), and SaveGame() in an if (useNativeSaveSystem) check.
+This effectively "freezes" the system while keeping the code intact for future reference or partial bridging.
+[Component] 
+Pixel Crushers (Dialogue System)
+[MODIFY] 
+SaveSystem.cs
+Implement a similar toggle or bridge component that intercepts Save() and Load() calls and redirects them to Easy Save 3.
+Open Questions
+IMPORTANT
+Bridge Logic: Do you want me to write the "Bridge" scripts FIRST, or should we "Freeze" the old systems now to clean up the console/disk usage?
+Update Risk: Are you planning to update these third-party plugins (UHFPS, DS) frequently? If so, we should keep code modifications to an absolute minimum (one-line toggles).
+Single Source of Truth: Confirm that Easy Save 3 and PicoShot are indeed the final choices for the "Primary" systems.
+Verification Plan
+Manual Verification
+Verify that no new UHFPS save folders (Saves/) are created after the freeze.
+Confirm that the Dialogue System still functions (using bridge logic if needed) without its native save files.
+Check the Unity Console for any "Service not found" or "Disabled" warnings to ensure the freeze is working as intended.)
+
+------------------------------------------
+ĐÓNG BĂNG VÀ TÁI CƠ CẤU HỆ THỐNG SAVE
+1 - sửa lại code các hệ thống cũ,viết code đóng băng nó lại để tránh lỗi
+2 - sử dụng Easy Save 3 làm "trụ cột" chính để lưu dữ liệu
+3 - tạo các action trong NodeCanvas sử dụng EasySave 3 để tăng độ linh hoạt (DONE)
+

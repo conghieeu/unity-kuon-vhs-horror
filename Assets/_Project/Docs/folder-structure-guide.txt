@@ -1,0 +1,130 @@
+====================================================
+  HƯỚNG DẪN CẤU TRÚC THƯ MỤC & CÁCH ĐẶT TÊN
+  (Unity Project - Best Practice)
+====================================================
+-----------------------------------------------
+1. CẤU TRÚC THƯ MỤC CHUẨN
+-----------------------------------------------
+Assets/
+│
+├── _Project/            ← Thư mục GỐC chứa TẤT CẢ asset do MÌNH tạo
+│   │                      (dấu _ giúp luôn hiển thị trên cùng)
+│   │
+│   ├── Scripts/         ← Code C# của mình
+│   ├── Prefabs/         ← Prefab của mình
+│   ├── Scenes/          ← Scene của mình
+│   ├── Models/          ← Model 3D (FBX, OBJ...)
+│   ├── Audio/           ← Nhạc, sound effect (số ít, không phải "Audios")
+│   ├── Materials/       ← Material, Shader
+│   ├── Timelines/       ← Timeline playable assets
+│   ├── Textures/        ← Hình ảnh, texture
+│   ├── UI/              ← Sprite, UI assets
+│   ├── Fonts/           ← Font chữ
+│   ├── Animations/      ← Animation clips, controllers
+│   └── Docs/            ← Tài liệu
+│
+├── ThirdParty/          ← Asset tải từ Asset Store / GitHub
+│   ├── NodeCanvas/
+│   ├── UHFPS/
+│   └── ...
+│
+├── Plugins/             ← DLL, native plugins
+├── Resources/           ← Unity Resources (load runtime)
+├── Settings/            ← Project settings
+└── Editor Default Resources/
+TẠI SAO DÙNG _Project/ ?
+  - Dấu "_" khiến folder luôn ở trên cùng (thay vì đánh số 1-, 2-...)
+  - Gom tất cả asset của mình vào 1 chỗ, không lẫn với ThirdParty
+  - Dễ backup: copy _Project/ là đủ
+  - Thêm folder mới không cần nghĩ số, không sợ hỏng Git
+-----------------------------------------------
+2. QUY TẮC ĐẶT TÊN FILE
+-----------------------------------------------
+NGUYÊN TẮC CHUNG:
+  ✅ Dùng tiếng Anh
+  ✅ Dùng PascalCase hoặc underscore (_) để phân tách
+  ✅ Không dấu cách (space)
+  ✅ Không ký tự unicode / tiếng Việt có dấu
+  ✅ Dùng prefix để phân loại
+LÝ DO:
+  - Unicode có thể gây lỗi trên build system, CI/CD
+  - Dấu cách gây bug khi dùng command line, script tự động
+  - Tiếng Anh giúp teammate quốc tế đọc được
+-----------------------------------------------
+3. QUY TẮC ĐẶT TÊN TIMELINE
+-----------------------------------------------
+FORMAT:  TL_CH{chapter}_S{sequence}_{MoTaNgan}.playable
+  TL     = Prefix (Timeline)
+  CH01   = Chapter 01
+  S01    = Scene/Sequence 01
+  MoTa   = Mô tả ngắn bằng tiếng Anh, PascalCase
+VÍ DỤ:
+  ❌ CẢNH 1-1 Trong đường hầm.playable
+  ✅ TL_CH01_S01_Tunnel.playable
+  ❌ CẢNH 1-2 xuống xe.playable
+  ✅ TL_CH01_S02_ExitVehicle.playable
+  ❌ CẢNH 1-3 thanh toán.playable
+  ✅ TL_CH01_S03_Payment.playable
+-----------------------------------------------
+4. QUY TẮC ĐẶT TÊN CHUNG CHO CÁC LOẠI ASSET
+-----------------------------------------------
+SCRIPTS:
+  PascalCase, mô tả chức năng
+  ✅ PlayerController.cs
+  ✅ PlayPlayableDirector.cs
+  ❌ player controller.cs
+  ❌ script1.cs
+PREFABS:
+  PascalCase, prefix theo loại
+  ✅ PFB_EnemyZombie.prefab
+  ✅ PFB_DoorInteractable.prefab
+MATERIALS:
+  PascalCase, prefix MAT_
+  ✅ MAT_WoodFloor.mat
+  ✅ MAT_BloodDecal.mat
+TEXTURES:
+  PascalCase, suffix theo loại
+  ✅ WoodFloor_Diffuse.png
+  ✅ WoodFloor_Normal.png
+  ✅ WoodFloor_Roughness.png
+AUDIO:
+  PascalCase, prefix theo loại
+  ✅ SFX_DoorCreak.wav        (sound effect)
+  ✅ MUS_MainTheme.mp3        (music)
+  ✅ AMB_Rain.ogg             (ambience)
+SCENES:
+  PascalCase, prefix SCN_ hoặc không prefix
+  ✅ SCN_MainMenu.unity
+  ✅ SCN_Chapter01_Tunnel.unity
+ANIMATIONS:
+  PascalCase, prefix ANIM_
+  ✅ ANIM_PlayerWalk.anim
+  ✅ ANIM_DoorOpen.anim
+-----------------------------------------------
+5. NHỮNG ĐIỀU CẦN TRÁNH
+-----------------------------------------------
+  ❌ Đánh số thư mục (1-Scripts, 2-Prefabs...)
+     → Khó mở rộng, đổi số = hỏng Git references
+  ❌ Tên tiếng Việt có dấu
+     → Rủi ro lỗi encoding, build fail
+  ❌ Dấu cách trong tên file
+     → Lỗi command line, script tự động
+  ❌ File nén (.rar, .zip) trong Assets
+     → Tốn dung lượng Git, không cần thiết
+  ❌ Asset lẻ nằm ở root Assets/
+     → Khó quản lý, nên để vào folder phù hợp
+  ❌ Viết hoa không nhất quán
+     → Chọn 1 convention và giữ xuyên suốt
+-----------------------------------------------
+6. LƯU Ý KHI MIGRATE (ĐỔI CẤU TRÚC)
+-----------------------------------------------
+  ⚠️  PHẢI đổi tên / di chuyển file TRONG Unity Editor
+      (không dùng Windows Explorer)
+      → Unity sẽ tự cập nhật .meta file và references
+  ⚠️  Commit Git TRƯỚC khi bắt đầu đổi
+      → Có thể revert nếu hỏng
+  ⚠️  Đổi từng bước, test sau mỗi bước
+      → Không đổi tất cả cùng lúc
+====================================================
+  CẬP NHẬT: 2026-04-16
+====================================================
