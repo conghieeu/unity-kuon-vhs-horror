@@ -215,7 +215,7 @@ Material:
     - _ReceiveShadows: 1
     - _Roughness: 0.809
     - _Rougness_Metalic: 1
-    - _Smoothness: 1
+    - _Smoothness: 0
     - _SmoothnessPower: 0.06
     - _SmoothnessTextureChannel: 0
     - _Specular: 0.221
