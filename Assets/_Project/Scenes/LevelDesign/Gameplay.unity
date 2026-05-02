@@ -38797,6 +38797,107 @@ Transform:
   - {fileID: 1645064874}
   m_Father: {fileID: 873306174}
   m_LocalEulerAnglesHint: {x: 6.973109, y: 0.1850854, z: 0.6230205}
+--- !u!1 &600740377
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 2875424086359135687, guid: be87ee1e43e84c34298815e6803a41a1, type: 3}
+  m_PrefabInstance: {fileID: 1596209006}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 600740378}
+  - component: {fileID: 600740381}
+  - component: {fileID: 600740380}
+  - component: {fileID: 600740379}
+  m_Layer: 5
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &600740378
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 2875424086381432487, guid: be87ee1e43e84c34298815e6803a41a1, type: 3}
+  m_PrefabInstance: {fileID: 1596209006}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600740377}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1512588302}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &600740379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 8219930964982667993, guid: be87ee1e43e84c34298815e6803a41a1, type: 3}
+  m_PrefabInstance: {fileID: 1596209006}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600740377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 960, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 1
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!114 &600740380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 2875424086369396553, guid: be87ee1e43e84c34298815e6803a41a1, type: 3}
+  m_PrefabInstance: {fileID: 1596209006}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600740377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 16383
+--- !u!223 &600740381
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 2875424086381336513, guid: be87ee1e43e84c34298815e6803a41a1, type: 3}
+  m_PrefabInstance: {fileID: 1596209006}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600740377}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1 &601305600
 GameObject:
   m_ObjectHideFlags: 0
@@ -127587,6 +127688,16 @@ MonoBehaviour:
     defaultUseMessage: Press E to talk
     UIElements: {fileID: 0}
   layerSpecificElements: []
+  selector: {fileID: 0}
+  proximitySelector: {fileID: 0}
+  defaultUseMessage: 
+  usable: {fileID: 0}
+  lastInRange: 0
+  usableUI: {fileID: 0}
+  started: 0
+  originalDefaultUseMessage: 
+  previousUseDefaultGUI: 0
+  m_elements: {fileID: 0}
 --- !u!114 &1377111372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127601,7 +127712,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp-firstpass::PixelCrushers.DialogueSystem.Wrappers.Selector
   selectAt: 1
   layerMask:
-    serializedVersion: 2
     m_Bits: 512
   distanceFrom: 0
   maxSelectionDistance: 30
@@ -127613,14 +127723,22 @@ MonoBehaviour:
   guiStyleName: label
   alignment: 1
   textStyle: 1
-  textStyleColor: {r: 0, g: 0, b: 0, a: 1}
-  inRangeColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  outOfRangeColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  reticle:
-    inRange: {fileID: 0}
-    outOfRange: {fileID: 0}
-    width: 64
-    height: 64
+  textStyleColor:
+    r: 0
+    g: 0
+    b: 0
+    a: 1
+  inRangeColor:
+    r: 1
+    g: 0.92156863
+    b: 0.015686275
+    a: 1
+  outOfRangeColor:
+    r: 0.5
+    g: 0.5
+    b: 0.5
+    a: 1
+  reticle: {inRange: {fileID: 0}, outOfRange: {fileID: 0}, width: 64, height: 64}
   useKey: 101
   useButton: Fire2
   m_defaultUseMessage: (E to interact)
@@ -127630,13 +127748,121 @@ MonoBehaviour:
   onSelectedUsable:
     m_PersistentCalls:
       m_Calls: []
+    m_CallsDirty: 1
   onDeselectedUsable:
     m_PersistentCalls:
       m_Calls: []
+    m_CallsDirty: 1
   tooFarEvent:
     m_PersistentCalls:
       m_Calls: []
+    m_CallsDirty: 1
   debug: 0
+  <CustomPosition>k__BackingField: {x: 0, y: 0, z: 0}
+  m_eventSystem: {fileID: 0}
+  selection: {fileID: 0}
+  usable: {fileID: 0}
+  clickedDownOn: {fileID: 0}
+  heading: 
+  useMessage: 
+  distance: 0
+  guiStyle:
+    m_Name: 
+    m_Normal: {m_Background: {fileID: 0}, m_ScaledBackgrounds: []
+, m_TextColor:
+        r: 0
+        g: 0
+        b: 0
+        a: 1
+}
+    m_Hover: {m_Background: {fileID: 0}, m_ScaledBackgrounds: []
+, m_TextColor:
+        r: 0
+        g: 0
+        b: 0
+        a: 1
+}
+    m_Active: {m_Background: {fileID: 0}, m_ScaledBackgrounds: []
+, m_TextColor:
+        r: 0
+        g: 0
+        b: 0
+        a: 1
+}
+    m_Focused: {m_Background: {fileID: 0}, m_ScaledBackgrounds: []
+, m_TextColor:
+        r: 0
+        g: 0
+        b: 0
+        a: 1
+}
+    m_OnNormal: {m_Background: {fileID: 0}, m_ScaledBackgrounds: []
+, m_TextColor:
+        r: 0
+        g: 0
+        b: 0
+        a: 1
+}
+    m_OnHover: {m_Background: {fileID: 0}, m_ScaledBackgrounds: []
+, m_TextColor:
+        r: 0
+        g: 0
+        b: 0
+        a: 1
+}
+    m_OnActive: {m_Background: {fileID: 0}, m_ScaledBackgrounds: []
+, m_TextColor:
+        r: 0
+        g: 0
+        b: 0
+        a: 1
+}
+    m_OnFocused: {m_Background: {fileID: 0}, m_ScaledBackgrounds: []
+, m_TextColor:
+        r: 0
+        g: 0
+        b: 0
+        a: 1
+}
+    m_Border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Margin:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Padding:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Overflow:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Font: {fileID: 0}
+    m_FontSize: 0
+    m_FontStyle: 0
+    m_Alignment: 0
+    m_WordWrap: 0
+    m_RichText: 1
+    m_TextClipping: 0
+    m_ImagePosition: 0
+    m_ContentOffset: {x: 0, y: 0}
+    m_FixedWidth: 0
+    m_FixedHeight: 0
+    m_StretchWidth: 1
+    m_StretchHeight: 0
+    m_IsSDF: 0
+  guiStyleLineHeight: 16
+  numLastHits: 0
+  hasReportedInvalidCamera: 0
+  hasCheckedDefaultInputManager: 0
+  isUsingDefaultInputManager: 1
 --- !u!114 &1377111373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -127653,121 +127879,96 @@ MonoBehaviour:
     onConversationStart:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1377111372}
-          m_TargetAssemblyTypeName: PixelCrushers.DialogueSystem.Wrappers.Selector,
-            Assembly-CSharp-firstpass
-          m_MethodName: set_enabled
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1377111374}
-          m_TargetAssemblyTypeName: UHFPS.Runtime.UHFPSDialogueBridge, Assembly-CSharp
-          m_MethodName: OnConversationStart
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
+        - {m_Target: {fileID: 1377111372}, m_TargetAssemblyTypeName: PixelCrushers.DialogueSystem.Wrappers.Selector, Assembly-CSharp-firstpass, m_MethodName: set_enabled, m_Mode: 6, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
+        - {m_Target: {fileID: 1377111374}, m_TargetAssemblyTypeName: UHFPS.Runtime.UHFPSDialogueBridge, Assembly-CSharp, m_MethodName: OnConversationStart, m_Mode: 1, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 0}, m_CallState: 2}
+      m_CallsDirty: 1
     onConversationEnd:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1377111372}
-          m_TargetAssemblyTypeName: PixelCrushers.DialogueSystem.Wrappers.Selector,
-            Assembly-CSharp-firstpass
-          m_MethodName: set_enabled
-          m_Mode: 6
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
-        - m_Target: {fileID: 1377111374}
-          m_TargetAssemblyTypeName: UHFPS.Runtime.UHFPSDialogueBridge, Assembly-CSharp
-          m_MethodName: OnConversationEnd
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 1
-          m_CallState: 2
+        - {m_Target: {fileID: 1377111372}, m_TargetAssemblyTypeName: PixelCrushers.DialogueSystem.Wrappers.Selector, Assembly-CSharp-firstpass, m_MethodName: set_enabled, m_Mode: 6, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 1}, m_CallState: 2}
+        - {m_Target: {fileID: 1377111374}, m_TargetAssemblyTypeName: UHFPS.Runtime.UHFPSDialogueBridge, Assembly-CSharp, m_MethodName: OnConversationEnd, m_Mode: 1, m_Arguments: {m_ObjectArgument: {fileID: 0}, m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine, m_IntArgument: 0, m_FloatArgument: 0, m_StringArgument: , m_BoolArgument: 1}, m_CallState: 2}
+      m_CallsDirty: 1
     runOnConversationEndEventsAtEndOfFrame: 0
     onConversationCancelled:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
     onConversationLineEarly:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
     onConversationLine:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
     onConversationLineEnd:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
     onConversationLineCancelled:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
     onConversationResponseMenu:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
     onConversationResponseMenuTimeout:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
     onLinkedConversationStart:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
   barkEvents:
     onBarkStart:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
     onBarkEnd:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
     onBarkLine:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
   sequenceEvents:
     onSequenceStart:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
     onSequenceEnd:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
   questEvents:
     onQuestStateChange:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
     onQuestTrackingEnabled:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
     onQuestTrackingDisabled:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
     onUpdateQuestTracker:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
   pauseEvents:
     onDialogueSystemPause:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
     onDialogueSystemUnpause:
       m_PersistentCalls:
         m_Calls: []
+      m_CallsDirty: 1
 --- !u!114 &1377111374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134775,11 +134976,26 @@ Transform:
   - {fileID: 1107500064}
   m_Father: {fileID: 438374996}
   m_LocalEulerAnglesHint: {x: 39.598434, y: 0.8691508, z: -0.03573757}
---- !u!1 &1512588293 stripped
+--- !u!1 &1512588293
 GameObject:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 2875424086359135681, guid: be87ee1e43e84c34298815e6803a41a1, type: 3}
   m_PrefabInstance: {fileID: 1596209006}
   m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1512588302}
+  - component: {fileID: 1512588301}
+  - component: {fileID: 1512588300}
+  - component: {fileID: 1512588299}
+  - component: {fileID: 1512588298}
+  m_Layer: 0
+  m_Name: Dialogue Manager Variant
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!114 &1512588298
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134792,6 +135008,339 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 077ae7f842e61834cbf79303bdb7f29c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp-firstpass::PixelCrushers.Wrappers.InputActionRegistry
+--- !u!114 &1512588299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 2875424086369398069, guid: be87ee1e43e84c34298815e6803a41a1, type: 3}
+  m_PrefabInstance: {fileID: 1596209006}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512588293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dddab24af7a02a54c9631fd5c532d7c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputDevice: 0
+  joystickKeyCodesToCheck: 4a0100004b0100004c01000051010000
+  joystickButtonsToCheck: []
+  joystickAxesToCheck: []
+  joystickAxisThreshold: 0.5
+  keyButtonsToCheck:
+  - E
+  keyCodesToCheck: 1b000000
+  keyInputSwitchesModeTo: 1
+  alwaysAutoFocus: 0
+  detectMouseControl: 1
+  mouseMoveThreshold: 0.1
+  controlCursorState: 0
+  enforceCursorOnPause: 0
+  controlGraphicRaycasters: 0
+  backKeyCodes: 4b010000
+  backButtons:
+  - Cancel
+  submitButton: Submit
+  singleton: 1
+  onUseKeyboard:
+    m_PersistentCalls:
+      m_Calls: []
+    m_CallsDirty: 1
+  onUseJoystick:
+    m_PersistentCalls:
+      m_Calls: []
+    m_CallsDirty: 1
+  onUseMouse:
+    m_PersistentCalls:
+      m_Calls: []
+    m_CallsDirty: 1
+  onUseTouch:
+    m_PersistentCalls:
+      m_Calls: []
+    m_CallsDirty: 1
+  m_lastMousePosition: {x: 0, y: 0, z: 0}
+  m_ignoreMouse: 0
+  m_cursorLockMode: 1
+  m_inputAllowed: 1
+--- !u!114 &1512588300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 2875424086369449611, guid: be87ee1e43e84c34298815e6803a41a1, type: 3}
+  m_PrefabInstance: {fileID: 1596209006}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512588293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b24a5606b164c84db0d3ed3ee8256e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_parent: {fileID: 600740378}
+  m_prefabs:
+  - {fileID: 168688, guid: a5c98dfcec76e1847a0aa8d7c8a93459, type: 3}
+  - {fileID: 121952, guid: 720348da784b8fa49a7c48365da6f1b1, type: 3}
+  - {fileID: 162630, guid: f40d1072f56eeb04f9c104b7c4a8811f, type: 3}
+  m_position: 0
+--- !u!114 &1512588301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 2875424086369396549, guid: be87ee1e43e84c34298815e6803a41a1, type: 3}
+  m_PrefabInstance: {fileID: 1596209006}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512588293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab8b685e62a9aeb4a9472b30ec2d86d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialDatabase: {fileID: 11400000, guid: 3a572b6c7dc70834bb1e4e1805d708cb, type: 2}
+  displaySettings:
+    conversationOverrideSettings:
+      useOverrides: 0
+      overrideSubtitleSettings: 0
+      showNPCSubtitlesDuringLine: 1
+      showNPCSubtitlesWithResponses: 1
+      showPCSubtitlesDuringLine: 0
+      skipPCSubtitleAfterResponseMenu: 0
+      subtitleCharsPerSecond: 30
+      minSubtitleSeconds: 2
+      continueButton: 0
+      overrideSequenceSettings: 0
+      defaultSequence: 
+      defaultPlayerSequence: 
+      defaultResponseMenuSequence: 
+      overrideInputSettings: 0
+      alwaysForceResponseMenu: 1
+      includeInvalidEntries: 0
+      responseTimeout: 0
+      emTagForOldResponses: 0
+      emTagForInvalidResponses: 0
+      cancelSubtitle:
+        key: 27
+        buttonName: 
+      cancelConversation:
+        key: 27
+        buttonName: 
+    dialogueUI: {fileID: 177140, guid: 77d31c2998b2bd148b0ede2a5ab00489, type: 3}
+    defaultCanvas: {fileID: 600740381}
+    localizationSettings:
+      language: 
+      useSystemLanguage: 0
+      textTable: {fileID: 0}
+    subtitleSettings:
+      showNPCSubtitlesDuringLine: 1
+      showNPCSubtitlesWithResponses: 1
+      showPCSubtitlesDuringLine: 1
+      allowPCSubtitleReminders: 0
+      skipPCSubtitleAfterResponseMenu: 1
+      subtitleCharsPerSecond: 30
+      minSubtitleSeconds: 2
+      continueButton: 0
+      requireContinueOnLastLine: 0
+      richTextEmphases: 1
+      convertPipesToLineBreaks: 1
+      informSequenceStartAndEnd: 0
+    cameraSettings: {sequencerCamera: {fileID: 1586617177}, alternateCameraObject: {fileID: 424908803}, cameraAngles: {fileID: 0}, cameraEasing: 0, keepCameraPositionAtConversationEnd: 0, showSubtitleOnEmptyContinue: 0, defaultSequence: AudioWait(entrytag); Delay({{end}}), defaultPlayerSequence: AudioWait(entrytag), defaultResponseMenuSequence: , entrytagFormat: 0, treatAllCommandsAsRequired: 0, reportMissingAudioFiles: 0, disableInternalSequencerCommands: 0}
+    inputSettings:
+      alwaysForceResponseMenu: 0
+      includeInvalidEntries: 0
+      responseTimeout: 0
+      responseTimeoutAction: 0
+      emTagForOldResponses: 0
+      emTagForInvalidResponses: 0
+      qteButtons:
+      - Fire1
+      - Fire2
+      cancel:
+        key: 0
+        buttonName: 
+      cancelConversation:
+        key: 0
+        buttonName: 
+    barkSettings:
+      allowBarksDuringConversations: 1
+      barkCharsPerSecond: 0
+      minBarkSeconds: 0
+      defaultBarkSequence: 
+    alertSettings:
+      allowAlertsDuringConversations: 0
+      alertCheckFrequency: 0
+      alertCharsPerSecond: 0
+      minAlertSeconds: 0
+  persistentDataSettings:
+    recordPersistentDataOn: 1
+    includeActorData: 1
+    includeAllItemData: 0
+    includeLocationData: 0
+    includeStatusAndRelationshipData: 1
+    includeAllConversationFields: 0
+    saveConversationSimStatusWithField: 
+    saveDialogueEntrySimStatusWithField: 
+    asyncGameObjectBatchSize: 1000
+    asyncDialogueEntryBatchSize: 100
+    initializeNewVariables: 1
+  allowSimultaneousConversations: 0
+  interruptActiveConversations: 0
+  stopEvaluationAtFirstValid: 0
+  reevaluateLinksAfterSubtitle: 0
+  useLinearGroupMode: 0
+  updateActiveConversationTextWhenLanguageChanges: 1
+  includeSimStatus: 0
+  instantiateDatabase: 1
+  preloadResources: 1
+  warmUpConversationController: 0
+  dontHideImmediateDuringWarmup: 0
+  dontDestroyOnLoad: 1
+  allowOnlyOneInstance: 1
+  onStartTriggerWaitForSaveDataApplied: 0
+  dialogueTimeMode: 0
+  debugLevel: 2
+  invokeOnQuestStateChangeForEntries: 1
+  m_isInitialized: 0
+  m_originalDisplaySettings:
+    conversationOverrideSettings:
+      useOverrides: 0
+      overrideSubtitleSettings: 0
+      showNPCSubtitlesDuringLine: 1
+      showNPCSubtitlesWithResponses: 1
+      showPCSubtitlesDuringLine: 0
+      skipPCSubtitleAfterResponseMenu: 0
+      subtitleCharsPerSecond: 30
+      minSubtitleSeconds: 2
+      continueButton: 0
+      overrideSequenceSettings: 0
+      defaultSequence: 
+      defaultPlayerSequence: 
+      defaultResponseMenuSequence: 
+      overrideInputSettings: 0
+      alwaysForceResponseMenu: 1
+      includeInvalidEntries: 0
+      responseTimeout: 0
+      emTagForOldResponses: 0
+      emTagForInvalidResponses: 0
+      cancelSubtitle:
+        key: 27
+        buttonName: 
+      cancelConversation:
+        key: 27
+        buttonName: 
+    dialogueUI: {fileID: 0}
+    defaultCanvas: {fileID: 0}
+    localizationSettings:
+      language: 
+      useSystemLanguage: 0
+      textTable: {fileID: 0}
+    subtitleSettings:
+      showNPCSubtitlesDuringLine: 1
+      showNPCSubtitlesWithResponses: 1
+      showPCSubtitlesDuringLine: 0
+      allowPCSubtitleReminders: 0
+      skipPCSubtitleAfterResponseMenu: 0
+      subtitleCharsPerSecond: 30
+      minSubtitleSeconds: 2
+      continueButton: 0
+      requireContinueOnLastLine: 0
+      richTextEmphases: 1
+      convertPipesToLineBreaks: 1
+      informSequenceStartAndEnd: 0
+    cameraSettings: {sequencerCamera: {fileID: 0}, alternateCameraObject: {fileID: 0}, cameraAngles: {fileID: 0}, cameraEasing: 0, keepCameraPositionAtConversationEnd: 0, showSubtitleOnEmptyContinue: 0, defaultSequence: Delay({{end}}), defaultPlayerSequence: , defaultResponseMenuSequence: , entrytagFormat: 0, treatAllCommandsAsRequired: 0, reportMissingAudioFiles: 0, disableInternalSequencerCommands: 0}
+    inputSettings:
+      alwaysForceResponseMenu: 1
+      includeInvalidEntries: 0
+      responseTimeout: 0
+      responseTimeoutAction: 0
+      emTagForOldResponses: 0
+      emTagForInvalidResponses: 0
+      qteButtons:
+      - Fire1
+      - Fire2
+      cancel:
+        key: 27
+        buttonName: 
+      cancelConversation:
+        key: 27
+        buttonName: 
+    barkSettings:
+      allowBarksDuringConversations: 1
+      barkCharsPerSecond: 0
+      minBarkSeconds: 0
+      defaultBarkSequence: 
+    alertSettings:
+      allowAlertsDuringConversations: 0
+      alertCheckFrequency: 0
+      alertCharsPerSecond: 0
+      minAlertSeconds: 0
+  m_overrodeDisplaySettings: 0
+  m_isOverrideUIPrefab: 0
+  m_dontDestroyOverrideUI: 0
+  m_overrideDialogueUI: {fileID: 0}
+  m_started: 0
+  m_lastDebugLevelSet: 0
+  m_uiLocalizationManager: {fileID: 0}
+  m_calledRandomizeNextEntry: 0
+  m_isDuplicateBeingDestroyed: 0
+  <isAlternateConversationActive>k__BackingField: 0
+  <currentActor>k__BackingField: {fileID: 0}
+  <currentConversant>k__BackingField: {fileID: 0}
+  <lastConversationStarted>k__BackingField: 
+  <lastConversationEnded>k__BackingField: 
+  <lastConversationID>k__BackingField: 0
+  <allowLuaExceptions>k__BackingField: 0
+  <warnIfActorAndConversantSame>k__BackingField: 0
+  m_unloadAddressablesOnSceneChange: 1
+  fakeConversation:
+    id: 0
+    fields: []
+    overrideSettings:
+      useOverrides: 0
+      overrideSubtitleSettings: 0
+      showNPCSubtitlesDuringLine: 1
+      showNPCSubtitlesWithResponses: 1
+      showPCSubtitlesDuringLine: 0
+      skipPCSubtitleAfterResponseMenu: 0
+      subtitleCharsPerSecond: 30
+      minSubtitleSeconds: 2
+      continueButton: 0
+      overrideSequenceSettings: 0
+      defaultSequence: 
+      defaultPlayerSequence: 
+      defaultResponseMenuSequence: 
+      overrideInputSettings: 0
+      alwaysForceResponseMenu: 1
+      includeInvalidEntries: 0
+      responseTimeout: 0
+      emTagForOldResponses: 0
+      emTagForInvalidResponses: 0
+      cancelSubtitle:
+        key: 27
+        buttonName: 
+      cancelConversation:
+        key: 27
+        buttonName: 
+    nodeColor: 
+    dialogueEntries: []
+    entryGroups: []
+    canvasScrollPosition: {x: 0, y: 0}
+    canvasZoom: 1
+  warmupStandardDialogueUI: {fileID: 0}
+  addTempCanvasGroup: 0
+  warmupCanvasGroup: {fileID: 0}
+  warmupPreviousLogLevel: 0
+  warmupPreviousAlpha: 0
+  m_disableInput: 0
+--- !u!4 &1512588302
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 2875424086359425249, guid: be87ee1e43e84c34298815e6803a41a1, type: 3}
+  m_PrefabInstance: {fileID: 1596209006}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512588293}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 386.98096, y: 363.14984, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 600740378}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1512779553
 GameObject:
   m_ObjectHideFlags: 0
@@ -159991,6 +160540,10 @@ PrefabInstance:
     - target: {fileID: 1451543815383960146, guid: fa621dc58798b1f48b30e347e7defd46, type: 3}
       propertyPath: DynamicTitle.ReflectName
       value: videoPlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 3842738893921442601, guid: fa621dc58798b1f48b30e347e7defd46, type: 3}
+      propertyPath: display.meshRenderer
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3842738893921442646, guid: fa621dc58798b1f48b30e347e7defd46, type: 3}
       propertyPath: m_Name
