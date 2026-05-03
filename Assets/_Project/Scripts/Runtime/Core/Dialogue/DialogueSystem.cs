@@ -151,6 +151,10 @@ namespace UHFPS.Runtime
             currentTrigger.IsCompleted = true;
 
             SendBinderEvent(DialogueBinderType.End);
+
+            // Reset trigger so it can be re-triggered on next interact
+            currentTrigger.ResetTrigger();
+
             ResetDialogue();
 
             nextDialogueTrigger = false;

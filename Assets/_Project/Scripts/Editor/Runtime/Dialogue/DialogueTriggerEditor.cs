@@ -20,6 +20,7 @@ namespace UHFPS.Editors
                     Properties.Draw("TriggerType");
                     Properties.Draw("DialogueType");
                     Properties.Draw("DialogueContinue");
+                    Properties.Draw("Repeatable");
                 }
                 EditorGUILayout.EndVertical();
                 EditorGUILayout.Space();
