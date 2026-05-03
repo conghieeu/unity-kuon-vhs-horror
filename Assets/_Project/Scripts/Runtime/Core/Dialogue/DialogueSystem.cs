@@ -147,6 +147,9 @@ namespace UHFPS.Runtime
 
         private IEnumerator HandleDialogue(Dialogue dialogue)
         {
+            // Wait for the interaction frame to end to prevent accidental skip
+            yield return null;
+
             yield return HandleSubtitles(dialogue);
             currentTrigger.IsCompleted = true;
 

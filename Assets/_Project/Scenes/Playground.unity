@@ -4223,7 +4223,7 @@ GameObject:
   - component: {fileID: 501350905}
   - component: {fileID: 501350904}
   - component: {fileID: 501350903}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: "Trigger li\xEAn t\u1EE5c"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4242,12 +4242,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 463818b2825d6b0439a2f9ff3b9ab45f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TriggerType: 0
+  TriggerType: 1
   DialogueType: 0
-  DialogueContinue: 0
+  DialogueContinue: 1
   Dialogue: {fileID: 11400000, guid: a923afd6b00c674458a48747f5dc13d2, type: 2}
   DialogueAudio: {fileID: 501350904}
   BinderName: SpeechTest
+  Repeatable: 1
   RangedDialogue: 1
   ResetDialogueWhenOut: 1
   LocalDialogueRange: 10
@@ -4363,7 +4364,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -4935,12 +4936,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 463818b2825d6b0439a2f9ff3b9ab45f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TriggerType: 0
+  TriggerType: 2
   DialogueType: 1
-  DialogueContinue: 0
+  DialogueContinue: 1
   Dialogue: {fileID: 11400000, guid: 9d4f7c28f74f58945a6ae3fa7ae35f72, type: 2}
   DialogueAudio: {fileID: 0}
   BinderName: 
+  Repeatable: 1
   RangedDialogue: 0
   ResetDialogueWhenOut: 0
   LocalDialogueRange: 0
@@ -17225,6 +17227,7 @@ MonoBehaviour:
   Dialogue: {fileID: 11400000, guid: 8d86a57d78502de47a6c163f0ec4677a, type: 2}
   DialogueAudio: {fileID: 1933443163}
   BinderName: SpeechTest
+  Repeatable: 0
   RangedDialogue: 1
   ResetDialogueWhenOut: 1
   LocalDialogueRange: 10

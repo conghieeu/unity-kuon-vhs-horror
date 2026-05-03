@@ -18,14 +18,18 @@ namespace UHFPS.Runtime
         public DialogueSystem.DialogueData DialogueData { get; private set; }
         public bool IsCompleted { get; set; }
 
+        [Tooltip("Loại kích hoạt: Trigger (Va chạm), Interact (Tương tác phím E), Event (Kích hoạt bằng code).")]
         public TriggerTypeEnum TriggerType;
+        [Tooltip("Loại hội thoại: Local (Âm thanh 3D, giới hạn khoảng cách), Global (Âm thanh 2D, không giới hạn khoảng cách).")]
         public DialogueTypeEnum DialogueType;
+        [Tooltip("Cách chuyển câu thoại: Sequence (Tự động chuyển), Event (Nhấn phím để chuyển).")]
         public DialogueContinueEnum DialogueContinue;
         
         public DialogueAsset Dialogue;
         public AudioSource DialogueAudio;
         public string BinderName;
 
+        [Tooltip("Cho phép kích hoạt lại hội thoại nhiều lần.")]
         public bool Repeatable;
         public bool RangedDialogue;
         public bool ResetDialogueWhenOut;
