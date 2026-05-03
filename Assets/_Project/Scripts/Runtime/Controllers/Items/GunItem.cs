@@ -555,6 +555,7 @@ namespace UHFPS.Runtime
 
             bulletsInMag = inventory.GetItemQuantity(GunInventoryItem);
             carryingBullets = inventory.GetAllItemsQuantity(AmmoInventoryItem);
+            UpdateAmmoText();
 
             isBusy = false;
             isReloading = false;
