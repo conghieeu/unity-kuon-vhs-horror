@@ -97,6 +97,7 @@ namespace UHFPS.Runtime
 
         public List<SaveablePair> worldSaveables = new();
         public List<RuntimeSaveable> runtimeSaveables = new();
+        private HashSet<string> destroyedTokens = new();
 
         public static Dictionary<string, string> LastSceneSaves;
         private static JObject PlayerData;
@@ -389,6 +390,18 @@ namespace UHFPS.Runtime
         }
 
         /// <summary>
+        /// Track a world saveable (scene-placed object) as destroyed so it stays destroyed after save/load.
+        /// </summary>
+        public static void RemoveWorldSaveableByInstance(MonoBehaviour instance)
+        {
+            var match = Instance.worldSaveables.Find(x => x.Instance == instance);
+            if (!string.IsNullOrEmpty(match.Token))
+            {
+                Instance.destroyedTokens.Add(match.Token);
+            }
+        }
+
+        /// <summary>
         /// Set time played timer active state.
         /// </summary>
         public static void SetTimePlayedTimer(bool state)
@@ -547,6 +560,7 @@ namespace UHFPS.Runtime
 
             saveablesBuffer.Add("worldSaveables", worldBuffer);
             saveablesBuffer.Add("runtimeSaveables", runtimeBuffer);
+            saveablesBuffer.Add("destroyedSaveables", JArray.FromObject(destroyedTokens));
             return saveablesBuffer;
         }
 
@@ -752,11 +766,25 @@ namespace UHFPS.Runtime
             JToken worldSaveablesData = worldState["worldSaveables"];
             JToken runtimeSaveablesData = worldState["runtimeSaveables"];
 
+            // load destroyed saveables list (backward compatible: may not exist in old saves)
+            JToken destroyedData = worldState["destroyedSaveables"];
+            HashSet<string> destroyedList = destroyedData != null
+                ? new HashSet<string>(destroyedData.ToObject<List<string>>())
+                : new HashSet<string>();
+
             // iterate every world saveable
             foreach (var saveable in worldSaveables)
             {
                 if (saveable.Instance == null || string.IsNullOrEmpty(saveable.Token))
                     continue;
+
+                // if this saveable was destroyed in the saved session, destroy it again
+                if (destroyedList.Contains(saveable.Token))
+                {
+                    destroyedTokens.Add(saveable.Token);
+                    Destroy(saveable.Instance.gameObject);
+                    continue;
+                }
 
                 JToken token = worldSaveablesData[saveable.Token];
                 if (token == null)

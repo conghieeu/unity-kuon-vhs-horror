@@ -92629,7 +92629,31 @@ MonoBehaviour:
   ObjectReferences: {fileID: 11400000, guid: 0ecd2d095f8fe2344b4750a1ccd0bdb3, type: 2}
   SavingIcon: {fileID: 7547530078950415781}
   Debugging: 1
-  worldSaveables: []
+  worldSaveables:
+  - Token: InteractableItem.3d9e9758b3cf55e439eaf9fe09ca6671
+    Instance: {fileID: 862699191}
+  - Token: DialogueTrigger.c25def6903adadf4ab8a2a8ecd5d5c69
+    Instance: {fileID: 501350903}
+  - Token: InteractableItem.c4b295cf920922345a130ff932c80f8d
+    Instance: {fileID: 1330990732}
+  - Token: InteractableItem.5f0d59e564ea46945882ca50fa04a278
+    Instance: {fileID: 795800587}
+  - Token: NPCHealth.c39b7c4a6379a9e4a8d71e59511a82f5
+    Instance: {fileID: 202586591}
+  - Token: NPCHealth.151bd18620dee8a4ca5b76fe3b9bd6f6
+    Instance: {fileID: 989739535}
+  - Token: NPCHealth.137b5a0ee8825754a8ce8c866e77878f
+    Instance: {fileID: 878442987}
+  - Token: NPCHealth.d696aab32626df44797c3b3622be3683
+    Instance: {fileID: 759182847}
+  - Token: InteractableItem.a1a100770bb559b4a8ee1e8b946c00a3
+    Instance: {fileID: 299483786}
+  - Token: AutosaveTrigger.7a0bd32376167854b9285f82e287b25d
+    Instance: {fileID: 995518972}
+  - Token: InteractableItem.23f35bd7c25c14d4696ba1b50aa120cd
+    Instance: {fileID: 672774028}
+  - Token: DialogueTrigger.d9de7daec6b7ce14ca0101670b1054e0
+    Instance: {fileID: 1933443162}
   runtimeSaveables: []
 --- !u!4 &7275789704248966725
 Transform:

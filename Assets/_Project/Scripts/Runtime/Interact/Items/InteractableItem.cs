@@ -161,8 +161,11 @@ namespace UHFPS.Runtime
 
         public void EnabledState(bool enabled)
         {
-            if (!enabled && SaveGameManager.HasReference) 
+            if (!enabled && SaveGameManager.HasReference)
+            {
+                SaveGameManager.RemoveWorldSaveableByInstance(this);
                 SaveGameManager.RemoveSaveable(gameObject);
+            }
 
             if(DisableType == DisableTypeEnum.Deactivate)
                 gameObject.SetActive(enabled);

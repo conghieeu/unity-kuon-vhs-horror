@@ -1,17 +1,17 @@
 {
-  "id": "4104fa60600949fbaae8df2d112d4ecf",
+  "id": "9daf137a32a1481dbf4753804df2e195",
   "playerData": {
     "position": {
-      "x": 1.850836,
-      "y": -1.1920929E-07,
-      "z": 3.72025275
+      "x": 4.14327765,
+      "y": -1.78813934E-07,
+      "z": 2.66279268
     },
     "rotation": {
-      "x": 65.92329,
-      "y": -49.1401978
+      "x": 124.22,
+      "y": -24.6199436
     },
     "localData": {
-      "health": 60,
+      "health": 100,
       "selectedItem": 3,
       "playerItems": {
         "playerItem_0": {
@@ -22,7 +22,7 @@
         "playerItem_1": {},
         "playerItem_2": {},
         "playerItem_3": {
-          "flashlightAttached": true
+          "flashlightAttached": false
         },
         "playerItem_4": {
           "batteryEnergy": 320.0
@@ -44,7 +44,7 @@
         "items": {
           "item_0": {
             "item": "a89400ede61f4e26aae37610a18b01c9",
-            "quantity": 64,
+            "quantity": 21,
             "orientation": 0,
             "position": {
               "x": 0,
@@ -61,16 +61,6 @@
               "y": 0
             },
             "customData": {}
-          },
-          "item_2": {
-            "item": "a89400ede61f4e26aae37610a18b01c9",
-            "quantity": 60,
-            "orientation": 0,
-            "position": {
-              "x": 5,
-              "y": 0
-            },
-            "customData": {}
           }
         },
         "shortcuts": {
@@ -84,7 +74,121 @@
     }
   },
   "worldState": {
-    "worldSaveables": {},
-    "runtimeSaveables": {}
+    "worldSaveables": {
+      "InteractableItem.3d9e9758b3cf55e439eaf9fe09ca6671": {
+        "position": {
+          "x": 1.957109,
+          "y": 0.0219999738,
+          "z": 4.202769
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 156.047623,
+          "z": 0.0
+        },
+        "quantity": 28,
+        "enabledState": true,
+        "hotspotEnabled": false,
+        "customData": {}
+      },
+      "DialogueTrigger.c25def6903adadf4ab8a2a8ecd5d5c69": {
+        "IsCompleted": false
+      },
+      "InteractableItem.c4b295cf920922345a130ff932c80f8d": {
+        "position": {
+          "x": 2.316146,
+          "y": 0.014938443,
+          "z": 4.32978249
+        },
+        "rotation": {
+          "x": 5.122642E-05,
+          "y": 269.999969,
+          "z": 270.0
+        },
+        "quantity": 1,
+        "enabledState": true,
+        "hotspotEnabled": false,
+        "customData": {}
+      },
+      "NPCHealth.c39b7c4a6379a9e4a8d71e59511a82f5": {
+        "position": {
+          "x": 17.5012436,
+          "y": 0.0333328247,
+          "z": -0.8613448
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 261.1085,
+          "z": 0.0
+        },
+        "health": 0
+      },
+      "NPCHealth.151bd18620dee8a4ca5b76fe3b9bd6f6": {
+        "position": {
+          "x": 20.9781628,
+          "y": 0.0333328247,
+          "z": 8.437673
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 348.275421,
+          "z": 0.0
+        },
+        "health": 100
+      },
+      "NPCHealth.137b5a0ee8825754a8ce8c866e77878f": {
+        "position": {
+          "x": 20.817873,
+          "y": 0.0333328247,
+          "z": 4.22765
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 168.79274,
+          "z": 0.0
+        },
+        "health": 100
+      },
+      "NPCHealth.d696aab32626df44797c3b3622be3683": {
+        "position": {
+          "x": 13.6048813,
+          "y": 0.0333328247,
+          "z": 3.122039
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 245.192139,
+          "z": 0.0
+        },
+        "health": 100
+      },
+      "AutosaveTrigger.7a0bd32376167854b9285f82e287b25d": {
+        "isSaved": false
+      },
+      "InteractableItem.23f35bd7c25c14d4696ba1b50aa120cd": {
+        "position": {
+          "x": 1.78139174,
+          "y": 0.0217321124,
+          "z": 3.93333
+        },
+        "rotation": {
+          "x": 0.0,
+          "y": 105.161827,
+          "z": 0.0
+        },
+        "quantity": 28,
+        "enabledState": true,
+        "hotspotEnabled": false,
+        "customData": {}
+      },
+      "DialogueTrigger.d9de7daec6b7ce14ca0101670b1054e0": {
+        "IsCompleted": false
+      }
+    },
+    "runtimeSaveables": {},
+    "destroyedSaveables": [
+      "InteractableItem.5f0d59e564ea46945882ca50fa04a278",
+      "InteractableItem.a1a100770bb559b4a8ee1e8b946c00a3"
+    ]
   }
 }
