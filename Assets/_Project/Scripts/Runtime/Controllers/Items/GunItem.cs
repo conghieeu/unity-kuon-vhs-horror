@@ -557,6 +557,7 @@ namespace UHFPS.Runtime
             carryingBullets = inventory.GetAllItemsQuantity(AmmoInventoryItem);
 
             isBusy = false;
+            isReloading = false;
             isEquipped = true;
         }
 
@@ -572,6 +573,7 @@ namespace UHFPS.Runtime
                 attachmentSettings.FlashlightLight.enabled = false;
 
             isBusy = false;
+            isReloading = false;
             isEquipped = false;
         }
 

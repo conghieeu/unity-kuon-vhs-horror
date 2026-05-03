@@ -1,0 +1,100 @@
+{
+  "id": "77d74e52124b429785a3156b57a0b80d",
+  "playerData": {
+    "position": {
+      "x": 10.4269972,
+      "y": -1.1920929E-07,
+      "z": 6.884295
+    },
+    "rotation": {
+      "x": -97.76005,
+      "y": -11.4798765
+    },
+    "localData": {
+      "health": 100,
+      "selectedItem": 3,
+      "playerItems": {
+        "playerItem_0": {
+          "recordingTime": 0,
+          "batteryEnergy": 100.0,
+          "nightVision": false
+        },
+        "playerItem_1": {},
+        "playerItem_2": {},
+        "playerItem_3": {
+          "flashlightAttached": false
+        },
+        "playerItem_4": {
+          "batteryEnergy": 320.0
+        },
+        "playerItem_5": {
+          "currentFuel": 60.0
+        },
+        "playerItem_6": {},
+        "playerItem_7": {},
+        "playerItem_8": {
+          "baseTemp": 23.0
+        },
+        "playerItem_9": {}
+      }
+    },
+    "globalData": {
+      "inventory": {
+        "expanded": 0,
+        "items": {
+          "item_0": {
+            "item": "a89400ede61f4e26aae37610a18b01c9",
+            "quantity": 64,
+            "orientation": 0,
+            "position": {
+              "x": 0,
+              "y": 0
+            },
+            "customData": {}
+          },
+          "item_1": {
+            "item": "896bd5e3b27745d884a827b90ce02fb7",
+            "quantity": 7,
+            "orientation": 0,
+            "position": {
+              "x": 2,
+              "y": 0
+            },
+            "customData": {}
+          },
+          "item_2": {
+            "item": "a89400ede61f4e26aae37610a18b01c9",
+            "quantity": 13,
+            "orientation": 0,
+            "position": {
+              "x": 5,
+              "y": 0
+            },
+            "customData": {}
+          },
+          "item_3": {
+            "item": "3f96ba077954472e85e3efd7ba5d650f",
+            "quantity": 1,
+            "orientation": 0,
+            "position": {
+              "x": 7,
+              "y": 0
+            },
+            "customData": {}
+          }
+        },
+        "shortcuts": {
+          "shortcut_0": "{}",
+          "shortcut_1": "{}",
+          "shortcut_2": "{}",
+          "shortcut_3": "{}"
+        }
+      },
+      "objectives": {}
+    }
+  },
+  "worldState": {
+    "worldSaveables": {},
+    "runtimeSaveables": {}
+  }
+}

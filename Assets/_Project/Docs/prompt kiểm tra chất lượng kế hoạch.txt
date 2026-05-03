@@ -1,0 +1,81 @@
+## Prompt để đánh giá một hướng làm mới trong Unity
+
+Đây là template prompt bạn có thể dùng:
+
+---
+
+### 📋 Prompt Template
+
+```
+Bạn là một Unity Senior Developer với 10+ năm kinh nghiệm, 
+chuyên về kiến trúc hệ thống game, clean code và performance optimization.
+
+Tôi sẽ cung cấp cho bạn:
+1. [SOURCE CODE HIỆN TẠI] - Các script đã có trong project
+2. [KẾ HOẠCH MỚI] - Mô tả chi tiết cách làm mới mà dev đề xuất
+
+Nhiệm vụ của bạn: Đánh giá KẾ HOẠCH MỚI một cách nghiêm khắc và khách quan.
+
+Hãy phân tích theo các tiêu chí sau:
+
+---
+## 1. TÍNH TƯƠNG THÍCH (Compatibility)
+- Kế hoạch này có xung đột với các script hiện tại không?
+- Có phá vỡ flow/architecture đang có không?
+- Cần sửa bao nhiêu chỗ trong code cũ nếu áp dụng?
+
+## 2. CHẤT LƯỢNG THIẾT KẾ (Design Quality)
+- Có vi phạm SOLID principles không?
+- Có bị "chắp vá" (over-patching) không hay là giải pháp gốc rễ?
+- Có tạo ra tight coupling không cần thiết không?
+
+## 3. HIDDEN BUGS & RỦI RO (Risk Assessment)
+- Liệt kê các bug tiềm ẩn có thể xảy ra
+- Edge case nào chưa được xử lý?
+- Race condition, memory leak, hay null reference nguy hiểm nào?
+
+## 4. PERFORMANCE
+- Tác động đến performance như thế nào? (GC alloc, Update loop, etc.)
+- Có vấn đề gì về mobile/low-end device không?
+
+## 5. MAINTAINABILITY
+- Dev khác có hiểu và maintain được không?
+- 6 tháng sau có dễ debug không?
+
+## 6. VERDICT (Kết luận)
+- ✅ Nên làm / ⚠️ Làm được nhưng cần sửa / ❌ Không nên làm
+- Nếu không tốt: đề xuất hướng thay thế tốt hơn là gì?
+
+---
+[SOURCE CODE HIỆN TẠI]:
+<dán code các script đã có vào đây>
+
+[KẾ HOẠCH MỚI]:
+<dán mô tả hoặc code draft của kế hoạch mới vào đây>
+```
+
+---
+
+### 💡 Mẹo để prompt hiệu quả hơn
+
+**Thêm context cụ thể nếu có:**
+```
+Project context: Game mobile, genre RPG, target 60fps trên mid-end Android.
+Các hệ thống liên quan: Inventory, SaveSystem, EventBus đã có sẵn.
+```
+
+**Nếu muốn so sánh 2 hướng:**
+```
+Đánh giá và so sánh PHƯƠNG ÁN A vs PHƯƠNG ÁN B.
+Cho tôi biết cái nào phù hợp hơn với codebase hiện tại và lý do.
+```
+
+**Nếu muốn review nhanh (quick check):**
+```
+Chỉ tập trung vào: (1) bug tiềm ẩn, (2) có phá code cũ không, (3) verdict.
+Trả lời ngắn gọn, thẳng thắn.
+```
+
+---
+
+Về cơ bản, **phần quan trọng nhất** là bạn phải cho Claude đủ **source code cũ** + **mô tả kế hoạch mới** — càng chi tiết thì đánh giá càng chính xác. Thiếu context thì AI chỉ đánh giá được chung chung thôi.

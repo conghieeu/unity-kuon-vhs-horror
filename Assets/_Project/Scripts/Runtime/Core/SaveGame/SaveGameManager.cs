@@ -825,11 +825,11 @@ namespace UHFPS.Runtime
             JToken localData = playerData["localData"];
             JToken globalData = playerData["globalData"];
 
-            // load player local data
-            playerPresence.PlayerManager.OnCustomLoad(localData);
-
             // load player global data
             LoadPlayerGlobalData(globalData);
+
+            // load player local data
+            playerPresence.PlayerManager.OnCustomLoad(localData);
         }
 
         private void LoadPlayerGlobalData(JToken globalData)
