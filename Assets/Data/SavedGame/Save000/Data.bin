@@ -1,17 +1,17 @@
 {
-  "id": "ddbc3022eefb4460a6464b7db291d10c",
+  "id": "4104fa60600949fbaae8df2d112d4ecf",
   "playerData": {
     "position": {
-      "x": 12.2935753,
+      "x": 1.850836,
       "y": -1.1920929E-07,
-      "z": 5.99662447
+      "z": 3.72025275
     },
     "rotation": {
-      "x": -90.7402039,
-      "y": -5.259863
+      "x": 65.92329,
+      "y": -49.1401978
     },
     "localData": {
-      "health": 100,
+      "health": 60,
       "selectedItem": 3,
       "playerItems": {
         "playerItem_0": {
@@ -22,7 +22,7 @@
         "playerItem_1": {},
         "playerItem_2": {},
         "playerItem_3": {
-          "flashlightAttached": false
+          "flashlightAttached": true
         },
         "playerItem_4": {
           "batteryEnergy": 320.0
@@ -44,7 +44,7 @@
         "items": {
           "item_0": {
             "item": "a89400ede61f4e26aae37610a18b01c9",
-            "quantity": 57,
+            "quantity": 64,
             "orientation": 0,
             "position": {
               "x": 0,
@@ -54,7 +54,7 @@
           },
           "item_1": {
             "item": "896bd5e3b27745d884a827b90ce02fb7",
-            "quantity": 3,
+            "quantity": 7,
             "orientation": 0,
             "position": {
               "x": 2,
@@ -63,11 +63,11 @@
             "customData": {}
           },
           "item_2": {
-            "item": "3f96ba077954472e85e3efd7ba5d650f",
-            "quantity": 1,
+            "item": "a89400ede61f4e26aae37610a18b01c9",
+            "quantity": 60,
             "orientation": 0,
             "position": {
-              "x": 7,
+              "x": 5,
               "y": 0
             },
             "customData": {}
