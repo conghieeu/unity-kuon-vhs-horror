@@ -9,6 +9,14 @@ namespace UHFPS.Scriptable
     public class DialogueAsset : ScriptableObject
     {
         public enum SubtitleTypeEnum { Single, Multiple }
+        public enum DialogueEndType { NextSequence, JumpToIndex, Options, End }
+
+        [Serializable]
+        public class DialogueOption
+        {
+            public GString OptionText;
+            public int JumpToIndex;
+        }
 
         [Serializable]
         public abstract class SubtitleEntry 
@@ -32,16 +40,22 @@ namespace UHFPS.Scriptable
         {
             public AudioClip DialogueAudio;
             public SubtitleTypeEnum SubtitleType;
+            public bool CanSkip = true;
 
             public DialogueSubtitle SingleSubtitle = new();
 
             [SerializeReference]
             public List<SubtitleEntry> Subtitles = new();
 
+            public DialogueEndType EndType = DialogueEndType.NextSequence;
+            public int JumpIndex;
+            public List<DialogueOption> Options = new();
+
             public Dialogue()
             {
                 DialogueAudio = null;
                 Subtitles = new();
+                Options = new();
             }
 
             public Dialogue Copy()
@@ -50,7 +64,11 @@ namespace UHFPS.Scriptable
                 {
                     DialogueAudio = DialogueAudio,
                     SubtitleType = SubtitleType,
+                    CanSkip = CanSkip,
                     Subtitles = new(),
+                    EndType = EndType,
+                    JumpIndex = JumpIndex,
+                    Options = new(),
 
                     SingleSubtitle = new()
                     {
@@ -80,6 +98,15 @@ namespace UHFPS.Scriptable
                             Text = new(dialogue.Text)
                         });
                     }
+                }
+
+                foreach (var option in Options)
+                {
+                    copy.Options.Add(new DialogueOption()
+                    {
+                        OptionText = new(option.OptionText),
+                        JumpToIndex = option.JumpToIndex
+                    });
                 }
 
                 return copy;

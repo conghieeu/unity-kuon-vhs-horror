@@ -4,6 +4,7 @@ using System.Reactive.Subjects;
 using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UHFPS.Scriptable;
 using UHFPS.Tools;
 using TMPro;
@@ -13,7 +14,7 @@ namespace UHFPS.Runtime
 {
     public class DialogueSystem : Singleton<DialogueSystem>
     {
-        public enum DialogueBinderType { Start, Subtitle, Finish, End }
+        public enum DialogueBinderType { Start, Subtitle, Finish, End, Options }
 
         public sealed class DialogueData : List<Dialogue> { }
 
@@ -37,6 +38,9 @@ namespace UHFPS.Runtime
         private bool isSequenceType;
         private bool dialoguePlaying;
         private bool nextDialogueTrigger;
+
+        private bool optionSelected;
+        private int selectedOptionIndex;
 
         private DialogueBinder[] dialogueBinders;
 
@@ -114,6 +118,18 @@ namespace UHFPS.Runtime
         }
 
         /// <summary>
+        /// Select an option by its jump index.
+        /// </summary>
+        public void SelectOption(int jumpIndex)
+        {
+            if (currentData == null || !dialoguePlaying)
+                return;
+
+            selectedOptionIndex = jumpIndex;
+            optionSelected = true;
+        }
+
+        /// <summary>
         /// Force show the dialogue panel.
         /// </summary>
         public void ForceShow(bool show)
@@ -145,32 +161,68 @@ namespace UHFPS.Runtime
         private IEnumerator HandleSubtitles(Dialogue dialogue)
         {
             // set dialogue audio and play
-            currentAudio.clip = dialogue.DialogueAudio;
-            currentAudio.Play();
+            bool hasAudio = dialogue.DialogueAudio != null;
+            if (hasAudio)
+            {
+                currentAudio.clip = dialogue.DialogueAudio;
+                currentAudio.Play();
+            }
+
+            bool wasSkipped = false;
+            float timer = 0f;
 
             // handle single dialogue subtitle
             if (dialogue.SubtitleType == SubtitleTypeEnum.Single)
             {
                 var subtitle = dialogue.SingleSubtitle;
-                yield return new WaitForSeconds(subtitle.Time);
+                
+                // delay before showing
+                while (timer < subtitle.Time)
+                {
+                    if (dialogue.CanSkip && IsSkipInputPressed())
+                    {
+                        wasSkipped = true;
+                        break;
+                    }
+                    timer += Time.deltaTime;
+                    yield return null;
+                }
 
-                ShowDialogueText(subtitle);
-                fadeDialoguePanel = true;
+                if (!wasSkipped)
+                {
+                    ShowDialogueText(subtitle);
+                    fadeDialoguePanel = true;
+                    SendBinderEvent(DialogueBinderType.Subtitle, new object[] { dialogue.DialogueAudio, (string)subtitle.Text });
 
-                // send subtitle event to binder
-                SendBinderEvent(DialogueBinderType.Subtitle, new object[] { dialogue.DialogueAudio, (string)subtitle.Text });
-
-                yield return new WaitUntil(() => !currentAudio.isPlaying);
+                    float displayTimer = 0f;
+                    while (hasAudio ? currentAudio.isPlaying : displayTimer < 3f)
+                    {
+                        if (dialogue.CanSkip && IsSkipInputPressed())
+                        {
+                            wasSkipped = true;
+                            break;
+                        }
+                        displayTimer += Time.deltaTime;
+                        yield return null;
+                    }
+                }
             }
             else
             {
                 // handle multiple dialogue subtitles
                 int subtitleIndex = -1;
                 List<SubtitleEntry> sortedSubtitles = dialogue.Subtitles.OrderBy(x => x.Time).ToList();
+                float maxTime = sortedSubtitles.Count > 0 ? sortedSubtitles.Last().Time + 2f : 2f;
 
-                while (currentAudio.isPlaying)
+                while (hasAudio ? currentAudio.isPlaying : timer < maxTime)
                 {
-                    float time = currentAudio.time;
+                    if (dialogue.CanSkip && IsSkipInputPressed())
+                    {
+                        wasSkipped = true;
+                        break;
+                    }
+
+                    float time = hasAudio ? currentAudio.time : timer;
                     for (int i = subtitleIndex + 1; i < sortedSubtitles.Count; i++)
                     {
                         var subtitle = sortedSubtitles[i];
@@ -200,6 +252,7 @@ namespace UHFPS.Runtime
                         }
                     }
 
+                    timer += Time.deltaTime;
                     yield return null;
                 }
             }
@@ -207,28 +260,79 @@ namespace UHFPS.Runtime
             // stop audio source just in case
             currentAudio.Stop();
 
-            // handle other dialogues
-            if(dialogueIndex < currentData.Count - 1)
+            // handle dialogue end types
+            if (dialogue.EndType == DialogueEndType.End)
             {
-                var nextDialogue = currentData[++dialogueIndex];
+                // do nothing, let it fall through
+            }
+            else if (dialogue.EndType == DialogueEndType.Options)
+            {
+                optionSelected = false;
+                selectedOptionIndex = -1;
+
+                // Ensure options UI is visible
+                fadeDialoguePanel = true;
 
                 // send dialogue finish event
                 SendBinderEvent(DialogueBinderType.Finish);
+                SendBinderEvent(DialogueBinderType.Options, new object[] { dialogue.Options });
+                
+                // Show options UI directly
+                var ui = DialoguePanel.GetComponent<DialogueOptionsUI>();
+                if(ui != null) ui.OnShowOptions(dialogue.Options);
 
-                if (isSequenceType)
-                {
-                    // sequence time wait
-                    yield return new WaitForSeconds(SequenceWait);
-                }
-                else
-                {
-                    // wait for next dialogue trigger 
-                    yield return new WaitUntil(() => nextDialogueTrigger);
-                    nextDialogueTrigger = false;
-                }
+                yield return new WaitUntil(() => optionSelected);
 
-                // handle next dialogue
-                yield return HandleSubtitles(nextDialogue);
+                // wait 1 frame to clear input state so it doesn't double-skip the next dialogue
+                yield return null;
+
+                if (selectedOptionIndex >= 0 && selectedOptionIndex < currentData.Count)
+                {
+                    dialogueIndex = selectedOptionIndex;
+                    var nextDialogue = currentData[dialogueIndex];
+
+                    yield return HandleSubtitles(nextDialogue);
+                }
+            }
+            else
+            {
+                int nextIndex = dialogue.EndType == DialogueEndType.JumpToIndex ? dialogue.JumpIndex : dialogueIndex + 1;
+
+                if (nextIndex >= 0 && nextIndex < currentData.Count)
+                {
+                    dialogueIndex = nextIndex;
+                    var nextDialogue = currentData[dialogueIndex];
+
+                    // send dialogue finish event
+                    SendBinderEvent(DialogueBinderType.Finish);
+
+                    if (!wasSkipped)
+                    {
+                        if (isSequenceType)
+                        {
+                            // sequence time wait
+                            yield return new WaitForSeconds(SequenceWait);
+                        }
+                        else
+                        {
+                            // wait for next dialogue trigger 
+                            yield return new WaitUntil(() => nextDialogueTrigger);
+                            nextDialogueTrigger = false;
+
+                            // wait 1 frame to clear the input state so we don't double-skip
+                            yield return null;
+                        }
+                    }
+                    else
+                    {
+                        // wait 1 frame to clear the input state so we don't double-skip
+                        yield return null;
+                        nextDialogueTrigger = false;
+                    }
+
+                    // handle next dialogue
+                    yield return HandleSubtitles(nextDialogue);
+                }
             }
 
             OnDialogueEnd.OnNext(Unit.Default);
@@ -275,6 +379,10 @@ namespace UHFPS.Runtime
                     case DialogueBinderType.End:
                         binder.OnDialogueEnd?.Invoke();
                         break;
+                    case DialogueBinderType.Options:
+                        List<DialogueOption> options = (List<DialogueOption>)parameters[0];
+                        binder.OnShowOptions?.Invoke(options);
+                        break;
                 }
             }
         }
@@ -292,6 +400,9 @@ namespace UHFPS.Runtime
             currentTrigger = null;
             currentData = null;
             dialogueIndex = 0;
+
+            var ui = DialoguePanel.GetComponent<DialogueOptionsUI>();
+            if(ui != null) ui.OnDialogueEnd();
         }
 
         private void Update()
@@ -324,6 +435,15 @@ namespace UHFPS.Runtime
                     DialoguePanel.alpha = 0f;
                 }
             }
+        }
+
+        private bool IsSkipInputPressed()
+        {
+            if (Keyboard.current != null && (Keyboard.current.eKey.wasPressedThisFrame || Keyboard.current.enterKey.wasPressedThisFrame))
+                return true;
+            if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame)
+                return true;
+            return false;
         }
     }
 }

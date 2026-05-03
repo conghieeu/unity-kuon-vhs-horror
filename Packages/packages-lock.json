@@ -1,11 +1,5 @@
 {
   "dependencies": {
-    "com.antigravity.ide": {
-      "version": "file:com.antigravity.ide",
-      "depth": 0,
-      "source": "embedded",
-      "dependencies": {}
-    },
     "com.coplaydev.unity-mcp": {
       "version": "https://github.com/CoplayDev/unity-mcp.git?path=/MCPForUnity#main",
       "depth": 0,
@@ -94,6 +88,15 @@
       "depth": 1,
       "source": "builtin",
       "dependencies": {}
+    },
+    "com.unity.ide.antigravity": {
+      "version": "https://github.com/tndh/com.unity.ide.antigravity.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.test-framework": "1.1.9"
+      },
+      "hash": "aeb4c85640cd7add11db8e8562109e888fa8ad23"
     },
     "com.unity.ide.rider": {
       "version": "3.0.39",

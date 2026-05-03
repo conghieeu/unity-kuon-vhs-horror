@@ -21,6 +21,7 @@ namespace UHFPS.Editors
                     Properties.Draw("OnSubtitle");
                     Properties.Draw("OnSubtitleFinish");
                     Properties.Draw("OnDialogueEnd");
+                    Properties.Draw("OnShowOptions");
                     EditorDrawing.EndBorderHeaderLayout();
                 }
 

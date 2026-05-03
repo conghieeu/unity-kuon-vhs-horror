@@ -1,0 +1,159 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93cb5bd7e8a706a41b793e7440b34eea, type: 3}
+  m_Name: Dialogue Option
+  m_EditorClassIdentifier: Assembly-CSharp::UHFPS.Scriptable.DialogueAsset
+  Dialogues:
+  - DialogueAudio: {fileID: 8300000, guid: 782faa4571fcb7d45add7e2407887902, type: 3}
+    SubtitleType: 0
+    CanSkip: 1
+    SingleSubtitle:
+      Time: 0
+      Narrator: 'Hieu:'
+      NarratorColor: {r: 1, g: 0, b: 0, a: 1}
+      Text:
+        GlocText: These guidelines are working if:** fewer unnecessary changes in
+          diffs, fewer rewrites due to overcomplication, and clarifying questions
+          come before implementation rather than after mistakes.
+        NormalText: 
+    Subtitles:
+    - rid: 6907289350046482533
+    - rid: 6907289350046482534
+    EndType: 2
+    JumpIndex: 0
+    Options:
+    - OptionText:
+        GlocText: 'When your changes create orphans: - Remove imports/variables/functions
+          that YOUR changes made unused. - Don''t remove pre-existing dead code unless
+          asked.  The test: Every changed line should trace directly to the user''s
+          request.'
+        NormalText: 
+      JumpToIndex: 0
+    - OptionText:
+        GlocText: 'When your changes create orphans: - Remove imports/variables/functions
+          that YOUR changes made unused. - Don''t remove pre-existing dead code unless
+          asked.  The test: Every changed line should trace directly to the user''s
+          request.'
+        NormalText: 
+      JumpToIndex: 1
+    - OptionText:
+        GlocText: 'When your changes create orphans: - Remove imports/variables/functions
+          that YOUR changes made unused. - Don''t remove pre-existing dead code unless
+          asked.  The test: Every changed line should trace directly to the user''s
+          request.'
+        NormalText: 
+      JumpToIndex: 2
+    - OptionText:
+        GlocText: 'When your changes create orphans: - Remove imports/variables/functions
+          that YOUR changes made unused. - Don''t remove pre-existing dead code unless
+          asked.  The test: Every changed line should trace directly to the user''s
+          request.'
+        NormalText: 
+      JumpToIndex: 2
+    - OptionText:
+        GlocText: 'When your changes create orphans: - Remove imports/variables/functions
+          that YOUR changes made unused. - Don''t remove pre-existing dead code unless
+          asked.  The test: Every changed line should trace directly to the user''s
+          request.'
+        NormalText: 
+      JumpToIndex: 2
+    - OptionText:
+        GlocText: Option C
+        NormalText: 
+      JumpToIndex: 2
+    - OptionText:
+        GlocText: Option C
+        NormalText: 
+      JumpToIndex: 2
+    - OptionText:
+        GlocText: Option C
+        NormalText: 
+      JumpToIndex: 2
+    - OptionText:
+        GlocText: Option C
+        NormalText: 
+      JumpToIndex: 2
+    - OptionText:
+        GlocText: Option C
+        NormalText: 
+      JumpToIndex: 2
+    - OptionText:
+        GlocText: Option C
+        NormalText: 
+      JumpToIndex: 2
+    - OptionText:
+        GlocText: Option C
+        NormalText: 
+      JumpToIndex: 2
+    - OptionText:
+        GlocText: Option C
+        NormalText: 
+      JumpToIndex: 2
+  - DialogueAudio: {fileID: 8300000, guid: 782faa4571fcb7d45add7e2407887902, type: 3}
+    SubtitleType: 1
+    CanSkip: 1
+    SingleSubtitle:
+      Time: 0
+      Narrator: 123
+      NarratorColor: {r: 1, g: 0, b: 0, a: 1}
+      Text:
+        GlocText: You chosed
+        NormalText: 
+    Subtitles:
+    - rid: 6907289350046482768
+    EndType: 0
+    JumpIndex: 0
+    Options: []
+  - DialogueAudio: {fileID: 8300000, guid: 782faa4571fcb7d45add7e2407887902, type: 3}
+    SubtitleType: 0
+    CanSkip: 1
+    SingleSubtitle:
+      Time: 0
+      Narrator: 
+      NarratorColor: {r: 1, g: 1, b: 1, a: 1}
+      Text:
+        GlocText: DIALOG 33333333333333333333
+        NormalText: 
+    Subtitles: []
+    EndType: 0
+    JumpIndex: 0
+    Options: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 6907289350046482533
+      type: {class: DialogueAsset/DialogueSubtitle, ns: UHFPS.Scriptable, asm: Assembly-CSharp}
+      data:
+        Time: 0
+        Narrator: HAHAHAHHA
+        NarratorColor: {r: 1, g: 1, b: 1, a: 1}
+        Text:
+          GlocText: 
+          NormalText: 
+    - rid: 6907289350046482534
+      type: {class: DialogueAsset/DialogueSubtitle, ns: UHFPS.Scriptable, asm: Assembly-CSharp}
+      data:
+        Time: 3.4601316
+        Narrator: HHUHUHUHU
+        NarratorColor: {r: 1, g: 1, b: 1, a: 1}
+        Text:
+          GlocText: 
+          NormalText: 
+    - rid: 6907289350046482768
+      type: {class: DialogueAsset/DialogueSubtitle, ns: UHFPS.Scriptable, asm: Assembly-CSharp}
+      data:
+        Time: 0
+        Narrator: AAA
+        NarratorColor: {r: 1, g: 1, b: 1, a: 1}
+        Text:
+          GlocText: DIALOG 2222222222222222222222222
+          NormalText: 

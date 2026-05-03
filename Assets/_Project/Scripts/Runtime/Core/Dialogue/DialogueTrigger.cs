@@ -61,6 +61,11 @@ namespace UHFPS.Runtime
                     }
                 }
 
+                foreach (var option in copy.Options)
+                {
+                    option.OptionText.SubscribeGloc();
+                }
+
                 DialogueData.Add(copy);
             }
         }

@@ -70,6 +70,6 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "unity-kuon-vhs-horror.slnx",
+    "dotnet.defaultSolution": "unity-kuon-vhs-horror.sln",
     "hide-files.files": []
 }
