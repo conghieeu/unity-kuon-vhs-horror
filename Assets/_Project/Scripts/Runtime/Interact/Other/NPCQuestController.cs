@@ -48,9 +48,12 @@ namespace UHFPS.Runtime
 
         public void InteractStart()
         {
-            // Do not interact if a dialogue is already playing
+            // If a dialogue is currently playing, treat interaction as advancing the dialogue (for Event mode)
             if (DialogueSystem.Instance.IsPlaying)
+            {
+                DialogueSystem.Instance.NextDialogue();
                 return;
+            }
 
             // Pre-interaction logic based on state
             if (currentState == NPCState.WaitingForItem)

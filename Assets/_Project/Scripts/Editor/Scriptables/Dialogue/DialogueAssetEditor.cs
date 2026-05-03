@@ -104,7 +104,6 @@ namespace UHFPS.Editors
                         SerializedProperty dialogue = Properties["Dialogues"].GetArrayElementAtIndex(selectedDialogue);
                         SerializedProperty audioClip = dialogue.FindPropertyRelative("DialogueAudio");
                         SerializedProperty subtitleType = dialogue.FindPropertyRelative("SubtitleType");
-                        SerializedProperty canSkip = dialogue.FindPropertyRelative("CanSkip");
                         SerializedProperty endType = dialogue.FindPropertyRelative("EndType");
                         SerializedProperty jumpIndex = dialogue.FindPropertyRelative("JumpIndex");
                         SerializedProperty options = dialogue.FindPropertyRelative("Options");
@@ -112,7 +111,6 @@ namespace UHFPS.Editors
                         EditorGUI.BeginChangeCheck();
                         EditorGUILayout.PropertyField(audioClip);
                         EditorGUILayout.PropertyField(subtitleType);
-                        EditorGUILayout.PropertyField(canSkip);
                         EditorGUILayout.Space();
                         
                         EditorGUILayout.PropertyField(endType);

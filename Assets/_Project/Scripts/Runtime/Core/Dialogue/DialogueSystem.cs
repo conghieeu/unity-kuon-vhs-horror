@@ -35,7 +35,7 @@ namespace UHFPS.Runtime
 
         private bool fadeDialoguePanel;
         private bool forceHidePanel;
-        private bool isSequenceType;
+        private DialogueTrigger.DialogueContinueEnum continueType;
         private bool dialoguePlaying;
         private bool nextDialogueTrigger;
 
@@ -63,7 +63,7 @@ namespace UHFPS.Runtime
         /// <returns>State if the dialogue is being played.</returns>
         public bool PlayDialogue(DialogueTrigger trigger)
         {
-            if (dialoguePlaying) 
+            if (dialoguePlaying)
                 return false;
 
             currentTrigger = trigger;
@@ -71,7 +71,7 @@ namespace UHFPS.Runtime
             currentData = trigger.DialogueData;
             var dialogue = currentData[dialogueIndex];
 
-            if(trigger.DialogueType == DialogueTrigger.DialogueTypeEnum.Global)
+            if (trigger.DialogueType == DialogueTrigger.DialogueTypeEnum.Global)
             {
                 currentAudio = AudioSource;
             }
@@ -81,7 +81,8 @@ namespace UHFPS.Runtime
             }
 
             dialoguePlaying = true;
-            isSequenceType = trigger.DialogueContinue == DialogueTrigger.DialogueContinueEnum.Sequence;
+            continueType = trigger.DialogueContinue;
+            Debug.Log($"[DialogueSystem] PlayDialogue: continueType={continueType}, dialogueIndex={dialogueIndex}");
 
             OnDialogueStart.OnNext(Unit.Default);
             SendBinderEvent(DialogueBinderType.Start);
@@ -167,6 +168,18 @@ namespace UHFPS.Runtime
 
         private IEnumerator HandleSubtitles(Dialogue dialogue)
         {
+            // Reset option flags
+            optionSelected = false;
+            selectedOptionIndex = -1;
+
+            // If the dialogue ends with options, show them immediately alongside the subtitle
+            if (dialogue.EndType == DialogueEndType.Options)
+            {
+                SendBinderEvent(DialogueBinderType.Options, new object[] { dialogue.Options });
+                var ui = DialoguePanel.GetComponent<DialogueOptionsUI>();
+                if (ui != null) ui.OnShowOptions(dialogue.Options);
+            }
+
             // set dialogue audio and play
             bool hasAudio = dialogue.DialogueAudio != null;
             if (hasAudio)
@@ -182,11 +195,16 @@ namespace UHFPS.Runtime
             if (dialogue.SubtitleType == SubtitleTypeEnum.Single)
             {
                 var subtitle = dialogue.SingleSubtitle;
-                
+
                 // delay before showing
                 while (timer < subtitle.Time)
                 {
-                    if (dialogue.CanSkip && IsSkipInputPressed())
+                    if (continueType == DialogueTrigger.DialogueContinueEnum.Press && IsSkipInputPressed())
+                    {
+                        wasSkipped = true;
+                        break;
+                    }
+                    if (optionSelected)
                     {
                         wasSkipped = true;
                         break;
@@ -204,7 +222,12 @@ namespace UHFPS.Runtime
                     float displayTimer = 0f;
                     while (hasAudio ? currentAudio.isPlaying : displayTimer < 3f)
                     {
-                        if (dialogue.CanSkip && IsSkipInputPressed())
+                        if (continueType == DialogueTrigger.DialogueContinueEnum.Press && IsSkipInputPressed())
+                        {
+                            wasSkipped = true;
+                            break;
+                        }
+                        if (optionSelected)
                         {
                             wasSkipped = true;
                             break;
@@ -223,7 +246,12 @@ namespace UHFPS.Runtime
 
                 while (hasAudio ? currentAudio.isPlaying : timer < maxTime)
                 {
-                    if (dialogue.CanSkip && IsSkipInputPressed())
+                    if (continueType == DialogueTrigger.DialogueContinueEnum.Press && IsSkipInputPressed())
+                    {
+                        wasSkipped = true;
+                        break;
+                    }
+                    if (optionSelected)
                     {
                         wasSkipped = true;
                         break;
@@ -237,7 +265,7 @@ namespace UHFPS.Runtime
                         // wait until next subtitle time position
                         if (time > subtitle.Time)
                         {
-                            if(subtitle is DialogueSubtitle sub)
+                            if (subtitle is DialogueSubtitle sub)
                             {
                                 fadeDialoguePanel = true;
                                 ShowDialogueText(sub);
@@ -249,7 +277,7 @@ namespace UHFPS.Runtime
                                     subtitleIndex = i;
                                 }
                             }
-                            else if(subtitle is SubtitleBreak)
+                            else if (subtitle is SubtitleBreak)
                             {
                                 fadeDialoguePanel = false;
                                 subtitleIndex = i;
@@ -268,27 +296,26 @@ namespace UHFPS.Runtime
             currentAudio.Stop();
 
             // handle dialogue end types
+            Debug.Log($"[DialogueSystem] HandleSubtitles END: EndType={dialogue.EndType}, wasSkipped={wasSkipped}, continueType={continueType}, dialogueIndex={dialogueIndex}");
             if (dialogue.EndType == DialogueEndType.End)
             {
+                Debug.Log($"[DialogueSystem] EndType=End → dialogue finished, no next.");
                 // do nothing, let it fall through
             }
             else if (dialogue.EndType == DialogueEndType.Options)
             {
-                optionSelected = false;
-                selectedOptionIndex = -1;
-
-                // Ensure options UI is visible
+                // Options UI was shown at the start of HandleSubtitles. 
+                // Ensure options UI is visible in case it faded out.
                 fadeDialoguePanel = true;
 
-                // send dialogue finish event
-                SendBinderEvent(DialogueBinderType.Finish);
-                SendBinderEvent(DialogueBinderType.Options, new object[] { dialogue.Options });
-                
-                // Show options UI directly
-                var ui = DialoguePanel.GetComponent<DialogueOptionsUI>();
-                if(ui != null) ui.OnShowOptions(dialogue.Options);
+                // Wait until an option is selected if it hasn't been yet
+                if (!optionSelected)
+                {
+                    yield return new WaitUntil(() => optionSelected);
+                }
 
-                yield return new WaitUntil(() => optionSelected);
+                // send dialogue finish event since text is done
+                SendBinderEvent(DialogueBinderType.Finish);
 
                 // wait 1 frame to clear input state so it doesn't double-skip the next dialogue
                 yield return null;
@@ -313,29 +340,35 @@ namespace UHFPS.Runtime
                     // send dialogue finish event
                     SendBinderEvent(DialogueBinderType.Finish);
 
-                    if (!wasSkipped)
+                    // Always respect Sequence/Event/Press mode logic
+                    if (continueType == DialogueTrigger.DialogueContinueEnum.Sequence)
                     {
-                        if (isSequenceType)
+                        // Wait for SequenceWait, unless overridden by an external Event (nextDialogueTrigger)
+                        float seqTimer = 0f;
+                        while (seqTimer < SequenceWait)
                         {
-                            // sequence time wait
-                            yield return new WaitForSeconds(SequenceWait);
-                        }
-                        else
-                        {
-                            // wait for next dialogue trigger 
-                            yield return new WaitUntil(() => nextDialogueTrigger);
-                            nextDialogueTrigger = false;
-
-                            // wait 1 frame to clear the input state so we don't double-skip
+                            if (nextDialogueTrigger) break;
+                            seqTimer += Time.deltaTime;
                             yield return null;
                         }
                     }
-                    else
+                    else if (continueType == DialogueTrigger.DialogueContinueEnum.Event)
                     {
-                        // wait 1 frame to clear the input state so we don't double-skip
+                        // Event mode: wait for next dialogue trigger (from an external script like NPCQuestController)
                         yield return null;
                         nextDialogueTrigger = false;
+                        yield return new WaitUntil(() => nextDialogueTrigger);
                     }
+                    else if (continueType == DialogueTrigger.DialogueContinueEnum.Press)
+                    {
+                        // Press mode: wait for next dialogue trigger or skip input
+                        yield return null;
+                        nextDialogueTrigger = false;
+                        yield return new WaitUntil(() => nextDialogueTrigger || IsSkipInputPressed());
+                    }
+
+                    nextDialogueTrigger = false;
+                    yield return null;
 
                     // handle next dialogue
                     yield return HandleSubtitles(nextDialogue);
@@ -409,7 +442,7 @@ namespace UHFPS.Runtime
             dialogueIndex = 0;
 
             var ui = DialoguePanel.GetComponent<DialogueOptionsUI>();
-            if(ui != null) ui.OnDialogueEnd();
+            if (ui != null) ui.OnDialogueEnd();
         }
 
         private void Update()

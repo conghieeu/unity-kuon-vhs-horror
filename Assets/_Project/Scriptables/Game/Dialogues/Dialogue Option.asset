@@ -15,7 +15,6 @@ MonoBehaviour:
   Dialogues:
   - DialogueAudio: {fileID: 8300000, guid: 782faa4571fcb7d45add7e2407887902, type: 3}
     SubtitleType: 0
-    CanSkip: 1
     SingleSubtitle:
       Time: 0
       Narrator: 'Hieu:'
@@ -100,7 +99,6 @@ MonoBehaviour:
       JumpToIndex: 2
   - DialogueAudio: {fileID: 8300000, guid: 782faa4571fcb7d45add7e2407887902, type: 3}
     SubtitleType: 1
-    CanSkip: 1
     SingleSubtitle:
       Time: 0
       Narrator: 123
@@ -115,7 +113,6 @@ MonoBehaviour:
     Options: []
   - DialogueAudio: {fileID: 8300000, guid: 782faa4571fcb7d45add7e2407887902, type: 3}
     SubtitleType: 0
-    CanSkip: 1
     SingleSubtitle:
       Time: 0
       Narrator: 

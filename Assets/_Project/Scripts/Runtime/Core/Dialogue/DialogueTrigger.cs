@@ -13,7 +13,7 @@ namespace UHFPS.Runtime
     {
         public enum TriggerTypeEnum { Trigger, Interact, Event }
         public enum DialogueTypeEnum { Local, Global }
-        public enum DialogueContinueEnum { Sequence, Event }
+        public enum DialogueContinueEnum { Sequence, Event, Press }
 
         public DialogueSystem.DialogueData DialogueData { get; private set; }
         public bool IsCompleted { get; set; }
@@ -104,6 +104,12 @@ namespace UHFPS.Runtime
         {
             if (TriggerType != TriggerTypeEnum.Interact)
                 return;
+
+            if (isTriggered && dialogueSystem.IsPlaying)
+            {
+                dialogueSystem.NextDialogue();
+                return;
+            }
 
             TriggerDialogue();
         }

@@ -40,7 +40,6 @@ namespace UHFPS.Scriptable
         {
             public AudioClip DialogueAudio;
             public SubtitleTypeEnum SubtitleType;
-            public bool CanSkip = true;
 
             public DialogueSubtitle SingleSubtitle = new();
 
@@ -64,7 +63,6 @@ namespace UHFPS.Scriptable
                 {
                     DialogueAudio = DialogueAudio,
                     SubtitleType = SubtitleType,
-                    CanSkip = CanSkip,
                     Subtitles = new(),
                     EndType = EndType,
                     JumpIndex = JumpIndex,
