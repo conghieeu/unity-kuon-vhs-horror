@@ -1,0 +1,41 @@
+using UnityEngine;
+using UHFPS.Scriptable;
+
+namespace UHFPS.Runtime.States
+{
+    public class #SCRIPTNAME# : AIStateAsset
+    {
+        public override FSMAIState InitState(NPCStateMachine machine, AIStatesGroup group)
+        {
+            return new #SCRIPTNAME#_State(machine);
+        }
+
+        public override string StateKey => "Your state key";
+        public override string Name => "Your state name";
+
+        public class #SCRIPTNAME#_State : FSMAIState
+        {
+            public #SCRIPTNAME#_State(NPCStateMachine machine) : base(machine) { }
+
+            public override void OnStateEnter()
+            {
+                #NOTRIM#
+            }
+
+            public override void OnStateExit()
+            {
+                #NOTRIM#
+            }
+
+            public override void OnStateUpdate()
+            {
+                #NOTRIM#
+            }
+
+            public override Transition[] OnGetTransitions()
+            {
+                return new Transition[0];
+            }
+        }
+    }
+}
