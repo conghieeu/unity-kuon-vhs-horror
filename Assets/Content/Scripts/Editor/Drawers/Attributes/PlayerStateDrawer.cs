@@ -47,7 +47,7 @@ namespace ThunderWire.Editors
 
                 if (string.IsNullOrEmpty(property.stringValue))
                     title = new("None");
-                else if (!states.Contains(selected)) 
+                else if (!states.Contains(selected))
                     selected = "Missing State";
 
                 Rect popupRect = EditorGUI.PrefixLabel(position, label);
