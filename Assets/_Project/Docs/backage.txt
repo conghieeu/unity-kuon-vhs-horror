@@ -16,5 +16,7 @@ vTabs
 Wingman 
 HierarchyDecorator Github
 ProBuilder
-https://github.com/PicoShot/Localization-Unity
+https://github.com/PicoShot/Localization-Unity PicoShot Localization
 Easy Save
+
+

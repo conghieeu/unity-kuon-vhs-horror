@@ -1,0 +1,454 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b201d5a7ae63fb04985b6d256e782f3b, type: 3}
+  m_Name: Game Options
+  m_EditorClassIdentifier: 
+  Sections:
+  - Section:
+      Name: General
+      GUID: 365b8c7819964cc1be4334ee071b79c9
+    Items:
+    - rid: 5518344916744536126
+    - rid: 951096600808390722
+    - rid: 951096600808390723
+    - rid: 951096600808390724
+    - rid: 951096600808390725
+    - rid: 951096600808390726
+    - rid: 951096600808390727
+  - Section:
+      Name: Graphics
+      GUID: 2bf68564ed384015b8122a64df3d3e91
+    Items:
+    - rid: 951096600808390728
+    - rid: 951096600808390729
+    - rid: 951096600808390730
+    - rid: 951096600808390731
+    - rid: 951096600808390732
+    - rid: 951096643576922177
+    - rid: 951096643576922182
+    - rid: 951096643576922183
+    - rid: 951096643576922179
+    - rid: 951096643576922180
+    - rid: 951096643576922184
+    - rid: 951096643576922181
+    - rid: 951096643576922185
+    - rid: 951096643576922186
+    - rid: 951096643576922187
+    - rid: 951096643576922188
+  - Section:
+      Name: Audio
+      GUID: 62ec0cc775a84149bce376a7b3bad415
+    Items:
+    - rid: 951096643576922191
+    - rid: 951096643576922190
+  OptionPrefabs:
+  - {fileID: 1458672171430065180, guid: 59caa5526fa2a2a40bc3f86646a12ce5, type: 3}
+  - {fileID: 1458672171430065180, guid: 3d71e4fb9cbd2454a8093856e1550cce, type: 3}
+  - {fileID: 8867812072088462527, guid: 62fe05263d11b8e45a261a2f1cd59c21, type: 3}
+  - {fileID: 2406713744051337430, guid: 06fd74c7846d74c44bfddf0371fea48b, type: 3}
+  - {fileID: 7776964011525960297, guid: ea8363a5a006eef46a431d203901eff8, type: 3}
+  references:
+    version: 2
+    RefIds:
+    - rid: 951096600808390722
+      type: {class: OptionCustomFloat, ns: UHFPS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 4500ca41b2454d30b8cdb6c05aa63cd0
+        Name: brightness
+        Prefab: {fileID: 8916374741916289909, guid: 06fd74c7846d74c44bfddf0371fea48b, type: 3}
+        Title:
+          GlocText: options.brightness
+          NormalText: 
+        DefaultValue: 0
+        SliderLimits:
+          min: 0
+          max: 1
+        UseSnapping: 1
+        SnapValue: 0.05
+    - rid: 951096600808390723
+      type: {class: OptionCustomInteger, ns: UHFPS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: d3fe5a9bf8004e14b6bf2328fdfcd049
+        Name: fov
+        Prefab: {fileID: 8916374741916289909, guid: 06fd74c7846d74c44bfddf0371fea48b, type: 3}
+        Title:
+          GlocText: options.camera.fov
+          NormalText: 
+        DefaultValue: 60
+        SliderLimits:
+          min: 30
+          max: 90
+    - rid: 951096600808390724
+      type: {class: OptionCustomFloat, ns: UHFPS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 1cf2e8456ffa4efb9c5fa8990cee0a7d
+        Name: sensitivity
+        Prefab: {fileID: 8916374741916289909, guid: 06fd74c7846d74c44bfddf0371fea48b, type: 3}
+        Title:
+          GlocText: options.look.sensitivity
+          NormalText: 
+        DefaultValue: 1
+        SliderLimits:
+          min: 0.1
+          max: 3
+        UseSnapping: 1
+        SnapValue: 0.1
+    - rid: 951096600808390725
+      type: {class: OptionCustomBoolean, ns: UHFPS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 53ade4a7869e4f54aab4acbe8ec9f3cd
+        Name: smoothing
+        Prefab: {fileID: 490803695445625362, guid: 59caa5526fa2a2a40bc3f86646a12ce5, type: 3}
+        Title:
+          GlocText: options.look.smoothing
+          NormalText: 
+        DefaultValue: 0
+        OffName:
+          GlocText: '*OFF'
+          NormalText: '*OFF'
+        OnName:
+          GlocText: '*ON'
+          NormalText: '*ON'
+    - rid: 951096600808390726
+      type: {class: OptionCustomFloat, ns: UHFPS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 8a2964a3a56f492393349bc64190387e
+        Name: smoothing_speed
+        Prefab: {fileID: 8916374741916289909, guid: 06fd74c7846d74c44bfddf0371fea48b, type: 3}
+        Title:
+          GlocText: options.smoothing.speed
+          NormalText: 
+        DefaultValue: 1
+        SliderLimits:
+          min: 0
+          max: 5
+        UseSnapping: 1
+        SnapValue: 0.1
+    - rid: 951096600808390727
+      type: {class: OptionCustomBoolean, ns: UHFPS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: e3c38c70e27044dbb3c8d7cc9a9548bf
+        Name: show_fps
+        Prefab: {fileID: 490803695445625362, guid: 59caa5526fa2a2a40bc3f86646a12ce5, type: 3}
+        Title:
+          GlocText: options.show.fps
+          NormalText: 
+        DefaultValue: 1
+        OffName:
+          GlocText: '*OFF'
+          NormalText: '*OFF'
+        OnName:
+          GlocText: '*ON'
+          NormalText: '*ON'
+    - rid: 951096600808390728
+      type: {class: OptionDisplayMonitor, ns: UHFPS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 01a70cdff495418aa2669e7789340a57
+        Name: display
+        Prefab: {fileID: 3119760976245609011, guid: 62fe05263d11b8e45a261a2f1cd59c21, type: 3}
+        Title:
+          GlocText: options.display
+          NormalText: 
+    - rid: 951096600808390729
+      type: {class: OptionFullscreen, ns: UHFPS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 5b2d43fb1d4a4ddba2992c2af3303689
+        Name: fullscreen
+        Prefab: {fileID: 3119760976245609011, guid: 62fe05263d11b8e45a261a2f1cd59c21, type: 3}
+        Title:
+          GlocText: options.display.mode
+          NormalText: 
+        ModeNames:
+        - GlocText: '*Windowed'
+          NormalText: '*Windowed'
+        - GlocText: '*Borderless Window'
+          NormalText: '*Borderless Window'
+    - rid: 951096600808390730
+      type: {class: OptionResolution, ns: UHFPS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: e1f3f4a0083449ca809a36003fc602d2
+        Name: resolution
+        Prefab: {fileID: 3119760976245609011, guid: 62fe05263d11b8e45a261a2f1cd59c21, type: 3}
+        Title:
+          GlocText: options.screen.res
+          NormalText: 
+    - rid: 951096600808390731
+      type: {class: OptionFramerate, ns: UHFPS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: f9edb3e1212b4b42ae61112d49f118bd
+        Name: framerate
+        Prefab: {fileID: 490803695445625362, guid: 59caa5526fa2a2a40bc3f86646a12ce5, type: 3}
+        Title:
+          GlocText: options.frame.rate
+          NormalText: 
+        Framerates:
+        - Name:
+            GlocText: '*30FPS'
+            NormalText: '*30FPS'
+          Value: 30
+        - Name:
+            GlocText: '*60FPS'
+            NormalText: '*60FPS'
+          Value: 60
+        - Name:
+            GlocText: '*120FPS'
+            NormalText: '*120FPS'
+          Value: 120
+        - Name:
+            GlocText: '*Variable'
+            NormalText: '*Variable'
+          Value: -1
+    - rid: 951096600808390732
+      type: {class: OptionVSync, ns: UHFPS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 51f619b9fcae4a178db10508653663c8
+        Name: vsync
+        Prefab: {fileID: 490803695445625362, guid: 59caa5526fa2a2a40bc3f86646a12ce5, type: 3}
+        Title:
+          GlocText: options.vsync
+          NormalText: 
+        VSyncNames:
+        - GlocText: '*OFF'
+          NormalText: '*OFF'
+        - GlocText: '*ON'
+          NormalText: '*ON'
+    - rid: 951096643576922177
+      type: {class: OptionSeparator, ns: UHFPS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 7551fcd35bf54fe69298079811a53cc6
+        Name: Video Settings
+        Prefab: {fileID: 3742190214275192212, guid: ea8363a5a006eef46a431d203901eff8, type: 3}
+        Title:
+          GlocText: options.separator.video
+          NormalText: 
+    - rid: 951096643576922179
+      type: {class: OptionAnisotropic, ns: UHFPS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: f3b185d3299a4b69b5a91a02bf14a31e
+        Name: anisotropic
+        Prefab: {fileID: 490803695445625362, guid: 59caa5526fa2a2a40bc3f86646a12ce5, type: 3}
+        Title:
+          GlocText: options.anisotropic
+          NormalText: 
+        AnisotropicNames:
+        - GlocText: '*Disable'
+          NormalText: 
+        - GlocText: '*Enable'
+          NormalText: 
+        - GlocText: '*Force Enable'
+          NormalText: 
+    - rid: 951096643576922180
+      type: {class: OptionTextureQuality, ns: UHFPS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 7f2f2da5c1874dbc807b024cb6364990
+        Name: texture_quality
+        Prefab: {fileID: 490803695445625362, guid: 59caa5526fa2a2a40bc3f86646a12ce5, type: 3}
+        Title:
+          GlocText: options.texture.quality
+          NormalText: 
+        TextureQuality:
+        - GlocText: '*Eighth Size'
+          NormalText: 
+        - GlocText: '*Quarter Size'
+          NormalText: 
+        - GlocText: '*Half Size'
+          NormalText: 
+        - GlocText: '*Normal'
+          NormalText: 
+    - rid: 951096643576922181
+      type: {class: OptionSeparator, ns: UHFPS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: c348f93f07cd4748b11cc80fd65e8755
+        Name: Post Processing
+        Prefab: {fileID: 3742190214275192212, guid: ea8363a5a006eef46a431d203901eff8, type: 3}
+        Title:
+          GlocText: options.separator.pp
+          NormalText: 
+    - rid: 951096643576922182
+      type: {class: OptionAntialiasingMode, ns: UHFPS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 8ad4b806ba6349b289c057099caec3fe
+        Name: antialiasing_mode
+        Prefab: {fileID: 490803695445625362, guid: 59caa5526fa2a2a40bc3f86646a12ce5, type: 3}
+        Title:
+          GlocText: options.antialiasing
+          NormalText: 
+        AntialiasingModes:
+        - GlocText: '*None'
+          NormalText: 
+        - GlocText: '*FXAA'
+          NormalText: 
+        - GlocText: '*SMAA'
+          NormalText: 
+        - GlocText: '*TAA'
+          NormalText: 
+    - rid: 951096643576922183
+      type: {class: OptionAntialiasingQuality, ns: UHFPS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: cc61d54f9520455f9f86a431d9f7999b
+        Name: antialiasing_quality
+        Prefab: {fileID: 490803695445625362, guid: 59caa5526fa2a2a40bc3f86646a12ce5, type: 3}
+        Title:
+          GlocText: options.antialiasing.quality
+          NormalText: 
+        QualityLevels:
+        - GlocText: '*Low'
+          NormalText: 
+        - GlocText: '*Medium'
+          NormalText: 
+        - GlocText: '*High'
+          NormalText: 
+        AutoDisableQuality: 1
+    - rid: 951096643576922184
+      type: {class: OptionShadowDistance, ns: UHFPS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: f0a0348c430043c4bfc27312fb687ffb
+        Name: shadow_distance
+        Prefab: {fileID: 490803695445625362, guid: 3d71e4fb9cbd2454a8093856e1550cce, type: 3}
+        Title:
+          GlocText: options.shadow.distance
+          NormalText: 
+        ShadowDistances:
+        - Name:
+            GlocText: '*Disabled'
+            NormalText: 
+          Value: 0
+        - Name:
+            GlocText: '*Very Low'
+            NormalText: 
+          Value: 25
+        - Name:
+            GlocText: '*Low'
+            NormalText: 
+          Value: 40
+        - Name:
+            GlocText: '*Medium'
+            NormalText: 
+          Value: 55
+        - Name:
+            GlocText: '*High'
+            NormalText: 
+          Value: 70
+        - Name:
+            GlocText: '*Very High'
+            NormalText: 
+          Value: 85
+        - Name:
+            GlocText: '*Max'
+            NormalText: 
+          Value: 100
+    - rid: 951096643576922185
+      type: {class: OptionCustomBoolean, ns: UHFPS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 3d6aa07a7d724184b7ccbe37c0594d60
+        Name: pp_bloom
+        Prefab: {fileID: 490803695445625362, guid: 59caa5526fa2a2a40bc3f86646a12ce5, type: 3}
+        Title:
+          GlocText: options.bloom
+          NormalText: 
+        DefaultValue: 1
+        OffName:
+          GlocText: '*OFF'
+          NormalText: 
+        OnName:
+          GlocText: '*ON'
+          NormalText: 
+    - rid: 951096643576922186
+      type: {class: OptionCustomBoolean, ns: UHFPS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 825cf68d21ce4acda5161f249524760a
+        Name: pp_vignette
+        Prefab: {fileID: 490803695445625362, guid: 59caa5526fa2a2a40bc3f86646a12ce5, type: 3}
+        Title:
+          GlocText: options.vignette
+          NormalText: 
+        DefaultValue: 1
+        OffName:
+          GlocText: '*OFF'
+          NormalText: 
+        OnName:
+          GlocText: '*ON'
+          NormalText: 
+    - rid: 951096643576922187
+      type: {class: OptionCustomBoolean, ns: UHFPS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: d6715eed8fa0428cbb61a230021f1b67
+        Name: pp_grain
+        Prefab: {fileID: 490803695445625362, guid: 59caa5526fa2a2a40bc3f86646a12ce5, type: 3}
+        Title:
+          GlocText: options.film.grain
+          NormalText: 
+        DefaultValue: 1
+        OffName:
+          GlocText: '*OFF'
+          NormalText: 
+        OnName:
+          GlocText: '*ON'
+          NormalText: 
+    - rid: 951096643576922188
+      type: {class: OptionCustomBoolean, ns: UHFPS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: e4a71e83825a4098a15cc52b4711e86e
+        Name: pp_chromatic_aberration
+        Prefab: {fileID: 490803695445625362, guid: 59caa5526fa2a2a40bc3f86646a12ce5, type: 3}
+        Title:
+          GlocText: options.chromatic
+          NormalText: 
+        DefaultValue: 1
+        OffName:
+          GlocText: '*OFF'
+          NormalText: 
+        OnName:
+          GlocText: '*ON'
+          NormalText: 
+    - rid: 951096643576922190
+      type: {class: OptionCustomFloat, ns: UHFPS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: c08580afde774beba8e960207ede55dd
+        Name: volume_music
+        Prefab: {fileID: 8916374741916289909, guid: 06fd74c7846d74c44bfddf0371fea48b, type: 3}
+        Title:
+          GlocText: options.audio.music
+          NormalText: 
+        DefaultValue: 1
+        SliderLimits:
+          min: 0
+          max: 1
+        UseSnapping: 1
+        SnapValue: 0.05
+    - rid: 951096643576922191
+      type: {class: OptionVolumeGeneral, ns: UHFPS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 62121d19e2f1484f99f48a1cffa10409
+        Name: volume_general
+        Prefab: {fileID: 8916374741916289909, guid: 06fd74c7846d74c44bfddf0371fea48b, type: 3}
+        Title:
+          GlocText: options.audio.general
+          NormalText: 
+        DefaultValue: 1
+        SliderLimits:
+          min: 0
+          max: 1
+        UseSnapping: 1
+        SnapValue: 0.05
+    - rid: 5518344916744536126
+      type: {class: OptionLanguage, ns: UHFPS.Runtime, asm: Assembly-CSharp}
+      data:
+        GUID: 0647690e591647ce945d17f7681ad429
+        Name: language
+        Prefab: {fileID: 3119760976245609011, guid: 62fe05263d11b8e45a261a2f1cd59c21, type: 3}
+        Title:
+          GlocText: options.language
+          NormalText: 
+        Languages:
+        - GlocText: '*English'
+          NormalText: 

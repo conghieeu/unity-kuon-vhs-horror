@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d312663c8cd23642992b5d25cd832bb, type: 3}
+  m_Name: (Surface) Wood
+  m_EditorClassIdentifier: 
+  SurfaceTag:
+    tag: Untagged
+  SurfaceTextures:
+  - {fileID: 2800000, guid: 593b06e20fb0f81498523da7b6b84497, type: 3}
+  - {fileID: 2800000, guid: 3f6433889237e724c9137251ca39b3fb, type: 3}
+  - {fileID: 2800000, guid: ee9860ce5c2eea448ae6cc4a61f39a7b, type: 3}
+  - {fileID: 2800000, guid: 0548a5a37e4180d48b0489fd4d71cddd, type: 3}
+  SurfaceFriction: 1
+  FootstepsVolume: 1
+  SurfaceFootsteps:
+  - {fileID: 8300000, guid: 57e160d3f101f19438ad711d9d423e29, type: 3}
+  - {fileID: 8300000, guid: dadd04b092b9ea247b5ff2dff9ce4dda, type: 3}
+  - {fileID: 8300000, guid: 15539467cd9f5604fa7eb14c6d9e308c, type: 3}
+  - {fileID: 8300000, guid: d772ec5a4fce72a489475d1ac347d071, type: 3}
+  - {fileID: 8300000, guid: efe02d42af20ffe44a8cfb4603da2b68, type: 3}
+  - {fileID: 8300000, guid: ade15e4e82a250d42b6354a82d0ad5cc, type: 3}
+  - {fileID: 8300000, guid: 474abef49692d0c43aeb2b4748181de0, type: 3}
+  - {fileID: 8300000, guid: 59b7593885290834c94b27be9f1251c0, type: 3}
+  - {fileID: 8300000, guid: 75b29a5af79f4bb4bbaa733db9f699cf, type: 3}
+  - {fileID: 8300000, guid: e4271e90f61ba6f4d95c6c5de351c64d, type: 3}
+  LandStepsVolume: 1
+  SurfaceLandSteps:
+  - {fileID: 8300000, guid: 66b81d6e9662cf14dac13d8700bcac02, type: 3}
+  - {fileID: 8300000, guid: cdd389b02d5686041a4345e5e7808287, type: 3}
+  - {fileID: 8300000, guid: 61e43d24082bb1146b62de1f71f26903, type: 3}
+  - {fileID: 8300000, guid: c1fe0ed48d1ed294594227fa47c52c62, type: 3}
+  - {fileID: 8300000, guid: fbc518ae209414444aaf71072e0c0c86, type: 3}
+  BulletImpactVolume: 1
+  SurfaceBulletImpact: []
+  MeleeImpactVolume: 1
+  SurfaceMeleeImpact:
+  - {fileID: 8300000, guid: ce43147f9863c2343941a9d9a29db664, type: 3}
+  SurfaceBulletmarks:
+  - {fileID: 9186598987835553325, guid: 20e41a5b6f82a4d46afc094faf69ef67, type: 3}
+  SurfaceMeleemarks:
+  - {fileID: 4934402381929662067, guid: 1fd262787525c38418dbf1974bacc19e, type: 3}

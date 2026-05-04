@@ -10,15 +10,6 @@
       },
       "hash": "73eb27aeccfa8e0676eaf3304136e9b85953d913"
     },
-    "com.picoshot.localization": {
-      "version": "https://github.com/PicoShot/Localization-Unity.git?path=/Package",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {
-        "com.unity.textmeshpro": "3.0.0"
-      },
-      "hash": "0b88a94fc063ca892f45d05795a14e3838ddc63c"
-    },
     "com.rlabrecque.steamworks.net": {
       "version": "file:com.rlabrecque.steamworks.net",
       "depth": 0,
@@ -258,14 +249,6 @@
         "com.unity.modules.jsonserialize": "1.0.0"
       },
       "url": "https://packages.unity.com"
-    },
-    "com.unity.textmeshpro": {
-      "version": "5.0.0",
-      "depth": 1,
-      "source": "builtin",
-      "dependencies": {
-        "com.unity.ugui": "2.0.0"
-      }
     },
     "com.unity.timeline": {
       "version": "1.8.12",
