@@ -1,4 +1,4 @@
-﻿<Solution>
+<Solution>
   <Project Path="Unity.Timeline.csproj" />
   <Project Path="NodeCanvas.csproj" />
   <Project Path="Assembly-CSharp-firstpass.csproj" />

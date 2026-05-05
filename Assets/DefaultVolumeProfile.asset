@@ -233,6 +233,281 @@ MonoBehaviour:
   texture:
     m_OverrideState: 1
     m_Value: {fileID: 0}
+--- !u!114 &-6022102898096021996
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a63c99b3ed38a41f39e4d2bc6c00dfba, type: 3}
+  m_Name: VHSPro
+  m_EditorClassIdentifier: Assembly-CSharp::VHSPro
+  active: 1
+  g_pixel: 1
+  g_color: 1
+  g_palette: 1
+  g_crt: 1
+  g_noise: 1
+  g_jitter: 1
+  g_signal: 1
+  g_feedback: 1
+  g_extra: 0
+  g_bypass: 0
+  pixelOn:
+    m_OverrideState: 1
+    m_Value: 0
+  screenResPresetId:
+    m_OverrideState: 1
+    m_Value: 2
+  screenWidth:
+    m_OverrideState: 1
+    m_Value: 640
+  screenHeight:
+    m_OverrideState: 1
+    m_Value: 480
+  colorOn:
+    m_OverrideState: 1
+    m_Value: 0
+  colorMode:
+    m_OverrideState: 1
+    m_Value: 2
+  colorSyncedOn:
+    m_OverrideState: 1
+    m_Value: 1
+  bitsR:
+    m_OverrideState: 1
+    m_Value: 2
+  bitsG:
+    m_OverrideState: 1
+    m_Value: 2
+  bitsB:
+    m_OverrideState: 1
+    m_Value: 2
+  bitsSynced:
+    m_OverrideState: 1
+    m_Value: 2
+  bitsGray:
+    m_OverrideState: 1
+    m_Value: 1
+  grayscaleColor:
+    m_OverrideState: 1
+    m_Value: {r: 1, g: 1, b: 1, a: 1}
+  ditherOn:
+    m_OverrideState: 1
+    m_Value: 0
+  ditherMode:
+    m_OverrideState: 1
+    m_Value: 3
+  ditherAmount:
+    m_OverrideState: 1
+    m_Value: 1
+  paletteOn:
+    m_OverrideState: 1
+    m_Value: 0
+  paletteId:
+    m_OverrideState: 1
+    m_Value: 0
+  paletteDelta:
+    m_OverrideState: 1
+    m_Value: 5
+  paletteTex:
+    m_OverrideState: 1
+    m_Value: {fileID: 0}
+    dimension: 1
+  paletteCustom: {fileID: 0}
+  paletteCustomName: 
+  paletteCustomInit: 0
+  bleedOn:
+    m_OverrideState: 1
+    m_Value: 0
+  crtMode:
+    m_OverrideState: 1
+    m_Value: 0
+  bleedAmount:
+    m_OverrideState: 1
+    m_Value: 1
+  noiseResGlobal:
+    m_OverrideState: 1
+    m_Value: 1
+  noiseResWidth:
+    m_OverrideState: 1
+    m_Value: 640
+  noiseResHeight:
+    m_OverrideState: 1
+    m_Value: 480
+  filmgrainOn:
+    m_OverrideState: 1
+    m_Value: 0
+  filmGrainAmount:
+    m_OverrideState: 1
+    m_Value: 0.016
+  signalNoiseOn:
+    m_OverrideState: 1
+    m_Value: 0
+  signalNoiseAmount:
+    m_OverrideState: 1
+    m_Value: 0.3
+  signalNoisePower:
+    m_OverrideState: 1
+    m_Value: 0.83
+  lineNoiseOn:
+    m_OverrideState: 1
+    m_Value: 0
+  lineNoiseAmount:
+    m_OverrideState: 1
+    m_Value: 1
+  lineNoiseSpeed:
+    m_OverrideState: 1
+    m_Value: 5
+  tapeNoiseOn:
+    m_OverrideState: 1
+    m_Value: 0
+  tapeNoiseTH:
+    m_OverrideState: 1
+    m_Value: 0.63
+  tapeNoiseAmount:
+    m_OverrideState: 1
+    m_Value: 1
+  tapeNoiseSpeed:
+    m_OverrideState: 1
+    m_Value: 1
+  scanLinesOn:
+    m_OverrideState: 1
+    m_Value: 0
+  scanLineWidth:
+    m_OverrideState: 1
+    m_Value: 10
+  linesFloatOn:
+    m_OverrideState: 1
+    m_Value: 0
+  linesFloatSpeed:
+    m_OverrideState: 1
+    m_Value: 1
+  stretchOn:
+    m_OverrideState: 1
+    m_Value: 0
+  jitterHOn:
+    m_OverrideState: 1
+    m_Value: 0
+  jitterHAmount:
+    m_OverrideState: 1
+    m_Value: 0.5
+  jitterVOn:
+    m_OverrideState: 1
+    m_Value: 0
+  jitterVAmount:
+    m_OverrideState: 1
+    m_Value: 1
+  jitterVSpeed:
+    m_OverrideState: 1
+    m_Value: 1
+  twitchHOn:
+    m_OverrideState: 1
+    m_Value: 0
+  twitchHFreq:
+    m_OverrideState: 1
+    m_Value: 1
+  twitchVOn:
+    m_OverrideState: 1
+    m_Value: 0
+  twitchVFreq:
+    m_OverrideState: 1
+    m_Value: 1
+  signalTweakOn:
+    m_OverrideState: 1
+    m_Value: 0
+  signalAdjustY:
+    m_OverrideState: 1
+    m_Value: 0
+  signalAdjustI:
+    m_OverrideState: 1
+    m_Value: 0
+  signalAdjustQ:
+    m_OverrideState: 1
+    m_Value: 0
+  signalShiftY:
+    m_OverrideState: 1
+    m_Value: 1
+  signalShiftI:
+    m_OverrideState: 1
+    m_Value: 1
+  signalShiftQ:
+    m_OverrideState: 1
+    m_Value: 1
+  feedbackOn:
+    m_OverrideState: 1
+    m_Value: 0
+  feedbackThresh:
+    m_OverrideState: 1
+    m_Value: 0.1
+  feedbackAmount:
+    m_OverrideState: 1
+    m_Value: 2
+  feedbackFade:
+    m_OverrideState: 1
+    m_Value: 0.82
+  feedbackColor:
+    m_OverrideState: 1
+    m_Value: {r: 1, g: 0.5, b: 0, a: 1}
+  feedbackDebugOn:
+    m_OverrideState: 1
+    m_Value: 0
+  feedbackMode: 0
+  independentTimeOn:
+    m_OverrideState: 1
+    m_Value: 0
+  bypassOn:
+    m_OverrideState: 1
+    m_Value: 0
+  bypassTex:
+    m_OverrideState: 1
+    m_Value: {fileID: 0}
+    dimension: 1
+--- !u!114 &-5945405950082978255
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ee751481990022498d1a2a65160e587, type: 3}
+  m_Name: BloodDisortion
+  m_EditorClassIdentifier: Assembly-CSharp::UHFPS.Rendering.BloodDisortion
+  active: 1
+  BlendColor:
+    m_OverrideState: 1
+    m_Value: {r: 1, g: 1, b: 1, a: 1}
+    hdr: 0
+  OverlayColor:
+    m_OverrideState: 1
+    m_Value: {r: 1, g: 1, b: 1, a: 1}
+    hdr: 0
+  BlendTexture:
+    m_OverrideState: 1
+    m_Value: {fileID: 0}
+  BumpTexture:
+    m_OverrideState: 1
+    m_Value: {fileID: 0}
+  BloodAmount:
+    m_OverrideState: 1
+    m_Value: 0
+  MinBloodAmount:
+    m_OverrideState: 1
+    m_Value: 0
+  MaxBloodAmount:
+    m_OverrideState: 1
+    m_Value: 1
+  EdgeSharpness:
+    m_OverrideState: 1
+    m_Value: 0.5
+  Distortion:
+    m_OverrideState: 1
+    m_Value: 0.5
 --- !u!114 &-5520245016509672950
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -543,6 +818,31 @@ MonoBehaviour:
   p31:
     m_OverrideState: 1
     m_Value: {r: 0, g: 0, b: 0, a: 1}
+--- !u!114 &-178190413373764688
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac04d2c95f7a6aa4681d48e2bbe16eed, type: 3}
+  m_Name: EyeBlink
+  m_EditorClassIdentifier: Assembly-CSharp::UHFPS.Rendering.EyeBlink
+  active: 1
+  Blink:
+    m_OverrideState: 1
+    m_Value: 0
+  VignetteOuterRing:
+    m_OverrideState: 1
+    m_Value: 0.4
+  VignetteInnerRing:
+    m_OverrideState: 1
+    m_Value: 0.5
+  VignetteAspectRatio:
+    m_OverrideState: 1
+    m_Value: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -575,13 +875,13 @@ MonoBehaviour:
   - {fileID: -6288072647309666549}
   - {fileID: 7518938298396184218}
   - {fileID: -1410297666881709256}
-  - {fileID: 3097574545686439263}
-  - {fileID: -5294750908861601096}
-  - {fileID: -6794818607519187234}
-  - {fileID: -2267626932750435059}
-  - {fileID: 7405001284164886916}
-  - {fileID: 9054268118646154008}
-  - {fileID: 369119304828787675}
+  - {fileID: 3268206010549883712}
+  - {fileID: 2452472732620379166}
+  - {fileID: 6168391923607500021}
+  - {fileID: -178190413373764688}
+  - {fileID: -5945405950082978255}
+  - {fileID: -6022102898096021996}
+  - {fileID: 8782102482855907186}
 --- !u!114 &369119304828787675
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -1125,6 +1425,46 @@ MonoBehaviour:
   contribution:
     m_OverrideState: 1
     m_Value: 0
+--- !u!114 &2452472732620379166
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93beae75511d8dd4baa7786f4ffe3913, type: 3}
+  m_Name: Raindrop
+  m_EditorClassIdentifier: Assembly-CSharp::UHFPS.Rendering.Raindrop
+  active: 1
+  Raining:
+    m_OverrideState: 1
+    m_Value: 1
+  DropletsMask:
+    m_OverrideState: 1
+    m_Value: {fileID: 0}
+  Tiling:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1}
+  Distortion:
+    m_OverrideState: 1
+    m_Value: 0.5
+  TilingScale:
+    m_OverrideState: 1
+    m_Value: 1
+  GlobalRotation:
+    m_OverrideState: 1
+    m_Value: 0
+  DropletsGravity:
+    m_OverrideState: 1
+    m_Value: 0
+  DropletsSpeed:
+    m_OverrideState: 1
+    m_Value: 1
+  DropletsStrength:
+    m_OverrideState: 1
+    m_Value: 1
 --- !u!114 &3097574545686439263
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -1165,6 +1505,28 @@ MonoBehaviour:
   DropletsStrength:
     m_OverrideState: 1
     m_Value: 1
+--- !u!114 &3268206010549883712
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a25c89454ee47db42bbb6a81ec2d6d8c, type: 3}
+  m_Name: DualKawaseBlur
+  m_EditorClassIdentifier: Assembly-CSharp::UHFPS.Rendering.DualKawaseBlur
+  active: 1
+  BlurRadius:
+    m_OverrideState: 1
+    m_Value: 0
+  Iteration:
+    m_OverrideState: 1
+    m_Value: 4
+  RTDownScaling:
+    m_OverrideState: 1
+    m_Value: 2
 --- !u!114 &3959858460715838825
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -1241,6 +1603,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   active: 1
   intensity:
+    m_OverrideState: 1
+    m_Value: 0
+--- !u!114 &6168391923607500021
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 924484cda5dee3144ab04608116b5be7, type: 3}
+  m_Name: Scanlines
+  m_EditorClassIdentifier: Assembly-CSharp::UHFPS.Rendering.Scanlines
+  active: 1
+  ScanlinesStrength:
+    m_OverrideState: 1
+    m_Value: 0
+  ScanlinesSharpness:
+    m_OverrideState: 1
+    m_Value: 1.5
+  ScanlinesScroll:
+    m_OverrideState: 1
+    m_Value: 2
+  ScanlinesFrequency:
+    m_OverrideState: 1
+    m_Value: 5
+  GlitchIntensity:
+    m_OverrideState: 1
+    m_Value: 0
+  GlitchFrequency:
     m_OverrideState: 1
     m_Value: 0
 --- !u!114 &6940869943325143175
@@ -1334,6 +1727,40 @@ MonoBehaviour:
   scale:
     m_OverrideState: 1
     m_Value: 1
+--- !u!114 &8782102482855907186
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae89e52999c1da34594c7c0d00bc7512, type: 3}
+  m_Name: FearTentancles
+  m_EditorClassIdentifier: Assembly-CSharp::UHFPS.Rendering.FearTentancles
+  active: 1
+  EffectFade:
+    m_OverrideState: 1
+    m_Value: 0
+  TentaclesPosition:
+    m_OverrideState: 1
+    m_Value: 0
+  LayerPosition:
+    m_OverrideState: 1
+    m_Value: 0
+  VignetteStrength:
+    m_OverrideState: 1
+    m_Value: 0
+  TentaclesSpeed:
+    m_OverrideState: 1
+    m_Value: 1
+  Tentacles:
+    m_OverrideState: 1
+    m_Value: 20
+  TopLayer:
+    m_OverrideState: 1
+    m_Value: 0
 --- !u!114 &9001657382290151224
 MonoBehaviour:
   m_ObjectHideFlags: 3

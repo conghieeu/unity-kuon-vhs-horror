@@ -6,24 +6,25 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/ThirdParty/ThunderWire Studio/UHFPS/Content/Scenes/MainMenu.unity
+    path: Assets/ThunderWire Studio/UHFPS/Content/Scenes/MainMenu.unity
     guid: 600b46598d843a148a2ea8972c1e318c
   - enabled: 0
-    path: Assets/ThirdParty/ThunderWire Studio/UHFPS/Content/Scenes/LevelManager.unity
+    path: Assets/ThunderWire Studio/UHFPS/Content/Scenes/LevelManager.unity
     guid: e8115f250f482ec4d8ad6ea1dc55e505
   - enabled: 0
-    path: Assets/ThirdParty/ThunderWire Studio/UHFPS/_Demo/Scenes/Playground.unity
+    path: Assets/ThunderWire Studio/UHFPS/_Demo/Scenes/Playground.unity
     guid: ccce3bb1d069b4948a32b2a90efff845
   - enabled: 0
-    path: Assets/ThirdParty/ThunderWire Studio/UHFPS/_Demo/Scenes/Elevator.unity
+    path: Assets/ThunderWire Studio/UHFPS/_Demo/Scenes/Elevator.unity
     guid: 1427cd3696b895f459c7de450581a34e
   - enabled: 0
-    path: Assets/ThirdParty/ThunderWire Studio/UHFPS/_Demo/Scenes/Raining.unity
+    path: Assets/ThunderWire Studio/UHFPS/_Demo/Scenes/Raining.unity
     guid: 5d02e5420369bbe42bc168890153f297
   - enabled: 1
-    path: Assets/_Project/Scenes/LevelDesign/Gameplay.unity
+    path: Assets/_Project/Scenes/LevelDesign/Level 1 - 4 26.unity
     guid: 8bcaf48ff3469b846bb37fcc7cfee002
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: ae838b1c970aab641bb8e4643590df24, type: 2}
     com.unity.input.settings: {fileID: 11400000, guid: ce68c4c37abec5347801e4204a280574, type: 2}
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 916c72588b6bc6e48a022e8c82e6438f, type: 3}
   m_UseUCBPForAssetBundles: 0

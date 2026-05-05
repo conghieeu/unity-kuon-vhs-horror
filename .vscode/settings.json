@@ -71,5 +71,6 @@
         "*.slnx": "*.csproj"
     },
     "dotnet.defaultSolution": "unity-kuon-vhs-horror.slnx",
-    "hide-files.files": []
+    "hide-files.files": [],
+    "dotrush.roslyn.projectOrSolutionFiles": []
 }

@@ -12,6 +12,7 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
+  - _EMISSION
   - _METALLICSPECGLOSSMAP
   - _NORMALMAP
   m_InvalidKeywords: []
@@ -117,6 +118,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _AddPrecomputedVelocity: 0
     - _AlphaClip: 0
     - _AlphaToMask: 0
     - _BASE_COLOR_WEIGHT: 1
@@ -157,6 +159,7 @@ Material:
     - _TRANSPARENCY: 0
     - _UVSec: 0
     - _WorkflowMode: 1
+    - _XRMotionVectorsPass: 1
     - _ZWrite: 1
     m_Colors:
     - _BASE_COLOR: {r: 0.5, g: 0.5, b: 0.5, a: 1}
