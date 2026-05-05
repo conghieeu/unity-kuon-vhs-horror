@@ -1,20 +1,27 @@
 using System;
 using UnityEngine;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime
 {
     [Serializable]
+    [Summary("Hiệu ứng va chạm/rung lắc khi nhân vật tiếp đất.")]
     public class LandMotion : SpringMotionModule
     {
         public override string Name => "General/Land Motion";
 
         [Header("General Settings")]
+        [Tooltip("Cấu hình biên độ dịch chuyển (Offset) khi tiếp đất.")]
         public OffsetMotion.OffsetSettings landSettings;
 
         [Header("Impact Settings")]
+        [Tooltip("Thời gian tối thiểu ở trên không để kích hoạt hiệu ứng tiếp đất.")]
         public float minActivateAirTime = 1f;
+        [Tooltip("Thời gian trên không tối đa để đạt được tác động mạnh nhất.")]
         public float maxImpactAirTime = 2f;
+        [Tooltip("Hệ số nhân vị trí tác động.")]
         public float positionMultiplier = 1f;
+        [Tooltip("Hệ số nhân góc quay tác động.")]
         public float rotationMultiplier = 1f;
 
         private float remainingResetDuration;

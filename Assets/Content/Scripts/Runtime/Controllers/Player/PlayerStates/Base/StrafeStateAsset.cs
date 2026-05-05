@@ -1,8 +1,10 @@
 using UnityEngine;
 using UHFPS.Scriptable;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime.States
 {
+    [Summary("Lớp cơ sở cho các trạng thái di chuyển theo kiểu Strafe (gia tốc/ma sát kiểu Quake/Source).")]
     public abstract class StrafeStateAsset : PlayerStateAsset
     {
         public override FSMPlayerState InitState(PlayerStateMachine machine, PlayerStatesGroup group)

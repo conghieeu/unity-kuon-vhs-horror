@@ -1,8 +1,10 @@
 using UnityEngine;
 using UHFPS.Scriptable;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime.States
 {
+    [Summary("Lớp cơ sở cho các trạng thái di chuyển theo kiểu Smooth (mềm mại, nội suy).")]
     public abstract class SmoothStateAsset : PlayerStateAsset
     {
         public override FSMPlayerState InitState(PlayerStateMachine machine, PlayerStatesGroup group)

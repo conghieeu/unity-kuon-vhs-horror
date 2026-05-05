@@ -1,9 +1,11 @@
 using System;
 using UnityEngine;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime
 {
     [Serializable]
+    [Summary("Hiệu ứng ngoại lực dạng rung lắc (Shake Force).")]
     public sealed class ShakeForceMotion : ExternalMotionData
     {
         [Serializable]

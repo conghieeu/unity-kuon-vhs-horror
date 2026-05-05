@@ -1,20 +1,27 @@
 using System;
 using UnityEngine;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime
 {
     [Serializable]
+    [Summary("Hiệu ứng nhấp nhô (Bobbing) khi di chuyển, áp dụng cho vị trí và góc quay.")]
     public class BobMotion : SpringMotionModule
     {
         public override string Name => "General/Bob Motion";
 
         [Header("General Settings")]
+        [Tooltip("Tốc độ nhấp nhô.")]
         public float bobbingSpeed = 1f;
+        [Tooltip("Tốc độ phục hồi về vị trí ban đầu khi dừng lại.")]
         public float resetSpeed = 10f;
+        [Tooltip("Tốc độ tối đa được xem là dừng lại.")]
         public float playerStopSpeed = 0.5f;
 
         [Header("Amplitude Settings")]
+        [Tooltip("Biên độ nhấp nhô của vị trí.")]
         public Vector3 positionAmplitude = Vector3.zero;
+        [Tooltip("Biên độ nhấp nhô của góc quay.")]
         public Vector3 rotationAmplitude = Vector3.zero;
 
         private float currentBobTime;

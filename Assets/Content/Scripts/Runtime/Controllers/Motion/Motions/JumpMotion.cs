@@ -1,14 +1,17 @@
 using System;
 using UnityEngine;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime
 {
     [Serializable]
+    [Summary("Hiệu ứng chuyển động nảy lên khi nhân vật nhảy.")]
     public class JumpMotion : SpringMotionModule
     {
         public override string Name => "General/Jump Motion";
 
         [Header("General Settings")]
+        [Tooltip("Cấu hình biên độ dịch chuyển (Offset) khi nhảy.")]
         public OffsetMotion.OffsetSettings jumpSettings;
 
         private float remainingResetDuration;

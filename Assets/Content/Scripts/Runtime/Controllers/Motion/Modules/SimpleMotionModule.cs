@@ -1,8 +1,10 @@
 using System;
 using UnityEngine;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime
 {
+    [Summary("Module chuyển động đơn giản không sử dụng hệ thống lò xo (Spring).")]
     public abstract class SimpleMotionModule : MotionModule
     {
         [NonSerialized] private Vector3 positionTarget;

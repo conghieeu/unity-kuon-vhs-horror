@@ -1,12 +1,16 @@
 using UnityEngine;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime
 {
-    [ThunderWire.Attributes.Summary("Quản lý vật thể đạn (Bullet) và va chạm của đạn.")]
+    [Summary("Quản lý vật thể đạn (Bullet) và va chạm của đạn.")]
     public class Bullet : MonoBehaviour
     {
+        [Tooltip("LayerMask để kiểm tra va chạm của đạn với môi trường.")]
         public LayerMask CheckMask;
+        [Tooltip("Có tự động hủy viên đạn sau một khoảng thời gian không?")]
         public bool DestroyAfterTime = true;
+        [Tooltip("Thời gian tồn tại của viên đạn trước khi bị hủy.")]
         public float TimeAlive = 2f;
 
         private float force;

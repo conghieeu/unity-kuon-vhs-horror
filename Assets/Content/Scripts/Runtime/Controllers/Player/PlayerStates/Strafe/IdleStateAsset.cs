@@ -1,9 +1,11 @@
 using UnityEngine;
 using UHFPS.Scriptable;
 using UHFPS.Input;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime.States
 {
+    [Summary("Trạng thái đứng yên (Idle) theo kiểu Strafe.")]
     public class IdleStateAsset : StrafeStateAsset
     {
         public override FSMPlayerState InitState(PlayerStateMachine machine, PlayerStatesGroup group)

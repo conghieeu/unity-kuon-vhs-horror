@@ -2,13 +2,16 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UHFPS.Scriptable;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime
 {
     [Serializable]
+    [Summary("Lớp cơ sở trừu tượng cho tất cả các module chuyển động (Motion).")]
     public abstract class MotionModule
     {
         [Range(0f, 1f)]
+        [Tooltip("Trọng số ảnh hưởng của chuyển động này (0 = không tác động, 1 = 100%).")]
         public float Weight = 1f;
 
         [NonSerialized] protected MotionPreset preset;

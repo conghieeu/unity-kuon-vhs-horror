@@ -1,15 +1,19 @@
 using System;
 using UnityEngine;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime
 {
     [Serializable]
+    [Summary("Module chuyển động sử dụng hệ thống vật lý lò xo (Spring3D) để tạo độ nảy và quán tính.")]
     public abstract class SpringMotionModule : MotionModule
     {
         private Spring3D PositionSpring = new();
         private Spring3D RotationSpring = new();
 
+        [Tooltip("Cấu hình độ nhạy/quán tính lò xo cho vị trí.")]
         public SpringSettings PositionSpringSettings = new(10f, 100f, 1f, 1f);
+        [Tooltip("Cấu hình độ nhạy/quán tính lò xo cho góc quay.")]
         public SpringSettings RotationSpringSettings = new(10f, 100f, 1f, 1f);
 
         public override void Initialize(MotionSettings motionSettings)

@@ -1,9 +1,11 @@
 using UnityEngine;
 using UHFPS.Scriptable;
 using UHFPS.Input;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime.States
 {
+    [Summary("Trạng thái nhảy (Jump) theo kiểu Strafe.")]
     public class JumpingStateAsset : StrafeStateAsset
     {
         public override FSMPlayerState InitState(PlayerStateMachine machine, PlayerStatesGroup group)

@@ -1,7 +1,9 @@
 using UnityEngine;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime
 {
+    [Summary("Lớp cơ sở cho các trạng thái của người chơi, cung cấp các thuộc tính và phương thức tiện ích.")]
     public class FSMPlayerState : FSMState
     {
         public Transition[] Transitions { get; private set; }

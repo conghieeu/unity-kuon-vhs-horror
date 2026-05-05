@@ -6,6 +6,7 @@ using ThunderWire.Attributes;
 namespace UHFPS.Runtime
 {
     [Serializable]
+    [Summary("Lưu trữ danh sách các module chuyển động tương ứng với một trạng thái (State) cụ thể.")]
     public sealed class StateMotionData
     {
         [PlayerStatePicker(includeDefault = true)]

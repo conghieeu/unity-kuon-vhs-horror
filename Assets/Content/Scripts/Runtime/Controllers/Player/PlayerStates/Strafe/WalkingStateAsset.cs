@@ -1,8 +1,10 @@
 using UHFPS.Scriptable;
 using UHFPS.Input;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime.States
 {
+    [Summary("Trạng thái đi bộ (Walk) theo kiểu Strafe.")]
     public class WalkingStateAsset : StrafeStateAsset
     {
         public override FSMPlayerState InitState(PlayerStateMachine machine, PlayerStatesGroup group)

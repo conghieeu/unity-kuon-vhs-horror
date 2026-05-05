@@ -1,10 +1,9 @@
 using UnityEngine;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime
 {
-    /// <summary>
-    /// Procedural animation of damped harmonic oscillator.
-    /// </summary>
+    [Summary("Trình đánh giá dao động điều hòa giảm xóc (Spring3D) cho hiệu ứng chuyển động kiểu lò xo.")]
     public sealed class Spring3D
     {
         public Vector3 currentValue;

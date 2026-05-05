@@ -1,16 +1,21 @@
 using System;
 using UnityEngine;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime
 {
     [Serializable]
+    [Summary("Hiệu ứng nhịp thở (Breathing), làm chuyển động nhẹ nhàng theo chu kỳ.")]
     public class BreathMotion : SimpleMotionModule
     {
         public override string Name => "General/Breath Motion";
 
         [Header("General Settings")]
+        [Tooltip("Đường cong Animation xác định mẫu nhịp thở.")]
         public AnimationCurve breathingPattern = new(new(0, 1), new(1, 1));
+        [Tooltip("Tốc độ nhịp thở.")]
         public float breathingRate;
+        [Tooltip("Cường độ nhịp thở.")]
         public float breathingIntensity;
 
         // Current time in the breathing cycle

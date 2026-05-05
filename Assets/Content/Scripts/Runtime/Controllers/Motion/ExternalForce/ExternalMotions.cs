@@ -1,10 +1,12 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime
 {
     [Serializable]
+    [Summary("Quản lý danh sách các lực tác động bên ngoài (External Motions).")]
     public sealed class ExternalMotions
     {
         [Serializable]

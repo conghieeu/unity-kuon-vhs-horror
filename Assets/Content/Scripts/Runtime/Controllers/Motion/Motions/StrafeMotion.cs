@@ -1,7 +1,9 @@
 using UnityEngine;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime
 {
+    [Summary("Hiệu ứng lắc lư khi nhân vật di chuyển ngang (Strafe).")]
     public class StrafeMotion : SpringMotionModule
     {
         public override string Name => "General/Strafe Motion";
@@ -9,12 +11,15 @@ namespace UHFPS.Runtime
         private const float PositionMod = 0.01f;
 
         [Header("General Settings")]
+        [Tooltip("Giới hạn độ dài lắc lư tối đa.")]
         public float MaxSwayLength = 10f;
 
         [Header("Position Strafe")]
+        [Tooltip("Độ thay đổi vị trí theo chuyển động ngang.")]
         public Vector3 PositionSway;
 
         [Header("Rotation Strafe")]
+        [Tooltip("Độ thay đổi góc quay theo chuyển động ngang.")]
         public Vector3 RotationSway;
 
         public override void MotionUpdate(float deltaTime)

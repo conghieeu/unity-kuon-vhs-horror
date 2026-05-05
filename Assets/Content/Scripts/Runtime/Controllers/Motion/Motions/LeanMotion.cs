@@ -1,17 +1,23 @@
 using UHFPS.Input;
 using UHFPS.Tools;
 using UnityEngine;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime
 {
+    [Summary("Hiệu ứng nghiêng người (Lean) khi nhìn qua các góc tường.")]
     public class LeanMotion : SpringMotionModule
     {
         public override string Name => "Camera/Lean Motion";
 
         [Header("General Settings")]
+        [Tooltip("LayerMask để kiểm tra va chạm của tường khi nghiêng.")]
         public LayerMask leanMask;
+        [Tooltip("Khoảng cách vị trí nghiêng tối đa.")]
         public float leanPosition;
+        [Tooltip("Góc nghiêng tối đa của Camera.")]
         public float leanTiltAmount;
+        [Tooltip("Bán kính của Collider dùng để kiểm tra va chạm (SphereCast).")]
         public float leanColliderRadius;
 
         public override void MotionUpdate(float deltaTime)

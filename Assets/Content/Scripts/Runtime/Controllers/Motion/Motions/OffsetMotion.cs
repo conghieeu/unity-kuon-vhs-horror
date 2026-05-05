@@ -1,9 +1,11 @@
 using System;
 using UnityEngine;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime
 {
     [Serializable]
+    [Summary("Cấu hình biên độ dịch chuyển (Offset) cố định được kích hoạt khi đi vào/ra khỏi một trạng thái.")]
     public class OffsetMotion : SpringMotionModule
     {
         public override string Name => "General/Offset Motion";
@@ -11,13 +13,18 @@ namespace UHFPS.Runtime
         [Serializable]
         public struct OffsetSettings
         {
+            [Tooltip("Vị trí bù trừ (Offset).")]
             public Vector3 positionOffset;
+            [Tooltip("Góc quay bù trừ (Offset).")]
             public Vector3 rotationOffset;
+            [Tooltip("Thời gian áp dụng.")]
             public float duration;
         }
 
         [Header("General Settings")]
+        [Tooltip("Cấu hình áp dụng khi vừa bước vào (Enter) hiệu ứng.")]
         public OffsetSettings enterOffset;
+        [Tooltip("Cấu hình áp dụng khi kết thúc/thoát (Exit) hiệu ứng.")]
         public OffsetSettings exitOffset;
 
         private bool hasEntered;

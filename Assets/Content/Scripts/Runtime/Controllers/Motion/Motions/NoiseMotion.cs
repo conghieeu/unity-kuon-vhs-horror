@@ -1,20 +1,24 @@
 using System;
 using UnityEngine;
 using Random = UnityEngine.Random;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime
 {
     [Serializable]
+    [Summary("Hiệu ứng nhiễu (Noise) ngẫu nhiên, tạo chuyển động rung lắc nhẹ.")]
     public class NoiseMotion : SpringMotionModule
     {
         public override string Name => "General/Noise Motion";
 
         [Header("General Settings")]
-        [Range(0f, 5f)] public float noiseSpeed = 1f;
-        [Range(0f, 1f)] public float noiseJitter = 0f;
+        [Range(0f, 5f)] [Tooltip("Tốc độ chuyển động của nhiễu (Perlin Noise).")] public float noiseSpeed = 1f;
+        [Range(0f, 1f)] [Tooltip("Độ giật/jitter của nhiễu (càng cao càng rung giật).")] public float noiseJitter = 0f;
 
         [Header("Amplitude Settings")]
+        [Tooltip("Biên độ thay đổi vị trí do nhiễu.")]
         public Vector3 positionAmplitude = Vector3.zero;
+        [Tooltip("Biên độ thay đổi góc quay do nhiễu.")]
         public Vector3 rotationAmplitude = Vector3.zero;
 
         public override void MotionUpdate(float deltaTime)

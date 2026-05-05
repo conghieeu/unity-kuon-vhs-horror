@@ -1,8 +1,10 @@
 using System;
 using UnityEngine;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime
 {
+    [Summary("Module chuyển động có khả năng nội suy (Blend) trọng số mượt mà.")]
     public abstract class BlendMotionModule : MotionModule
     {
         public float BlendDamping = 1f;

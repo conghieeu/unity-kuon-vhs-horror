@@ -1,17 +1,26 @@
 using UnityEngine;
 using UnityEngine.UI;
+using ThunderWire.Attributes;
 
+[Summary("Tương tác cơ bản để bật/tắt nguồn phát âm thanh (như Radio).")]
 public class AudioInteractive : MonoBehaviour
 {
     [Header("Audio Radio")]
+    [Tooltip("Nguồn phát âm thanh.")]
     public AudioSource audioSource;
+    [Tooltip("File âm thanh sẽ được phát.")]
     public AudioClip radioClip;
+    [Tooltip("Có phát lặp lại (loop) hay không?")]
     public bool loop = true;
 
     [Header("Interaction")]
+    [Tooltip("UI Text hiển thị phím bấm tương tác.")]
     public Text promptText;
+    [Tooltip("Phím dùng để tương tác.")]
     public string interactKey = "E";
+    [Tooltip("Dòng chữ hiển thị khi đang bật (tùy chọn tắt).")]
     public string promptOn = "Tắt radio (E)";
+    [Tooltip("Dòng chữ hiển thị khi đang tắt (tùy chọn bật).")]
     public string promptOff = "Bật radio (E)";
 
     bool playerNearby;

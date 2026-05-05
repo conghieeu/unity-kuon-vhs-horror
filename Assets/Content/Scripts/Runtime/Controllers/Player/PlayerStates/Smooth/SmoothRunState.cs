@@ -1,9 +1,11 @@
 using UnityEngine;
 using UHFPS.Input;
 using UHFPS.Scriptable;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime.States
 {
+    [Summary("Trạng thái chạy (Run) theo kiểu Smooth.")]
     public class SmoothRunState : SmoothStateAsset
     {
         public override FSMPlayerState InitState(PlayerStateMachine machine, PlayerStatesGroup group)

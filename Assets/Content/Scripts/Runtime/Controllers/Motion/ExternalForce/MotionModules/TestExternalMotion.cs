@@ -1,9 +1,11 @@
 using System;
 using UnityEngine;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime
 {
     [Serializable]
+    [Summary("Hiệu ứng ngoại lực dùng để kiểm tra thử nghiệm.")]
     public class TestExternalMotion : ExternalMotionData
     {
         [Serializable]

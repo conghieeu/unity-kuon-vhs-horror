@@ -1,9 +1,11 @@
 using System;
 using UnityEngine;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime
 {
     [Serializable]
+    [Summary("Hiệu ứng lảo đảo (Wobble) có thể điều khiển được biên độ và tần số trong thời gian thực.")]
     public class WobbleMotion : BlendMotionModule
     {
         public override string Name => "General/Wobble Motion";

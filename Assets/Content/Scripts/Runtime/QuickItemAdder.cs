@@ -5,6 +5,7 @@ using QFSW.QC;
 
 namespace Kuon
 {
+    [Summary("Tiện ích hỗ trợ thêm nhanh vật phẩm (Item) vào kho đồ (Inventory) và tùy chọn cầm lên tay.")]
     public class QuickItemAdder : MonoBehaviour
     {
         [Header("Item Settings")]

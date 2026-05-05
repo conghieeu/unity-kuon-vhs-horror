@@ -1,9 +1,11 @@
 using System;
 using UnityEngine;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime
 {
     [Serializable]
+    [Summary("Hiệu ứng ngoại lực đơn giản với một vector lực cố định.")]
     public sealed class SimpleForceMotion : ExternalMotionData
     {
         [Serializable]

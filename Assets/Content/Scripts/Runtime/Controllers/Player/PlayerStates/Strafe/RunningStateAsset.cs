@@ -1,9 +1,11 @@
 using UHFPS.Scriptable;
 using UHFPS.Input;
 using UnityEngine;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime.States
 {
+    [Summary("Trạng thái chạy (Run) theo kiểu Strafe.")]
     public class RunningStateAsset : StrafeStateAsset
     {
         public override FSMPlayerState InitState(PlayerStateMachine machine, PlayerStatesGroup group)
