@@ -6,25 +6,43 @@ using UnityEngine.Events;
 using UHFPS.Tools;
 using Newtonsoft.Json.Linq;
 
+using ThunderWire.Attributes;
+
 namespace UHFPS.Runtime
 {
+    [Summary("Hệ thống giải đố Ổ khóa (Padlock). Quản lý hai loại: Ổ khóa xoay số (kết hợp Camera Blend) hoặc Ổ khóa mở bằng chìa (Inventory Selector).")]
     public class PadlockPuzzle : PuzzleBase, IInventorySelector, IDynamicUnlock, ISaveable
     {
         public enum PadlockTypeEnum { NumberPadlock, KeyPadlock }
 
+        [Tooltip("Loại ổ khóa: NumberPadlock (Xoay số), KeyPadlock (Dùng chìa).")]
         public PadlockTypeEnum PadlockType;
+
+        [Tooltip("Cho phép tương tác trực tiếp lên ổ khóa thay vì bắt buộc phải tương tác thông qua Dynamic Object (như cánh cửa).")]
         public bool UseInteract = true;
+
+        [Tooltip("Danh sách các vòng số trên ổ khóa (Chỉ dành cho NumberPadlock).")]
         public PadlockPuzzleDigit[] PadlockDigits = new PadlockPuzzleDigit[1];
 
+        [Tooltip("Mã số đúng để mở khóa (Ví dụ: '1234').")]
         public string UnlockCode = "0";
+
+        [Tooltip("Vật phẩm chìa khóa để mở (Chỉ dành cho KeyPadlock).")]
         public ItemGuid UnlockKeyItem;
 
+        [Tooltip("Animator xử lý animation mở khóa (Ví dụ: Bung còng khóa).")]
         public Animator Animator;
+
+        [Tooltip("Tên Trigger trong Animator để gọi Animation mở.")]
         public string UnlockAnimation = "Unlock";
 
+        [Tooltip("Âm thanh phát ra khi mở khóa thành công.")]
         public SoundClip UnlockSound;
+
+        [Tooltip("Sự kiện gọi ra khi ổ khóa được mở.")]
         public UnityEvent OnPadlockUnlock;
 
+        [HideInInspector]
         public bool isUnlocked;
 
         private DynamicObject dynamicObject;

@@ -81,6 +81,9 @@ namespace UHFPS.Runtime
         }
     }
 
+    /// <summary>
+    /// Các phương thức mở rộng hỗ trợ lưu trữ dữ liệu (Vector2, Vector3, Transform...).
+    /// </summary>
     public static class SaveableExtensions
     {
         public static SaveableVector2 ToSaveable(this Vector2 vector)
@@ -104,7 +107,7 @@ namespace UHFPS.Runtime
         }
 
         /// <summary>
-        /// Add basic transform properties to a storable collection. (position, rotation, scale)
+        /// Thêm các thuộc tính transform cơ bản (vị trí, góc xoay, tỷ lệ) vào StorableCollection.
         /// </summary>
         public static StorableCollection WithTransform(this StorableCollection storableCollection, Transform transform, bool includeScale = false)
         {
@@ -115,7 +118,7 @@ namespace UHFPS.Runtime
         }
 
         /// <summary>
-        /// Load basic transform properties. (position, rotation, scale)
+        /// Tải các thuộc tính transform cơ bản (vị trí, góc xoay, tỷ lệ).
         /// </summary>
         public static void LoadTransform(this JToken token, Transform transform)
         {

@@ -1,24 +1,34 @@
 using UnityEngine;
 using UnityEngine.Events;
 using Newtonsoft.Json.Linq;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime
 {
+    [Summary("Quản lý việc thiết lập hoặc reset nhiệt độ của nhiệt kế (Thermometer) khi người chơi bước vào vùng Trigger.")]
     public class ThermometerTemp : MonoBehaviour, ISaveable
     {
         public enum TempType { Base, Trigger, Raycast, Event }
         public enum TempChangeType { SetBase, ResetBase }
         public enum TriggerTypeEnum { Once, SetReset }
 
+        [Tooltip("Cách thức nhiệt độ thay đổi: Base (Mặc định toàn scene), Trigger (Khi bước vào), Raycast (Khi nhìn vào), Event (Kích hoạt ngoài).")]
         public TempType TemperatureType = TempType.Base;
+        [Tooltip("Loại thay đổi: Đặt nhiệt độ mới (SetBase) hay Reset về mặc định (ResetBase).")]
         public TempChangeType ChangeType = TempChangeType.SetBase;
+        [Tooltip("Kích hoạt một lần (Once) hay cho phép đặt/reset nhiều lần (SetReset).")]
         public TriggerTypeEnum TriggerType = TriggerTypeEnum.Once;
+        [Tooltip("Tên của vật phẩm nhiệt kế trong danh sách PlayerItems.")]
         public string ThermometerItem = "Thermometer";
+        [Tooltip("Nhiệt độ mục tiêu.")]
         public float Temperature = 23.6f;
 
+        [Tooltip("Phạm vi nhiệt độ ngẫu nhiên.")]
         public MinMax RandomTempScale = new(10f, 25f);
 
+        [Tooltip("Sự kiện gọi ra khi nhiệt độ được thiết lập.")]
         public UnityEvent<float> OnSetTemp;
+        [Tooltip("Sự kiện gọi ra khi nhiệt độ được reset.")]
         public UnityEvent OnResetTemp;
 
         public bool IsBaseTrigger => TemperatureType == TempType.Trigger || TemperatureType == TempType.Event;

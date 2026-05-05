@@ -1,8 +1,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+using ThunderWire.Attributes;
+
 namespace UHFPS.Runtime
 {
+    [Summary("Module thuộc GameManager, quản lý hiển thị các Icon tương tác nổi (Floating Icon) khi người chơi nhìn vào một vật thể.")]
     public class InteractIconModule : ManagerModule
     {
         public struct IconUpdateCache
@@ -13,8 +16,13 @@ namespace UHFPS.Runtime
 
         public override string Name => "Interact Icon";
 
+        [Tooltip("Prefab của Icon tương tác sẽ được sinh ra trên màn hình.")]
         public GameObject InteractIconPrefab;
+
+        [Tooltip("Thời gian hiện dần (Fade In) của Icon tính bằng giây.")]
         public float FadeInTime = 0.2f;
+
+        [Tooltip("Thời gian mờ dần (Fade Out) của Icon tính bằng giây.")]
         public float FadeOutTime = 0.05f;
 
         private readonly Dictionary<InteractIconObject, FloatingIcon> floatingIcons = new();

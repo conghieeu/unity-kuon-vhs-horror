@@ -5,7 +5,7 @@ using UnityEngine;
 namespace UHFPS.Runtime
 {
     /// <summary>
-    /// A generic reflection field allows you to get or set a generic (object) value for a property, field, or method.
+    /// Một trường phản chiếu (Reflection) cho phép truy cập hoặc thay đổi giá trị của một Field, Property hoặc Method bất kỳ (kiểu object).
     /// </summary>
     [Serializable]
     public sealed class GenericReflectionField

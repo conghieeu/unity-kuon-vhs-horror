@@ -1,7 +1,7 @@
 namespace UHFPS.Input
 {
     /// <summary>
-    /// Class that contains all input constants.
+    /// Lớp chứa tất cả các hằng số tên cấu hình nút bấm (Inputs) cho hệ thống Input System.
     /// </summary>
     public sealed class Controls
     {

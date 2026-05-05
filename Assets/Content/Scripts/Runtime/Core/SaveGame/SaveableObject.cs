@@ -1,9 +1,11 @@
 using System;
 using UnityEngine;
 using Newtonsoft.Json.Linq;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime
 {
+    [Summary("Quản lý việc lưu và tải các trạng thái cơ bản của một đối tượng (Position, Rotation, Scale, Active State, v.v.).")]
     public class SaveableObject : MonoBehaviour, ISaveable
     {
         [Flags]
@@ -18,8 +20,13 @@ namespace UHFPS.Runtime
             ReferencesActive = 1 << 5
         }
 
+        [Tooltip("Các cờ quy định những thành phần nào của đối tượng sẽ được lưu (Vị trí, Xoay, Tỷ lệ, Trạng thái kích hoạt...).")]
         public SaveableFlagsEnum SaveableFlags;
+
+        [Tooltip("Thành phần MeshRenderer cần được lưu trạng thái bật/tắt (Enabled).")]
         public MeshRenderer MeshRenderer;
+
+        [Tooltip("Danh sách các Component (Behaviour) khác cần được lưu trạng thái bật/tắt.")]
         public Behaviour[] References;
 
         public StorableCollection OnSave()

@@ -5,7 +5,7 @@ using UnityEngine;
 namespace UHFPS.Runtime
 {
     /// <summary>
-    /// Reflection field allows you to get or set a bool value for a property, field, or method.
+    /// Một trường phản chiếu (Reflection) chuyên biệt để làm việc với giá trị kiểu bool.
     /// </summary>
     [Serializable]
     public sealed class ReflectionField

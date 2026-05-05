@@ -6,9 +6,11 @@ using ThunderWire.Attributes;
 namespace UHFPS.Rendering
 {
     [Docs("https://docs.twgamesdev.com/uhfps/guides/urp-specific#uhfps-screen-effects")]
+    [Summary("Quản lý và kích hoạt các hiệu ứng màn hình đặc thù của UHFPS.")]
     public class UHFPSScreenEffects : ScriptableRendererFeature
     {
         [SerializeReference]
+        [Tooltip("Danh sách các hiệu ứng màn hình được cấu hình.")]
         public List<EffectFeature> Features = new()
         {
             new ScanlinesFeature(),

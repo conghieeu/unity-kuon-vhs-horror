@@ -1,17 +1,25 @@
 using Newtonsoft.Json.Linq;
 using UnityEngine;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime
 {
+    [Summary("Trigger dùng để thêm mới hoặc hoàn thành nhiệm vụ khi người chơi va chạm (Trigger), tương tác (Interact) hoặc gọi qua Event.")]
     public class ObjectiveTrigger : MonoBehaviour, IInteractStart, ISaveable
     {
         public enum TriggerType { Trigger, Interact, Event }
         public enum ObjectiveType { New, Complete, NewAndComplete }
 
+        [Tooltip("Cách thức kích hoạt Trigger (Va chạm, Tương tác, hoặc Gọi qua Sự kiện).")]
         public TriggerType triggerType = TriggerType.Trigger;
+
+        [Tooltip("Hành động xử lý nhiệm vụ (Thêm mới, Hoàn thành, hoặc Cả hai).")]
         public ObjectiveType objectiveType = ObjectiveType.New;
 
+        [Tooltip("Dữ liệu nhiệm vụ sẽ được THÊM MỚI khi kích hoạt.")]
         public ObjectiveSelect objectiveToAdd;
+
+        [Tooltip("Dữ liệu nhiệm vụ sẽ được HOÀN THÀNH khi kích hoạt.")]
         public ObjectiveSelect objectiveToComplete;
 
         private bool isTriggered;

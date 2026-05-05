@@ -4,15 +4,26 @@ using UnityEngine;
 using Unity.Cinemachine;
 using UHFPS.Input;
 
+using ThunderWire.Attributes;
+
 namespace UHFPS.Runtime
 {
+    [Summary("Class cơ sở cho các Puzzle có hiệu ứng chuyển đổi góc nhìn (Camera Blend). Tự động khóa di chuyển của người chơi khi tương tác.")]
     public abstract class PuzzleBaseBlend : MonoBehaviour, IInteractStart
     {
+        [Tooltip("Camera (Cinemachine) dùng để quay góc cận cảnh vào Puzzle.")]
         public CinemachineCamera VirtualCamera;
+
+        [Tooltip("Hiệu ứng chuyển cảnh Camera (Blend) từ Player sang Puzzle.")]
         public CinemachineBlendDefinition BlendDefinition;
+
+        [Tooltip("Gợi ý các nút điều khiển sẽ hiện lên UI khi đang ở góc nhìn Puzzle.")]
         public ControlsContext[] ControlsContexts;
 
+        [Tooltip("Danh sách các Collider sẽ được BẬT lên khi bắt đầu chơi (VD: Bật các nút bấm).")]
         public List<Collider> CollidersEnable = new();
+
+        [Tooltip("Danh sách các Collider sẽ bị TẮT đi khi bắt đầu chơi.")]
         public List<Collider> CollidersDisable = new();
 
         protected PlayerPresenceManager playerPresence;

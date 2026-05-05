@@ -1,7 +1,12 @@
 using System.Reactive.Subjects;
 
+using ThunderWire.Attributes;
+
 namespace UHFPS.Runtime
 {
+    /// <summary>
+    /// Giao diện dành cho các thiết bị tiêu thụ điện từ PowerGenerator.
+    /// </summary>
     public interface IPowerConsumer
     {
         /// <summary>

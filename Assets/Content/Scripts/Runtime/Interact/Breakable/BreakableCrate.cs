@@ -5,8 +5,12 @@ using UnityEngine.Events;
 using Newtonsoft.Json.Linq;
 using UHFPS.Tools;
 
+using ThunderWire.Attributes;
+
 namespace UHFPS.Runtime
 {
+    [InspectorHeader("Breakable Crate")]
+    [Summary("Quản lý một thùng gỗ (Crate) hoặc vật thể có thể bị đập vỡ, rơi ra vật phẩm bên trong.")]
     public class BreakableCrate : BaseBreakableEntity
     {
         [Serializable]
@@ -16,24 +20,46 @@ namespace UHFPS.Runtime
             public Percentage Probability;
         }
 
+        [Tooltip("Danh sách các vật phẩm có thể rơi ra theo xác suất ngẫu nhiên.")]
         public List<CrateItem> CrateItems = new();
+
+        [Tooltip("Vật phẩm cố định được giấu bên trong (Chỉ dùng nếu không sinh đồ ngẫu nhiên).")]
         public ObjectReference ItemInside;
+
+        [Tooltip("Prefab của vật thể đã bị vỡ (chứa các mảnh vỡ vật lý).")]
         public GameObject BrokenCratePrefab;
+
+        [Tooltip("Vị trí trung tâm (Nơi sinh ra vật phẩm khi vỡ).")]
         public Transform CrateCenter;
 
+        [Tooltip("Đánh dấu để chọn sinh vật phẩm ngẫu nhiên từ danh sách CrateItems.")]
         public bool SpawnRandomItem;
+
+        [Tooltip("Hiện Icon nổi trên màn hình cho vật phẩm rớt ra.")]
         public bool ShowFloatingIcon;
+
+        [Tooltip("Bật Vật lý (Gravity) cho vật phẩm rớt ra.")]
         public bool EnableItemsGravity;
+
+        [Tooltip("Khoảng thời gian (giây) ngẫu nhiên để xóa dần các mảnh vỡ vật lý.")]
         public MinMax PiecesKeepTime;
+
+        [Tooltip("Góc xoay cộng thêm cho mô hình vỡ.")]
         public Vector3 BrokenRotation;
+
+        [Tooltip("Góc xoay của vật phẩm rớt ra.")]
         public Vector3 SpawnedRotation;
 
+        [Tooltip("Bật hiệu ứng văng (Explosion) để các mảnh vỡ bắn ra xung quanh.")]
         public bool ExplosionEffect;
         public float UpwardsModifer = 1.5f;
         public float ExplosionPower = 200;
         public float ExplosionRadius = 0.5f;
 
+        [Tooltip("Âm thanh phát ra khi vật thể bị vỡ.")]
         public SoundClip BreakSound;
+
+        [Tooltip("Sự kiện kích hoạt khi vật thể bị vỡ.")]
         public UnityEvent OnCrateBreak;
 
         private FloatingIconModule floatingIcon;

@@ -6,23 +6,35 @@ using TMPro;
 namespace UHFPS.Runtime
 {
     [InspectorHeader("Shortcut Slot")]
+    [Summary("Quản lý giao diện và dữ liệu của một ô phím tắt (Shortcut) trên màn hình HUD.")]
     public class ShortcutSlot : MonoBehaviour
     {
+        [Tooltip("Kích thước tối đa của khung chứa icon vật phẩm.")]
         public Vector2 ItemRectSize;
 
         [Header("Panels")]
+        [Tooltip("GameObject cha chứa icon vật phẩm.")]
         public GameObject ItemPanel;
+
+        [Tooltip("GameObject cha chứa Text hiển thị số lượng vật phẩm.")]
         public GameObject QuantityPanel;
 
         [Header("References")]
+        [Tooltip("Component Image dùng để render icon của vật phẩm.")]
         public Image ItemIcon;
+
+        [Tooltip("Component Image làm màu nền cho ô phím tắt.")]
         public Image Background;
 
         [Header("Settings")]
+        [Tooltip("Có hiển thị số lượng vật phẩm hay không.")]
         public bool ShowQuantity;
 
         [Header("Slot Colors")]
+        [Tooltip("Màu nền khi ô phím tắt trống.")]
         public Color EmptySlotColor;
+
+        [Tooltip("Màu nền khi có vật phẩm được gán vào ô phím tắt.")]
         public Color NormalSlotColor;
 
         private InventoryItem inventoryItem;

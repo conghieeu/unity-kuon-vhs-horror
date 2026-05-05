@@ -13,16 +13,24 @@ using static UHFPS.Input.InputManager;
 namespace UHFPS.Runtime
 {
     [InspectorHeader("Options Input")]
+    [Summary("Điều khiển UI để người chơi thay đổi phím tắt (Key Rebinding) cho một hành động cụ thể.")]
     public class OptionsInput : MonoBehaviour
     {
+        [Tooltip("Tham chiếu tới Input Action (Hành động) và Binding Index (Vị trí gán) cần thay đổi.")]
         public InputReference InputReference;
 
         [Header("References")]
+        [Tooltip("Nút (Button) UI để bấm vào khi bắt đầu gán phím mới.")]
         public Button Binding;
+
+        [Tooltip("Text hiển thị tên phím đang được gán hiện tại.")]
         public TMP_Text InputText;
 
         [Header("Texts")]
+        [Tooltip("Dòng chữ hiển thị khi đang chờ người dùng nhập phím mới (Hỗ trợ Localization).")]
         public GString RebindText;
+
+        [Tooltip("Dòng chữ hiển thị khi chưa có phím nào được gán (Hỗ trợ Localization).")]
         public GString NoneText;
 
         private InputManager input;

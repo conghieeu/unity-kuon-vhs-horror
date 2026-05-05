@@ -6,11 +6,16 @@ using ThunderWire.Attributes;
 namespace UHFPS.Runtime
 {
     [InspectorHeader("Interact Button")]
+    [Summary("Đại diện cho một nút bấm hiển thị thông tin tương tác (Phím + Tên hành động).")]
     public class InteractButton : MonoBehaviour
     {
+        [Tooltip("Dấu ngăn cách giữa các nút.")]
         public GameObject Separator;
+        [Tooltip("Text hiển thị tên hành động tương tác.")]
         public TMP_Text InteractInfo;
+        [Tooltip("Image hiển thị icon của phím bấm.")]
         public Image ButtonImage;
+        [Tooltip("Kích thước cơ sở của nút bấm.")]
         public Vector2 ButtonSize;
 
         private RectTransform buttonRect;

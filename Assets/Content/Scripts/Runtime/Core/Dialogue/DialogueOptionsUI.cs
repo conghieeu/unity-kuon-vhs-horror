@@ -4,12 +4,20 @@ using TMPro;
 using UnityEngine.InputSystem;
 using static UHFPS.Scriptable.DialogueAsset;
 
+using ThunderWire.Attributes;
+
 namespace UHFPS.Runtime
 {
+    [Summary("Component điều khiển giao diện UI hiển thị các Lựa chọn (Options) khi hội thoại rẽ nhánh.")]
     public class DialogueOptionsUI : MonoBehaviour
     {
+        [Tooltip("Panel UI chứa toàn bộ danh sách các Lựa chọn.")]
         public GameObject OptionsPanel;
+
+        [Tooltip("Prefab của Button lựa chọn (Bao gồm Text).")]
         public GameObject OptionButtonPrefab;
+
+        [Tooltip("Transform chứa các Button lựa chọn được sinh ra (Thường là một Layout Group).")]
         public Transform OptionsContainer;
 
         private List<GameObject> activeButtons = new();

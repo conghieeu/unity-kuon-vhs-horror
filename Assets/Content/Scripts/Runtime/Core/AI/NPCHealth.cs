@@ -4,8 +4,11 @@ using UnityEngine.Events;
 using UHFPS.Tools;
 using Newtonsoft.Json.Linq;
 
+using ThunderWire.Attributes;
+
 namespace UHFPS.Runtime
 {
+    [Summary("Quản lý máu (Health) và trạng thái sống/chết (Chuyển sang dạng Ragdoll/Corpse) của NPC.")]
     public class NPCHealth : BaseHealthEntity, ISaveable
     {
         [System.Serializable]
@@ -23,29 +26,58 @@ namespace UHFPS.Runtime
             }
         }
 
+        [Tooltip("Danh sách các bộ phận cơ thể (Ragdoll) của NPC để bật/tắt hiệu ứng vật lý khi chết.")]
         public List<BodySegment> BodySegments = new();
+
+        [Tooltip("Danh sách các Component (như AI, Collider) sẽ bị tắt đi khi NPC chết.")]
         public List<Component> DisableComponents;
 
+        [Tooltip("Xương hông (Hips) của NPC.")]
         public Transform Hips;
+
+        [Tooltip("Collider phần đầu.")]
         public Collider Head;
+
+        [Tooltip("Layer dành cho các phần cơ thể.")]
         public Layer BodyPartLayer;
 
+        [Tooltip("Máu tối đa của NPC.")]
         public uint MaxHealth = 100;
+
+        [Tooltip("Máu khởi điểm của NPC.")]
         public uint StartHealth = 100;
+
+        [Tooltip("Hệ số nhân sát thương khi bị bắn trúng đầu.")]
         public float HeadshotMultiplier = 2f;
+
+        [Tooltip("Cho phép nhân sát thương khi bắn trúng đầu không?")]
         public bool AllowHeadhsot = true;
 
+        [Tooltip("Có xóa/ẩn xác (Corpse) của NPC sau một khoảng thời gian chết không?")]
         public bool RemoveCorpse;
+
+        [Tooltip("Tắt object xác thay vì xóa hoàn toàn.")]
         public bool DisableCorpse;
+
+        [Tooltip("Thời gian tồn tại của xác (giây) trước khi bị xóa/ẩn.")]
         public float CorpseRemoveTime = 10f;
 
+        [Tooltip("Danh sách âm thanh phát ra khi nhận sát thương.")]
         public AudioClip[] DamageSounds;
-        [Range(0f, 1f)] public float DamageVolume = 1f;
 
+        [Range(0f, 1f)] 
+        public float DamageVolume = 1f;
+
+        [Tooltip("Âm thanh phát ra khi NPC chết.")]
         public SoundClip DeathSound;
 
+        [Tooltip("Sự kiện gọi ra khi NPC nhận sát thương, truyền vào lượng sát thương.")]
         public UnityEvent<int> OnTakeDamage;
+
+        [Tooltip("Sự kiện gọi ra khi NPC chết.")]
         public UnityEvent OnDeath;
+
+        [Tooltip("Sự kiện gọi ra khi xác của NPC bị xóa/ẩn.")]
         public UnityEvent OnCorpseRemove;
 
         private int lastDamageSound;

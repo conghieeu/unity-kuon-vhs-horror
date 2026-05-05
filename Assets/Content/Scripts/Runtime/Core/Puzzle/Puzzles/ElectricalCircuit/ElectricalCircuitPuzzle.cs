@@ -7,12 +7,15 @@ using UnityEngine.Events;
 using Newtonsoft.Json.Linq;
 using UHFPS.Tools;
 
+using ThunderWire.Attributes;
+
 namespace UHFPS.Runtime
 {
     public enum PowerType { None, Output, Input }
     public enum PartDirection { Up, Down, Left, Right }
 
     [RequireComponent(typeof(AudioSource))]
+    [Summary("Hệ thống giải đố Mạch điện (Nối dây cấp nguồn). Quản lý cấu hình lưới, luồng điện và kiểm tra điều kiện hoàn thành.")]
     public class ElectricalCircuitPuzzle : PuzzleBase, ISaveable
     {
         [Serializable]
@@ -41,28 +44,58 @@ namespace UHFPS.Runtime
             public UnityEvent<int> OnDisconnected;
         }
 
+        [Tooltip("Số lượng hàng của bảng mạch.")]
         public ushort Rows;
+
+        [Tooltip("Số lượng cột của bảng mạch.")]
         public ushort Columns;
+
+        [Tooltip("Cấu hình cổng cấp điện (Output) và cổng nhận điện (Input) quanh bảng mạch.")]
         public PowerComponent[] PowerFlow;
+
+        [Tooltip("Danh sách các khối linh kiện (Prefabs) dùng để tạo bảng mạch.")]
         public ElectricalCircuitComponent[] CircuitComponents;
 
+        [Tooltip("Transform gốc để chứa các component được sinh ra.")]
         public Transform ComponentsParent;
+
+        [Tooltip("Khoảng cách (Offset) giữa các linh kiện.")]
         public float ComponentsSpacing = 0f;
+
+        [Tooltip("Kích thước lưới của mỗi linh kiện (Thường là 1).")]
         public float ComponentsSize = 1f;
 
+        [Tooltip("Vô hiệu hóa toàn bộ bảng mạch sau khi giải thành công.")]
         public bool DisableWhenConnected = true;
+
+        [Tooltip("Thời gian chờ (giây) sau khi điện thông mạch trước khi tự động thoát camera.")]
         public float PowerConnectedWaitTime = 1f;
 
+        [Tooltip("Mảng cấu hình (Góc xoay) ban đầu của từng linh kiện trên lưới.")]
         public ComponentFlow[] ComponentsFlow;
+
+        [Tooltip("Danh sách các linh kiện đã được tạo ra trong Runtime.")]
         public List<ElectricalCircuitComponent> Components = new();
+
+        [Tooltip("Sự kiện kích hoạt theo từng cổng Input khi có/mất nguồn điện.")]
         public List<PowerInputEvents> InputEvents = new();
 
+        [Tooltip("Âm thanh phát ra khi xoay linh kiện.")]
         public SoundClip RotateComponent;
+
+        [Tooltip("Âm thanh phát ra khi mạch điện kết nối thành công.")]
         public SoundClip PowerConnected;
+
+        [Tooltip("Âm thanh phát ra khi mạch điện bị ngắt kết nối.")]
         public SoundClip PowerDisconnected;
 
+        [Tooltip("Sự kiện gọi ra khi toàn bộ bảng mạch được kết nối đúng.")]
         public UnityEvent OnConnected;
+
+        [Tooltip("Sự kiện gọi ra khi mạch bị ngắt (nếu mạch có thể tiếp tục chơi).")]
         public UnityEvent OnDisconnected;
+
+        [HideInInspector]
         public bool isConnected;
 
         private AudioSource audioSource;

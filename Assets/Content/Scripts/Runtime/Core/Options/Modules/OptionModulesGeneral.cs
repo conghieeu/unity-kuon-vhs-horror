@@ -3,13 +3,17 @@ using System.Linq;
 using UnityEngine;
 using Newtonsoft.Json.Linq;
 
+using ThunderWire.Attributes;
+
 namespace UHFPS.Runtime
 {
     [Serializable]
+    [Summary("Tuỳ chọn ngôn ngữ của game. Gọi hệ thống Localization để thay đổi ngôn ngữ hiện tại.")]
     public class OptionLanguage : OptionModule
     {
         public override string ContextName => "General/Language";
 
+        [Tooltip("Danh sách các ngôn ngữ được hỗ trợ (Thứ tự phải tương ứng với Index trong GameLocalization).")]
         public GString[] Languages = { new("*English", "") };
 
         public override void OnApplyOption()
@@ -39,6 +43,7 @@ namespace UHFPS.Runtime
     }
 
     [Serializable]
+    [Summary("Tuỳ chọn màn hình hiển thị (Display Monitor). Chọn màn hình nào để game xuất ra.")]
     // 0 - First, N - Last
     public class OptionDisplayMonitor : OptionModule
     {
@@ -84,6 +89,7 @@ namespace UHFPS.Runtime
     }
 
     [Serializable]
+    [Summary("Tuỳ chọn độ phân giải màn hình (Screen Resolution).")]
     // 0 - Min Resolution, N - Max Resolution
     public class OptionResolution : OptionModule
     {
@@ -137,11 +143,13 @@ namespace UHFPS.Runtime
     }
 
     [Serializable]
+    [Summary("Tuỳ chọn chế độ hiển thị: Toàn màn hình hoặc Cửa sổ.")]
     // 0 - Windowed, 1 - Fullscreen
     public class OptionFullscreen : OptionModule
     {
         public override string ContextName => "Screen/Fullscreen Mode";
 
+        [Tooltip("Tên các chế độ hiển thị (Cửa sổ, Viền tràn màn hình...).")]
         public GString[] ModeNames = { 
             new("*Windowed", ""),
             new("*Borderless Window", "") 
@@ -181,11 +189,13 @@ namespace UHFPS.Runtime
     }
 
     [Serializable]
+    [Summary("Tuỳ chọn giới hạn FPS (Tốc độ khung hình).")]
     // 0 - 30FPS, 1 - 60FPS, 2 - 120FPS, 3 - Variable
     public class OptionFramerate : OptionModule
     {
         public override string ContextName => "General/Framerate";
 
+        [Tooltip("Danh sách các mức giới hạn FPS có thể chọn.")]
         public NameValue<int>[] Framerates =
         {
             new("*30FPS", 30),
@@ -224,11 +234,13 @@ namespace UHFPS.Runtime
     }
 
     [Serializable]
+    [Summary("Tuỳ chọn Đồng bộ dọc (VSync) để tránh rách hình (Tearing).")]
     // 0 - Don't Sync, 1 = Every V Blank
     public class OptionVSync : OptionModule
     {
         public override string ContextName => "General/VSync";
 
+        [Tooltip("Các nhãn trạng thái VSync.")]
         public GString[] VSyncNames = { 
             new("*OFF", ""),
             new("*ON", "") 
@@ -262,11 +274,13 @@ namespace UHFPS.Runtime
     }
 
     [Serializable]
+    [Summary("Tuỳ chọn Lọc Đẳng hướng (Anisotropic Filtering) để cải thiện độ nét của texture nhìn từ xa/nghiêng.")]
     // 0 - Disable, 1 - Enable, 2 - Force Enable
     public class OptionAnisotropic : OptionModule
     {
         public override string ContextName => "General/Anisotropic";
 
+        [Tooltip("Các nhãn trạng thái Anisotropic Filtering.")]
         public GString[] AnisotropicNames = { 
             new("*Disable", ""),
             new("*Enable", ""),
@@ -301,11 +315,13 @@ namespace UHFPS.Runtime
     }
 
     [Serializable]
+    [Summary("Tuỳ chọn chất lượng Texture của game (Độ phân giải Mipmap).")]
     // 0 - Eighth Size, 1 - Quarter Size, 2 - Half Size, 3 - Normal
     public class OptionTextureQuality : OptionModule
     {
         public override string ContextName => "General/Texture Quality";
 
+        [Tooltip("Nhãn các mức chất lượng Texture (Từ thấp đến cao).")]
         public GString[] TextureQuality = { 
             new("*Eighth Size", ""),
             new("*Quarter Size", ""),
@@ -344,13 +360,21 @@ namespace UHFPS.Runtime
 
     // 0 - Min Volume, 1 - Max Volume
     [Serializable]
+    [Summary("Tuỳ chọn âm lượng tổng quát (General/Master Volume). Kiểm soát âm lượng của AudioListener.")]
     public class OptionVolumeGeneral : OptionModule
     {
         public override string ContextName => "General/Volume";
 
+        [Tooltip("Âm lượng mặc định khi game khởi tạo hoặc Reset.")]
         public float DefaultValue = 1f;
+
+        [Tooltip("Giới hạn giá trị của Slider âm lượng (0-1).")]
         public MinMax SliderLimits = new(0, 1);
+
+        [Tooltip("Sử dụng tính năng nhảy bậc (Snapping) thay vì mượt hoàn toàn.")]
         public bool UseSnapping = true;
+
+        [Tooltip("Giá trị nhảy mỗi bậc (Ví dụ: 0.05).")]
         public float SnapValue = 0.05f;
 
         public override void OnApplyOption()

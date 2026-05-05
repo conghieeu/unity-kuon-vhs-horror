@@ -18,6 +18,7 @@ using ThunderWire.Attributes;
 namespace UHFPS.Runtime
 {
     [Docs("https://docs.twgamesdev.com/uhfps/guides/options-manager")]
+    [Summary("Quản lý toàn bộ hệ thống Cài đặt (Options) bao gồm Hình ảnh, Âm thanh, Điều khiển và Lưu/Tải từ file config.")]
     public class OptionsManager : Singleton<OptionsManager>
     {
         public const char NAME_SEPARATOR = '.';
@@ -109,11 +110,19 @@ namespace UHFPS.Runtime
             }
         }
 
+        [Tooltip("Danh sách liên kết giữa UI Section (Tab Cài đặt) và các tuỳ chọn bên trong nó.")]
         public List<OptionLink> OptionLinks = new();
+
+        [Tooltip("Asset dữ liệu ScriptableObject chứa định nghĩa tất cả các tuỳ chọn.")]
         public OptionsAsset OptionsAsset;
+
+        [Tooltip("Global Volume dùng để áp dụng các thay đổi hiệu ứng hình ảnh (Độ sáng, DOF, FOV...).")]
         public Volume GlobalVolume;
 
+        [Tooltip("Áp dụng và lưu cả thiết lập phím bấm (Input rebinds) khi lưu Options.")]
         public bool ApplyAndSaveInputs = true;
+
+        [Tooltip("Hiển thị log trong Console để gỡ lỗi quá trình lưu/tải Options.")]
         public bool ShowDebug = true;
 
         private Resolution[] resolutions;

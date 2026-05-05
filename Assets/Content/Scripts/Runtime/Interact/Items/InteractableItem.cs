@@ -9,6 +9,7 @@ using ThunderWire.Attributes;
 namespace UHFPS.Runtime
 {
     [Docs("https://docs.twgamesdev.com/uhfps/guides/interactions")]
+    [Summary("Lớp đa năng quản lý mọi vật phẩm có thể tương tác trong game (Vật phẩm nhặt được, Vật phẩm kiểm tra/xoay, Giấy tờ, Mở rộng túi đồ).")]
     public class InteractableItem : SaveableBehaviour
     {
         [Serializable]

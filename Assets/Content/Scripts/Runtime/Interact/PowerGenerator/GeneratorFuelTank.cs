@@ -2,25 +2,45 @@ using System.Collections.Generic;
 using System.Linq;
 using UHFPS.Tools;
 using UnityEngine;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime
 {
     [RequireComponent(typeof(AudioSource))]
+    [Summary("Quản lý bình xăng/dầu của máy phát điện. Cần đổ nhiên liệu (Hold) để duy trì hoạt động.")]
     public class GeneratorFuelTank : MonoBehaviour, IInteractStart, IInteractStop, IInteractTimed
     {
+        [Tooltip("Tham chiếu tới máy phát điện liên kết.")]
         public PowerGenerator Generator;
+
+        [Tooltip("Vật phẩm (Can dầu/xăng) yêu cầu để đổ.")]
         public ItemGuid FuelItem;
+
+        [Tooltip("Tên biến lưu trữ lượng nhiên liệu của vật phẩm trong Json (Mặc định: fuelLiters).")]
         public string FuelProperty = "fuelLiters";
 
+        [Tooltip("Lượng nhiên liệu tối thiểu còn thiếu để cho phép bắt đầu đổ.")]
         public float MinRefuelLiters = 1f;
+
+        [Tooltip("Thời gian (giây) cần giữ nút để đổ đầy toàn bộ dung tích.")]
         public MinMax RefuelTime = new(1f, 10f);
 
+        [Tooltip("Thời gian hiển thị tin nhắn gợi ý trên màn hình.")]
         public float MessageTime = 2f;
+
+        [Tooltip("Nội dung thông báo khi bình nhiên liệu đã đầy.")]
         public GString NotRequiredMessage;
+
+        [Tooltip("Nội dung thông báo khi người chơi không có can dầu.")]
         public GString NoCanistersMessage;
 
+        [Tooltip("Nguồn phát âm thanh (AudioSource) khi đổ.")]
         public AudioSource AudioSource;
+
+        [Tooltip("Âm thanh đổ nhiên liệu (Chất lỏng).")]
         public SoundClip RefuelSound;
+
+        [Tooltip("Thời gian làm mờ (Fade) âm lượng khi kết thúc đổ.")]
         public float FadeTime;
 
         public float InteractTime { get; set; }

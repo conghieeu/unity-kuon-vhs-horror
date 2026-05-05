@@ -4,53 +4,112 @@ using UnityEngine.Video;
 using Newtonsoft.Json.Linq;
 using UHFPS.Tools;
 using TMPro;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime
 {
+    [Summary("Quản lý đầu máy phát băng video (VCR/VHS). Nhận băng, phát video lên CRTMonitor và xử lý các thao tác như Play, Pause, Rewind, Fast Forward.")]
     public class VCRPlayer : MonoBehaviour, IInventorySelector, ISaveable
     {
         public enum DisplayText { Play, Pause, Stop, Eject, FastForwad, Rewind, None }
 
+        [Tooltip("Định danh của vật phẩm cuộn băng (Băng VHS) trong Inventory.")]
         public ItemProperty VHSItem;
 
+        [Tooltip("Animator xử lý hoạt ảnh đóng/mở khay băng.")]
         public Animator animator;
+
+        [Tooltip("Nguồn phát âm thanh cơ học của máy VCR.")]
         public AudioSource audioSource;
+
+        [Tooltip("Đối tượng cuộn băng sẽ hiển thị sau khi lắp vào.")]
         public InteractableItem VHSTape;
+
+        [Tooltip("Vùng va chạm để tương tác bỏ băng vào.")]
         public Collider insertCollider;
+
+        [Tooltip("Thuộc tính Material để đổi nhãn dán của băng.")]
         public string tapeMaterialProperty = "_MainTex";
 
+        [Tooltip("Material phát sáng (Màn hình LED) của máy VCR.")]
         public RendererMaterial emissionMaterial;
+
+        [Tooltip("Tên tham số phát sáng trên Material.")]
         public string emissionKeyword = "_EMISSION";
 
+        [Tooltip("UI hiển thị thời gian phát.")]
         public TMP_Text timeText;
+
+        [Tooltip("UI hiển thị trạng thái (Play, Stop...).")]
         public TMP_Text stateText;
+
+        [Tooltip("Khối cha chứa màn hình hiển thị UI của VCR.")]
         public GameObject displayParent;
+
+        [Tooltip("Biểu tượng (Icon) hiện lên khi băng đã được đưa vào.")]
         public GameObject VHSIcon;
+
+        [Tooltip("Định dạng hiển thị thời gian (Phút:Giây).")]
         public string displayFormat = "<mspace=0.5em>{0:D2}:{1:D2}</mspace>";
 
+        [Tooltip("Màn hình ti-vi (CRT) nhận tín hiệu từ đầu phát này.")]
         public CRTMonitor monitor;
+
+        [Tooltip("Kích thước Texture xuất ra màn hình (Độ phân giải Video).")]
         public Vector2Int outputTextureSize = new Vector2Int(500, 350);
 
+        [Tooltip("Tốc độ tua ngược (Rewind).")]
         public float rewindSpeed;
+
+        [Tooltip("Tốc độ tua nhanh (Fast Forward).")]
         public float fastForwardSpeed;
+
+        [Tooltip("Tốc độ khởi động máy quay (Winding) trước khi đạt vận tốc tối đa.")]
         public float windingStartupSpeed;
+
+        [Tooltip("Thời gian chờ trước khi tua bắt đầu.")]
         public float timeBeforeWinding;
 
+        [Tooltip("Trigger kích hoạt hoạt ảnh đưa băng vào.")]
         public string insertTrigger = "Insert";
+
+        [Tooltip("Trigger kích hoạt hoạt ảnh đẩy băng ra.")]
         public string ejectTrigger = "Eject";
+
+        [Tooltip("Trigger kích hoạt đóng cửa khay băng.")]
         public string closeCoverTrigger = "Close";
 
+        [Tooltip("Ký tự đại diện cho trạng thái Tua đi (Fast Forward) trên Text UI.")]
         public string fastForwardSymbol = ">";
-        public string rewindSymbol = "<";
-        public string playSymbol = "�";
-        public string stopSymbol = "�";
-        public string pauseSymbol = "�";
-        public string ejectSymbol = "�";
 
+        [Tooltip("Ký tự đại diện cho Tua lại (Rewind).")]
+        public string rewindSymbol = "<";
+
+        [Tooltip("Ký tự đại diện cho Phát (Play).")]
+        public string playSymbol = "€";
+
+        [Tooltip("Ký tự đại diện cho Dừng (Stop).")]
+        public string stopSymbol = "€";
+
+        [Tooltip("Ký tự đại diện cho Tạm dừng (Pause).")]
+        public string pauseSymbol = "™";
+
+        [Tooltip("Ký tự đại diện cho Đẩy băng (Eject).")]
+        public string ejectSymbol = "®";
+
+        [Tooltip("Âm thanh đưa băng vào.")]
         public SoundClip tapeInsert;
+
+        [Tooltip("Âm thanh đẩy băng ra.")]
         public SoundClip tapeEject;
+
+        [Tooltip("Âm thanh đang phát băng.")]
         public SoundClip play;
+
+        [Tooltip("Âm thanh dừng băng.")]
         public SoundClip stop;
+
+        [Tooltip("Âm thanh tua băng.")]
         public SoundClip rewind;
 
         private RenderTexture outputTexture;

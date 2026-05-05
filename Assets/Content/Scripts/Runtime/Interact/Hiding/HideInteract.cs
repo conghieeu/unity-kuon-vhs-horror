@@ -7,33 +7,58 @@ using UHFPS.Tools;
 using UHFPS.Runtime.States;
 using static UHFPS.Runtime.States.HidingStateAsset;
 
+using ThunderWire.Attributes;
+
 namespace UHFPS.Runtime
 {
+    [Summary("Quản lý hệ thống ẩn nấp (Hiding) của người chơi (Ví dụ: Chui vào tủ, Gầm giường).")]
     public class HideInteract : MonoBehaviour, IInteractStart
     {
         public enum HideStyleEnum { Trigger, Interact }
 
+        [Tooltip("Kiểu trốn (Trigger: Đi vào vùng thì tự trốn, Interact: Phải bấm nút để trốn).")]
         public HideStyleEnum HideStyle = HideStyleEnum.Trigger;
         public bool DrawGizmos = true;
 
+        [Tooltip("Vị trí của người chơi khi đang ở trong chỗ trốn.")]
         public Transform PlayerHidePosition;
+
+        [Tooltip("Vị trí của người chơi khi bước ra khỏi chỗ trốn.")]
         public Transform PlayerUnhidePosition;
 
+        [Tooltip("Camera Cinemachine sử dụng góc nhìn bên trong chỗ trốn.")]
         public CinemachineCamera VirtualCamera;
+
+        [Tooltip("Animator của chỗ trốn (Ví dụ: Đóng/Mở cửa tủ).")]
         public Animator Animator;
+
+        [Tooltip("Chữ hiển thị trên màn hình để thao tác bước ra ngoài (Ví dụ: 'Ra ngoài').")]
         public GString UnhideText;
 
+        [Tooltip("Cấu hình chuyển đổi Camera (Cinemachine Blend) khi ra/vào chỗ trốn.")]
         public CinemachineBlendDefinition BlendDefinition;
         [Range(0f, 1f)] public float BlendInOffset = 1f;
         [Range(0f, 1f)] public float BlendOutOffset = 1f;
 
+        [Tooltip("Tên biến Bool trên Animator báo hiệu đang trốn.")]
         public string HideParameter = "IsHiding";
+
+        [Tooltip("Tên State khởi điểm (Default).")]
         public string DefaultStateName = "Default";
+
+        [Tooltip("Tên State đóng cửa trốn.")]
         public string HideStateName = "Hide";
+
+        [Tooltip("Tên State mở cửa bước ra.")]
         public string UnhideStateName = "Unhide";
 
+        [Tooltip("Sự kiện gọi ra khi bắt đầu trốn (VD: Đang chui vào).")]
         public UnityEvent OnHideStart;
+
+        [Tooltip("Sự kiện gọi ra khi đã trốn xong hoàn toàn.")]
         public UnityEvent OnHidden;
+
+        [Tooltip("Sự kiện gọi ra khi bước ra ngoài.")]
         public UnityEvent OnUnhide;
 
         public bool IsHidden;

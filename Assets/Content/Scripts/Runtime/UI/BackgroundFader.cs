@@ -6,8 +6,10 @@ using ThunderWire.Attributes;
 namespace UHFPS.Runtime
 {
     [InspectorHeader("Background Fader")]
+    [Summary("Xử lý hiệu ứng làm mờ (Fade In/Out) cho hình nền UI.")]
     public class BackgroundFader : MonoBehaviour
     {
+        [Tooltip("Image UI dùng để làm mờ.")]
         public Image Background;
 
         /// <summary>

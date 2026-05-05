@@ -18,8 +18,10 @@ namespace UHFPS.Runtime
     }
 
     [InspectorHeader("Interact Info Panel")]
+    [Summary("Bảng hiển thị thông tin các phím điều khiển khả dụng trong một ngữ cảnh nhất định.")]
     public class ControlsInfoPanel : MonoBehaviour
     {
+        [Tooltip("Danh sách các nút bấm UI để hiển thị thông tin tương tác.")]
         public InteractButton[] InteractButtons;
 
         private readonly Stack<ControlsContext[]> contextsQueue = new();

@@ -2,6 +2,9 @@ using System.Collections.Generic;
 
 namespace UHFPS.Runtime
 {
+    /// <summary>
+    /// Một giá trị có thể quan sát, tự động đánh dấu flag khi giá trị bị thay đổi.
+    /// </summary>
     public class ObservableValue<T>
     {
         private T _value;

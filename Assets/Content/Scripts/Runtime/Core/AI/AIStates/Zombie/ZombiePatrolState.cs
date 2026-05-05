@@ -1,23 +1,36 @@
 using System;
 using System.Linq;
+using System.Collections.Generic;
 using UnityEngine;
+using ThunderWire.Attributes;
 using UHFPS.Tools;
 using UHFPS.Scriptable;
 
 namespace UHFPS.Runtime.States
 {
+    [Summary("Trạng thái AI: Đi tuần tra (Patrol) qua các điểm (Waypoint) được chỉ định.")]
     public class ZombiePatrolState : AIStateAsset
     {
         public enum WaypointPatrolEnum { InOrder, Random }
         public enum PatrolTypeEnum { None, WaitTime }
 
+        [Tooltip("Chế độ đi tuần (Theo thứ tự - InOrder hoặc Ngẫu nhiên - Random).")]
         public WaypointPatrolEnum Patrol = WaypointPatrolEnum.InOrder;
+
+        [Tooltip("Kiểu đi tuần (Không dừng lại - None hoặc Dừng lại chờ tại điểm - WaitTime).")]
         public PatrolTypeEnum PatrolType = PatrolTypeEnum.None;
 
         [Header("Settings")]
+        [Tooltip("Thời gian chờ tại mỗi điểm tuần tra (Nếu PatrolType = WaitTime).")]
         public float PatrolTime = 3f;
+
+        [Tooltip("Tốc độ đi bộ khi tuần tra.")]
         public float WalkSpeed = 0.5f;
+
+        [Tooltip("Khoảng cách dừng lại (tới điểm Waypoint) khi tuần tra.")]
         public float PatrolStoppingDistance = 1f;
+
+        [Tooltip("Khoảng cách siêu gần để AI tự động phát hiện người chơi.")]
         public float VeryClosePlayerDetection = 1f;
 
         public override FSMAIState InitState(NPCStateMachine machine, AIStatesGroup group)

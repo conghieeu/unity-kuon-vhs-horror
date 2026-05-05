@@ -4,8 +4,15 @@ using UnityEngine;
 
 namespace UHFPS.Tools
 {
+    /// <summary>
+    /// Công cụ hỗ trợ Fade In/Out cho CanvasGroup bằng Coroutine.
+    /// </summary>
+    [ThunderWire.Attributes.Summary("Hỗ trợ hiệu ứng làm mờ (Fade In/Out) cho CanvasGroup.")]
     public class CanvasGroupFader : MonoBehaviour
     {
+        /// <summary>
+        /// Khởi tạo một instance tạm thời để thực hiện hiệu ứng Fade.
+        /// </summary>
         public static void StartFadeInstance(CanvasGroup canvasGroup, bool fadeIn, float speed, Action onFade = null)
         {
             GameObject fadeGO = new("CanvasGroupFader");

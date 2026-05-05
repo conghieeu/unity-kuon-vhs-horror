@@ -6,6 +6,7 @@ using Newtonsoft.Json.Linq;
 namespace UHFPS.Runtime
 {
     [Serializable]
+    [ThunderWire.Attributes.Summary("Cấu hình vật thể có thể xoay (Ví dụ: Van nước, Núm vặn).")]
     public class DynamicRotable : DynamicObjectType
     {
         // limits

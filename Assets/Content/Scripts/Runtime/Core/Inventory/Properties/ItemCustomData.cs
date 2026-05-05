@@ -2,11 +2,15 @@ using System;
 using UnityEngine;
 using Newtonsoft.Json.Linq;
 
+using ThunderWire.Attributes;
+
 namespace UHFPS.Runtime
 {
     [Serializable]
+    [Summary("Cấu trúc lưu trữ dữ liệu tuỳ chỉnh (Custom Data) của vật phẩm dưới định dạng JSON (Ví dụ: số đạn trong súng, mật mã của tờ giấy...).")]
     public sealed class ItemCustomData
     {
+        [Tooltip("Chuỗi dữ liệu dạng JSON.")]
         [TextArea(3, 10)] public string JsonData;
 
         public JObject GetJson()

@@ -10,6 +10,7 @@ using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime
 {
+    [Summary("Class điều khiển UI của một vật phẩm đơn lẻ trong giao diện Inventory. Quản lý việc kéo thả, xoay và hiển thị thông tin số lượng/icon.")]
     public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
     {
         public struct ItemData
@@ -24,17 +25,31 @@ namespace UHFPS.Runtime
 
         public enum HoverType { Normal, Hover, Move, Error }
 
+        [Tooltip("Hướng xoay của vật phẩm (Ngang / Dọc) khi nằm trong lưới rương.")]
         public Orientation orientation;
+
+        [Tooltip("Thành phần UI Image để hiển thị hình ảnh của vật phẩm.")]
         public Image itemImage;
+
+        [Tooltip("Thành phần UI Image làm nền lưới, sẽ đổi màu khi kéo, di chuột hoặc lỗi vị trí.")]
         public Image background;
+
         [Space]
+        [Tooltip("Giao diện UI dùng để hiển thị text số lượng khi vật phẩm nằm ngang.")]
         public InventoryItemPanel horizontalPanel;
+
+        [Tooltip("Giao diện UI dùng để hiển thị text số lượng khi vật phẩm nằm dọc.")]
         public InventoryItemPanel verticalPanel;
+
+        [Tooltip("Giao diện phụ (Ngang/Dọc) đang được bật.")]
         public InventoryItemPanel activePanel;
 
         [Header("Debug")]
-        [ReadOnly] public Vector2Int currentSlot;
-        [ReadOnly] public Vector2Int lastSlot;
+        [ReadOnly, Tooltip("Tọa độ lưới (x, y) hiện tại mà chuột đang kéo tới.")] 
+        public Vector2Int currentSlot;
+
+        [ReadOnly, Tooltip("Tọa độ lưới (x, y) hợp lệ gần nhất trước khi di chuyển.")] 
+        public Vector2Int lastSlot;
 
         public Inventory Inventory { get; set; }
         public string ContainerGuid { get; set; }

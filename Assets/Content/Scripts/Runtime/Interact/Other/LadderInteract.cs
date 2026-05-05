@@ -2,22 +2,41 @@ using UnityEngine;
 using UHFPS.Tools;
 using UHFPS.Input;
 
+using ThunderWire.Attributes;
+
 namespace UHFPS.Runtime
 {
+    [Summary("Quản lý tương tác với Thang leo (Ladder), định nghĩa các điểm bắt đầu, điểm kết thúc và giới hạn góc nhìn.")]
     public class LadderInteract : MonoBehaviour, IStateInteract
     {
+        [Tooltip("Mô hình chính của chiếc thang (Để tính chiều cao hoặc hiển thị).")]
         public GameObject LadderPart;
+
+        [Tooltip("Khoảng cách tăng thêm theo trục dọc sau mỗi bước di chuyển.")]
         public float VerticalIncrement;
 
+        [Tooltip("Vị trí điểm cao nhất của thang (Offset so với tâm).")]
         public Vector3 LadderUpOffset;
+
+        [Tooltip("Vị trí điểm bước ra khỏi thang ở trên cùng (Offset).")]
         public Vector3 LadderExitOffset;
+
+        [Tooltip("Điểm uốn cong đường dẫn khi người chơi bước ra (Arc Offset).")]
         public Vector3 LadderArcOffset;
+
+        [Tooltip("Vị trí tâm của chân thang.")]
         public Vector3 CenterOffset;
 
+        [Tooltip("Giới hạn góc xoay của chuột khi đang leo thang.")]
         public bool UseMouseLimits = true;
+
+        [Tooltip("Giới hạn góc nhìn lên/xuống.")]
         public MinMax MouseVerticalLimits = new MinMax(-60, 90);
+
+        [Tooltip("Giới hạn góc nhìn trái/phải.")]
         public MinMax MouseHorizontalLimits = new MinMax(-80, 80);
 
+        [Tooltip("Bật hiển thị hình vẽ (Gizmos) trên Scene.")]
         public bool DrawGizmos = true;
         public bool DrawGizmosSteps = true;
         public bool DrawGizmosLabels = true;

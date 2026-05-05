@@ -2,6 +2,7 @@ using UnityEngine;
 
 namespace UHFPS.Runtime
 {
+    [ThunderWire.Attributes.Summary("Quản lý vật thể đạn (Bullet) và va chạm của đạn.")]
     public class Bullet : MonoBehaviour
     {
         public LayerMask CheckMask;

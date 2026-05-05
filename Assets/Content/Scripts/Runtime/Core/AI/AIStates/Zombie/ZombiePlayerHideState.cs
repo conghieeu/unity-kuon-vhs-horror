@@ -1,13 +1,21 @@
 using UnityEngine;
 using UHFPS.Scriptable;
+using UHFPS.Tools;
+using ThunderWire.Attributes;
 using static UHFPS.Runtime.States.HidingStateAsset;
 
 namespace UHFPS.Runtime.States
 {
+    [Summary("Trạng thái AI: Xử lý hành vi khi người chơi đang chui vào chỗ trốn (Tủ, Gầm giường).")]
     public class ZombiePlayerHideState : AIStateAsset
     {
+        [Tooltip("Lượng sát thương gây ra nếu AI phát hiện và lôi người chơi ra khỏi chỗ trốn.")]
         public int SeePlayerDamage = 10;
+
+        [Tooltip("Khoảng cách mà AI sẽ bắt đầu lôi người chơi ra khỏi chỗ trốn.")]
         public float HidingCloseDistance = 2f;
+
+        [Tooltip("Thời gian chờ (nếu mất dấu/người chơi trốn kỹ) trước khi AI quay lại trạng thái đi tuần.")]
         public float PatrolTime = 3f;
 
         public override FSMAIState InitState(NPCStateMachine machine, AIStatesGroup group)

@@ -8,22 +8,42 @@ namespace UHFPS.Runtime
     public enum DisplayTexture { NoSignal, NoTape, Stop, Rewind, FastForward }
 
     [InspectorHeader("CRT Monitor (for VCR Player)")]
+    [Summary("Màn hình ti-vi (CRT) đi kèm với đầu phát VCR. Hiển thị thông báo tĩnh hoặc nhận tín hiệu Video.")]
     public class CRTMonitor : MonoBehaviour, ISaveable
     {
+        [Tooltip("Trình phát Video (VideoPlayer) truyền hình ảnh lên màn hình.")]
         public VideoPlayer videoPlayer;
+
+        [Tooltip("Nguồn phát âm thanh của Video.")]
         public AudioSource videoAudio;
 
         [Header("Materials")]
+        [Tooltip("Lớp vật liệu màn hình của TV.")]
         public RendererMaterial display;
+
+        [Tooltip("Material khi Bật màn hình (Màn sáng).")]
         public Material poweredOnMaterial;
+
+        [Tooltip("Material khi Tắt màn hình (Màn đen).")]
         public Material poweredOffMaterial;
+
+        [Tooltip("Tham số Textures trên Material.")]
         public string materialProperty = "_MainTex";
 
         [Header("Display Textures")]
+        [Tooltip("Ảnh hiển thị: Không có tín hiệu.")]
         public Texture2D noSignal;
+
+        [Tooltip("Ảnh hiển thị: Yêu cầu đút băng.")]
         public Texture2D insertTape;
+
+        [Tooltip("Ảnh hiển thị: Băng đang dừng.")]
         public Texture2D stop;
+
+        [Tooltip("Ảnh hiển thị: Tua lùi.")]
         public Texture2D rewind;
+
+        [Tooltip("Ảnh hiển thị: Tua đi.")]
         public Texture2D fastForward;
 
         private RenderTexture inputTexture;

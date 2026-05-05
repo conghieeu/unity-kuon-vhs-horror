@@ -1,25 +1,38 @@
 using Newtonsoft.Json.Linq;
 using UnityEngine;
 using UnityEngine.Events;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime
 {
+    [InspectorHeader("Look At Trigger")]
+    [Summary("Kích hoạt sự kiện khi người chơi nhìn thẳng vào (Look At) hoặc nhìn hướng khác (Look Away) đối với vật thể này.")]
     public class LookAtTrigger : MonoBehaviour, ISaveable
     {
         public enum TriggerTypeEnum { Once, MoreTimes }
 
+        [Tooltip("Loại kích hoạt: Một lần (Once) hay Nhiều lần (MoreTimes).")]
         public TriggerTypeEnum TriggerType;
+        [Tooltip("LayerMask dùng để kiểm tra vật cản che khuất tầm nhìn (Raycast).")]
         public LayerMask CullMask;
+        [Tooltip("Phạm vi khung nhìn (Viewport) mà người chơi phải hướng tới (1,1 là toàn màn hình, thấp hơn là phải nhìn gần vào tâm vật thể hơn).")]
         public Vector2 ViewportOffset = Vector2.one;
 
+        [Tooltip("Sử dụng ViewportOffset để xác định hành động Look Away (người chơi nhìn ra khỏi phạm vi Viewport).")]
         public bool LookAwayViewport = false;
+        [Tooltip("Bật kiểm tra khoảng cách (người chơi phải ở trong khoảng cách TriggerDistance).")]
         public bool UseDistance = false;
 
+        [Tooltip("Có gọi sự kiện Look Away khi người chơi vượt ra ngoài khoảng cách cho phép không?")]
         public bool CallEventOutsideDistance = false;
+        [Tooltip("Hiển thị vòng tròn khoảng cách trong Scene view (chỉ trên Editor).")]
         public bool VisualizeDistance = false;
+        [Tooltip("Khoảng cách tối đa người chơi có thể nhìn thấy và kích hoạt vật thể.")]
         public float TriggerDistance = 5f;
 
+        [Tooltip("Sự kiện gọi ra khi người chơi nhìn vào vật thể.")]
         public UnityEvent OnLookAt;
+        [Tooltip("Sự kiện gọi ra khi người chơi rời mắt khỏi vật thể.")]
         public UnityEvent OnLookAway;
 
         private PlayerPresenceManager playerPresence;

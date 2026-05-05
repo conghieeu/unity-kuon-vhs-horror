@@ -1,8 +1,11 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+using ThunderWire.Attributes;
+
 namespace UHFPS.Runtime
 {
+    [Summary("Quản lý hiển thị và hiệu ứng mờ dần (Fade) của một Icon nổi trên màn hình.")]
     public class FloatingIcon : MonoBehaviour
     {
         private float fadeTime;

@@ -3,6 +3,10 @@ using UnityEngine;
 
 namespace UHFPS.Tools
 {
+    /// <summary>
+    /// Công cụ hỗ trợ chạy Coroutine từ các lớp không kế thừa MonoBehaviour.
+    /// </summary>
+    [ThunderWire.Attributes.Summary("Cho phép chạy Coroutine từ các script không phải MonoBehaviour.")]
     public class CoroutineRunner : MonoBehaviour
     {
         private IEnumerator coroutine;

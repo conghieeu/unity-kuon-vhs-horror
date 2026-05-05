@@ -13,6 +13,7 @@ namespace UHFPS.Runtime
 {
     [RequireComponent(typeof(NavMeshAgent))]
     [Docs("https://docs.twgamesdev.com/uhfps/guides/state-machines/adding-ai-states")]
+    [Summary("Máy trạng thái hữu hạn (FSM) quản lý toàn bộ các trạng thái hành vi (State) của NPC (Kẻ địch/Đồng minh).")]
     public class NPCStateMachine : MonoBehaviour
     {
         #region Getters / Setters
@@ -81,19 +82,36 @@ namespace UHFPS.Runtime
             public FSMAIState FSMState;
         }
 
+        [Tooltip("Tài sản (Asset) cấu hình danh sách các trạng thái hành vi của AI.")]
         public AIStatesGroup StatesAsset;
         public AIStatesGroup StatesAssetRuntime;
 
         public Animator Animator;
+
+        [Tooltip("Vị trí xương đầu để xét góc nhìn của NPC.")]
         public Transform HeadBone;
+
+        [Tooltip("Layer Mask cho tầm nhìn của NPC (Các vật thể che chắn).")]
         public LayerMask SightsMask;
+
+        [Tooltip("Loại NPC (Kẻ địch hoặc Đồng minh).")]
         public NPCTypeEnum NPCType;
 
-        [Range(0, 179)] public float SightsFOV = 110;
+        [Range(0, 179)] 
+        [Tooltip("Góc nhìn (FOV) của NPC tính bằng độ.")]
+        public float SightsFOV = 110;
+
+        [Tooltip("Khoảng cách tối đa mà NPC có thể nhìn thấy mục tiêu.")]
         public float SightsDistance = 15;
+
+        [Tooltip("Tốc độ xoay của NPC khi được chuyển sang điều khiển xoay thủ công.")]
         public float SteeringSpeed = 6f;
 
+        [Header("Gizmos (Editor Only)")]
+        [Tooltip("Hiển thị điểm đến mục tiêu hiện tại trong Editor.")]
         public bool ShowDestination;
+
+        [Tooltip("Hiển thị đường giới hạn góc nhìn và khoảng cách của NPC.")]
         public bool ShowSights;
 
         private MultiKeyDictionary<string, Type, State> aiStates;

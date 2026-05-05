@@ -1,9 +1,11 @@
 using UnityEngine.Events;
 using UnityEngine;
 using System;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime
 {
+    [Summary("Kích hoạt sự kiện khi có đủ trọng lượng đè lên bàn đạp (Pressure Plate).")]
     public class PressurePlateTrigger : MonoBehaviour, ICharacterControllerHit
     {
         [Flags]
@@ -14,13 +16,19 @@ namespace UHFPS.Runtime
             Objects = 1 << 2
         }
 
+        [Tooltip("Loại đối tượng có thể tạo ra trọng lượng đè lên bàn đạp (Người chơi, Vật thể, hoặc cả hai).")]
         public WeightTypeEnum WeightType = WeightTypeEnum.Player | WeightTypeEnum.Objects;
+        [Tooltip("Trọng lượng tối thiểu cần thiết để kích hoạt bàn đạp.")]
         public float TriggerWeight = 10f;
 
+        [Tooltip("Sự kiện gọi ra khi tổng trọng lượng đạt hoặc vượt ngưỡng TriggerWeight.")]
         public UnityEvent OnWeightTrigger;
+        [Tooltip("Sự kiện gọi ra mỗi khi trọng lượng thay đổi.")]
         public UnityEvent OnWeightChange;
+        [Tooltip("Sự kiện gọi ra khi tổng trọng lượng giảm xuống dưới ngưỡng TriggerWeight.")]
         public UnityEvent OnWeightRelease;
 
+        [Tooltip("Tổng trọng lượng hiện tại đang đè lên bàn đạp.")]
         public float totalWeight;
         private float playerWeight;
         private bool isTriggered;

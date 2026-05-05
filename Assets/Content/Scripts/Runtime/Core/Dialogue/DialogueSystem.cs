@@ -9,22 +9,36 @@ using UHFPS.Scriptable;
 using UHFPS.Tools;
 using TMPro;
 using static UHFPS.Scriptable.DialogueAsset;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime
 {
+    [Summary("Quản lý hệ thống hiển thị hội thoại, chạy âm thanh và xử lý logic các lựa chọn (Options), ngắt nghỉ (Sequence/Press).")]
     public class DialogueSystem : Singleton<DialogueSystem>
     {
         public enum DialogueBinderType { Start, Subtitle, Finish, End, Options }
 
         public sealed class DialogueData : List<Dialogue> { }
 
+        [Tooltip("AudioSource mặc định để phát âm thanh hội thoại khi chế độ là Global.")]
         public AudioSource AudioSource;
+
+        [Tooltip("CanvasGroup điều khiển độ trong suốt của toàn bộ giao diện hội thoại.")]
         public CanvasGroup DialoguePanel;
+
+        [Tooltip("Text dùng để hiển thị phụ đề (Subtitle) của hội thoại.")]
         public TMP_Text DialogueText;
 
+        [Tooltip("Có hiển thị tên người nói (Narrator) ở đầu câu hay không.")]
         public bool ShowNarrator;
+
+        [Tooltip("Sử dụng màu sắc riêng được thiết lập cho từng người nói.")]
         public bool UseNarratorColors;
+
+        [Tooltip("Thời gian chờ tự động chuyển câu trong chế độ Sequence.")]
         public float SequenceWait;
+
+        [Tooltip("Tốc độ Fade In/Out của bảng phụ đề hội thoại.")]
         public float FadeTime;
 
         private string dialogueBinderName;

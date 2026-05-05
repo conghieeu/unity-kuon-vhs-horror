@@ -6,6 +6,7 @@ namespace UHFPS.Runtime
 {
     [InspectorHeader("Jumpscare Direct")]
     [Docs("https://docs.twgamesdev.com/uhfps/guides/jumpscares#direct-jumpscare")]
+    [Summary("Component quản lý các mô hình Jumpscare 3D trực tiếp gắn trước Camera (Ví dụ: Ma nhảy ra trước mặt).")]
     public class JumpscareDirect : MonoBehaviour
     {
         [Serializable]
@@ -15,6 +16,7 @@ namespace UHFPS.Runtime
             public GameObject ModelObject;
         }
 
+        [Tooltip("Danh sách các mô hình Jumpscare 3D được gắn trước Camera. ID dùng để gọi từ Jumpscare Trigger.")]
         public DirectModel[] JumpscareDirectModels;
 
         private GameObject directModel;

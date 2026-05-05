@@ -6,6 +6,7 @@ using Newtonsoft.Json.Linq;
 namespace UHFPS.Runtime
 {
     [Serializable]
+    [ThunderWire.Attributes.Summary("Cấu hình vật thể có thể bật/tắt (Ví dụ: Công tắc đèn, Cần gạt).")]
     public class DynamicSwitchable : DynamicObjectType
     {
         // limits

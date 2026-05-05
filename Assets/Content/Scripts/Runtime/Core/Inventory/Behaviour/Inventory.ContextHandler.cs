@@ -6,6 +6,9 @@ using UHFPS.Tools;
 
 namespace UHFPS.Runtime
 {
+    /// <summary>
+    /// Xử lý các Menu ngữ cảnh (Context Menu) cho vật phẩm trong Inventory.
+    /// </summary>
     public partial class Inventory
     {
         public struct Shortcut

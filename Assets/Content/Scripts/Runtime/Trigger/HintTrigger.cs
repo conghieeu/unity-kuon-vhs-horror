@@ -6,19 +6,26 @@ using UnityEngine.Events;
 namespace UHFPS.Runtime
 {
     [InspectorHeader("Hint Trigger")]
+    [Summary("Kích hoạt hiển thị thông báo gợi ý (Hint) trên màn hình khi người chơi bước vào hoặc thoát khỏi vùng Trigger.")]
     public class HintTrigger : MonoBehaviour, ISaveable
     {
         public enum TriggerTypeEnum { TriggerEnter, TriggerExit, Event }
 
+        [Tooltip("Loại kích hoạt: Khi bước vào (TriggerEnter), khi thoát ra (TriggerExit) hoặc kích hoạt bằng sự kiện ngoài (Event).")]
         public TriggerTypeEnum TriggerType = TriggerTypeEnum.TriggerEnter;
+        [Tooltip("Nội dung tin nhắn gợi ý.")]
         public GString HintMessage;
+        [Tooltip("Thời gian (giây) hiển thị thông báo.")]
         public float MessageTime;
 
         [Header("Settings")]
+        [Tooltip("Có cho phép hiển thị gợi ý này nhiều lần không?")]
         public bool ShowMoreTimes;
+        [Tooltip("Chỉ gọi sự kiện (OnHintShowed) một lần duy nhất, ngay cả khi gợi ý hiển thị nhiều lần.")]
         public bool CallEventOnce;
 
         [Header("Events")]
+        [Tooltip("Sự kiện gọi ra khi gợi ý được hiển thị.")]
         public UnityEvent OnHintShowed;
 
         private bool isTriggered;

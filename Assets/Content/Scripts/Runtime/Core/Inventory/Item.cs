@@ -1,6 +1,8 @@
 using System;
 using UnityEngine;
 
+using ThunderWire.Attributes;
+
 namespace UHFPS.Runtime
 {
     public enum ImageOrientation { Normal, Flipped };
@@ -8,6 +10,7 @@ namespace UHFPS.Runtime
     public enum UsableType { PlayerItem, HealthItem, CustomEvent }
 
     [Serializable]
+    [Summary("Định nghĩa toàn bộ thuộc tính và cài đặt của một Vật phẩm (Item) trong hệ thống Inventory.")]
     public sealed class Item
     {
         public string GUID;
@@ -35,6 +38,7 @@ namespace UHFPS.Runtime
             public bool canBindShortcut;
             public bool alwaysShowQuantity;
         }
+        [Tooltip("Các cài đặt chung của vật phẩm (Có thể dùng, xếp chồng, kết hợp, v.v.).")]
         public ItemSettings Settings;
 
         [Serializable]
@@ -47,6 +51,7 @@ namespace UHFPS.Runtime
             public bool removeOnUse;
             public ItemCustomData customData;
         }
+        [Tooltip("Cài đặt khi vật phẩm được Use (Dùng làm máu, chạy sự kiện, v.v.).")]
         public ItemUsableSettings UsableSettings;
 
         [Serializable]
@@ -54,6 +59,7 @@ namespace UHFPS.Runtime
         {
             public ushort maxStack;
         }
+        [Tooltip("Thuộc tính riêng (Ví dụ số lượng tối đa xếp chồng).")]
         public ItemProperties Properties;
 
         [Serializable]
@@ -72,19 +78,20 @@ namespace UHFPS.Runtime
             public string inheritKey;
             public ItemCustomData customData;
 
-            [Tooltip("Use crafting like operations. If you combine two items, their quantity is reduced by the required crafting amount and the resulting item quantity will be set from the resulting item amount.")]
+            [Tooltip("Sử dụng cơ chế chế tạo (Crafting). Nếu kết hợp 2 vật phẩm, số lượng sẽ bị trừ đi theo lượng yêu cầu, và tạo ra vật phẩm mới theo số lượng kết quả.")]
             public bool isCrafting;
-            [Tooltip("After combining, do not remove the active item from inventory.")]
+            [Tooltip("Sau khi kết hợp, KHÔNG xóa vật phẩm đang chọn khỏi túi đồ.")]
             public bool keepAfterCombine;
-            [Tooltip("After combining, remove the second item from the inventory.")]
+            [Tooltip("Sau khi kết hợp, XÓA vật phẩm thứ 2 (vật phẩm bị mang ra kết hợp) khỏi túi đồ.")]
             public bool removeSecondItem;
-            [Tooltip("After combining, call the combine event if the second inventory item is a player item. The combine event will be called only on the second item.")]
+            [Tooltip("Gọi sự kiện Combine nếu vật phẩm thứ 2 là Player Item (vật phẩm cầm trên tay).")]
             public bool eventAfterCombine;
-            [Tooltip("After combining, select the player item instead of adding the result item to the inventory.")]
+            [Tooltip("Sau khi kết hợp, lấy luôn vật phẩm mới ra tay thay vì cất vào túi đồ.")]
             public bool selectAfterCombine;
-            [Tooltip("After combining, the resulting item will have custom data.")]
+            [Tooltip("Vật phẩm tạo ra sau khi kết hợp sẽ mang dữ liệu tùy chỉnh (Custom Data).")]
             public bool haveCustomData;
         }
+        [Tooltip("Cài đặt kết hợp vật phẩm (Crafting/Combine).")]
         public ItemCombineSettings[] CombineSettings;
 
         [Serializable]
@@ -93,6 +100,7 @@ namespace UHFPS.Runtime
             public GString titleKey;
             public GString descriptionKey;
         }
+        [Tooltip("Cài đặt Đa ngôn ngữ (Localization) cho tên và mô tả vật phẩm.")]
         public Localization LocalizationSettings;
 
         /// <summary>

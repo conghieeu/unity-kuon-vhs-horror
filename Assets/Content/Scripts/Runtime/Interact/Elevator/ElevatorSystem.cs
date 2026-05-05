@@ -5,9 +5,11 @@ using UnityEngine.Events;
 using Newtonsoft.Json.Linq;
 using UHFPS.Tools;
 using UHFPS.Input;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime
 {
+    [Summary("Hệ thống thang máy cốt lõi, quản lý các tầng, di chuyển, đóng/mở cửa và âm thanh thang máy.")]
     public class ElevatorSystem : MonoBehaviour, ISaveable
     {
         public enum ElevatorState
@@ -22,27 +24,59 @@ namespace UHFPS.Runtime
         public Animator Animator;
         public AudioSource AudioSource;
 
+        [Tooltip("Danh sách điểm Transform tương ứng với vị trí các Tầng.")]
         public List<Transform> Floors = new();
+
+        [Tooltip("Khoảng cách bù trừ dùng cho Gizmos hiển thị Tầng trong Editor.")]
         public Vector3 FloorOffset;
+
+        [Tooltip("Thời gian (giây) để thang máy đi qua 1 tầng.")]
         public float OneFloorDuration = 10f;
+
+        [Tooltip("Thời gian (giây) tự động đóng cửa sau khi mở.")]
         public float AutoDoorCloseTime = 5f;
+
+        [Tooltip("Chỉ di chuyển theo trục dọc (Y), giữ nguyên X/Z.")]
         public bool VerticalMoveOnly;
 
+        [Tooltip("Tham số Trigger Animator để mở cửa.")]
         public string OpenDoorTrigger = "Open";
+
+        [Tooltip("Tham số Trigger Animator để đóng cửa.")]
         public string CloseDoorTrigger = "Close";
+
+        [Tooltip("Tên State Animator khi cửa đang mở hoàn toàn.")]
         public string OpenDoorState = "DoorOpen";
+
+        [Tooltip("Tên State Animator khi cửa đang đóng hoàn toàn.")]
         public string CloseDoorState = "DoorClose";
 
+        [Tooltip("Âm thanh khi thang máy bắt đầu di chuyển.")]
         public SoundClip ElevatorStartMove;
+
+        [Tooltip("Âm thanh khi thang máy tới đích.")]
         public SoundClip ElevatorEnd;
         [Space]
+
+        [Tooltip("Âm thanh mở cửa.")]
         public SoundClip ElevatorOpenClean;
+
+        [Tooltip("Âm thanh tiếng bíp khi mở cửa.")]
         public SoundClip ElevatorOpenBeep;
+
+        [Tooltip("Âm thanh đóng cửa.")]
         public SoundClip ElevatorClose;
 
+        [Tooltip("Sự kiện gọi ra khi người chơi bước vào trong thang máy.")]
         public UnityEvent OnElevatorEnter;
+
+        [Tooltip("Sự kiện gọi ra khi người chơi bước ra ngoài.")]
         public UnityEvent OnElevatorExit;
+
+        [Tooltip("Sự kiện gọi ra khi thang máy tới tầng mục tiêu.")]
         public UnityEvent OnElevatorEndMove;
+
+        [Tooltip("Sự kiện gọi ra khi thang máy bắt đầu di chuyển, trả về số tầng mục tiêu.")]
         public UnityEvent<int> OnElevatorStartMove;
 
         public ElevatorState State => currentState;

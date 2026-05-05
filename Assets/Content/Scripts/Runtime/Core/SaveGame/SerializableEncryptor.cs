@@ -6,6 +6,9 @@ using UHFPS.Scriptable;
 
 namespace UHFPS.Runtime
 {
+    /// <summary>
+    /// Lớp tiện ích tĩnh hỗ trợ mã hóa và giải mã dữ liệu save game bằng thuật toán mã hóa đối xứng (AES).
+    /// </summary>
     public static class SerializableEncryptor
     {
         public static async Task Encrypt(SerializationAsset serializationAsset, string path, string text)

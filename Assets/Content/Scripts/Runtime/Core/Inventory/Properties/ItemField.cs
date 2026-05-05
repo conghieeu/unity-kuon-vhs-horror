@@ -3,9 +3,12 @@ using UnityEngine;
 using UHFPS.Tools;
 using static UHFPS.Scriptable.InventoryDatabase;
 
+using ThunderWire.Attributes;
+
 namespace UHFPS.Runtime
 {
     [Serializable]
+    [Summary("Class cơ sở định nghĩa một trường thông tin tham chiếu đến Item trong Database (Sử dụng GUID).")]
     public abstract class ItemField
     {
         [Serializable]

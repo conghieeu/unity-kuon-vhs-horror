@@ -6,15 +6,19 @@ using ThunderWire.Attributes;
 namespace UHFPS.Runtime
 {
     [InspectorHeader("Sound Trigger")]
+    [Summary("Phát một âm thanh khi người chơi tương tác hoặc bước vào vùng Trigger.")]
     public class SoundTrigger : MonoBehaviour, IInteractStart, ISaveable
     {
         public enum TriggerTypeEnum { Interact, Trigger, Event }
         public enum UseTypeEnum { Once, MoreTimes }
 
+        [Tooltip("Cách thức phát âm thanh: Tương tác trực tiếp (Interact), Bước vào Trigger (Trigger), hoặc gọi qua Event (Event).")]
         public TriggerTypeEnum TriggerType;
+        [Tooltip("Phát một lần duy nhất hay nhiều lần.")]
         public UseTypeEnum UseType;
 
         [Header("Sound")]
+        [Tooltip("Âm thanh cần phát.")]
         public SoundClip TriggerSound;
 
         private bool isPlayed = false;

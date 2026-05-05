@@ -1,21 +1,34 @@
 using UnityEngine;
 using UHFPS.Scriptable;
 using UHFPS.Tools;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime.States
 {
+    [Summary("Trạng thái AI: Đuổi theo (Chase) và Tấn công (Attack) người chơi.")]
     public class ZombieChaseState : AIStateAsset
     {
+        [Tooltip("Tốc độ chạy khi đuổi theo người chơi.")]
         public float RunSpeed = 3f;
+
+        [Tooltip("Khoảng cách dừng lại (so với người chơi) khi đuổi theo.")]
         public float ChaseStoppingDistance = 1.5f;
 
         [Header("Chase")]
+        [Tooltip("Thời gian (giây) chờ trước khi chuyển về trạng thái đi tuần (Patrol) sau khi mất dấu người chơi.")]
         public float LostPlayerPatrolTime = 5f;
+
+        [Tooltip("Thời gian (giây) tiếp tục đi tới vị trí cuối cùng nhìn thấy người chơi sau khi mất dấu.")]
         public float LostPlayerPredictTime = 1f;
+
+        [Tooltip("Khoảng cách siêu gần để AI tự động phát hiện người chơi (Dù không nằm trong tầm nhìn).")]
         public float VeryClosePlayerDetection = 1.5f;
 
         [Header("Attack")]
+        [Tooltip("Góc nhìn cho phép AI thực hiện đòn tấn công.")]
         public float AttackFOV = 30f;
+
+        [Tooltip("Khoảng cách tối đa để AI có thể tấn công người chơi.")]
         public float AttackDistance = 2f;
 
         public override FSMAIState InitState(NPCStateMachine machine, AIStatesGroup group)

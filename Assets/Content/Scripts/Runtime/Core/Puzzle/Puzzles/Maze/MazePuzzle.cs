@@ -5,46 +5,87 @@ using UHFPS.Tools;
 using UnityEngine.Events;
 using Newtonsoft.Json.Linq;
 
+using ThunderWire.Attributes;
+
 namespace UHFPS.Runtime
 {
+    [Summary("Hệ thống giải đố Mê cung lăn bi (Maze Puzzle). Điều khiển xoay/nghiêng khay mê cung để đưa viên bi về đích.")]
     public class MazePuzzle : PuzzleBaseBlend, ISaveable
     {
         public enum TriggerType { PutBall, GrabBall, WrongHole, FinishHole }
 
+        [Tooltip("Transform chứa toàn bộ bảng mê cung (để xoay/nghiêng).")]
         public Transform MazeTransform;
 
+        [Tooltip("Vật phẩm viên bi trong túi đồ.")]
         public ItemGuid BallItem;
+
+        [Tooltip("Mô hình vật lý của viên bi lăn trong mê cung.")]
         public Rigidbody BallObject;
+
+        [Tooltip("Điểm đặt viên bi khi vừa thả vào mê cung.")]
         public Transform BallStart;
 
+        [Tooltip("Trigger (vùng tương tác) để thả bi vào lỗ bắt đầu.")]
         public Collider PutBallTrigger;
+
+        [Tooltip("Trigger để nhặt lại bi nếu rơi vào lỗ sai.")]
         public Collider GrabBallTrigger;
+
+        [Tooltip("Hiệu ứng hoặc Object hiển thị lúc lấy lại bi.")]
         public GameObject GrabBallAnim;
 
+        [Tooltip("Animator xử lý các animation như mở ngăn kéo lấy phần thưởng, hoặc nghiêng mê cung đổ bi ra.")]
         public Animator MazeAnimator;
         public string OpenDrawerState = "Open";
         public string GrabBallState = "Grab";
 
+        [Tooltip("Độ dời vị trí khi người chơi tương tác nâng mê cung lên góc nhìn cận cảnh.")]
         public Vector3 MazeLiftOffset;
+
+        [Tooltip("Góc xoay khởi tạo khi nâng mê cung lên.")]
         public Vector3 RotationOffset;
 
+        [Tooltip("Vị trí của mê cung khi nghiêng đổ bi ra lỗ sai.")]
         public Vector3 GrabBallPosition;
+
+        [Tooltip("Góc nghiêng của mê cung khi đổ bi ra lỗ sai.")]
         public Vector3 GrabBallRotation;
+
+        [Tooltip("Thời gian animation nghiêng mê cung đổ bi.")]
         public float GrabBallDuration;
 
+        [Tooltip("Các Layer bị bỏ qua khi click chuột (VD: Mặt kính).")]
         public LayerMask CullLayers;
+
+        [Tooltip("Layer để click tương tác thả bi/nhặt bi.")]
         public Layer InteractLayer;
 
+        [Tooltip("Thời gian nâng mê cung lên.")]
         public float LiftDuration;
+
+        [Tooltip("Thời gian hạ mê cung xuống.")]
         public float ReturnDuration;
+
+        [Tooltip("Tốc độ xoay/nghiêng mê cung bằng chuột.")]
         public float RotateSpeed;
 
+        [Tooltip("Trục xoay dọc (Thường là X).")]
         public Axis VerticalAxis = Axis.X;
+
+        [Tooltip("Trục xoay ngang (Thường là Z).")]
         public Axis HorizontalAxis = Axis.Z;
+
+        [Tooltip("Giới hạn góc nghiêng dọc.")]
         public MinMax VerticalLimits = new(-45, 45);
+
+        [Tooltip("Giới hạn góc nghiêng ngang.")]
         public MinMax HorizontalLimits = new(-45, 45);
 
+        [Tooltip("Sự kiện gọi ra khi viên bi rơi vào lỗ sai.")]
         public UnityEvent OnBallEnterWrongHole;
+
+        [Tooltip("Sự kiện gọi ra khi viên bi rơi vào lỗ đích (Hoàn thành giải đố).")]
         public UnityEvent OnBallEnterFinishHole;
 
         private Inventory inventory;

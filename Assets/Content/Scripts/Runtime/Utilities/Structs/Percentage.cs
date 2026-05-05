@@ -1,8 +1,15 @@
+using UnityEngine;
+using ThunderWire.Attributes;
+
 namespace UHFPS.Runtime
 {
+    /// <summary>
+    /// Cấu trúc lưu trữ và tính toán tỉ lệ phần trăm (0-100).
+    /// </summary>
     [System.Serializable]
     public struct Percentage
     {
+        [Tooltip("Giá trị phần trăm (0-100).")]
         public ushort Value;
 
         public Percentage(ushort value)

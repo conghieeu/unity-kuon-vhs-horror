@@ -10,29 +10,48 @@ namespace UHFPS.Runtime
 {
     [InspectorHeader("Jumpscare Manager")]
     [Docs("https://docs.twgamesdev.com/uhfps/guides/jumpscares")]
+    [Summary("Quản lý toàn bộ hệ thống Jumpscare (Âm thanh, Rung lắc màn hình, Hiện hình ảnh 2D, Hiệu ứng sợ hãi/Xúc tu).")]
     public class JumpscareManager : Singleton<JumpscareManager>
     {
+        [Tooltip("Thành phần Image dùng để hiển thị Jumpscare dạng ảnh 2D trên màn hình.")]
         public Image DirectImage;
 
         [Header("Direct Jumpscare Settings")]
-        [Range(1f, 2f)] public float ImageMaxScale = 2f;
-        [Range(0f, 1f)] public float ImageScaleTime = 0.5f;
+        [Range(1f, 2f)] 
+        [Tooltip("Tỉ lệ phóng to tối đa của ảnh 2D Jumpscare.")]
+        public float ImageMaxScale = 2f;
+        [Range(0f, 1f)] 
+        [Tooltip("Thời gian để ảnh phóng to tới mức tối đa.")]
+        public float ImageScaleTime = 0.5f;
 
         [Header("Fear Effect Settings")]
-        [Range(0f, 1f)] public float FearIntensityDuration = 0.2f;
-        [Range(0f, 1f)] public float FearSpeedDuration = 0.2f;
+        [Range(0f, 1f)] 
+        [Tooltip("Tỉ lệ thời gian để cường độ sợ hãi đạt mức tối đa.")]
+        public float FearIntensityDuration = 0.2f;
+        [Range(0f, 1f)] 
+        [Tooltip("Tỉ lệ thời gian để tốc độ chuyển động xúc tu đạt mức tối đa.")]
+        public float FearSpeedDuration = 0.2f;
 
         [Header("Tentacles Default Settings")]
-        [Range(0.1f, 3f)] public float TentaclesDefaultSpeed = 1f;
-        [Range(-0.2f, 0.2f)] public float TentaclesDefaultPosition = 0f;
+        [Range(0.1f, 3f)] 
+        [Tooltip("Tốc độ chuyển động mặc định của xúc tu.")]
+        public float TentaclesDefaultSpeed = 1f;
+        [Range(-0.2f, 0.2f)] 
+        [Tooltip("Vị trí hiển thị mặc định của xúc tu (-0.2 là bị ẩn).")]
+        public float TentaclesDefaultPosition = 0f;
 
         [Header("Tentacles Animation Settings")]
+        [Tooltip("Tốc độ xúc tu trườn vào trong màn hình.")]
         public float TentaclesMoveSpeed = 1f;
+        [Tooltip("Tốc độ hoạt ảnh (quẫy) của xúc tu.")]
         public float TentaclesAnimationSpeed = 1f;
+        [Tooltip("Tốc độ hiện dần (Fade In) của hiệu ứng xúc tu.")]
         public float TentaclesFadeInSpeed = 1f;
+        [Tooltip("Tốc độ mờ dần (Fade Out) của hiệu ứng xúc tu.")]
         public float TentaclesFadeOutSpeed = 1f;
 
         [Header("Camera Wobble Settings")]
+        [Tooltip("Tỉ lệ giảm dần của hiệu ứng lắc camera (Wobble) sau khi bị Jumpscare.")]
         public float WobbleLossRate = 0.5f;
 
         private PlayerPresenceManager playerPresence;

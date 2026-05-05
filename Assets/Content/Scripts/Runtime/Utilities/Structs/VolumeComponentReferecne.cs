@@ -1,12 +1,19 @@
 using System;
+using UnityEngine;
 using UnityEngine.Rendering;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime
 {
+    /// <summary>
+    /// Tham chiếu đến một thành phần (Component) cụ thể trong Profile của Volume URP.
+    /// </summary>
     [Serializable]
     public struct VolumeComponentReferecne
     {
+        [Tooltip("Volume mục tiêu.")]
         public Volume Volume;
+        [Tooltip("Chỉ số của Component trong danh sách Profile.")]
         public int ComponentIndex;
 
         public VolumeComponent GetVolumeComponent()

@@ -4,26 +4,50 @@ using UnityEngine;
 using UHFPS.Input;
 using UHFPS.Tools;
 
+using ThunderWire.Attributes;
+
 namespace UHFPS.Runtime
 {
+    [Summary("Thành phần 3D sinh ra trước Camera để xử lý logic xoay ổ khóa và thanh ghim (Bobby Pin) trong Lockpick Puzzle.")]
     public class LockpickComponent : MonoBehaviour
     {
+        [Tooltip("AudioSource phát ra tiếng mở khóa hoặc gãy ghim.")]
         public AudioSource AudioSource;
+
+        [Tooltip("Transform mô hình của thanh ghim (Bobby Pin).")]
         public Transform BobbyPin;
+
+        [Tooltip("Transform mô hình của ổ khóa (Sẽ xoay khi thử bẻ).")]
         public Transform LockpickKeyhole;
+
+        [Tooltip("Vị trí ảo dùng để gắn thanh ghim vào đúng tâm xoay của ổ khóa.")]
         public Transform KeyholeCopyLocation;
 
+        [Tooltip("Trục xoay của thanh ghim (Thường là Z).")]
         public Axis BobbyPinForward;
+
+        [Tooltip("Trục xoay của ổ khóa (Thường là Z).")]
         public Axis KeyholeForward;
 
+        [Tooltip("Tốc độ di chuyển ghim khi di chuột.")]
         public float BobbyPinRotateSpeed = 20;
+
+        [Tooltip("Thời gian chờ trước khi rút ghim mới ra sau khi ghim cũ bị gãy.")]
         public float BobbyPinResetTime = 1;
+
+        [Tooltip("Biên độ rung lắc của thanh ghim khi bị xoay căng (Sai góc mở).")]
         public float BobbyPinShakeAmount = 3;
 
+        [Tooltip("Góc xoay tối đa của ổ khóa khi được mở thành công (Thường là -90 hoặc 90).")]
         public float KeyholeUnlockAngle = -90;
+
+        [Tooltip("Tốc độ xoay ổ khóa khi người chơi bấm nút Mở (Jump/Tương tác).")]
         public float KeyholeRotateSpeed = 2;
 
+        [Tooltip("Âm thanh phát ra khi bẻ khóa thành công.")]
         public SoundClip Unlock;
+
+        [Tooltip("Âm thanh phát ra khi bẻ gãy 1 thanh ghim.")]
         public SoundClip BobbyPinBreak;
 
         private PlayerManager playerManager;

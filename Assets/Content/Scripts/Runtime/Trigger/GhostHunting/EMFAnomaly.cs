@@ -11,6 +11,7 @@ using Random = UnityEngine.Random;
 namespace UHFPS.Runtime
 {
     [RequireComponent(typeof(SphereCollider))]
+    [Summary("Tạo ra một vùng dị thường EMF (Điện từ trường) để thiết bị EMF Detector có thể phát hiện.")]
     public class EMFAnomaly : MonoBehaviour, ISaveable
     {
         [Serializable]

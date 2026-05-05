@@ -5,21 +5,40 @@ using UHFPS.Tools;
 using TMPro;
 using System.Collections;
 
+using ThunderWire.Attributes;
+
 namespace UHFPS.Runtime
 {
+    [Summary("Thành phần xử lý giao diện UI bẻ khóa két sắt cổ điển (Xoay số 3 vòng).")]
     public class SafeWheel : MonoBehaviour
     {
+        [Tooltip("Mô hình Transform của núm vặn.")]
         public Transform Wheel;
+
+        [Tooltip("Trục xoay của núm vặn (Thường là Z).")]
         public Axis WheelRotateAxis = Axis.Z;
 
+        [Tooltip("Số lớn nhất có trên vòng quay (Ví dụ két sắt có 100 vạch thì để 99).")]
         public ushort MaxWheelNumber = 99;
+
+        [Tooltip("Thời gian giữ nút xoay (giây) trước khi núm tự động xoay nhanh.")]
         public float FastRotateWaitTime = 2f;
+
+        [Tooltip("Tốc độ chuyển số (giây/số) khi núm đang ở chế độ xoay nhanh.")]
         public float FastRotateNumberTime = 1f;
+
+        [Tooltip("Độ mượt (Lerp) của hoạt ảnh núm xoay.")]
         public float RotateSmoothing = 0.1f;
+
+        [Tooltip("Thời gian trễ sau khi nhập đúng mã và mở két.")]
         public float UnlockWaitTime = 1f;
 
         public AudioSource AudioSource;
+
+        [Tooltip("Âm thanh phát ra khi núm xoay qua 1 vạch số.")]
         public SoundClip DialTurn;
+
+        [Tooltip("Âm thanh báo mở két thành công.")]
         public SoundClip SafeUnlock;
 
         private SafePuzzle safePuzzle;

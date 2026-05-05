@@ -18,6 +18,7 @@ using NameAndParameters = UnityEngine.InputSystem.Utilities.NameAndParameters;
 namespace UHFPS.Input
 {
     [Docs("https://docs.twgamesdev.com/uhfps/guides/managing-inputs")]
+    [Summary("Quản lý hệ thống Input (Unity New Input System). Xử lý việc đọc phím, thay đổi phím (Rebind) và hiển thị biểu tượng nút trên UI.")]
     public class InputManager : Singleton<InputManager>
     {
         public const string EXTENSION = ".xml";
@@ -33,8 +34,13 @@ namespace UHFPS.Input
         private readonly List<string> pressedActions = new();
         private bool isApplyPending;
 
+        [Tooltip("Asset cấu hình Input Actions của Unity (Chứa định nghĩa mọi nút bấm).")]
         public InputActionAsset inputActions;
+
+        [Tooltip("Asset định nghĩa hình ảnh/icon cho từng phím bấm để hiện lên giao diện (VD: Chuột trái, phím E).")]
         public InputSpritesAsset inputSpritesAsset;
+
+        [Tooltip("Bật Log chi tiết trong Console để kiểm tra lỗi hệ thống Input.")]
         public bool debugMode;
 
         public ReplaySubject<Unit> OnInputsInit = new();

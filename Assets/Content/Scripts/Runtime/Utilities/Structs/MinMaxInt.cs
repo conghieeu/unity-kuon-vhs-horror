@@ -1,12 +1,18 @@
 using System;
 using UnityEngine;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime
 {
+    /// <summary>
+    /// Cấu trúc lưu trữ giá trị tối thiểu và tối đa (kiểu int).
+    /// </summary>
     [Serializable]
     public struct MinMaxInt
     {
+        [Tooltip("Giá trị tối thiểu.")]
         public int min;
+        [Tooltip("Giá trị tối đa.")]
         public int max;
 
         public bool Flipped => max < min;

@@ -2,9 +2,12 @@ using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 
+using ThunderWire.Attributes;
+
 namespace UHFPS.Runtime
 {
     [System.Serializable]
+    [Summary("Module quản lý hiển thị các biểu tượng lơ lửng (Floating Icon) trên màn hình UI chỉ tới các vật thể tương tác được trong thế giới 3D.")]
     public class FloatingIconModule : ManagerModule
     {
         public struct ObjectIconPair
@@ -37,13 +40,23 @@ namespace UHFPS.Runtime
 
         public override string Name => "Floating Icon";
 
+        [Tooltip("Prefab của Floating Icon sẽ được tạo ra trên UI.")]
         public GameObject FloatingIconPrefab;
 
         [Header("Settings")]
+        [Tooltip("Layer Mask của các vật cản. Nếu vật cản che khuất tầm nhìn từ Camera đến đồ vật, Icon sẽ bị ẩn.")]
         public LayerMask CullLayers;
+
+        [Tooltip("Khoảng cách tối đa để Icon bắt đầu hiện ra (Fade In).")]
         public float DistanceShow = 4;
+
+        [Tooltip("Khoảng cách lớn nhất mà Icon sẽ biến mất (Fade Out).")]
         public float DistanceHide = 4;
+
+        [Tooltip("Thời gian mờ dần sang rõ (Fade In) của Icon.")]
         public float FadeInTime = 0.2f;
+
+        [Tooltip("Thời gian rõ dần sang mờ (Fade Out) của Icon.")]
         public float FadeOutTime = 0.05f;
 
         private readonly List<FloatingIconData> uiFloatingIcons = new List<FloatingIconData>();

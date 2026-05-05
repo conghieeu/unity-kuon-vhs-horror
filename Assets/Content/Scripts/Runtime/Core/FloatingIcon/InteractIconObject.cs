@@ -1,16 +1,26 @@
 using UHFPS.Tools;
 using UnityEngine;
 
+using ThunderWire.Attributes;
+
 namespace UHFPS.Runtime
 {
+    [Summary("Component gắn vào vật thể để hiển thị Icon tương tác khi người chơi nhìn (Hover) hoặc giữ (Hold) vật thể.")]
     public class InteractIconObject : MonoBehaviour, IHoverStart, IHoverEnd, IInteractStart, IInteractStop
     {
+        [Tooltip("Icon hiển thị khi người chơi nhìn vào vật thể.")]
         public Sprite HoverIcon;
+
+        [Tooltip("Kích thước của Hover Icon.")]
         public Vector2 HoverSize;
 
+        [Tooltip("Icon hiển thị khi người chơi đang giữ (Hold) tương tác.")]
         public Sprite HoldIcon;
+
+        [Tooltip("Kích thước của Hold Icon.")]
         public Vector2 HoldSize;
 
+        [Tooltip("Độ lệch vị trí của Icon so với tâm vật thể.")]
         public Vector3 IconOffset;
 
         private InteractIconModule module;

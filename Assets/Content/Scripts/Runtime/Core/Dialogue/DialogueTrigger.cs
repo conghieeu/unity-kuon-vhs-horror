@@ -7,8 +7,11 @@ using static UHFPS.Scriptable.DialogueAsset;
 using UnityEditor;
 #endif
 
+using ThunderWire.Attributes;
+
 namespace UHFPS.Runtime
 {
+    [Summary("Kích hoạt và quản lý một đoạn hội thoại khi người chơi tương tác, va chạm, hoặc được gọi từ hệ thống khác (Event).")]
     public class DialogueTrigger : MonoBehaviour, IInteractStart, ISaveable
     {
         public enum TriggerTypeEnum { Trigger, Interact, Event }
@@ -22,17 +25,28 @@ namespace UHFPS.Runtime
         public TriggerTypeEnum TriggerType;
         [Tooltip("Loại hội thoại: Local (Âm thanh 3D, giới hạn khoảng cách), Global (Âm thanh 2D, không giới hạn khoảng cách).")]
         public DialogueTypeEnum DialogueType;
-        [Tooltip("Cách chuyển câu thoại: Sequence (Tự động chuyển), Event (Nhấn phím để chuyển).")]
+        [Tooltip("Cách chuyển câu thoại: Sequence (Tự động chuyển), Event (Dựa trên logic code chờ external trigger), Press (Nhấn phím/chuột để tự chuyển).")]
         public DialogueContinueEnum DialogueContinue;
         
+        [Tooltip("Asset dữ liệu chứa nội dung của cuộc hội thoại (ScriptableObject).")]
         public DialogueAsset Dialogue;
+
+        [Tooltip("AudioSource cục bộ để phát âm thanh 3D cho hội thoại Local (Cần có nếu chọn Local).")]
         public AudioSource DialogueAudio;
+
+        [Tooltip("Tên Binder để kết nối với DialogueBinder (nếu có logic chạy cutscene/animation riêng).")]
         public string BinderName;
 
         [Tooltip("Cho phép kích hoạt lại hội thoại nhiều lần.")]
         public bool Repeatable;
+
+        [Tooltip("Giới hạn khoảng cách nghe hội thoại (Local) - đi quá xa sẽ không nghe thấy.")]
         public bool RangedDialogue;
+
+        [Tooltip("Khi đi quá khoảng cách, hội thoại sẽ dừng và có thể kích hoạt lại từ đầu khi quay lại.")]
         public bool ResetDialogueWhenOut;
+
+        [Tooltip("Khoảng cách tối đa (bán kính) để nghe được hội thoại Local.")]
         public float LocalDialogueRange;
 
         private DialogueSystem dialogueSystem;

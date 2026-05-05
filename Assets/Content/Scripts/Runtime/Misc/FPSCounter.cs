@@ -5,13 +5,17 @@ using TMPro;
 namespace UHFPS.Runtime
 {
     [InspectorHeader("FPS Counter")]
+    [Summary("Hiển thị số khung hình trên giây (FPS) lên màn hình.")]
     public class FPSCounter : MonoBehaviour
     {
+        [Tooltip("Text UI hiển thị số FPS.")]
         public TMP_Text FPSText;
 
         [Header("Settings")]
         [Range(0f, 1f)]
+        [Tooltip("Hệ số làm mượt giá trị FPS.")]
         public float ExpSmoothingFactor = 0.9f;
+        [Tooltip("Tần suất cập nhật Text (giây).")]
         public float RefreshFrequency = 0.4f;
 
         private float timeSinceUpdate = 0f;

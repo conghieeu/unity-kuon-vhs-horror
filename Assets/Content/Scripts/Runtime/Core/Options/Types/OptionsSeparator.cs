@@ -3,6 +3,7 @@ using ThunderWire.Attributes;
 namespace UHFPS.Runtime
 {
     [InspectorHeader("Option Separator")]
+    [Summary("Thành phần UI đóng vai trò như một thanh phân cách hoặc tiêu đề phụ trong menu Options.")]
     public class OptionsSeparator : OptionBehaviour
     {
         public override void SetOptionValue(object value) { }

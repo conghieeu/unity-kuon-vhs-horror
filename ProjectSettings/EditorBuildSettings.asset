@@ -6,19 +6,19 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_Project/Scenes/MainMenu.unity
+    path: Assets/_Game/Scenes/MainMenu.unity
     guid: 600b46598d843a148a2ea8972c1e318c
   - enabled: 1
-    path: Assets/_Project/Scenes/Playground.unity
+    path: Assets/_Game/Scenes/Playground.unity
     guid: 76b8c6c0a7c048249bd14a2d9693b26e
   - enabled: 1
-    path: Assets/_Project/Scenes/LevelManager.unity
+    path: Assets/_Game/Scenes/LevelManager.unity
     guid: e8115f250f482ec4d8ad6ea1dc55e505
   - enabled: 1
-    path: Assets/ThirdParty/ThunderWire Studio/UHFPS/_Demo/Scenes/Elevator.unity
+    path: Assets/_Demo/Scenes/Elevator.unity
     guid: 1427cd3696b895f459c7de450581a34e
   - enabled: 1
-    path: Assets/ThirdParty/ThunderWire Studio/UHFPS/_Demo/Scenes/Raining.unity
+    path: Assets/_Demo/Scenes/Raining.unity
     guid: 5d02e5420369bbe42bc168890153f297
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: ae838b1c970aab641bb8e4643590df24, type: 2}

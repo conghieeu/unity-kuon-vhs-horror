@@ -4,8 +4,11 @@ using UnityEngine;
 using UHFPS.Tools;
 using Newtonsoft.Json.Linq;
 
+using ThunderWire.Attributes;
+
 namespace UHFPS.Runtime
 {
+    [Summary("Thành phần mạch điện nhỏ (Ví dụ: Ống dẫn, dây điện xoay được) trong hệ thống Electrical Circuit Puzzle.")]
     public class ElectricalCircuitComponent : MonoBehaviour, IInteractStart, ISaveableCustom
     {
         [Serializable]
@@ -23,16 +26,28 @@ namespace UHFPS.Runtime
             public List<int> PowerFlows = new();
         }
 
+        [Tooltip("Tham chiếu đến hệ thống Puzzle chính (Mạch điện tổng) quản lý component này.")]
         public ElectricalCircuitPuzzle ElectricalCircuit;
 
+        [Tooltip("Hình ảnh Icon hiển thị để tiện thiết kế hệ thống trong Editor.")]
         public Texture2D ComponentIcon;
+
+        [Tooltip("Hình dạng 3D của linh kiện mạch điện.")]
         public MeshFilter ComponentMesh;
+
+        [Tooltip("Trục xoay của component (Thông thường là trục Y/Z tùy cấu hình 3D).")]
         public Axis ComponentUp;
 
+        [Tooltip("Tọa độ lưới (X, Y) của component này trên bảng mạch điện.")]
         public Vector2Int Coords;
+
+        [Tooltip("Góc xoay hiện tại của component (Chỉ áp dụng với trục ComponentUp).")]
         public float Angle;
 
+        [Tooltip("Cấu hình hướng dòng điện truyền qua (Trái, Phải, Lên, Xuống) và các Renderer phát sáng khi có điện.")]
         public List<FlowDirection> FlowDirections = new();
+
+        [Tooltip("Dữ liệu hoạt động (Runtime) quản lý luồng điện thực tế đi qua component này.")]
         public PowerFlow[] PowerFlows;
 
         private void Awake()

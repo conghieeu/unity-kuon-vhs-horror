@@ -3,9 +3,8 @@ using UnityEngine;
 
 namespace UHFPS.Runtime
 {
-    /// <summary>
-    /// Represents the base class for entity health functions.
-    /// </summary>
+
+    [ThunderWire.Attributes.Summary("Lớp cơ sở (Base Class) định nghĩa hệ thống máu (Health) cho mọi thực thể có thể bị sát thương (Người chơi, Quái vật, Đồ vật...).")]
     public abstract class BaseHealthEntity : MonoBehaviour, IHealthEntity
     {
         private int Health;
@@ -67,17 +66,17 @@ namespace UHFPS.Runtime
         }
 
         /// <summary>
-        /// Override this method to define custom behavior when the entity health is changed.
+        /// Ghi đè phương thức này để định nghĩa hành động khi lượng máu bị thay đổi.
         /// </summary>
         public virtual void OnHealthChanged(int oldHealth, int newHealth) { }
 
         /// <summary>
-        /// Override this method to define custom behavior when the entity health is zero.
+        /// Ghi đè phương thức này để định nghĩa hành động khi thực thể hết máu (chết).
         /// </summary>
         public virtual void OnHealthZero() { }
 
         /// <summary>
-        /// Override this method to define custom behavior when the entity health is maximum.
+        /// Ghi đè phương thức này để định nghĩa hành động khi thực thể đạt lượng máu tối đa.
         /// </summary>
         public virtual void OnHealthMax() { }
     }

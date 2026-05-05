@@ -10,9 +10,13 @@ using static UHFPS.Runtime.ObjectiveManager;
 namespace UHFPS.Runtime
 {
     [InspectorHeader("Objective Holder")]
+    [Summary("Quản lý việc hiển thị UI của một nhiệm vụ chính và các nhiệm vụ phụ liên quan.")]
     public class ObjectiveHolder : MonoBehaviour
     {
+        [Tooltip("Transform gốc để chứa các mục tiêu phụ (Sub-Objectives) hiển thị trên UI.")]
         public Transform SubObjectives;
+
+        [Tooltip("UI Text hiển thị tên mục tiêu chính.")]
         public TMP_Text ObjectiveTitle;
 
         private ObjectiveManager manager;

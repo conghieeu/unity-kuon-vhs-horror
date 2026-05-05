@@ -1,4 +1,4 @@
-﻿using System.Linq;
+using System.Linq;
 using System.Globalization;
 using System.Collections.Generic;
 using System.Reactive.Disposables;
@@ -13,6 +13,9 @@ using UnityEditor;
 
 namespace UHFPS.Tools
 {
+    /// <summary>
+    /// Lớp tiện ích chứa các phương thức mở rộng và công cụ hỗ trợ lập trình.
+    /// </summary>
     public static class GameTools
     {
         public static void AddTo(this System.IDisposable disposable, CompositeDisposable disposables)

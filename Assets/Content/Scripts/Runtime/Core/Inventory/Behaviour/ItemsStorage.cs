@@ -5,8 +5,11 @@ using UnityEngine.Events;
 using UHFPS.Tools;
 using Newtonsoft.Json.Linq;
 
+using ThunderWire.Attributes;
+
 namespace UHFPS.Runtime
 {
+    [Summary("Quản lý hộp lưu trữ đồ (Rương/Storage), nơi người chơi có thể cất và lấy vật phẩm.")]
     public class ItemsStorage : InventoryContainer, IInteractTimed, IInteractStart, IInteractStop
     {
         [Serializable]
@@ -18,21 +21,26 @@ namespace UHFPS.Runtime
             public ItemCustomData ItemData;
         }
 
+        [Tooltip("Danh sách vật phẩm có sẵn trong Rương khi mới bắt đầu.")]
         public List<StorageItem> StoredItems = new();
 
-        [Tooltip("Interact with the container after holding the use button for a certain amount of time.")]
+        [Tooltip("Giữ nút tương tác một khoảng thời gian để mở hộp (Ví dụ: Hành động lục soát).")]
         public bool TimedOpen;
-        [Tooltip("Instantly interact with the container after searching the container once.")]
+        [Tooltip("Sau khi lục soát lần đầu, hộp sẽ có thể mở ngay lập tức ở các lần sau.")]
         public bool KeepSearched;
-        [Tooltip("Automatically arrange the stored items in the container.")]
+        [Tooltip("Tự động sắp xếp vị trí của các vật phẩm có sẵn trong rương.")]
         public bool AutoCoords;
 
         [field: SerializeField]
+        [Tooltip("Thời gian cần giữ nút để lục soát rương (Nếu TimedOpen = true).")]
         public float InteractTime { get; set; }
 
         public AudioSource AudioSource;
+        [Tooltip("Âm thanh khi đang lục soát rương.")]
         public SoundClip SearchingSound;
+        [Tooltip("Âm thanh khi mở rương.")]
         public SoundClip OpenStorageSound;
+        [Tooltip("Âm thanh khi đóng rương.")]
         public SoundClip CloseStorageSound;
 
         public UnityEvent OnStartSearch;

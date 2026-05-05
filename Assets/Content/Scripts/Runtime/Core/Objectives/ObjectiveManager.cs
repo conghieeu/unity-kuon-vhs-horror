@@ -12,21 +12,34 @@ namespace UHFPS.Runtime
 {
     [InspectorHeader("Objective Manager")]
     [Docs("https://docs.twgamesdev.com/uhfps/guides/objectives")]
+    [Summary("Quản lý toàn bộ hệ thống Nhiệm vụ (Objective) của game. Xử lý logic thêm, bớt, hoàn thành nhiệm vụ và lưu trữ vào save data.")]
     public class ObjectiveManager : Singleton<ObjectiveManager>, ISaveableCustom
     {
+        [Tooltip("File chứa dữ liệu ScriptableObject định nghĩa toàn bộ danh sách nhiệm vụ trong game.")]
         public ObjectivesAsset ObjectivesAsset;
 
         [Header("Parent Settings")]
+        [Tooltip("Transform chứa các UI hiển thị danh sách nhiệm vụ hiện tại (thường là một Vertical Layout Group).")]
         public Transform ObjectivesParent;
+
+        [Tooltip("Script xử lý hiển thị thông báo góc màn hình khi nhận/trả nhiệm vụ.")]
         public ObjectiveNotification ObjectiveNotification;
 
         [Header("Prefab Settings")]
+        [Tooltip("Prefab giao diện của một nhiệm vụ chính.")]
         public GameObject ObjectivePrefab;
+
+        [Tooltip("Prefab giao diện của một nhiệm vụ phụ (mục tiêu con).")]
         public GameObject SubObjectivePrefab;
 
         [Header("Notification Settings")]
+        [Tooltip("Thời gian hiển thị thông báo nhận/trả nhiệm vụ trên màn hình (giây).")]
         public float NotificationDuration = 3f;
+
+        [Tooltip("Text thông báo khi nhận nhiệm vụ mới (Hỗ trợ Localization).")]
         public GString ObjectiveAdded;
+
+        [Tooltip("Text thông báo khi hoàn thành nhiệm vụ (Hỗ trợ Localization).")]
         public GString ObjectiveCompleted;
 
         private readonly Dictionary<string, ObjectiveCache> objectivesCache = new();

@@ -3,23 +3,40 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+using ThunderWire.Attributes;
+
 namespace UHFPS.Runtime
 {
+    [Summary("Hệ thống giải đố Đòn bẩy (Levers). Quản lý 3 loại giải đố chính: Theo thứ tự, Theo trạng thái Bật/Tắt, và Kéo dây chuyền (Chain).")]
     public class LeversPuzzle : MonoBehaviour, ISaveable
     {
         public enum PuzzleType { LeversOrder, LeversState, LeversChain }
 
+        [Tooltip("Loại giải đố đòn bẩy: Order (Theo thứ tự), State (Bật/Tắt đúng trạng thái), Chain (Dây chuyền ảnh hưởng lẫn nhau).")]
         public PuzzleType LeversPuzzleType;
+
+        [Tooltip("Danh sách các đòn bẩy con nằm trong hệ thống này.")]
         public List<LeversPuzzleLever> Levers = new();
 
+        [Tooltip("Cấu hình khi chọn chế độ giải đố: Levers Order.")]
         public LeversPuzzleOrder LeversOrder = new();
+
+        [Tooltip("Cấu hình khi chọn chế độ giải đố: Levers State.")]
         public LeversPuzzleState LeversState = new();
+
+        [Tooltip("Cấu hình khi chọn chế độ giải đố: Levers Chain.")]
         public LeversPuzzleChain LeversChain = new();
 
+        [Tooltip("Tốc độ animation gạt đòn bẩy.")]
         public float LeverSwitchSpeed = 2.5f;
 
+        [Tooltip("Sự kiện gọi ra khi giải đố thành công.")]
         public UnityEvent OnLeversCorrect;
+
+        [Tooltip("Sự kiện gọi ra khi giải đố thất bại (Sai thứ tự/Trạng thái).")]
         public UnityEvent OnLeversWrong;
+
+        [Tooltip("Sự kiện gọi ra mỗi khi gạt bất kỳ đòn bẩy nào (Truyền ID và trạng thái bật/tắt).")]
         public UnityEvent<int, bool> OnLeverChanged;
 
         public LeversPuzzleType CurrentLeverPuzzle

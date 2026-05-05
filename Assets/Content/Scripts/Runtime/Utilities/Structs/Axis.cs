@@ -1,5 +1,8 @@
 namespace UHFPS.Runtime
 {
+    /// <summary>
+    /// Định nghĩa các trục tọa độ (X, Y, Z) và hướng (Âm/Dương).
+    /// </summary>
     public enum Axis
     {
         /// <summary>Positive X Axis (1, 0, 0)</summary>

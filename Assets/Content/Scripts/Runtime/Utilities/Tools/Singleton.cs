@@ -1,9 +1,13 @@
-﻿using UnityEngine;
+using UnityEngine;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
 
+/// <summary>
+/// Lớp cơ sở cho các thành phần Singleton.
+/// </summary>
 [DisallowMultipleComponent]
+[ThunderWire.Attributes.Summary("Lớp cơ sở mẫu thiết kế Singleton cho MonoBehaviour.")]
 public class Singleton<T> : MonoBehaviour where T : MonoBehaviour
 {
     /// <summary>

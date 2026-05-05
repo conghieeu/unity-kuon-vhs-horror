@@ -2,9 +2,12 @@ using System;
 using System.Collections;
 using UnityEngine;
 
+using ThunderWire.Attributes;
+
 namespace UHFPS.Runtime
 {
     [Serializable]
+    [Summary("Lớp cơ sở (Base Class) cho các Module quản lý tính năng gắn kèm trong GameManager (Cutscene, Rain, v.v.).")]
     public abstract class ManagerModule
     {
         public GameManager GameManager { get; internal set; }

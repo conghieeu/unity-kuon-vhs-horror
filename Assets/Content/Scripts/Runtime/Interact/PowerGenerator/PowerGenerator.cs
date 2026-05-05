@@ -11,33 +11,63 @@ using UHFPS.Tools;
 
 namespace UHFPS.Runtime
 {
+    [Summary("Máy phát điện cung cấp năng lượng cho các thiết bị IPowerConsumer dựa trên mức tiêu thụ nhiên liệu (Fuel).")]
     public class PowerGenerator : MonoBehaviour, ISaveable
     {
+        [Tooltip("Dung lượng nhiên liệu tối đa (Lít).")]
         public float MaxFuelLiters = 10f;
+
+        [Tooltip("Dung lượng nhiên liệu hiện tại có trong máy.")]
         public float CurrentFuelLiters = 10f;
 
+        [Tooltip("Công tắc để khởi động/tắt máy phát.")]
         public SimpleSwitcher Switcher;
+
+        [Tooltip("Hiệu ứng hạt (Particle) khói xả ra khi máy đang chạy.")]
         public ParticleSystem ExhaustParticles;
+
+        [Tooltip("Thanh trượt (UI) hiển thị mức nhiên liệu còn lại.")]
         public Slider FuelStatus;
 
         [Range(0.01f, 1f)]
+        [Tooltip("Hiệu suất của máy phát điện.")]
         public float GeneratorEfficiency = 0.4f;
+
+        [Tooltip("Năng suất tỏa nhiệt của nhiên liệu (Độ hao hụt điện).")]
         public float FuelCalorificValue = 35f;
+
+        [Tooltip("Lượng nhiên liệu cơ bản (Lít/Giờ) tiêu thụ chỉ để duy trì động cơ (Không tính tải).")]
         public float MotorFuelDrainPerHour = 0.1f;
 
         [RequireInterface(typeof(IPowerConsumer))]
+        [Tooltip("Danh sách các thiết bị sử dụng điện tĩnh (Gắn cứng trên Scene).")]
         public List<MonoBehaviour> PowerConsumers = new();
 
+        [Tooltip("Nguồn âm thanh dùng để trộn (Crossfade).")]
         public AudioSource AudioSourceA;
+
+        [Tooltip("Nguồn âm thanh dùng để trộn (Crossfade).")]
         public AudioSource AudioSourceB;
+
+        [Tooltip("Thời gian trộn (Chuyển dần âm lượng) giữa các âm thanh của động cơ.")]
         public float BlendTime = 0.2f;
 
+        [Tooltip("Âm thanh lặp liên tục khi động cơ đang chạy.")]
         public SoundClip MotorLoop;
+
+        [Tooltip("Âm thanh khi bắt đầu khởi động máy.")]
         public SoundClip MotorStart;
+
+        [Tooltip("Âm thanh khi máy dừng hoạt động.")]
         public SoundClip MotorEnd;
 
+        [Tooltip("Sự kiện gọi ra khi Máy Phát khởi động.")]
         public UnityEvent OnGeneratorStart;
+
+        [Tooltip("Sự kiện gọi ra khi Máy Phát tắt.")]
         public UnityEvent OnGeneratorEnd;
+
+        [Tooltip("Sự kiện gọi ra khi Máy Phát cạn kiệt nhiên liệu.")]
         public UnityEvent OnOutOfFuel;
 
         private readonly CompositeDisposable disposables = new();

@@ -1,9 +1,13 @@
 using UnityEngine;
 
+using ThunderWire.Attributes;
+
 namespace UHFPS.Runtime
 {
+    [Summary("Gắn vào các vùng (Trigger) hoặc lỗ trên Mê cung để định nghĩa chức năng của lỗ đó.")]
     public class MazePuzzleTrigger : MonoBehaviour, IInteractStart
     {
+        [Tooltip("Chức năng của vùng Trigger này (Thả bi, Lấy lại bi, Rớt xuống lỗ sai, Rơi vào đích).")]
         public MazePuzzle.TriggerType TriggerType = MazePuzzle.TriggerType.PutBall;
 
         private MazePuzzle mazePuzzle;

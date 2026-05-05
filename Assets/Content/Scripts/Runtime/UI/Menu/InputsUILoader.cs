@@ -12,17 +12,24 @@ using static UHFPS.Input.InputManager;
 namespace UHFPS.Runtime
 {
     [InspectorHeader("Inputs UI Loader")]
+    [Summary("Tự động tải và hiển thị danh sách các phím điều khiển từ InputManager lên giao diện người dùng.")]
     public class InputsUILoader : MonoBehaviour
     {
+        [Tooltip("Transform cha chứa danh sách các phần tử gán phím.")]
         public Transform BindingsParent;
+        [Tooltip("Prefab cho mỗi dòng gán phím.")]
         public GameObject BindingPrefab;
 
         [Header("Texts")]
+        [Tooltip("Text hiển thị khi đang chờ người chơi nhấn phím mới.")]
         public string RebindText = "Press Button";
+        [Tooltip("Text hiển thị khi hành động chưa được gán phím.")]
         public string NoneText = "None";
 
         [Header("Colors")]
+        [Tooltip("Màu sắc bình thường của dòng gán phím.")]
         public Color RebindNormalColor = Color.white;
+        [Tooltip("Màu sắc cảnh báo khi hành động chưa được gán phím.")]
         public Color RebindNoneColor = Color.red;
 
         private InputManager input;

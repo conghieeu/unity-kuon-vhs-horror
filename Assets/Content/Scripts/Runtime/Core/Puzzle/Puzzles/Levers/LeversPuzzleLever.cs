@@ -2,27 +2,48 @@ using System.Collections;
 using UnityEngine;
 using UHFPS.Tools;
 
+using ThunderWire.Attributes;
+
 namespace UHFPS.Runtime
 {
     [RequireComponent(typeof(AudioSource))]
+    [Summary("Thành phần điều khiển vật lý và logic của một Đòn bẩy con trong hệ thống Levers Puzzle.")]
     public class LeversPuzzleLever : MonoBehaviour, IInteractStart
     {
         private LeversPuzzle leversPuzzle;
 
+        [Tooltip("Mô hình Transform của đòn bẩy sẽ bị xoay khi người chơi gạt.")]
         public Transform Target;
+
+        [Tooltip("Transform gốc đóng vai trò làm tâm xoay và giới hạn xoay.")]
         public Transform LimitsObject;
+
+        [Tooltip("Giới hạn góc xoay tối thiểu và tối đa của đòn bẩy.")]
         public MinMax SwitchLimits;
+
+        [Tooltip("Trục hướng tới của đòn bẩy (Thường là Z).")]
         public Axis LimitsForward = Axis.Z;
+
+        [Tooltip("Trục pháp tuyến của đòn bẩy (Thường là Y).")]
         public Axis LimitsNormal = Axis.Y;
 
+        [Tooltip("Âm thanh khi gạt đòn bẩy lên (Bật).")]
         public SoundClip LeverOnSound;
+
+        [Tooltip("Âm thanh khi gạt đòn bẩy xuống (Tắt).")]
         public SoundClip LeverOffSound;
 
+        [Tooltip("Đèn báo hiệu tích hợp ngay trên đòn bẩy.")]
         public Light LeverLight;
+
+        [Tooltip("Mesh Renderer của đèn để đổi màu Emission.")]
         public RendererMaterial LightRenderer;
         public string EmissionKeyword = "_EMISSION";
 
+        [Tooltip("Sử dụng đèn báo hiệu tích hợp trên đòn bẩy này.")]
         public bool UseLight;
+
+        [Tooltip("Trạng thái Bật/Tắt hiện tại của đòn bẩy (Có thể đánh dấu để gạt mặc định lúc đầu).")]
         public bool LeverState;
 
         private AudioSource audioSource;

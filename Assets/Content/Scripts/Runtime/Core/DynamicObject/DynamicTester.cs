@@ -7,7 +7,8 @@ using UHFPS.Runtime;
 using TMPro;
 using static UHFPS.Runtime.DynamicObject;
 
-public class DynamicTester : MonoBehaviour
+    [ThunderWire.Attributes.Summary("Dùng để kiểm tra và giả lập các thông số chuyển động của Dynamic Object trong Editor.")]
+    public class DynamicTester : MonoBehaviour
 {
     public Transform target;
     public TransformType transformType;

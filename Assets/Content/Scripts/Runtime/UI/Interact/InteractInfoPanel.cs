@@ -18,13 +18,18 @@ namespace UHFPS.Runtime
     }
 
     [InspectorHeader("Interact Info Panel")]
+    [Summary("Bảng hiển thị thông tin tương tác khi người chơi nhìn vào một vật thể có thể tương tác (IInteractable).")]
     public class InteractInfoPanel : MonoBehaviour
     {
+        [Tooltip("CanvasGroup để xử lý việc fade hiện/ẩn bảng.")]
         public CanvasGroup CanvasGroup;
+        [Tooltip("Text hiển thị tên của vật thể đang tương tác.")]
         public TMP_Text InteractName;
+        [Tooltip("Danh sách các nút bấm tương tác khả dụng.")]
         public InteractButton[] InteractButtons;
 
         [Header("Fading")]
+        [Tooltip("Tốc độ fade hiện/ẩn.")]
         public float FadeSpeed = 5f;
 
         private BindingPath[] bindingPaths;

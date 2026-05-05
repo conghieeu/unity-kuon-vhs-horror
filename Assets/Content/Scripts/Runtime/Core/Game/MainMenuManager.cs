@@ -6,10 +6,16 @@ using ThunderWire.Attributes;
 namespace UHFPS.Runtime
 {
     [InspectorHeader("Main Menu Manager")]
+    [Summary("Quản lý logic màn hình Main Menu, bao gồm chuyển cảnh (Load Scene) sang New Game và Quit Game.")]
     public class MainMenuManager : MonoBehaviour
     {
+        [Tooltip("Tham chiếu đến Component làm mờ nền (Background Fader).")]
         public BackgroundFader BackgroundFader;
+
+        [Tooltip("Tên Scene sẽ được Load khi người chơi chọn New Game.")]
         public string NewGameSceneName;
+
+        [Tooltip("Có xoá toàn bộ dữ liệu Save cũ khi bắt đầu New Game không?")]
         public bool NewGameRemoveSaves;
 
         public void NewGame()

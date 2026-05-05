@@ -402,6 +402,13 @@ namespace ThunderWire.Editors
                         monoScript = MonoScript.FromScriptableObject(scriptableObject);
 
                     DocsAttribute docsAttribute = script.GetType().GetCustomAttribute<DocsAttribute>(true);
+                    SummaryAttribute summaryAttribute = script.GetType().GetCustomAttribute<SummaryAttribute>(true);
+
+                    if (summaryAttribute != null && string.IsNullOrEmpty(title.tooltip))
+                    {
+                        title.tooltip = summaryAttribute.Summary;
+                    }
+
                     Event e = Event.current;
 
                     Rect pingRect = rect;

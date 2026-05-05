@@ -9,27 +9,41 @@ using ThunderWire.Attributes;
 namespace UHFPS.Runtime
 {
     [InspectorHeader("CCTV Camera System")]
+    [Summary("Hệ thống quản lý cụm Camera An Ninh (CCTV), cho phép người chơi xem và điều khiển góc quay trên màn hình.")]
     public class CCTV_CameraSystem : MonoBehaviour
     {
         public enum CameraFeedEnum { NoFeed, LiveFeed, StaticFeed }
         public enum CameraPivotEnum { Static, Vertical, Horizontal, Both }
 
+        [Tooltip("Chế độ hiển thị màn hình (LiveFeed = Thời gian thực, StaticFeed = Chỉ ảnh tĩnh chụp 1 lần).")]
         public CameraFeedEnum CameraFeed = CameraFeedEnum.NoFeed;
+
+        [Tooltip("Chế độ cho phép xoay camera.")]
         public CameraPivotEnum CameraPivot = CameraPivotEnum.Static;
 
         [Header("Camera Setup")]
+        [Tooltip("Hiệu ứng hậu kỳ (Post Processing) gắn trên màn hình CCTV.")]
         public Volume CCTVEffects;
+
+        [Tooltip("Danh sách các Camera thuộc hệ thống này.")]
         public CCTV_Camera[] Cameras;
 
         [Header("Camera Settings")]
+        [Tooltip("Tốc độ mờ đen (Fade) khi chuyển đổi sang xem camera.")]
         public float FadeViewSpeed = 3f;
+
+        [Tooltip("Độ nhạy khi người chơi dùng chuột xoay camera.")]
         public float CameraSensitivity = 0.5f;
 
         [Header("Camera Monitor")]
+        [Tooltip("Màn hình CRT nhận tín hiệu đầu ra của Camera.")]
         public CRTSimpleMonitor Monitor;
+
+        [Tooltip("Kích thước độ phân giải xuất ra (RenderTexture).")]
         public Vector2Int OutputTextureSize = new Vector2Int(500, 350);
 
         [Header("Enter Condition")]
+        [Tooltip("Điều kiện cần (Ví dụ: Cần bật nguồn điện) để có thể xem Camera.")]
         public ReflectionField Condition;
 
         private PlayerPresenceManager playerPresence;

@@ -2,8 +2,11 @@ using System.Collections;
 using UnityEngine;
 using UHFPS.Rendering;
 
+using ThunderWire.Attributes;
+
 namespace UHFPS.Runtime
 {
+    [Summary("Module thuộc GameManager, quản lý hiệu ứng hạt mưa (Raindrop) bám trên Camera thông qua URP Post Processing.")]
     public class RainingModule : ManagerModule
     {
         public override string Name => "Raining";

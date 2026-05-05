@@ -3,8 +3,11 @@ using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.Playables;
 
+using ThunderWire.Attributes;
+
 namespace UHFPS.Runtime
 {
+    [Summary("Module thuộc GameManager, chịu trách nhiệm xử lý logic chạy các Cutscene (Đoạn phim cắt cảnh) thông qua Timeline/PlayableDirector.")]
     public class CutsceneModule : ManagerModule
     {
         private PlayableDirector currentCutscene;

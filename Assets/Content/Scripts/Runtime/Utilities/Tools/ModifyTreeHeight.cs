@@ -7,18 +7,26 @@ using UnityEditor;
 
 namespace UHFPS.Runtime
 {
+    [ThunderWire.Attributes.Summary("Công cụ chỉnh sửa chiều cao và chiều rộng của cây trên Terrain hàng loạt.")]
     public class ModifyTreeHeight : MonoBehaviour
     {
+        [Tooltip("Chỉ chỉnh sửa loại cây cụ thể này (Prefab). Nếu để trống sẽ áp dụng cho tất cả.")]
         public GameObject SpecificTreeFilter;
 
         [Header("Settings")]
+        [Tooltip("Bật/tắt việc thay đổi chiều cao.")]
         public bool ChangeHeight = false;
+        [Tooltip("Tỉ lệ chiều cao mới.")]
         public float NewHeightScale = 1f;
+        [Tooltip("Bật/tắt việc thay đổi chiều rộng.")]
         public bool ChangeWidth = false;
+        [Tooltip("Tỉ lệ chiều rộng mới.")]
         public float NewWidthScale = 1f;
 
         [Header("Random")]
+        [Tooltip("Sử dụng kích thước ngẫu nhiên trong khoảng Min/Max.")]
         public bool UseRandomSize = false;
+        [Tooltip("Khoảng kích thước ngẫu nhiên.")]
         public MinMax RandomSize = new(1f, 2f);
 
         public void ModifyTerrain()

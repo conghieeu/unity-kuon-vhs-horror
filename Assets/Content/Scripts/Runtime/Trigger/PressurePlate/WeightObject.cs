@@ -1,16 +1,20 @@
 using System.Collections.Generic;
 using UnityEngine;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime
 {
+    [Summary("Thành phần gắn vào vật thể để định nghĩa trọng lượng, dùng để tương tác với PressurePlateTrigger.")]
     public class WeightObject : MonoBehaviour
     {
+        [Tooltip("Trọng lượng của vật thể (nếu không dùng Rigidbody Mass).")]
         public float ObjectWeight;
+        [Tooltip("Tổng trọng lượng của các vật thể khác đang đè lên trên vật thể này.")]
         public float StackedWeight;
 
-        [Tooltip("Use the rigidbody mass instead of the custom object weight.")]
+        [Tooltip("Sử dụng khối lượng (Mass) của Rigidbody thay vì ObjectWeight tùy chỉnh.")]
         public bool UseRigidbodyMass;
-        [Tooltip("Allow mass stacking when an object is added on top of another object.")]
+        [Tooltip("Cho phép cộng dồn trọng lượng khi có một vật thể khác đè lên trên vật thể này.")]
         public bool AllowStacking;
 
         private PressurePlateTrigger pressurePlate;

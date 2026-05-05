@@ -1,15 +1,20 @@
 using System;
 using System.IO;
+using ThunderWire.Attributes;
 using System.Collections;
 using UnityEngine;
 using UHFPS.Input;
 
 namespace UHFPS.Tools
 {
+    [Summary("Thành phần hỗ trợ chụp ảnh màn hình bằng phím tắt và lưu vào thư mục định trước.")]
     public class ScreenshotCapturer : MonoBehaviour
     {
+        [Tooltip("Hành động Input để chụp ảnh.")]
         public string ScreenshotAction = "input.action.screenshot";
+        [Tooltip("Thư mục lưu ảnh (tính từ đường dẫn Application.dataPath).")]
         public string ScreenshotDirectory = "/Screenshots/";
+        [Tooltip("Hệ số nhân độ phân giải ảnh chụp.")]
         public int ResolutionMultiplier = 1;
 
         private int screenshotCounter = 0;

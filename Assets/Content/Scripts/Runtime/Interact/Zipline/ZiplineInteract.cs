@@ -4,8 +4,10 @@ using ThunderWire.Attributes;
 namespace UHFPS.Runtime
 {
     [InspectorHeader("Zipline Interact")]
+    [Summary("Quản lý tương tác để bắt đầu đu dây Zipline. Gắn trên Collider điểm bắt đầu của Zipline.")]
     public class ZiplineInteract : MonoBehaviour, IStateInteract
     {
+        [Tooltip("Tham chiếu đến hệ thống ZiplineBuilder cấu hình đường cáp này.")]
         public ZiplineBuilder ZiplineBuilder;
 
         public StateParams OnStateInteract()

@@ -17,6 +17,7 @@ using ThunderWire.Attributes;
 namespace UHFPS.Runtime
 {
     [Docs("https://docs.twgamesdev.com/uhfps/guides/save-load-manager")]
+    [Summary("Trái tim của hệ thống Lưu/Tải game. Thu thập dữ liệu từ tất cả các object mang interface ISaveable và xuất ra file JSON, cũng như đọc và gán lại trạng thái khi load game.")]
     public class SaveGameManager : Singleton<SaveGameManager>
     {
         #region Structures
@@ -88,14 +89,22 @@ namespace UHFPS.Runtime
         public static string LoadSceneName;
         public static string LoadFolderName;
 
+        [Tooltip("Asset chứa danh sách các Prefab có thể được sinh ra (Instantiated) và cần được lưu trữ.")]
         public ObjectReferences ObjectReferences;
+
+        [Tooltip("UI Group hiển thị icon đang lưu game.")]
         public CanvasGroup SavingIcon;
+
+        [Tooltip("Bật log để gỡ lỗi quá trình lưu/tải.")]
         public bool Debugging;
 
         public event Action<string> OnGameSaved;
         public event Action OnGameLoaded;
 
+        [Tooltip("Danh sách các đối tượng có sẵn trong scene cần lưu trạng thái.")]
         public List<SaveablePair> worldSaveables = new();
+
+        [Tooltip("Danh sách các đối tượng được sinh ra trong lúc chơi cần lưu trạng thái.")]
         public List<RuntimeSaveable> runtimeSaveables = new();
         private HashSet<string> destroyedTokens = new();
 

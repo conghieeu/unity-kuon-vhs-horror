@@ -6,6 +6,7 @@ namespace UHFPS.Runtime
 {
     [InspectorHeader("Autosave Trigger")]
     [HelpBox("When the player walks through a trigger that has this component attached. The game will automatically be saved.")]
+    [Summary("Tự động lưu game khi người chơi bước vào vùng Trigger.")]
     public class AutosaveTrigger : MonoBehaviour, ISaveable
     {
         private bool isSaved;

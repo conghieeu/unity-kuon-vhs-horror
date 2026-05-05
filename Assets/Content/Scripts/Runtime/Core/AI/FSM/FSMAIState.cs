@@ -5,8 +5,11 @@ using UHFPS.Tools;
 using static UnityEngine.Object;
 using static UHFPS.Runtime.NPCStateMachine;
 
+using ThunderWire.Attributes;
+
 namespace UHFPS.Runtime
 {
+    [Summary("Lớp cơ sở (Base Class) cho mọi trạng thái (State) của AI trong hệ thống Máy trạng thái hữu hạn (FSM).")]
     public class FSMAIState : FSMState
     {
         public Transition[] Transitions { get; private set; }

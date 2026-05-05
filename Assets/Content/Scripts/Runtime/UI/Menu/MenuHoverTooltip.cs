@@ -7,10 +7,14 @@ using TMPro;
 namespace UHFPS.Runtime
 {
     [InspectorHeader("Menu Hover Tooltip")]
+    [Summary("Hiển thị một thông báo hướng dẫn (Tooltip) khi người chơi di chuột qua một nút bấm trong menu.")]
     public class MenuHoverTooltip : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
+        [Tooltip("Nút bấm mục tiêu.")]
         public Button ButtonHover;
+        [Tooltip("Text UI hiển thị nội dung hướng dẫn.")]
         public TMP_Text TooltipText;
+        [Tooltip("Nội dung hướng dẫn.")]
         public GString TooltipMessage;
 
         private bool isHover;

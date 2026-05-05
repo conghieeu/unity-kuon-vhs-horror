@@ -4,14 +4,18 @@ using UnityEngine;
 using Newtonsoft.Json.Linq;
 using UnityEngine.Rendering.Universal;
 
+using ThunderWire.Attributes;
+
 namespace UHFPS.Runtime
 {
     [Serializable]
+    [Summary("Tuỳ chọn chế độ Khử răng cưa (Antialiasing) của Camera URP.")]
     // 0 - None, 1 - FXAA, 2 - SMAA, 3 - TMAA
     public class OptionAntialiasingMode : OptionModule
     {
         public override string ContextName => "URP/Antialiasing Mode";
 
+        [Tooltip("Danh sách các chế độ Khử răng cưa.")]
         public GString[] AntialiasingModes =
         {
             new("*None", ""),
@@ -52,12 +56,14 @@ namespace UHFPS.Runtime
     }
 
     [Serializable]
+    [Summary("Tuỳ chọn chất lượng Khử răng cưa (Chỉ áp dụng cho TAA và SMAA).")]
     // 0 - Low, 1 - Medium, 2 - High
     // Only TAA, SMAA
     public class OptionAntialiasingQuality : OptionModule
     {
         public override string ContextName => "URP/Antialiasing Quality";
 
+        [Tooltip("Danh sách các mức chất lượng khử răng cưa.")]
         public GString[] QualityLevels =
 {
             new("*VeryLow", ""),
@@ -163,11 +169,13 @@ namespace UHFPS.Runtime
     }
 
     [Serializable]
+    [Summary("Tuỳ chọn Khoảng cách đổ bóng (Shadow Distance) của URP.")]
     // 0 - 0m (Disabled), 1 - 25m (Very Low), 2 - 40m (Low), 3 - 55m (Medium), 4 - 70m (High), 5 - 85m (Very High), 6 - 100m (Max)
     public class OptionShadowDistance : OptionModule
     {
         public override string ContextName => "URP/ShadowDistance";
 
+        [Tooltip("Danh sách các mức khoảng cách đổ bóng (theo mét).")]
         public NameValue<float>[] ShadowDistances =
         {
             new("*Disabled", 0f),

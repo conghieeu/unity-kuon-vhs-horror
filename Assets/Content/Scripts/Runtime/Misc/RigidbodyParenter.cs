@@ -6,10 +6,13 @@ namespace UHFPS.Runtime
 {
     [InspectorHeader("Rigidbody Parenter")]
     [HelpBox("Attach this component to a movable object to which interactable objects should be parented. Allowed objects are only DraggableItem or InteractableItem.")]
+    [Summary("Tự động gán các vật thể tương tác làm con của vật thể này khi chúng chạm vào bề mặt phía trên của nó.")]
     public class RigidbodyParenter : MonoBehaviour
     {
         [Space]
+        [Tooltip("Danh sách các vật thể đang được gán làm con.")]
         public List<GameObject> ParentedObjects = new();
+        [Tooltip("Đảo ngược hướng nhận diện 'phía trên'.")]
         public bool FlipUP = false;
 
         private void OnCollisionStay(Collision collision)

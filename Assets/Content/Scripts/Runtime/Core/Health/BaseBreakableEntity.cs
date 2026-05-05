@@ -4,8 +4,9 @@ using UnityEngine;
 namespace UHFPS.Runtime
 {
     /// <summary>
-    /// Represents the base class for breakable entity health functions.
+    /// Lớp cơ sở định nghĩa các chức năng phá vỡ (Breakable) cho một thực thể.
     /// </summary>
+    [ThunderWire.Attributes.Summary("Lớp cơ sở định nghĩa các chức năng phá vỡ (Breakable) cho một thực thể (Ví dụ: Thùng gỗ, Cửa kính).")]
     public abstract class BaseBreakableEntity : SaveableBehaviour, IBreakableEntity
     {
         private int Health;
@@ -50,12 +51,12 @@ namespace UHFPS.Runtime
         }
 
         /// <summary>
-        /// Override this method to define custom behavior when the breakable entity is broken.
+        /// Ghi đè phương thức này để tự định nghĩa hành động khi thực thể bị vỡ.
         /// </summary>
         public virtual void OnBreak() { }
 
         /// <summary>
-        /// Override this method to define custom behavior when the entity health is changed.
+        /// Ghi đè phương thức này để tự định nghĩa hành động khi lượng máu của thực thể thay đổi.
         /// </summary>
         public virtual void OnHealthChanged(int oldHealth, int newHealth) { }
     }

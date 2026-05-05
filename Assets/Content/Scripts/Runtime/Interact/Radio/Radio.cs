@@ -3,9 +3,11 @@ using System.Collections;
 using UnityEngine;
 using Newtonsoft.Json.Linq;
 using UHFPS.Tools;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime
 {
+    [Summary("Quản lý Radio dò đài, hỗ trợ nhiều kênh (Channel) tương ứng với từng tần số/vị trí dò (Tuner).")]
     public class Radio : MonoBehaviour, ISaveable
     {
         public enum ChannelTypeEnum { Once, Loop }
@@ -24,17 +26,34 @@ namespace UHFPS.Runtime
             public float playbackTime = 0f;
         }
 
+        [Tooltip("Danh sách cấu hình các đài phát (Tần số, Âm thanh, v.v.).")]
         public RadioChannel[] RadioChannels;
 
+        [Tooltip("Thành phần xử lý tương tác núm vặn dò đài.")]
         public RadioTuner RadioTuner;
+
+        [Tooltip("Thanh kim (Rod) chỉ định vị trí rà đài.")]
         public Transform TunerRod;
+
+        [Tooltip("Trục không gian mà thanh kim di chuyển.")]
         public Axis TunerMoveAxis;
+
+        [Tooltip("Giới hạn di chuyển tối thiểu/tối đa của thanh kim.")]
         public MinMax TunerLimits;
+
+        [Tooltip("Khoảng dung sai tần số (Range) mà một kênh phát sóng có thể được nhận.")]
         public float TuneRange = 0.005f;
+
+        [Tooltip("Tên tham số làm sáng màn hình Radio.")]
         public string EmissionKeyword = "_EMISSION";
 
+        [Tooltip("Nguồn phát âm thanh chính của Radio.")]
         public AudioSource AudioSource;
+
+        [Tooltip("Âm thanh nhiễu (Static) khi không có tín hiệu đài.")]
         public SoundClip RadioStatic;
+
+        [Tooltip("Danh sách tiếng lách cách rít lên ngẫu nhiên khi vặn núm dò đài.")]
         public AudioClip[] TuneSounds;
         [Range(0f, 1f)] public float TuneVolume = 1f;
 

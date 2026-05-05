@@ -30,30 +30,43 @@ namespace UHFPS.Runtime
     }
 
     [Docs("https://docs.twgamesdev.com/uhfps/guides/inventory")]
+    [Summary("Hệ thống Quản lý Túi đồ (Inventory) dạng lưới (Grid-based). Bao gồm quản lý vật phẩm, phím tắt, hòm đồ và các tương tác vật phẩm.")]
     public partial class Inventory : Singleton<Inventory>, ISaveableCustom
     {
         #region Structures
         [Serializable]
         public sealed class Settings
         {
+            [Tooltip("Số hàng của túi đồ.")]
             public ushort rows = 5;
+            [Tooltip("Số cột của túi đồ.")]
             public ushort columns = 5;
+            [Tooltip("Kích thước mỗi ô (pixels).")]
             public float cellSize = 100f;
+            [Tooltip("Khoảng cách giữa các ô (pixels).")]
             public float spacing = 10f;
+            [Tooltip("Thời gian trễ khi bắt đầu kéo (Drag) vật phẩm.")]
             public float dragTime = 0.05f;
+            [Tooltip("Thời gian trễ khi xoay vật phẩm.")]
             public float rotateTime = 0.05f;
+            [Tooltip("Lực văng ra khi vứt vật phẩm xuống đất.")]
             public float dropStrength = 10f;
         }
 
         [Serializable]
         public sealed class SlotSettings
         {
+            [Tooltip("Prefab của ô chứa đồ (Slot).")]
             public GameObject slotPrefab;
+            [Tooltip("Prefab của icon vật phẩm (Item) khi nằm trong túi đồ.")]
             public GameObject slotItemPrefab;
 
             [Header("Slot Textures")]
+            [Tooltip("Khung viền ô bình thường.")]
             public Sprite normalSlotFrame;
+            [Tooltip("Khung viền ô bị khóa.")]
             public Sprite lockedSlotFrame;
+            [Tooltip("Hình ảnh thay thế khi vật phẩm không có icon.")]
             public Sprite missingItemSprite;
 
             [Header("Slot Colors")]
@@ -188,25 +201,39 @@ namespace UHFPS.Runtime
         public InventoryDatabase inventoryDatabase;
 
         // references
+        [Tooltip("Transform chứa UI vùng chứa đồ (Container) khi mở rương, tủ...")]
         public Transform inventoryContainers;
+        [Tooltip("GridLayoutGroup quản lý hiển thị các ô đồ.")]
         public GridLayoutGroup slotsLayoutGrid;
+        [Tooltip("Transform chứa các Game Object là icon vật phẩm.")]
         public Transform itemsTransform;
 
         // control contexts
+        [Tooltip("Danh sách thông tin phím điều khiển (Mở túi, Sử dụng, Xoay...).")]
         public ControlsContext[] ControlsContexts;
 
         // settings
+        [Tooltip("Cấu hình chung của Inventory (số hàng, cột, kích thước ô...).")]
         public Settings settings;
+        [Tooltip("Cấu hình hiển thị ô đồ và màu sắc.")]
         public SlotSettings slotSettings;
+        [Tooltip("Cấu hình giao diện khi mở Container (hòm, rương).")]
         public ContainerSettings containerSettings;
+        [Tooltip("Cấu hình bảng thông tin vật phẩm (Tên, mô tả).")]
         public ItemInfo itemInfo;
+        [Tooltip("Cấu hình các ô phím tắt (1, 2, 3, 4).")]
         public ShortcutSettings shortcutSettings;
+        [Tooltip("Cấu hình bảng nhắc nhở gán phím tắt hoặc kết hợp.")]
         public PromptSettings promptSettings;
+        [Tooltip("Cấu hình Menu ngữ cảnh khi click chuột phải (Sử dụng, Kiểm tra, Vứt...).")]
         public ContextMenu contextMenu;
+        [Tooltip("Cấu hình âm thanh túi đồ.")]
         public Sounds sounds;
 
         // features
+        [Tooltip("Danh sách vật phẩm có sẵn khi mới bắt đầu game.")]
         public List<StartingItem> startingItems = new();
+        [Tooltip("Cấu hình khả năng mở rộng thêm ô đồ (VD: mua thêm balo).")]
         public ExpandableSlots expandableSlots;
 
         // inventory

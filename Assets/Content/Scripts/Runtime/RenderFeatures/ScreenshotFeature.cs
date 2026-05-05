@@ -1,5 +1,6 @@
 using System.IO;
 using UnityEngine;
+using ThunderWire.Attributes;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.Rendering.RenderGraphModule;
@@ -7,6 +8,7 @@ using UnityEngine.Experimental.Rendering;
 
 namespace UHFPS.Runtime.Rendering
 {
+    [Summary("Render Feature hỗ trợ việc chụp ảnh màn hình không đồng bộ (Async) từ GPU và lưu xuống ổ đĩa.")]
     public class ScreenshotFeature : ScriptableRendererFeature
     {
         private class AsyncReadbackPassData
@@ -18,7 +20,9 @@ namespace UHFPS.Runtime.Rendering
             public int height;
         }
 
+        [Tooltip("Thời điểm thực hiện render pass.")]
         public RenderPassEvent RenderPassEvent = RenderPassEvent.BeforeRenderingPostProcessing;
+        [Tooltip("Kích thước ảnh đầu ra.")]
         public Vector2Int OutputImageSize = new(640, 360);
 
         public static ScreenshotFeature Instance { get; private set; }

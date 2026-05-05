@@ -5,9 +5,11 @@ using Newtonsoft.Json.Linq;
 using UnityEngine.Events;
 using UnityEngine;
 using UHFPS.Tools;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime
 {
+    [Summary("Quản lý một bóng đèn có thể tương tác (bật/tắt) bằng tay, hỗ trợ tiêu thụ điện (PowerConsumer).")]
     public class InteractableLight : MonoBehaviour, IPowerConsumer, IInteractStart, ISaveable
     {
         public sealed class LightComponent
@@ -18,23 +20,43 @@ namespace UHFPS.Runtime
         }
 
         [field: SerializeField]
+        [Tooltip("Lượng điện năng (Watt) tiêu thụ khi được bật (Nếu có máy phát điện).")]
         public float ConsumeWattage { get; set; }
 
+        [Tooltip("Trạng thái hiện tại của đèn (Đang bật hay tắt).")]
         public bool IsSwitchedOn;
+
+        [Tooltip("Cần có hệ thống điện (Máy phát điện) để hoạt động.")]
         public bool UseEnergy;
 
+        [Tooltip("Danh sách các Component Light (Nguồn sáng) vật lý.")]
         public List<Light> LightComponents = new();
+
+        [Tooltip("Bật chế độ mờ từ từ (Fade) khi bật/tắt đèn.")]
         public bool SmoothLight;
+
+        [Tooltip("Thời gian (giây) để đèn mờ đi hoặc sáng lên hoàn toàn.")]
         public float SmoothDuration;
 
+        [Tooltip("Material phát sáng của bóng đèn.")]
         public RendererMaterial LightMaterial;
+
+        [Tooltip("Tự động bật/tắt hiệu ứng phát sáng (Emission) của bóng đèn.")]
         public bool EnableEmission = true;
+
+        [Tooltip("Tên biến tham số phát sáng trong Material (thường là _EMISSION).")]
         public string EmissionKeyword = "_EMISSION";
 
+        [Tooltip("Âm thanh khi bật đèn.")]
         public SoundClip LightSwitchOn;
+
+        [Tooltip("Âm thanh khi tắt đèn.")]
         public SoundClip LightSwitchOff;
 
+        [Tooltip("Sự kiện kích hoạt khi đèn được bật.")]
         public UnityEvent OnLightOn;
+
+        [Tooltip("Sự kiện kích hoạt khi đèn bị tắt.")]
         public UnityEvent OnLightOff;
 
         private LightComponent[] lightComponents;

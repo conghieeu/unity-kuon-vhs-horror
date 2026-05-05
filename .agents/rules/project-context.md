@@ -21,23 +21,27 @@ Dự án được xây dựng trên Unity Game Engine, sử dụng kiến trúc 
 
 ## 2. Folder Structure
 
-Cấu trúc dự án nằm gọn trong `Assets/_Project/`.
+Dự án được phân bổ trong thư mục `Assets/` với cấu trúc chính như sau:
 
-- `Animations/`, `Audio/`, `Fonts/`, `Materials/`, `Models/`: Các asset cơ bản (không chứa logic code).
-- `Docs/`: Tài liệu dự án (chứa prompt, note).
-- `Prefabs/`: Chứa các prefab đã setup sẵn component.
-- `Scenes/`: Chứa scene game.
-- `Scriptables/`: ScriptableObject data (Rất quan trọng, cấu hình Inventory, Dialogue, StateMachine, Localization).
-- **`Scripts/`** (Nơi chứa toàn bộ code):
-  - `Editor/`: Custom Inspector, Drawer, Window Editor.
-  - `Runtime/`: Code chạy lúc chơi.
-    - `Controllers/`: Điều khiển Camera, Items, Motion, Player.
-    - `Core/`: Logic nền tảng (GameManager, Inventory, SaveGame, Objectives, Options, Puzzle, Dialogue).
-    - `Interact/`: Mọi thứ tương tác được (VHS, Radio, Safe, Keypad, Elevator...).
-    - `Trigger/`: Các trigger sự kiện (Cutscenes, GhostHunting...).
-    - `UI/`: Script điều khiển giao diện.
+- **`Assets/Content/`**: Nơi chứa hầu hết nội dung và logic của trò chơi.
+  - `Animation/`, `Art/`, `Fonts/`, `Sounds/`, `Prefabs/`: Các asset cơ bản và prefab.
+  - `Docs/`: Tài liệu dự án (chứa prompt, note).
+  - **`Scripts/`** (Nơi chứa TOÀN BỘ CODE của dự án):
+    - `Editor/`: Custom Inspector, Drawer, Window Editor.
+    - `Runtime/`: Code chạy lúc chơi.
+      - `Controllers/`: Điều khiển Camera, Items, Motion, Player.
+      - `Core/`: Logic nền tảng (GameManager, Inventory, SaveGame, Objectives, Options, Puzzle, Dialogue).
+      - `Interact/`: Mọi thứ tương tác được (VHS, Radio, Safe, Keypad, Elevator...).
+      - `Trigger/`: Các trigger sự kiện (Cutscenes, GhostHunting...).
+      - `UI/`: Script điều khiển giao diện.
+    - `Scriptables/`: File code định nghĩa các ScriptableObject.
+- **`Assets/_Game/`**: Chứa dữ liệu tổ chức game flow.
+  - `Scenes/`: Chứa các scene game chính.
+  - `Cutscenes/`: Chứa các sequence timeline/cutscene.
+- **`Assets/Scriptables/`**: Chứa các file data ScriptableObject đã được khởi tạo (Rất quan trọng, cấu hình Inventory, Dialogue, StateMachine, Localization...).
+- **`Assets/ThirdParty/`**: Chứa các package của bên thứ 3 như framework ThunderWireStudio (UHFPS) hay VHSPro.
 
-⚠️ **Lưu ý:** KHÔNG được sửa code trong các thư mục nằm ngoài `Assets/_Project/` (ví dụ `Packages/` hay thư mục gốc của framework nếu có).
+⚠️ **Lưu ý:** Code logic dự án chỉ nằm gọn trong **`Assets/Content/Scripts/`**. KHÔNG được tùy tiện sửa đổi code gốc trong `Assets/ThirdParty/` hay các thư mục thư viện khác trừ khi thực sự cần thiết.
 
 ## 3. Conventions
 

@@ -5,15 +5,22 @@ using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime
 {
+    [Summary("Trạm trung chuyển tập trung các tham chiếu (References) đến mọi hệ thống liên quan tới người chơi (Máu, Camera, Inventory, Điều khiển...).")]
     [InspectorHeader("Player Manager", space = false)]
     public class PlayerManager : MonoBehaviour, ISaveableCustom
     {
         [Header("Player References")]
+        [Tooltip("Transform chứa toàn bộ cấu trúc Camera của người chơi.")]
         public Transform CameraHolder;
+
+        [Tooltip("Camera chính của trò chơi.")]
         public Camera MainCamera;
+
+        [Tooltip("Camera ảo (Cinemachine) điều khiển góc nhìn chính của người chơi.")]
         public CinemachineCamera MainVirtualCamera;
 
         [Header("Load Options")]
+        [Tooltip("Có tự động tải lại item đang cầm trên tay ở lần lưu trước không?")]
         public bool LoadSelectedItem;
 
         /// <summary>

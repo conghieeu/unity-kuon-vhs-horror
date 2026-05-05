@@ -5,23 +5,35 @@ using ThunderWire.Attributes;
 namespace UHFPS.Runtime
 {
     [InspectorHeader("Flickering Light")]
+    [Summary("Tạo hiệu ứng đèn nhấp nháy. Hỗ trợ âm thanh ballast và hiệu ứng Emission cho vật liệu.")]
     public class FlickeringLight : MonoBehaviour
     {
+        [Tooltip("Đèn mục tiêu.")]
         public Light Light;
 
         [Header("Settings")]
+        [Tooltip("Tỉ lệ (0-1) để đèn bị tắt đi.")]
         public float FlickerChance = 0.5f;
+        [Tooltip("Tốc độ nhấp nháy khi đèn đang bật.")]
         public MinMax FlickerRate = new(0.1f, 0.2f);
+        [Tooltip("Thời gian đèn bị tắt trước khi bật lại.")]
         public MinMax FlickerOffRate = new(0.1f, 0.2f);
 
         [Header("Sounds")]
+        [Tooltip("Âm thanh rè của chấn lưu.")]
         public AudioClip[] BallastBuzz;
-        [Range(0f, 1f)] public float BallastVolume = 1f;
+        [Range(0f, 1f)] 
+        [Tooltip("Âm lượng âm thanh rè.")]
+        public float BallastVolume = 1f;
+        [Tooltip("Khoảng cách âm thanh tối đa.")]
         public float MaxSoundDistance = 50f;
 
         [Header("Emission")]
+        [Tooltip("Bật/tắt hiệu ứng Emission trên vật liệu.")]
         public bool EnableEmission;
+        [Tooltip("Từ khóa shader cho Emission.")]
         public string EmissionKeyword = "_EMISSION";
+        [Tooltip("Vật liệu cần thay đổi Emission.")]
         public RendererMaterial Material;
 
         private float timer;

@@ -4,27 +4,32 @@ using UnityEngine;
 using UHFPS.Scriptable;
 using UHFPS.Runtime;
 using Newtonsoft.Json.Linq;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime
 {
     [RequireComponent(typeof(SaveableObject))]
+    [Summary("Bộ điều khiển NPC giao tiếp với người chơi và yêu cầu vật phẩm để hoàn thành nhiệm vụ.")]
     public class NPCQuestController : MonoBehaviour, IInteractStart, ISaveable
     {
         public enum NPCState { Initial, WaitingForItem, Completed }
 
         [Header("Dialogue Triggers")]
-        [Tooltip("The DialogueTrigger for the first encounter (Quest Giving). Make sure its TriggerType is set to 'Event'.")]
+        [Tooltip("Trigger hội thoại cho lần gặp đầu tiên (Giao nhiệm vụ). Hãy chắc chắn 'TriggerType' được đặt là 'Event'.")]
         public DialogueTrigger initialDialogueTrigger;
         
-        [Tooltip("The DialogueTrigger for when the NPC is waiting for the player to bring the item. Make sure its TriggerType is set to 'Event'.")]
+        [Tooltip("Trigger hội thoại khi NPC đang đợi người chơi mang vật phẩm về. Hãy chắc chắn 'TriggerType' được đặt là 'Event'.")]
         public DialogueTrigger waitingDialogueTrigger;
         
-        [Tooltip("The DialogueTrigger for when the quest is completed. Make sure its TriggerType is set to 'Event'.")]
+        [Tooltip("Trigger hội thoại khi nhiệm vụ đã hoàn thành. Hãy chắc chắn 'TriggerType' được đặt là 'Event'.")]
         public DialogueTrigger completedDialogueTrigger;
 
         [Header("Quest Settings")]
+        [Tooltip("Mã GUID của vật phẩm NPC yêu cầu.")]
         public string requiredItemGUID;
+        [Tooltip("Số lượng vật phẩm NPC yêu cầu.")]
         public ushort requiredItemQuantity = 1;
+        [Tooltip("Nhiệm vụ (Objective) sẽ được hệ thống đánh dấu hoàn thành sau khi giao đủ vật phẩm.")]
         public ObjectiveSelect objectiveToComplete;
 
         private NPCState currentState = NPCState.Initial;

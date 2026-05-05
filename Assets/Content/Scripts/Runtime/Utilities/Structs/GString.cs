@@ -3,18 +3,22 @@ using System.Reactive.Subjects;
 using System.Text.RegularExpressions;
 using UHFPS.Input;
 using UnityEngine;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime
 {
     /// <summary>
-    /// Represents a string that can be localized (GameLocalization) or normal.
+    /// Đại diện cho một chuỗi văn bản có thể được bản địa hóa (Localization) hoặc là văn bản thuần túy.
     /// </summary>
     [Serializable]
+    [Summary("Chuỗi văn bản hỗ trợ bản địa hóa hoặc văn bản thường.")]
     public sealed class GString
     {
         public const char EXCLUDE_CHAR = '*';
 
+        [Tooltip("Mã khóa bản địa hóa (Localization Key).")]
         public string GlocText;
+        [Tooltip("Văn bản thuần túy.")]
         public string NormalText;
 
         private Subject<string> OnTextChange = new();

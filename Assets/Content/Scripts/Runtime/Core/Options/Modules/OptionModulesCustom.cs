@@ -1,15 +1,24 @@
 using System;
 using Newtonsoft.Json.Linq;
+using UnityEngine;
+
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime
 {
     [Serializable]
+    [Summary("Tuỳ chọn loại True/False (Bật/Tắt) tùy chỉnh. Thường dùng cho các cấu hình như Bật/Tắt VHS Effect, Subtitles...")]
     public class OptionCustomBoolean : OptionModule
     {
         public override string ContextName => "Custom/Boolean";
 
+        [Tooltip("Giá trị mặc định khi game khởi tạo hoặc khi Reset tuỳ chọn.")]
         public bool DefaultValue;
+
+        [Tooltip("Chuỗi text hiển thị khi tuỳ chọn đang ở trạng thái Tắt (Ví dụ: OFF, KHÔNG).")]
         public GString OffName = new("*OFF", "");
+
+        [Tooltip("Chuỗi text hiển thị khi tuỳ chọn đang ở trạng thái Bật (Ví dụ: ON, CÓ).")]
         public GString OnName = new("*ON", "");
 
         public override void OnApplyOption()
@@ -47,13 +56,21 @@ namespace UHFPS.Runtime
     }
 
     [Serializable]
+    [Summary("Tuỳ chọn loại Float tùy chỉnh (Dạng thanh kéo Slider). Thường dùng cho các giá trị như Âm lượng, Độ sáng...")]
     public class OptionCustomFloat : OptionModule
     {
         public override string ContextName => "Custom/Float";
 
+        [Tooltip("Giá trị mặc định khi game khởi tạo hoặc khi Reset tuỳ chọn.")]
         public float DefaultValue;
+
+        [Tooltip("Giới hạn giá trị nhỏ nhất và lớn nhất của thanh kéo.")]
         public MinMax SliderLimits = new(0, 1);
+
+        [Tooltip("Bật chế độ Snapping (hít) để giá trị tăng/giảm theo từng bậc thay vì liên tục.")]
         public bool UseSnapping = true;
+
+        [Tooltip("Giá trị của mỗi bậc khi hít (Ví dụ: 0.05).")]
         public float SnapValue = 0.05f;
 
         public override void OnApplyOption()
@@ -96,11 +113,15 @@ namespace UHFPS.Runtime
     }
 
     [Serializable]
+    [Summary("Tuỳ chọn loại Số nguyên (Integer) tùy chỉnh (Dạng thanh kéo). Thường dùng cho FOV, Giới hạn FPS...")]
     public class OptionCustomInteger : OptionModule
     {
         public override string ContextName => "Custom/Integer";
 
+        [Tooltip("Giá trị mặc định khi game khởi tạo hoặc khi Reset tuỳ chọn.")]
         public int DefaultValue;
+
+        [Tooltip("Giới hạn nhỏ nhất và lớn nhất của thanh kéo (Ví dụ: 60 - 120 cho FOV).")]
         public MinMaxInt SliderLimits = new(0, 1);
 
         public override void OnApplyOption()

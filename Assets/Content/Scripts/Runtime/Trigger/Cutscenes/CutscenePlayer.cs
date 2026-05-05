@@ -1,11 +1,14 @@
 using UnityEngine;
 using Unity.Cinemachine;
 using UHFPS.Tools;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime
 {
+    [Summary("Script điều khiển camera và các thành phần liên quan của người chơi trong suốt quá trình diễn ra cutscene.")]
     public class CutscenePlayer : MonoBehaviour
     {
+        [Tooltip("Camera chính đại diện cho góc nhìn của người chơi trong cutscene.")]
         public CinemachineCamera HeadCamera;
 
         private PlayerPresenceManager playerPresence;

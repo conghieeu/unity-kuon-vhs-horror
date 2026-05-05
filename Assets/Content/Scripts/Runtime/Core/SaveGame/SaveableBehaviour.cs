@@ -4,16 +4,24 @@ using UnityEngine;
 namespace UHFPS.Runtime
 {
     /// <summary>
-    /// Derive from this class if you want to define a saveable object that can be instantiated at runtime.
+    /// Kế thừa lớp này nếu bạn muốn định nghĩa một đối tượng có thể lưu trạng thái và được khởi tạo (instantiate) trong quá trình chơi.
     /// </summary>
+    [ThunderWire.Attributes.Summary("Lớp cơ sở cho các đối tượng có thể lưu trữ trạng thái (Saveable) và được khởi tạo trong lúc chơi.")]
     public abstract class SaveableBehaviour : MonoBehaviour, IRuntimeSaveable
     {
         /// <summary>
-        /// A unique ID that is used to determine which object has been instantiated.
+        /// Mã định danh duy nhất được sử dụng để xác định đối tượng nào đã được khởi tạo.
         /// </summary>
-        /// <remarks>The object must be added to the ObjectReferences asset.</remarks>
+        /// <remarks>Đối tượng này phải được thêm vào tài sản (asset) ObjectReferences.</remarks>
         [field: SerializeField]
         public UniqueID UniqueID { get; set; }
+
+        /// <summary>
+        /// Giao diện bắt đầu khi người chơi bắt đầu nhìn (Hover) vào vật thể.
+        /// </summary>
+        public interface IHoverStart
+        {
+        }
 
         public abstract StorableCollection OnSave();
 

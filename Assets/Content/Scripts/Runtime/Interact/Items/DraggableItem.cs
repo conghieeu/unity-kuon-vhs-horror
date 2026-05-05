@@ -2,40 +2,47 @@ using UnityEngine;
 using UHFPS.Tools;
 using Newtonsoft.Json.Linq;
 using UnityEngine.Events;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime
 {
     [RequireComponent(typeof(Rigidbody), typeof(AudioSource))]
+    [Summary("Component cho phép vật thể có thể bị người chơi cầm nắm và kéo đi.")]
     public class DraggableItem : SaveableBehaviour, IOnDragStart, IOnDragEnd
     {
-        [Tooltip("Minimum and maximum distance to which the object can be zoomed.")]
+        [Tooltip("Khoảng cách tối thiểu và tối đa mà vật thể có thể được đưa lại gần/ra xa.")]
         public MinMax ZoomDistance;
-        [Tooltip("Maximum hold distance at which the object will be out of range and will be dropped.")]
+        [Tooltip("Khoảng cách cầm tối đa. Nếu vật thể vượt quá khoảng cách này (ví dụ bị kẹt), vật thể sẽ tự động bị thả ra.")]
         public float MaxHoldDistance = 4f;
 
+        [Tooltip("Bật/tắt âm thanh khi vật thể va chạm.")]
         public bool EnableImpactSound = true;
-        [Tooltip("Array of the impact sounds.")]
+        [Tooltip("Mảng chứa các âm thanh va chạm.")]
         public AudioClip[] ImpactSounds;
-        [Tooltip("Minimum and maximum impact volume. The impact will be played if the calculated volume is greater than the minimum impact volume.")]
+        [Tooltip("Âm lượng va chạm tối thiểu và tối đa. Âm thanh sẽ phát nếu âm lượng tính toán lớn hơn mức tối thiểu.")]
         public MinMax ImpactVolume;
-        [Tooltip("Modifier that is multiplied with the impact volume. Higher value = louder impact volume")]
+        [Tooltip("Hệ số nhân cho âm lượng va chạm. Giá trị càng cao, âm thanh va chạm càng lớn.")]
         public float VolumeModifier;
-        [Tooltip("Time at which the next impact will be detected.")]
+        [Tooltip("Thời gian (giây) để giới hạn giữa các lần phát hiện va chạm liên tiếp.")]
         public float NextImpact = 0.1f;
 
+        [Tooltip("Bật/tắt âm thanh khi vật thể trượt trên bề mặt.")]
         public bool EnableSlidingSound = true;
-        [Tooltip("Minimum angle between the collision and the motion at which the sliding is detected. Near 0 = sliding, More than 0 = static")]
+        [Tooltip("Góc tối thiểu giữa va chạm và chuyển động để phát hiện trượt. Gần 0 = trượt, Lớn hơn 0 = tĩnh.")]
         public float MinSlidingFactor = 5f;
-        [Tooltip("Velocity range at which the sliding volume is calculated. Higher value = faster movement is required to achieve volume 1")]
+        [Tooltip("Phạm vi tốc độ để tính toán âm lượng trượt. Giá trị càng cao, vật thể cần di chuyển càng nhanh để đạt âm lượng 1.")]
         public float SlidingVelocityRange = 5f;
-        [Tooltip("Modifier that is multiplied with the sliding volume. Higher value = louder sliding volume")]
+        [Tooltip("Hệ số nhân cho âm lượng trượt. Giá trị càng cao, âm lượng trượt càng lớn.")]
         public float SlidingVolumeModifier = 5f;
-        [Tooltip("Speed at which the volume is faded when the sliding stops.")]
+        [Tooltip("Tốc độ giảm dần âm lượng khi vật thể ngừng trượt.")]
         public float VolumeFadeOffSpeed = 5f;
 
+        [Tooltip("Sự kiện gọi ra khi người chơi bắt đầu kéo/cầm vật thể.")]
         public UnityEvent OnDragStarted;
+        [Tooltip("Sự kiện gọi ra khi thả vật thể.")]
         public UnityEvent OnDragEnded;
 
+        [Tooltip("Trạng thái hiện tại xem vật thể có đang va chạm hay không.")]
         public bool Collision;
 
         private Rigidbody rigid;

@@ -1,14 +1,18 @@
 using System;
+using UnityEngine;
 using UHFPS.Tools;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime
 {
     /// <summary>
-    /// Generates a Unique ID that can be used to identify scripts when saving/loading script state.
+    /// Tạo một mã định danh duy nhất (Unique ID) để nhận diện các script khi lưu/tải trạng thái.
     /// </summary>
     [Serializable]
+    [Summary("Mã định danh duy nhất cho Save/Load.")]
     public sealed class UniqueID
     {
+        [Tooltip("Mã định danh duy nhất.")]
         public string Id;
 
         public UniqueID()

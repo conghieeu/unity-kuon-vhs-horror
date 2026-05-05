@@ -8,6 +8,7 @@ using ThunderWire.Attributes;
 namespace UHFPS.Runtime
 {
     [Docs("https://docs.twgamesdev.com/uhfps/getting-started")]
+    [Summary("Quản lý sự hiện diện, trạng thái khóa/mở khóa và các thao tác chuyển đổi camera, dịch chuyển của người chơi trong scene.")]
     public class PlayerPresenceManager : Singleton<PlayerPresenceManager>
     {
         public enum UnlockType 
@@ -23,10 +24,16 @@ namespace UHFPS.Runtime
             Manually
         }
 
+        [Tooltip("Cách thức mở khóa người chơi khi bắt đầu scene (Tự động hoặc Thủ công).")]
         public UnlockType PlayerUnlockType = UnlockType.Automatically;
+
+        [Tooltip("GameObject chính của người chơi.")]
         public GameObject Player;
 
+        [Tooltip("Thời gian chờ trước khi bắt đầu hiệu ứng tối màn hình khi mở khóa.")]
         public float WaitFadeOutTime = 0.5f;
+
+        [Tooltip("Tốc độ hiệu ứng tối/sáng màn hình (Fade Out/In).")]
         public float FadeOutSpeed = 3f;
 
         private PlayerComponent[] playerComponents;

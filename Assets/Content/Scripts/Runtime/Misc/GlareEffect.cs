@@ -5,34 +5,42 @@ using UnityEngine;
 namespace UHFPS.Runtime
 {
     [InspectorHeader("Glare Effect")]
+    [Summary("Tạo hiệu ứng lóa sáng (Glare) luôn hướng về phía camera (Billboard).")]
     public class GlareEffect : MonoBehaviour
     {
+        [Tooltip("Tên tham số màu sắc trong Shader.")]
         public string ColorParam = "_BaseColor";
+        [Tooltip("Trạng thái hiển thị hiện tại.")]
         public bool GlareState = true;
 
-        [Tooltip("Distance at which the glare scales. (MIN = 0 * Scale - to - MAX = 1 * Scale)")]
+        [Tooltip("Khoảng cách mà hiệu ứng lóa sáng sẽ thay đổi kích thước.")]
         public MinMax ScaleDistance;
 
-        [Range(0f, 1f), Tooltip("Minimum distance at which the object scales.")]
+        [Range(0f, 1f), Tooltip("Khoảng cách tối thiểu để bắt đầu thay đổi tỉ lệ (Scale).")]
         public float MinScaleDistance = 0.5f;
 
-        [Tooltip("Distance at which the object fades out when the camera is near or far.")]
+        [Tooltip("Khoảng cách mà vật thể sẽ mờ dần (Fade) khi camera quá gần hoặc quá xa.")]
         public MinMax NearFarDistance;
 
-        [Tooltip("Distance at which the object begins to blend into the fading state.")]
+        [Tooltip("Khoảng cách chuyển đổi mờ dần.")]
         public float BlendDistance = 0.5f;
 
-        [Tooltip("Minimum and maximum pulse scale.")]
+        [Tooltip("Giới hạn tỉ lệ rung động (Min/Max).")]
         public MinMax PulseScale;
 
-        [Tooltip("Time for which the glare remains on the minimum pulse scale.")]
+        [Tooltip("Thời gian chờ ở mức rung tối thiểu.")]
         public float MinWaitTime = 1f;
 
+        [Tooltip("Tốc độ rung động.")]
         public float PulseSpeed = 1f;
+        [Tooltip("Tốc độ xoay.")]
         public float RotateSpeed = 3f;
 
+        [Tooltip("Bật/tắt việc thay đổi kích thước theo khoảng cách.")]
         public bool EnableDistanceScaling = true;
+        [Tooltip("Bật/tắt việc mờ dần khi camera ở gần.")]
         public bool EnableNearFading = true;
+        [Tooltip("Bật/tắt việc xoay tròn hiệu ứng.")]
         public bool EnableRotation = true;
 
         private Transform mainCamera;

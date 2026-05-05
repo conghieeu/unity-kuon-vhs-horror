@@ -5,10 +5,13 @@ namespace UHFPS.Runtime
 {
     [InspectorHeader("UI Button Tabs")]
     [HelpBox("This component is used to manage the UIButton Tabs. It deselects the other tabs when a tab is selected.")]
+    [Summary("Quản lý các tab UIButton. Tự động bỏ chọn các tab khác khi một tab được chọn.")]
     public class UIButtonTabs : MonoBehaviour
     {
         [Space]
+        [Tooltip("Tự động chọn tab đầu tiên khi bắt đầu.")]
         public bool SelectFirstTab = true;
+        [Tooltip("Danh sách các GameObject nội dung tương ứng với mỗi tab.")]
         public GameObject[] Tabs;
         private UIButton[] uiButtons;
 

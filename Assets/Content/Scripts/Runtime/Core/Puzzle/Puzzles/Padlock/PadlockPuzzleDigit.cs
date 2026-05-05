@@ -5,14 +5,23 @@ using ThunderWire.Attributes;
 namespace UHFPS.Runtime
 {
     [InspectorHeader("Padlock Puzzle Digit")]
+    [Summary("Thành phần gán vào các vòng xoay số của Padlock Puzzle. Quản lý việc xoay và chuyển số (0-9).")]
     public class PadlockPuzzleDigit : MonoBehaviour, IInteractStart
     {
+        [Tooltip("Trục xoay của vòng số.")]
         public Axis RotateAxis;
+
+        [Tooltip("Độ mượt (thời gian) khi vòng số xoay sang số tiếp theo.")]
         public float RotateSmoothTime = 0.3f;
+
+        [Tooltip("Số hiện tại đang hiển thị (0-9).")]
         public int CurrentNumber = 0;
+
+        [Tooltip("Đảo ngược chiều xoay của vòng số.")]
         public bool Inverse;
 
         [Header("Sounds")]
+        [Tooltip("Âm thanh phát ra mỗi khi vòng số xoay được một nấc.")]
         public SoundClip TurnSound;
 
         private PadlockPuzzle padlockPuzzle;

@@ -21,6 +21,7 @@ namespace UHFPS.Runtime
         public Texture2D Thumbnail;
     }
 
+    [ThunderWire.Attributes.Summary("Công cụ hỗ trợ đọc thông tin các file game đã lưu (Save Games).")]
     public class SaveGameReader
     {
         private readonly SerializationAsset serializationAsset;
@@ -31,7 +32,7 @@ namespace UHFPS.Runtime
         }
 
         /// <summary>
-        /// Get information about all saved games.
+        /// Lấy thông tin chi tiết về tất cả các file game đã lưu.
         /// </summary>
         public async Task<SavedGameInfo[]> ReadAllSaves()
         {
@@ -94,7 +95,7 @@ namespace UHFPS.Runtime
         }
 
         /// <summary>
-        /// Get info about the saved game of the specified save.
+        /// Lấy thông tin về file game đã lưu theo tên thư mục được chỉ định.
         /// </summary>
         public async Task<SavedGameInfo> ReadSave(string folderName)
         {
@@ -147,7 +148,7 @@ namespace UHFPS.Runtime
 
 
         /// <summary>
-        /// Get meta information about all saved games.
+        /// Lấy thông tin meta (thông tin cơ bản) về tất cả các file game đã lưu.
         /// </summary>
         public async Task<SavedGameInfo[]> ReadSavesMeta()
         {
@@ -194,7 +195,7 @@ namespace UHFPS.Runtime
         }
 
         /// <summary>
-        /// Remove all saved games.
+        /// Xóa tất cả các file game đã lưu.
         /// </summary>
         public async Task RemoveAllSaves()
         {
@@ -218,7 +219,7 @@ namespace UHFPS.Runtime
         }
 
         /// <summary>
-        /// Remove single saved game.
+        /// Xóa một file game đã lưu cụ thể theo tên thư mục.
         /// </summary>
         public async Task RemoveSave(string folderName)
         {

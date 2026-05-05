@@ -8,6 +8,7 @@ using TMPro;
 namespace UHFPS.Runtime
 {
     [Serializable]
+    [ThunderWire.Attributes.Summary("Cấu hình vật thể có thể mở (Ví dụ: Cửa xoay, Nắp hộp).")]
     public class DynamicOpenable : DynamicObjectType
     {
         // limits

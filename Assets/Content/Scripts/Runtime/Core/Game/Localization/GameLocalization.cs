@@ -14,10 +14,16 @@ using ThunderWire.Attributes;
 namespace UHFPS.Runtime
 {
     [Docs("https://docs.twgamesdev.com/uhfps/guides/localization")]
+    [Summary("Quản lý toàn bộ hệ thống Đa ngôn ngữ (Localization) của Game. Tải và cung cấp chuỗi văn bản dịch cho các thành phần UI, Subtitles...")]
     public class GameLocalization : Singleton<GameLocalization>
     {
+        [Tooltip("Bảng Localization chứa danh sách các ngôn ngữ và các cặp Key-Value được dịch.")]
         public GameLocaizationTable LocalizationTable;
+
+        [Tooltip("Index của ngôn ngữ mặc định sẽ được chọn khi mới vào game (0 = ngôn ngữ đầu tiên trong bảng).")]
         public int DefaultLanguage = 0;
+
+        [Tooltip("Có hiển thị cảnh báo Warning khi không tìm thấy Key dịch trong bảng không?")]
         public bool ShowWarnings = true;
 
         public CompositeDisposable Disposables = new();

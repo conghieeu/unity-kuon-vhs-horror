@@ -1,25 +1,36 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using ThunderWire.Attributes;
 using UHFPS.Tools;
 
 namespace UHFPS.Runtime
 {
+    [Summary("Tạo một sợi dây cáp mô phỏng theo phương pháp Procedural (Mesh động) nối giữa hai điểm.")]
     public class ProceduralCable : MonoBehaviour
     {
         [Serializable]
         public sealed class CableSettings
         {
+            [Tooltip("Vật liệu của dây cáp.")]
             public Material CableMaterial;
+            [Tooltip("Số bước phân đoạn của dây.")]
             public int Steps = 20;
+            [Tooltip("Độ cong của dây.")]
             public float Curvature = 1;
+            [Tooltip("Bán kính của dây.")]
             public float Radius = 0.2f;
+            [Tooltip("Số cạnh vòng tròn của dây.")]
             public int RadiusStep = 6;
+            [Tooltip("Hệ số nhân bán kính Collider.")]
             public float ColliderRadius = 1f;
+            [Tooltip("Tự động tạo Collider cho dây.")]
             public bool GenerateCollider = true;
+            [Tooltip("Hệ số nhân UV.")]
             public Vector2 uvMultiply = Vector2.one;
         }
 
+        [Tooltip("Điểm bắt đầu của dây.")]
         public Transform _startTransform;
         public Vector3 CableStart
         {
@@ -42,6 +53,7 @@ namespace UHFPS.Runtime
             }
         }
 
+        [Tooltip("Điểm kết thúc của dây.")]
         public Transform _endTransform;
         public Vector3 CableEnd
         {
@@ -73,7 +85,9 @@ namespace UHFPS.Runtime
             }
         }
 
+        [Tooltip("Cấu hình Mesh và Collider cho dây cáp.")]
         public CableSettings settings = new CableSettings();
+        [Tooltip("Nếu bật, dây cáp chỉ được tạo khi gọi hàm thủ công.")]
         public bool manualGeneration = false;
         public bool drawGizmos = false;
         public bool drawCableGizmos = false;

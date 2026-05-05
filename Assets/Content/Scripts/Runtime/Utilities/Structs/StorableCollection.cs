@@ -3,8 +3,7 @@ using System.Collections.Generic;
 namespace UHFPS.Runtime
 {
     /// <summary>
-    /// A buffer that stores data that can be used for serializing data or do other operations.
-    /// <br>Implements <see cref="Dictionary{TKey, TValue}"/> where the key is <see cref="string"/> and the value is <see cref="object"/>.</br>
+    /// Một bộ đệm lưu trữ dữ liệu (Key-Value) dùng để tuần tự hóa dữ liệu (Save/Load).
     /// </summary>
     public class StorableCollection : Dictionary<string, object> 
     {

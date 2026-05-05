@@ -6,9 +6,12 @@ using UnityEngine.Events;
 using Newtonsoft.Json.Linq;
 using UHFPS.Tools;
 
+using ThunderWire.Attributes;
+
 namespace UHFPS.Runtime
 {
     [RequireComponent(typeof(AudioSource))]
+    [Summary("Hệ thống giải đố Cầu dao (Fusebox). Người chơi cần tìm vật phẩm cầu chì và cắm đủ vào các khe để nối mạch.")]
     public class FuseboxPuzzle : PuzzleBaseSimple, IInventorySelector, ISaveable
     {
         [Serializable]
@@ -20,22 +23,37 @@ namespace UHFPS.Runtime
             public bool IsInserted;
         }
 
+        [Tooltip("Cầu chì (Item) mà người chơi cần phải thu thập để cắm vào cầu dao.")]
         public ItemProperty FuseItem;
+
+        [Tooltip("Cắm trực tiếp khi người chơi bấm tương tác (nếu có đủ đồ trong túi) thay vì mở bảng chọn Item.")]
         public bool UseInteract = false;
 
+        [Tooltip("Danh sách cấu hình các khe cắm cầu chì.")]
         public List<FuseElement> Fuses = new();
 
+        [Tooltip("Tự động đổi màu đèn báo trạng thái khi có/chưa có cầu chì.")]
         public bool UseFuseColors = false;
         public string EmissionKeyword = "_EMISSION";
         public string EmissionColorName = "_EmissionColor";
         public string BaseColorName = "_BaseColor";
+
+        [Tooltip("Màu đèn báo khi đã cắm cầu chì.")]
         public Color InsertedFuseColor = Color.white;
+
+        [Tooltip("Màu đèn báo khi chưa cắm cầu chì.")]
         public Color NoFuseColor = Color.white;
 
+        [Tooltip("Âm thanh phát ra khi cắm 1 cầu chì vào khe.")]
         public SoundClip FuseInsertSound;
+
+        [Tooltip("Âm thanh phát ra khi đã cắm ĐỦ tất cả cầu chì.")]
         public SoundClip FusesConnectedSound;
 
+        [Tooltip("Sự kiện gọi ra khi toàn bộ cầu chì được cắm thành công.")]
         public UnityEvent OnAllFusesConnected;
+
+        [Tooltip("Sự kiện gọi ra khi 1 khe cắm nhận được cầu chì (truyền ra ID khe).")]
         public UnityEvent<int> OnFuseConnected;
 
         public bool FusesConnected => fusesConnected;

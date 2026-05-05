@@ -4,34 +4,62 @@ using UnityEngine.Events;
 using UHFPS.Tools;
 using Newtonsoft.Json.Linq;
 
+using ThunderWire.Attributes;
+
 namespace UHFPS.Runtime
 {
     [RequireComponent(typeof(AudioSource))]
+    [Summary("Hệ thống giải đố Bảng mã điện tử (Keypad) cho két sắt nhỏ. Hỗ trợ hiển thị đèn báo hiệu và kiểm tra mã pin 4 số.")]
     public class SafeKeypadPuzzle : PuzzleBase, ISaveable
     {
         public enum Button { Number0, Number1, Number2, Number3, Number4, Number5, Number6, Number7, Number8, Number9, Cancel, Confirm }
         private const int MAX_INDICATORS = 4;
 
+        [Tooltip("Mã PIN đúng để mở khóa két (Mặc định 4 số).")]
         public string AccessCode = "0000";
 
+        [Tooltip("Animator của két sắt để thực hiện Animation mở cửa.")]
         public Animator Animator;
+
+        [Tooltip("Tên Trigger gọi animation mở cửa.")]
         public string UnlockTrigger = "Unlock";
+
+        [Tooltip("Tên Trigger gọi animation đóng/reset lại lúc load game.")]
         public string ResetTrigger = "Reset";
 
+        [Tooltip("Sử dụng các đèn LED nhỏ để báo hiệu số lượng phím đã bấm.")]
         public bool UseIndicators = true;
+
+        [Tooltip("Danh sách Renderer của 4 đèn LED báo hiệu.")]
         public MeshRenderer[] Indicators;
         public string EmissionKeyword = "_EMISSION";
         public string EmissionColor = "_EmissionColor";
+
+        [Tooltip("Màu đèn báo lúc chưa nhập hoặc nhập sai (Thường là đỏ).")]
         public Color DefaultLightColor = Color.red;
+
+        [Tooltip("Màu đèn báo khi đã nhập phím (Thường là xanh).")]
         public Color EnterLightColor = Color.green;
 
+        [Tooltip("Âm thanh khi nhấn nút trên keypad.")]
         public SoundClip ButtonPressSound;
+
+        [Tooltip("Âm thanh khi nhập đúng mã.")]
         public SoundClip AccessGrantedSound;
+
+        [Tooltip("Âm thanh báo lỗi khi nhập sai mã.")]
         public SoundClip AccessDeniedSound;
 
+        [Tooltip("Có gọi sự kiện OnAccessGranted khi load game đã giải xong không?")]
         public bool LoadCallEvent;
+
+        [Tooltip("Sự kiện gọi ra khi mở két thành công.")]
         public UnityEvent OnAccessGranted;
+
+        [Tooltip("Sự kiện gọi ra khi nhập sai mã.")]
         public UnityEvent OnAccessDenied;
+
+        [Tooltip("Sự kiện gọi ra mỗi khi một phím số được bấm (truyền ra số vừa bấm).")]
         public UnityEvent<int> OnButtonPressed;
 
         private AudioSource audioSource;

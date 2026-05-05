@@ -18,6 +18,7 @@ using TMText = TMPro.TMP_Text;
 namespace UHFPS.Runtime
 {
     [Docs("https://docs.twgamesdev.com/uhfps/guides/game-manager")]
+    [Summary("Quản lý toàn bộ hệ thống lõi của trò chơi, bao gồm UI, Post Processing, và các trạng thái trò chơi (Pause, Dead, Inventory...).")]
     public class GameManager : Singleton<GameManager>
     {
         public enum PanelType { GamePanel, PausePanel, DeadPanel, MainPanel, InventoryPanel, MapPanel }
@@ -44,24 +45,44 @@ namespace UHFPS.Runtime
             public Vector2 PointerSize;
         }
 
+        [Tooltip("Danh sách các module hệ thống được nạp vào GameManager.")]
         public ManagerModulesAsset Modules;
+
+        [Tooltip("Cấu hình Post Processing toàn cục của game.")]
         public Volume GlobalPPVolume;
+
+        [Tooltip("Cấu hình Post Processing dành riêng cho các hiệu ứng sức khỏe (mờ mắt, chớp đỏ...).")]
         public Volume HealthPPVolume;
+
+        [Tooltip("Công cụ quản lý hiệu ứng chuyển cảnh tối màn hình (Fade In/Out).")]
         public BackgroundFader BackgroundFade;
 
         #region Panels
         // Main Panels
+        [Tooltip("CanvasGroup chứa toàn bộ giao diện khi chơi (HUD, Inventory, v.v.).")]
         public CanvasGroup GamePanel;
+
+        [Tooltip("CanvasGroup chứa giao diện Menu Tạm dừng (Pause Menu).")]
         public CanvasGroup PausePanel;
+
+        [Tooltip("CanvasGroup chứa giao diện khi người chơi tử vong (Death Screen).")]
         public CanvasGroup DeadPanel;
 
         // Sub Panels
+        [Tooltip("CanvasGroup chứa các thông tin cố định trên màn hình (Hồng tâm, Máu...).")]
         public CanvasGroup HUDPanel;
+
+        [Tooltip("CanvasGroup chứa thanh chuyển tab (nếu có) khi mở Inventory/Menu.")]
         public CanvasGroup TabPanel;
 
         // Game Panels
+        [Tooltip("CanvasGroup chứa giao diện Túi đồ (Inventory).")]
         public CanvasGroup InventoryPanel;
+
+        [Tooltip("CanvasGroup chứa giao diện thông báo hệ thống (Alerts).")]
         public CanvasGroup AlertsPanel;
+
+        [Tooltip("Transform chứa các icon nổi (Floating Icons) hiển thị trên thế giới 3D.")]
         public Transform FloatingIcons;
         #endregion
 
@@ -72,48 +93,93 @@ namespace UHFPS.Runtime
 
         #region UserInterface
         // Reticle
+        [Tooltip("Hình ảnh hồng tâm (tâm ngắm) ở giữa màn hình.")]
         public Image ReticleImage;
+
+        [Tooltip("Vòng xoay tiến trình khi người chơi phải giữ phím để tương tác.")]
         public Image InteractProgress;
+
+        [Tooltip("Thanh hiển thị thể lực (Stamina) của người chơi.")]
         public Slider StaminaSlider;
 
         // Interaction
+        [Tooltip("Bảng hiển thị thông tin của vật thể khi có thể tương tác (tên, nút bấm).")]
         public InteractInfoPanel InteractInfoPanel;
+
+        [Tooltip("Bảng hiển thị các phím điều khiển đang có sẵn ở góc màn hình.")]
         public ControlsInfoPanel ControlsInfoPanel;
 
         // Interact Pointer
+        [Tooltip("Hình ảnh con trỏ chuột tùy chỉnh trong game.")]
         public Image PointerImage;
+
+        [Tooltip("Cấu hình con trỏ mặc định.")]
         public DefaultPointer NormalPointer;
+
+        [Tooltip("Cấu hình con trỏ khi rê vào vật thể có thể tương tác.")]
         public DefaultPointer HoverPointer;
+
+        [Tooltip("Cấu hình con trỏ khi click (Dùng trong chế độ Examine).")]
         public ExaminePointer ClickPointer;
+
+        [Tooltip("Cấu hình con trỏ khi kéo dọc (Dùng trong chế độ Examine ngăn kéo/cửa).")]
         public ExaminePointer DragVerticalPointer;
+
+        [Tooltip("Cấu hình con trỏ khi kéo ngang (Dùng trong chế độ Examine).")]
         public ExaminePointer DragHorizontalPointer;
 
         // Item Pickup
+        [Tooltip("Vị trí hiển thị giao diện khi nhặt được item mới.")]
         public Transform ItemPickupLayout;
+
+        [Tooltip("Prefab của giao diện thông báo nhặt được item.")]
         public GameObject ItemPickup;
+
+        [Tooltip("Thời gian hiển thị thông báo nhặt item (giây).")]
         public float PickupMessageTime = 2f;
 
         // Hint Message
+        [Tooltip("Bảng chứa các dòng tin nhắn gợi ý nhỏ.")]
         public CanvasGroup HintMessageGroup;
+
+        [Tooltip("Tốc độ ẩn/hiện của bảng thông báo gợi ý.")]
         public float HintMessageFadeSpeed = 2f;
 
         // Health
+        [Tooltip("Thanh trượt hiển thị lượng máu hiện tại.")]
         public Slider HealthBar;
+
+        [Tooltip("Icon nhịp tim nhấp nháy khi máu thấp.")]
         public Image Hearthbeat;
+
+        [Tooltip("Text hiển thị phần trăm máu hiện tại.")]
         public TMText HealthPercent;
 
         // Paper
+        [Tooltip("Giao diện đọc tài liệu/giấy tờ.")]
         public CanvasGroup PaperPanel;
+
+        [Tooltip("Text hiển thị nội dung tài liệu.")]
         public TMText PaperText;
+
+        [Tooltip("Tốc độ hiện/ẩn giao diện đọc tài liệu.")]
         public float PaperFadeSpeed;
 
         // Examine
+        [Tooltip("Bảng hiển thị thông tin mô tả khi xem xét (Examine) một vật thể 3D.")]
         public CanvasGroup ExamineInfoPanel;
+
+        [Tooltip("Vị trí hiển thị các điểm hotspot trên vật thể đang Examine.")]
         public Transform ExamineHotspots;
+
+        [Tooltip("Nội dung text mô tả vật thể đang Examine.")]
         public TMText ExamineText;
+
+        [Tooltip("Tốc độ hiện/ẩn của bảng thông tin Examine.")]
         public float ExamineFadeSpeed;
 
         // Overlays
+        [Tooltip("Chứa các giao diện phủ lên trên cùng (chẳng hạn như vệt máu, bụi bẩn camera...).")]
         public GameObject OverlaysParent;
         #endregion
 

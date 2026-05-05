@@ -5,8 +5,11 @@ using UHFPS.Tools;
 using Newtonsoft.Json.Linq;
 using static UHFPS.Runtime.Inventory;
 
+using ThunderWire.Attributes;
+
 namespace UHFPS.Runtime
 {
+    [Summary("Class cơ sở (Base Class) cho các dạng túi chứa đồ bên ngoài (Rương, Tủ khóa, Balo). Xử lý lưới đồ và dữ liệu vật phẩm bên trong.")]
     public abstract class InventoryContainer : MonoBehaviour, ISaveable
     {
         public sealed class ContainerItem
@@ -21,9 +24,16 @@ namespace UHFPS.Runtime
 
         public Dictionary<string, ContainerItem> ContainerItems = new();
 
+        [Tooltip("Tên hiển thị của Rương/Túi đồ (Hỗ trợ Localization).")]
         public GString ContainerTitle;
-        [Range(2, 10)] public ushort Rows = 5;
-        [Range(2, 10)] public ushort Columns = 5;
+
+        [Range(2, 10)]
+        [Tooltip("Số hàng (chiều dọc) của lưới rương chứa đồ.")]
+        public ushort Rows = 5;
+
+        [Range(2, 10)]
+        [Tooltip("Số cột (chiều ngang) của lưới rương chứa đồ.")]
+        public ushort Columns = 5;
 
         protected Inventory inventory;
 

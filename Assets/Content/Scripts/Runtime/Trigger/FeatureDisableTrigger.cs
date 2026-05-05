@@ -5,6 +5,7 @@ using UnityEngine;
 namespace UHFPS.Runtime
 {
     [InspectorHeader("Feature Disable Trigger")]
+    [Summary("Vô hiệu hóa một số tính năng của game (Lưu, Tải, Nhảy, Chạy...) khi người chơi ở trong vùng Trigger.")]
     public class FeatureDisableTrigger : MonoBehaviour
     {
         private GameManager gameManager;
@@ -21,6 +22,7 @@ namespace UHFPS.Runtime
             Crouch = 1 << 4
         }
 
+        [Tooltip("Các tính năng sẽ bị vô hiệu hóa khi người chơi ở trong Trigger.")]
         public Features FeaturesToDisable = Features.None;
 
         private void Awake()

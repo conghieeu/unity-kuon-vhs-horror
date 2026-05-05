@@ -5,8 +5,7 @@ using UHFPS.Runtime;
 namespace UHFPS.Tools
 {
     /// <summary>
-    /// A simple component that allows the cross-over of two audio clips. 
-    /// Requires two Audio Sources for crossfade or one for fade In/Out.
+    /// Thành phần hỗ trợ việc chuyển đổi mượt mà (Crossfade) hoặc làm mờ (Fade) giữa hai Audio Clip.
     /// </summary>
     public sealed class AudioCrossfader
     {

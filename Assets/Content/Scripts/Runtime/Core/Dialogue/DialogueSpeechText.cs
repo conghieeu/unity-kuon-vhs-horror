@@ -5,10 +5,16 @@ using UnityEngine;
 namespace UHFPS.Runtime
 {
     [InspectorHeader("Dialogue Speech Text")]
+    [Summary("Component quản lý UI Text hiển thị phụ đề hội thoại (Subtitle) ở trên đầu hoặc góc màn hình.")]
     public class DialogueSpeechText : MonoBehaviour
     {
+        [Tooltip("Tên Binder để kiểm tra đúng luồng hội thoại.")]
         public string BinderName;
+
+        [Tooltip("UI Text hiển thị phụ đề hội thoại.")]
         public TMP_Text TextMesh;
+
+        [Tooltip("Nếu bật, Text sẽ bị ẩn đi trong khoảng thời gian nghỉ giữa các câu thoại.")]
         public bool HideBetweenSubtitles;
 
         private bool isPlaying;

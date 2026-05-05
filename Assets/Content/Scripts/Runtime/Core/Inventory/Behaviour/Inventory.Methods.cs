@@ -5,6 +5,9 @@ using UnityEngine;
 
 namespace UHFPS.Runtime
 {
+    /// <summary>
+    /// Các phương thức tiện ích để thao tác với vật phẩm trong Inventory (Thêm, Xóa, Lấy số lượng...).
+    /// </summary>
     public partial class Inventory
     {
         private readonly Dictionary<string, List<Action<ItemUseEvent>>> useEvents = new();

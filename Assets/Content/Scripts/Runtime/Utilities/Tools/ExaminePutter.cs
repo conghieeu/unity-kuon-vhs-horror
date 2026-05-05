@@ -3,6 +3,10 @@ using UnityEngine;
 
 namespace UHFPS.Runtime
 {
+    /// <summary>
+    /// Xử lý việc đặt vật thể trở lại vị trí ban đầu sau khi kiểm tra (Examine).
+    /// </summary>
+    [ThunderWire.Attributes.Summary("Tự động đặt vật phẩm vào vị trí kiểm tra (Examine) khi tương tác.")]
     public class ExaminePutter : MonoBehaviour
     {
         public sealed class PutCurve

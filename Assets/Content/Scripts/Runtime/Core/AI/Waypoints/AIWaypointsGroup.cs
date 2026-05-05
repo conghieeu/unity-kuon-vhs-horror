@@ -6,14 +6,23 @@ using ThunderWire.Attributes;
 namespace UHFPS.Runtime
 {
     [InspectorHeader("AI Waypoints Group"), ExecuteInEditMode]
+    [Summary("Nhóm các điểm (Waypoint) lại với nhau để tạo thành một tuyến đường/khu vực tuần tra cho AI.")]
     public class AIWaypointsGroup : MonoBehaviour
     {
+        [Tooltip("Danh sách các điểm đến trong tuyến đường tuần tra.")]
         public List<AIWaypoint> Waypoints = new();
 
         [Header("Gizmos")]
+        [Tooltip("Màu hiển thị của nhóm điểm tuần tra (Trong Editor).")]
         public Color GroupColor = Color.red;
+
+        [Tooltip("Bật/tắt đường nối giữa các điểm tuần tra (Gizmos).")]
         public bool ConnectedGizmos;
+
+        [Tooltip("Nối điểm cuối với điểm đầu (Tạo thành vòng tròn khép kín).")]
         public bool ConnectEndWithStart;
+
+        [Tooltip("Nối tất cả các điểm lại với nhau.")]
         public bool ConnectAllWithAll;
 
         private void Update()

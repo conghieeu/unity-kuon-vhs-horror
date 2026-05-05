@@ -6,6 +6,7 @@ using Newtonsoft.Json.Linq;
 namespace UHFPS.Runtime
 {
     [Serializable]
+    [ThunderWire.Attributes.Summary("Cấu hình vật thể có thể kéo (Ví dụ: Ngăn kéo tủ, Cửa lùa).")]
     public class DynamicPullable : DynamicObjectType
     {
         [Tooltip("Limits that define the minimum/maximum position in which the pullable can be pulled.")]

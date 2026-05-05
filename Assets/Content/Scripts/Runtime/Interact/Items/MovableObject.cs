@@ -2,37 +2,72 @@ using System.Collections;
 using UnityEngine;
 using UHFPS.Input;
 using UHFPS.Tools;
+using UHFPS.Runtime.States;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime
 {
+    [Summary("Quản lý một vật thể có thể được người chơi kéo/đẩy (Ví dụ: Thùng gỗ lớn, Tủ đồ).")]
     public class MovableObject : MonoBehaviour, IStateInteract
     {
         public enum MoveDirectionEnum { LeftRight, ForwardBackward, AllDirections }
 
+        [Tooltip("Âm thanh phát ra khi vật thể trượt trên mặt đất.")]
         public AudioSource AudioSource;
+
+        [Tooltip("Thành phần vật lý của vật thể.")]
         public Rigidbody Rigidbody;
+
+        [Tooltip("Trục không gian hướng về phía trước của vật thể.")]
         public Axis ForwardAxis;
+
+        [Tooltip("Hiển thị hình vẽ (Gizmos) trong Editor.")]
         public bool DrawGizmos = true;
 
+        [Tooltip("Hướng di chuyển cho phép (Trái/Phải, Tiến/Lùi, hay Tất cả).")]
         public MoveDirectionEnum MoveDirection;
+
+        [Tooltip("Lớp (Layer) của chướng ngại vật cần kiểm tra va chạm khi di chuyển.")]
         public LayerMask CollisionMask;
+
+        [Tooltip("Độ lệch (Offset) vị trí cầm nắm so với điểm gốc.")]
         public Vector3 HoldOffset;
+
+        [Tooltip("Cho phép người chơi xoay (Rotate) vật thể khi di chuyển.")]
         public bool AllowRotation = true;
 
+        [Tooltip("Khoảng cách tối đa người chơi có thể với tới để giữ vật.")]
         public float HoldDistance = 2f;
+
+        [Tooltip("Trọng lượng của vật thể (Ảnh hưởng lực kéo/đẩy).")]
         public float ObjectWeight = 20f;
+
+        [Tooltip("Bán kính vùng va chạm mô phỏng của người chơi.")]
         public float PlayerRadius = 0.3f;
+
+        [Tooltip("Chiều cao vùng va chạm mô phỏng của người chơi.")]
         public float PlayerHeight = 1.8f;
+
+        [Tooltip("Độ lệch (Offset) phần chân người chơi khi kiểm tra va chạm.")]
         public float PlayerFeetOffset = 0f;
 
+        [Tooltip("Hệ số làm chậm tốc độ di chuyển của người chơi khi kéo vật.")]
         public float WalkMultiplier = 1f;
+
+        [Tooltip("Hệ số làm chậm tốc độ xoay Camera khi kéo vật.")]
         public float LookMultiplier = 1f;
 
         [Range(0f, 1f)]
+        [Tooltip("Âm lượng tối đa tiếng trượt của vật thể.")]
         public float SlideVolume = 1f;
+
+        [Tooltip("Tốc độ mờ/giảm dần âm lượng khi dừng kéo.")]
         public float VolumeFadeSpeed = 1f;
 
+        [Tooltip("Bật chế độ giới hạn góc xoay dọc của Camera (Chuột).")]
         public bool UseMouseLimits;
+
+        [Tooltip("Giới hạn góc xoay dọc của Camera khi kéo vật.")]
         public MinMax MouseVerticalLimits;
 
         public Transform RootMovable => Rigidbody.transform;

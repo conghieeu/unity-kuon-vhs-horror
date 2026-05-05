@@ -14,17 +14,27 @@ using UnityEditor;
 namespace UHFPS.Runtime
 {
     [InspectorHeader("Options Radio")]
+    [Summary("Điều khiển UI cho một tùy chọn dạng Radio (Nhiều lựa chọn chữ viết, chọn bằng nút mũi tên trái/phải).")]
     public class OptionsRadio : OptionBehaviour
     {
+        [Tooltip("Text dùng để hiển thị giá trị đang được chọn (VD: Thấp, Trung bình, Cao).")]
         public TMP_Text RadioText;
+
+        [Tooltip("Script xử lý hình ảnh chấm/vạch sáng biểu thị vị trí đang chọn.")]
         public OptionIndicator Indicator;
 
         [Header("Radio Settings")]
+        [Tooltip("Vị trí (Index) lựa chọn mặc định ban đầu.")]
         public int RadioIndex = 0;
+
+        [Tooltip("Bật nếu danh sách lựa chọn sẽ được nạp bằng Code thay vì gõ tay trong Inspector.")]
         public bool OptionsCustom;
+
+        [Tooltip("Danh sách các giá trị văn bản của lựa chọn (Hỗ trợ Localization).")]
         public GString[] Options;
 
         [Header("Events")]
+        [Tooltip("Sự kiện gọi ra khi giá trị thay đổi (Trả về Index mới).")]
         public UnityEvent<int> OnChange;
 
         private void Start()

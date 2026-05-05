@@ -4,14 +4,20 @@ using ThunderWire.Attributes;
 namespace UHFPS.Runtime
 {
     [InspectorHeader("Canvas Loot At Camera")]
+    [Summary("Khiến Canvas luôn hướng về phía Camera người chơi và tự động ẩn/hiện dựa trên khoảng cách và tầm nhìn.")]
     public class CanvasLootAtCamera : MonoBehaviour
     {
+        [Tooltip("CanvasGroup cần điều khiển độ mờ.")]
         public CanvasGroup CanvasGroup;
+        [Tooltip("Kích thước vùng nhìn (Viewport) để xác định xem Canvas có đang nằm trong tầm mắt không.")]
         public Vector2 ViewportSize = Vector2.one;
 
         [Header("Settings")]
+        [Tooltip("Khoảng cách tối đa để Canvas hiển thị.")]
         public float FadeDistance = 5f;
+        [Tooltip("Thời gian làm mượt hiệu ứng ẩn/hiện.")]
         public float SmoothTime = 1f;
+        [Tooltip("Đảo ngược hướng nhìn.")]
         public bool InvertDirection;
 
         private Camera playerCamera;

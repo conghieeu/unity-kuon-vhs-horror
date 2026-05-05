@@ -4,22 +4,41 @@ using UHFPS.Input;
 using Unity.Cinemachine;
 using UnityEngine.Events;
 
+using ThunderWire.Attributes;
+
 namespace UHFPS.Runtime
 {
+    [Summary("Lớp cơ sở (Base Class) cho tất cả các hệ thống giải đố. Xử lý chuyển đổi Camera, đóng băng người chơi, bật/tắt collider và hiển thị con trỏ chuột.")]
     public abstract class PuzzleBase : MonoBehaviour, IInteractStart
     {
+        [Tooltip("Camera riêng dùng để hiển thị góc nhìn cận cảnh khi giải đố.")]
         public CinemachineCamera PuzzleCamera;
+
+        [Tooltip("Tốc độ hiệu ứng làm mờ màn hình đen (Fade) khi chuyển Camera.")]
         public float SwitchCameraFadeSpeed = 5;
+
+        [Tooltip("Danh sách gợi ý phím bấm hiển thị khi đang giải đố (Click, Xoay, Thoát...).")]
         public ControlsContext[] ControlsContexts;
 
+        [Tooltip("Layer Mask xác định những gì con trỏ chuột có thể va chạm (Raycast) khi giải đố.")]
         public LayerMask CullLayers;
+
+        [Tooltip("Layer dành riêng cho các thành phần giải đố có thể tương tác (Nút bấm, Công tắc...).")]
         public Layer InteractLayer;
+
+        [Tooltip("Layer được gán vào vật thể sau khi giải đố xong để ngăn người chơi tương tác lại.")]
         public Layer DisabledLayer;
+
+        [Tooltip("Hiển thị con trỏ ảo trên màn hình để click vào các bộ phận giải đố.")]
         public bool EnablePointer;
 
+        [Tooltip("Danh sách Collider sẽ được BẬT khi bắt đầu giải đố (Dùng cho các nút bấm nhỏ).")]
         public List<Collider> CollidersEnable = new List<Collider>();
+
+        [Tooltip("Danh sách Collider sẽ bị TẮT khi bắt đầu giải đố (Thường là Collider tương tác chính của vật thể).")]
         public List<Collider> CollidersDisable = new List<Collider>();
 
+        [Tooltip("Sự kiện gọi ra khi màn hình bắt đầu mờ đi để chuyển cảnh (True = Vào giải đố, False = Thoát ra).")]
         public UnityEvent<bool> OnScreenFade;
 
         protected PlayerPresenceManager playerPresence;
