@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f55106f91a38b6d4a8120c7aec3aa82d, type: 3}
+  m_Name: (Objectives) Demo
+  m_EditorClassIdentifier: 
+  Objectives:
+  - ObjectiveKey: TryZipline
+    ObjectiveTitle:
+      GlocText: '*Little adrenaline'
+      NormalText: Little adrenaline
+    SubObjectives:
+    - SubObjectiveKey: TryZipline
+      CompleteCount: 0
+      ObjectiveText:
+        GlocText: '*Use the zipline and get some adrenaline'
+        NormalText: Use the zipline and get some adrenaline
+  - ObjectiveKey: TryPuzzles
+    ObjectiveTitle:
+      GlocText: '*Try some puzzles'
+      NormalText: Try some puzzles
+    SubObjectives:
+    - SubObjectiveKey: TryElectricCircuit
+      CompleteCount: 0
+      ObjectiveText:
+        GlocText: '*Try to solve the electric circuit puzzle'
+        NormalText: Try to solve the electric circuit puzzle
+    - SubObjectiveKey: TryLevers
+      CompleteCount: 3
+      ObjectiveText:
+        GlocText: '*Try to solve the levers puzzle [count]/3'
+        NormalText: Try to solve the levers puzzle
+  - ObjectiveKey: WayOut
+    ObjectiveTitle:
+      GlocText: '*The way out'
+      NormalText: The way out
+    SubObjectives:
+    - SubObjectiveKey: WayOut
+      CompleteCount: 0
+      ObjectiveText:
+        GlocText: '*Find a way out of this place'
+        NormalText: Find a way out of this place

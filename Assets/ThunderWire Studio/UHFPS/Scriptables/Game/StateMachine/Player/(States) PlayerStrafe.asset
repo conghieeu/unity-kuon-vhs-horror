@@ -1,0 +1,237 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7126588196890882439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2798a63569628e46be1f4c172d5544b, type: 3}
+  m_Name: Jumping
+  m_EditorClassIdentifier: 
+--- !u!114 &-6135597883646026547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d085e75c1f2714548a3f6c20b2fd52db, type: 3}
+  m_Name: Ladder
+  m_EditorClassIdentifier: 
+  ControlExit:
+    InputAction:
+      ActionName: input.action.jump
+      BindingIndex: 0
+    InteractName:
+      GlocText: controls.name.exit
+      NormalText: Exit
+  OnLadderSpeed: 1.5
+  ToLadderSpeed: 3
+  BezierLadderSpeed: 3
+  BezierEvalSpeed: 1
+  OnLadderDistance: 0.1
+  EndLadderDistance: 0.1
+  LadderFrontAngle: 10
+  PlayerCenterOffset: 0.5
+  GroundToLadderOffset: 0.1
+  FootstepsVolume: 1
+  LadderStepTime: 0.6
+  LadderFootsteps:
+  - {fileID: 8300000, guid: 32e4b26b073e1b448b3d079b802fbd4e, type: 3}
+  - {fileID: 8300000, guid: abfd1d08026882b4db58163761e367b9, type: 3}
+  - {fileID: 8300000, guid: fa8a288d0c9e4b04aa81784147372358, type: 3}
+  - {fileID: 8300000, guid: 1137ebc42d380dc44b85c27cb4ed42a2, type: 3}
+  - {fileID: 8300000, guid: 7fa3d47cad34abb4898d0eaaa8669574, type: 3}
+  - {fileID: 8300000, guid: e14d7764fc1637a48bc6a2d6708f18d1, type: 3}
+  - {fileID: 8300000, guid: 3821196cf371be043b93815c380a9e17, type: 3}
+--- !u!114 &-6089208073238054314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f09ad6719be5d84eae19b3e0fc1cd2f, type: 3}
+  m_Name: Walking
+  m_EditorClassIdentifier: 
+--- !u!114 &-5875970328235571646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73721e55fdeb3db45993b9633b0e1845, type: 3}
+  m_Name: Crouching
+  m_EditorClassIdentifier: 
+--- !u!114 &-4235595541821338520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88b374e9d96cd1f428e5ce53302ca374, type: 3}
+  m_Name: Running
+  m_EditorClassIdentifier: 
+--- !u!114 &-2734262125783700330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 258450e9227940840b031ae4f08fa784, type: 3}
+  m_Name: Idle
+  m_EditorClassIdentifier: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9720e36ae9a6679408d8077799dba0fa, type: 3}
+  m_Name: (States) PlayerStrafe
+  m_EditorClassIdentifier: 
+  PlayerStates:
+  - stateAsset: {fileID: -2734262125783700330}
+    isEnabled: 1
+  - stateAsset: {fileID: -6089208073238054314}
+    isEnabled: 1
+  - stateAsset: {fileID: -4235595541821338520}
+    isEnabled: 1
+  - stateAsset: {fileID: -5875970328235571646}
+    isEnabled: 1
+  - stateAsset: {fileID: -7126588196890882439}
+    isEnabled: 1
+  - stateAsset: {fileID: 168121009931680893}
+    isEnabled: 1
+  - stateAsset: {fileID: -6135597883646026547}
+    isEnabled: 1
+  - stateAsset: {fileID: 7815937591920540382}
+    isEnabled: 1
+  - stateAsset: {fileID: 2661364000807776837}
+    isEnabled: 1
+  - stateAsset: {fileID: 7339526265045310608}
+    isEnabled: 1
+  - stateAsset: {fileID: 7487515716680115408}
+    isEnabled: 1
+  friction: 5
+  acceleration: 8
+  deceleration: 8
+  airAcceleration: 1.75
+  airAccelerationCap: 0.1
+--- !u!114 &168121009931680893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c215de1f9c23a844a9a672e935d3dce5, type: 3}
+  m_Name: Sliding
+  m_EditorClassIdentifier: 
+  SlidingFriction: 20
+  SpeedChange: 2
+  MotionChange: 3
+  SlideControlChange: 0.3
+  SlideControl: 1
+--- !u!114 &2661364000807776837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d9aa680e1e851e4f9854e75719c7c25, type: 3}
+  m_Name: Pushing
+  m_EditorClassIdentifier: 
+  ControlExit:
+    InputAction:
+      ActionName: input.action.jump
+      BindingIndex: 0
+    InteractName:
+      GlocText: controls.name.exit
+      NormalText: Exit
+  ToMovableTime: 0.3
+  PushingSpeed: 10
+--- !u!114 &7339526265045310608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 277f41a8c7ea74c4eafaaa20d9e2cd56, type: 3}
+  m_Name: Death
+  m_EditorClassIdentifier: 
+  DeathCameraPosition: {x: 0, y: 0.2, z: 0}
+  DeathCameraRotation: {x: 0, y: 0, z: -60}
+  RotationChangeStart: 0.75
+  DeathChangeTime: 0.25
+--- !u!114 &7487515716680115408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1999379b0542a43478ca09079846b437, type: 3}
+  m_Name: Hiding
+  m_EditorClassIdentifier: 
+--- !u!114 &7815937591920540382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9654ec8df88a0c4eaf9b32745839f4e, type: 3}
+  m_Name: Zipline
+  m_EditorClassIdentifier: 
+  ControlExit:
+    InputAction:
+      ActionName: input.action.jump
+      BindingIndex: 0
+    InteractName:
+      GlocText: controls.name.exit
+      NormalText: Exit
+  EvaluationSpeed: 0.35
+  ZiplineSpeed: 3
+  ZiplineEndEval: 1
+  ZiplineEnter:
+    audioClip: {fileID: 8300000, guid: 044e160acaf3f2f43ac773666e373c0a, type: 3}
+    volume: 1
+  ZiplineExit:
+    audioClip: {fileID: 8300000, guid: cb296b10e0da3564da07c4778c8b0011, type: 3}
+    volume: 1
+  ZiplineSliding:
+    audioClip: {fileID: 8300000, guid: 430e07e8f60b497498c910b53e51f5b8, type: 3}
+    volume: 1

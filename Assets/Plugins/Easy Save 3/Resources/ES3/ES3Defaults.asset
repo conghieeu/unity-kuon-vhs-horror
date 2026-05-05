@@ -35,27 +35,8 @@ MonoBehaviour:
     referenceMode: 2
     serializationDepthLimit: 64
     assemblyNames:
-    - Assembly-CSharp
     - Assembly-CSharp-firstpass
-    - DialogueSystem
-    - MCPForUnity.Runtime
-    - NodeCanvas
-    - ParadoxNotion
-    - PicoShot.Localization
-    - PixelCrushers
-    - QFSW.QC
-    - QFSW.QC.Demo
-    - QFSW.QC.Extras
-    - QFSW.QC.Grammar
-    - QFSW.QC.Parsers
-    - QFSW.QC.ScanRules
-    - QFSW.QC.Serializers
-    - QFSW.QC.Suggestors
-    - QFSW.QC.UI
-    - SingularityGroup.HotReload.Runtime
-    - SingularityGroup.HotReload.Runtime.Public
-    - VInspector
-    - Wingman
+    - Assembly-CSharp
     showAdvancedSettings: 0
   addMgrToSceneAutomatically: 0
   autoUpdateReferences: 1

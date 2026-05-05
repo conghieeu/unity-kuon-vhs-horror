@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d312663c8cd23642992b5d25cd832bb, type: 3}
+  m_Name: (Surface) Dirt
+  m_EditorClassIdentifier: 
+  SurfaceTag:
+    tag: Untagged
+  SurfaceTextures:
+  - {fileID: 2800000, guid: 3b752e771ddb1a74c9058a53124e5c28, type: 3}
+  - {fileID: 2800000, guid: 0aab6f5170635a842b86d72edbaa04aa, type: 3}
+  SurfaceFriction: 1
+  FootstepsVolume: 1
+  SurfaceFootsteps:
+  - {fileID: 8300000, guid: d07d732c58beac44e8f8fb979081f69f, type: 3}
+  - {fileID: 8300000, guid: dac395d75748e494b87791bf9662a7e4, type: 3}
+  - {fileID: 8300000, guid: 3333b19c58f64c449bb6e1df1011b12e, type: 3}
+  - {fileID: 8300000, guid: 60f9f5f8025cf174d8091ae0c844d476, type: 3}
+  - {fileID: 8300000, guid: 401e6e1b64fc3cd4bb3584468a0e2a8c, type: 3}
+  - {fileID: 8300000, guid: 54873b189a3917b4e90a611d01304a38, type: 3}
+  - {fileID: 8300000, guid: 4a31e4e8a9656f641a1f9d6b26389385, type: 3}
+  - {fileID: 8300000, guid: b8998fdec74fb494da96aeaf8eb7ccc3, type: 3}
+  - {fileID: 8300000, guid: 2e4f104702b82ce4eac3a04de7710b99, type: 3}
+  - {fileID: 8300000, guid: f5bb3139d987a2f4ca8d843ec4088dbf, type: 3}
+  LandStepsVolume: 1
+  SurfaceLandSteps:
+  - {fileID: 8300000, guid: 9e2601885a6ba6e4198d974495248d2a, type: 3}
+  - {fileID: 8300000, guid: 79c2338f31b54764bbb86326c4db4714, type: 3}
+  - {fileID: 8300000, guid: 605489d70587cfd489a0f36c90ff6f35, type: 3}
+  - {fileID: 8300000, guid: 9835fa5113ea70344aa8fa322e4e5a5e, type: 3}
+  - {fileID: 8300000, guid: 753cfe231b643d943bc5687ee9269fdb, type: 3}
+  BulletImpactVolume: 1
+  SurfaceBulletImpact: []
+  MeleeImpactVolume: 1
+  SurfaceMeleeImpact:
+  - {fileID: 8300000, guid: 119070d211e1c534b817757bcaf8c847, type: 3}
+  SurfaceBulletmarks:
+  - {fileID: 3450624082010187653, guid: f8bfba9e88675344aa0cc67867110dfa, type: 3}
+  SurfaceMeleemarks:
+  - {fileID: 2859445566166323868, guid: 60433f4d689054943947cc2af765dd4f, type: 3}

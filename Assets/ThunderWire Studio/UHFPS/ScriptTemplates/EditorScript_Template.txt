@@ -1,0 +1,23 @@
+using UnityEngine;
+using UnityEditor;
+using UHFPS.Runtime;
+using ThunderWire.Editors;
+
+namespace UHFPS.Editors
+{
+    [CustomEditor(typeof(#SCRIPTNAME#))]
+    public class #SCRIPTNAME# : InspectorEditor<#SCRIPTNAME#>
+    {
+        public override void OnInspectorGUI()
+        {
+            EditorDrawing.DrawInspectorHeader(new GUIContent("#SCRIPTNAME#"), Target);
+            EditorGUILayout.Space();
+
+            serializedObject.Update();
+            {
+                #NOTRIM#
+            }
+            serializedObject.ApplyModifiedProperties();
+        }
+    }
+}

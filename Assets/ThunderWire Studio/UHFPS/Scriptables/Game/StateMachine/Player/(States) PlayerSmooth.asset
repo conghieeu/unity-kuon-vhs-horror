@@ -1,0 +1,235 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8521706686895293519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 277f41a8c7ea74c4eafaaa20d9e2cd56, type: 3}
+  m_Name: Death
+  m_EditorClassIdentifier: 
+  DeathCameraPosition: {x: 0, y: 0.2, z: 0}
+  DeathCameraRotation: {x: 0, y: 0, z: -60}
+  RotationChangeStart: 0.75
+  DeathChangeTime: 0.25
+--- !u!114 &-7187678247991363468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97facf966d0d40e48a29172f3d7e4cd4, type: 3}
+  m_Name: Jump
+  m_EditorClassIdentifier: 
+--- !u!114 &-5966767257484766718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 641543b11e0e83142b279ee987a4d61e, type: 3}
+  m_Name: Running
+  m_EditorClassIdentifier: 
+--- !u!114 &-3508934045134123938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2267b78c360d33a49866d16bf4eee989, type: 3}
+  m_Name: Idle
+  m_EditorClassIdentifier: 
+--- !u!114 &-3091074795513825643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13350e37888848a46b85a64003a4ca84, type: 3}
+  m_Name: Walking
+  m_EditorClassIdentifier: 
+--- !u!114 &-2928741228779882727
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1999379b0542a43478ca09079846b437, type: 3}
+  m_Name: Hiding
+  m_EditorClassIdentifier: 
+--- !u!114 &-1972307249272395086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c215de1f9c23a844a9a672e935d3dce5, type: 3}
+  m_Name: Sliding
+  m_EditorClassIdentifier: 
+  SlidingFriction: 20
+  SpeedChange: 2
+  MotionChange: 3
+  SlideControlChange: 0.3
+  SlideControl: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 242f986622c5ebc45919b22df9c3fb72, type: 3}
+  m_Name: (States) PlayerSmooth
+  m_EditorClassIdentifier: 
+  PlayerStates:
+  - stateAsset: {fileID: -3508934045134123938}
+    isEnabled: 1
+  - stateAsset: {fileID: -3091074795513825643}
+    isEnabled: 1
+  - stateAsset: {fileID: -5966767257484766718}
+    isEnabled: 1
+  - stateAsset: {fileID: 5317404476196027615}
+    isEnabled: 1
+  - stateAsset: {fileID: -7187678247991363468}
+    isEnabled: 1
+  - stateAsset: {fileID: -1972307249272395086}
+    isEnabled: 1
+  - stateAsset: {fileID: 6765447900060016093}
+    isEnabled: 1
+  - stateAsset: {fileID: 959416535218894860}
+    isEnabled: 1
+  - stateAsset: {fileID: 7554897181884122306}
+    isEnabled: 1
+  - stateAsset: {fileID: -8521706686895293519}
+    isEnabled: 1
+  - stateAsset: {fileID: -2928741228779882727}
+    isEnabled: 1
+  friction: 1
+  acceleration: 5
+  deceleration: 10
+--- !u!114 &959416535218894860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9654ec8df88a0c4eaf9b32745839f4e, type: 3}
+  m_Name: Zipline
+  m_EditorClassIdentifier: 
+  ControlExit:
+    InputAction:
+      ActionName: input.action.jump
+      BindingIndex: 0
+    InteractName:
+      GlocText: controls.name.exit
+      NormalText: Exit
+  EvaluationSpeed: 0.35
+  ZiplineSpeed: 3
+  ZiplineEndEval: 1
+  ZiplineEnter:
+    audioClip: {fileID: 8300000, guid: 044e160acaf3f2f43ac773666e373c0a, type: 3}
+    volume: 1
+  ZiplineExit:
+    audioClip: {fileID: 8300000, guid: cb296b10e0da3564da07c4778c8b0011, type: 3}
+    volume: 1
+  ZiplineSliding:
+    audioClip: {fileID: 8300000, guid: 430e07e8f60b497498c910b53e51f5b8, type: 3}
+    volume: 1
+--- !u!114 &5317404476196027615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd62a62fb1fc6584baeb65dc01a581c9, type: 3}
+  m_Name: Crouch
+  m_EditorClassIdentifier: 
+--- !u!114 &6765447900060016093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d085e75c1f2714548a3f6c20b2fd52db, type: 3}
+  m_Name: Ladder
+  m_EditorClassIdentifier: 
+  ControlExit:
+    InputAction:
+      ActionName: input.action.jump
+      BindingIndex: 0
+    InteractName:
+      GlocText: controls.name.exit
+      NormalText: Exit
+  OnLadderSpeed: 1.5
+  ToLadderSpeed: 3
+  BezierLadderSpeed: 3
+  BezierEvalSpeed: 1
+  OnLadderDistance: 0.1
+  EndLadderDistance: 0.1
+  LadderFrontAngle: 10
+  PlayerCenterOffset: 0.5
+  GroundToLadderOffset: 0.1
+  FootstepsVolume: 1
+  LadderStepTime: 0.5
+  LadderFootsteps:
+  - {fileID: 8300000, guid: 32e4b26b073e1b448b3d079b802fbd4e, type: 3}
+  - {fileID: 8300000, guid: abfd1d08026882b4db58163761e367b9, type: 3}
+  - {fileID: 8300000, guid: fa8a288d0c9e4b04aa81784147372358, type: 3}
+  - {fileID: 8300000, guid: 1137ebc42d380dc44b85c27cb4ed42a2, type: 3}
+  - {fileID: 8300000, guid: 7fa3d47cad34abb4898d0eaaa8669574, type: 3}
+  - {fileID: 8300000, guid: e14d7764fc1637a48bc6a2d6708f18d1, type: 3}
+  - {fileID: 8300000, guid: 3821196cf371be043b93815c380a9e17, type: 3}
+--- !u!114 &7554897181884122306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d9aa680e1e851e4f9854e75719c7c25, type: 3}
+  m_Name: Pushing
+  m_EditorClassIdentifier: 
+  ControlExit:
+    InputAction:
+      ActionName: input.action.jump
+      BindingIndex: 0
+    InteractName:
+      GlocText: controls.name.exit
+      NormalText: Exit
+  ToMovableTime: 1
+  PushingSpeed: 10
