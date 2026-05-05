@@ -5,14 +5,20 @@ using Newtonsoft.Json.Linq;
 namespace UHFPS.Runtime
 {
     [InspectorHeader("Dynamic Broken Fix")]
+    [Summary("Quản lý việc sửa chữa một Dynamic Object bị hỏng bằng cách yêu cầu người chơi chọn đúng vật phẩm từ Inventory.")]
     public class DynamicBrokenFix : MonoBehaviour, IDynamicUnlock, IInventorySelector, ISaveable
     {
+        [Tooltip("Renderer (mô hình) của bộ phận sẽ được hiển thị sau khi đã sửa chữa xong.")]
         public MeshRenderer DisabledRenderer;
+        [Tooltip("ID của vật phẩm cần thiết trong Inventory để sửa chữa đối tượng này.")]
         public ItemGuid FixableItem;
 
         [Header("Hint Text")]
+        [Tooltip("Hiển thị thông báo khi người chơi chọn sai vật phẩm.")]
         public bool ShowHintText;
+        [Tooltip("Nội dung thông báo (có hỗ trợ Localization) khi người chơi chọn sai vật phẩm.")]
         public GString NoFitHintText;
+        [Tooltip("Thời gian hiển thị thông báo trên màn hình (giây).")]
         public float HintTime = 2f;
 
         private DynamicObject dynamicObject;

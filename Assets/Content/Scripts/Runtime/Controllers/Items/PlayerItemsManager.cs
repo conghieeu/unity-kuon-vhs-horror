@@ -7,10 +7,14 @@ using ThunderWire.Attributes;
 namespace UHFPS.Runtime
 {
     [Docs("https://docs.twgamesdev.com/uhfps/guides/player-items")]
+    [Summary("Quản lý danh sách các vật phẩm của người chơi, xử lý việc chuyển đổi, chọn và hủy chọn các vật phẩm.")]
     public class PlayerItemsManager : PlayerComponent
     {
+        [Tooltip("Danh sách tất cả các hành vi vật phẩm (PlayerItemBehaviour) mà người chơi có thể sử dụng.")]
         public List<PlayerItemBehaviour> PlayerItems = new();
+        [Tooltip("Thời gian trễ (Anti-Spam) giữa mỗi lần chuyển đổi vật phẩm.")]
         public float AntiSpamDelay = 0.5f;
+        [Tooltip("Cho phép người chơi sử dụng vật phẩm hay không? (Có thể tắt khi đang trong Cutscene).")]
         public bool IsItemsUsable = true;
 
         private PlayerItemBehaviour currentItem;

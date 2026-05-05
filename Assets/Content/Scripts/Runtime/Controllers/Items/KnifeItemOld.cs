@@ -3,53 +3,92 @@ using UnityEngine;
 using UHFPS.Input;
 using UHFPS.Tools;
 using UHFPS.Scriptable;
+using ThunderWire.Attributes;
 using static UHFPS.Scriptable.SurfaceDefinitionSet;
 
 namespace UHFPS.Runtime
 {
+    [Summary("Điều khiển vật phẩm Dao găm (Phiên bản cũ), quản lý đòn chém và đâm.")]
     public class KnifeItemOld : PlayerItemBehaviour
     {
         [System.Serializable]
         public struct SlashType
         {
+            [Tooltip("Chỉ số của đòn đánh (truyền vào Animator).")]
             public ushort AttackIndex;
+            [Tooltip("Góc độ chém.")]
             public float AttackAngle;
+            [Tooltip("Hiển thị Gizmos góc chém.")]
             public bool Visualize;
         }
 
+        [Header("Surface Settings")]
+        [Tooltip("Tập hợp định nghĩa bề mặt khi bị dao chém trúng.")]
         public SurfaceDefinitionSet SurfaceDefinitionSet;
+        [Tooltip("Phương pháp phát hiện bề mặt.")]
         public SurfaceDetection SurfaceDetection;
+        [Tooltip("Thẻ (Tag) nhận diện bề mặt da thịt.")]
         public Tag FleshTag;
 
+        [Header("Attack Setup")]
+        [Tooltip("Lớp mạng (LayerMask) có thể bị chém trúng.")]
         public LayerMask RaycastMask;
+        [Tooltip("Khoảng cách tối đa để chém trúng mục tiêu.")]
         public float AttackDistance;
+        [Tooltip("Sát thương gây ra (ngẫu nhiên trong khoảng).")]
         public MinMaxInt AttackDamage;
+        [Tooltip("Thời gian chờ giữa các lần tấn công.")]
         public float AttackWait;
 
+        [Header("Animations")]
+        [Tooltip("Trạng thái rút dao.")]
         public string KnifeDrawState = "KnifeDraw";
+        [Tooltip("Trạng thái cất dao.")]
         public string KnifeHideState = "KnifeHide";
+        [Tooltip("Trạng thái nghỉ.")]
         public string KnifeIdleState = "KnifeIdle";
 
+        [Header("Triggers")]
+        [Tooltip("Tham số Trigger cất dao.")]
         public string HideTrigger = "Hide";
+        [Tooltip("Tham số Trigger tấn công.")]
         public string AttackTrigger = "Attack";
+        [Tooltip("Tham số Integer loại hình tấn công (Chém/Đâm).")]
         public string AttackTypeTrigger = "AttackType";
 
+        [Header("Attack Types")]
+        [Tooltip("Các loại đòn chém (Chém ngang, chém dọc, ...).")]
         public SlashType[] SlashTypes;
+        [Tooltip("Chỉ số của đòn đâm (Stab).")]
         public ushort StabIndex = 2;
 
+        [Tooltip("Hiệu ứng máu bắn ra khi chém trúng da thịt.")]
         public GameObject FleshImpact;
 
+        [Header("Sounds")]
+        [Tooltip("Âm thanh vung dao khi chém.")]
         public SoundClip SlashWhoosh;
+        [Tooltip("Âm thanh vung dao khi đâm.")]
         public SoundClip StabWhoosh;
 
+        [Tooltip("Danh sách âm thanh khi chém trúng da thịt.")]
         public AudioClip[] FleshSlash;
+        [Tooltip("Danh sách âm thanh khi đâm trúng da thịt.")]
         public AudioClip[] FleshStab;
 
-        [Range(0f, 1f)] public float DefaultSlashVolume = 1f;
-        [Range(0f, 1f)] public float DefaultStabVolume = 1f;
+        [Range(0f, 1f)]
+        [Tooltip("Âm lượng mặc định khi chém.")]
+        public float DefaultSlashVolume = 1f;
+        [Range(0f, 1f)]
+        [Tooltip("Âm lượng mặc định khi đâm.")]
+        public float DefaultStabVolume = 1f;
 
-        [Range(0f, 1f)] public float FleshSlashVolume = 1f;
-        [Range(0f, 1f)] public float FleshStabVolume = 1f;
+        [Range(0f, 1f)]
+        [Tooltip("Âm lượng khi chém trúng da thịt.")]
+        public float FleshSlashVolume = 1f;
+        [Range(0f, 1f)]
+        [Tooltip("Âm lượng khi đâm trúng da thịt.")]
+        public float FleshStabVolume = 1f;
 
         private AudioSource audioSource;
         private bool isEquipped;

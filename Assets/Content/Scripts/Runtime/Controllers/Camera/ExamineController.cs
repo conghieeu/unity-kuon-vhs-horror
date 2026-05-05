@@ -9,6 +9,7 @@ using static UHFPS.Runtime.InteractableItem;
 namespace UHFPS.Runtime
 {
     [RequireComponent(typeof(InteractController))]
+    [Summary("Hệ thống kiểm tra (Examine) vật phẩm, cho phép người chơi nhặt vật phẩm lên, xoay, phóng to, đọc văn bản và tương tác chi tiết.")]
     public class ExamineController : PlayerComponent
     {
         public sealed class ExaminedObject
@@ -26,40 +27,74 @@ namespace UHFPS.Runtime
             public GameObject GameObject => InteractableItem.gameObject;
         }
 
+        [Header("Examine Rendering")]
+        [Tooltip("Các layer bị bỏ qua (culling) khi render đối tượng đang được examine.")]
         public LayerMask FocusCullLayes;
+        [Tooltip("Layer dành riêng cho vật phẩm khi đang được examine (thường dùng để tách khỏi môi trường).")]
         public Layer FocusLayer;
+        [Tooltip("Rendering Layer Mask sử dụng cho URP/HDRP khi examine.")]
         public uint FocusRenderingLayer;
 
+        [Header("Examine Light & UI")]
+        [Tooltip("Nguồn sáng trợ sáng dành riêng cho vật phẩm đang examine.")]
         public Light ExamineLight;
+        [Tooltip("Prefab của điểm tương tác (Hotspot) hiển thị trên bề mặt vật phẩm.")]
         public GameObject HotspotPrefab;
 
+        [Header("Controls Info")]
+        [Tooltip("Cấu hình phím bấm: Cất vật phẩm.")]
         public ControlsContext ControlPutBack;
+        [Tooltip("Cấu hình phím bấm: Đọc giấy/tài liệu.")]
         public ControlsContext ControlRead;
+        [Tooltip("Cấu hình phím bấm: Nhặt vật phẩm vào kho.")]
         public ControlsContext ControlTake;
+        [Tooltip("Cấu hình phím bấm: Xoay vật phẩm.")]
         public ControlsContext ControlRotate;
+        [Tooltip("Cấu hình phím bấm: Phóng to/thu nhỏ.")]
         public ControlsContext ControlZoom;
 
+        [Header("Examine Settings")]
+        [Tooltip("Thời gian làm mượt khi xoay vật phẩm.")]
         public float RotateTime = 0.1f;
+        [Tooltip("Hệ số nhân tốc độ xoay.")]
         public float RotateMultiplier = 3f;
+        [Tooltip("Hệ số nhân tốc độ phóng to/thu nhỏ.")]
         public float ZoomMultiplier = 0.1f;
+        [Tooltip("Thời gian chờ trước khi xem xong vật phẩm (để hiện tiêu đề/thoại).")]
         public float TimeToExamine = 2f;
 
+        [Header("Positions")]
+        [Tooltip("Tọa độ rớt vật phẩm xuống đất (tương đối so với Camera).")]
         public Vector3 DropOffset;
+        [Tooltip("Tọa độ thu vật phẩm vào kho đồ (tương đối so với Camera).")]
         public Vector3 InventoryOffset;
+        [Tooltip("Hiển thị nhãn vị trí trên Gizmos (trong Editor).")]
         public bool ShowLabels = true;
 
+        [Header("Animations")]
+        [Tooltip("Đường cong làm mượt vị trí khi bắt đầu nhấc vật phẩm lên để examine.")]
         public AnimationCurve PickUpCurve = new(new Keyframe(0, 0), new Keyframe(1, 0));
+        [Tooltip("Hệ số nhân thời gian của PickUpCurve.")]
         public float PickUpCurveMultiplier = 1f;
+        [Tooltip("Thời gian nhấc vật phẩm.")]
         public float PickUpTime = 0.2f;
 
+        [Tooltip("Đường cong làm mượt vị trí khi cất vật phẩm lại chỗ cũ.")]
         public AnimationCurve PutPositionCurve = new(new Keyframe(0, 0), new Keyframe(1, 0));
+        [Tooltip("Hệ số nhân thời gian của PutPositionCurve.")]
         public float PutPositionCurveMultiplier = 1f;
+        [Tooltip("Thời gian cất vật phẩm (vị trí).")]
         public float PutPositionCurveTime = 0.1f;
 
+        [Tooltip("Đường cong làm mượt góc xoay khi cất vật phẩm lại chỗ cũ.")]
         public AnimationCurve PutRotationCurve = new(new Keyframe(0, 0), new Keyframe(1, 0));
+        [Tooltip("Hệ số nhân thời gian của PutRotationCurve.")]
         public float PutRotationCurveMultiplier = 1f;
+        [Tooltip("Thời gian cất vật phẩm (góc xoay).")]
         public float PutRotationCurveTime = 0.1f;
 
+        [Header("Sounds")]
+        [Tooltip("Âm thanh gợi ý khi xem xong vật phẩm (nếu vật phẩm không có âm thanh riêng).")]
         public SoundClip ExamineHintSound;
 
         public Vector3 DropPosition => transform.TransformPoint(DropOffset);

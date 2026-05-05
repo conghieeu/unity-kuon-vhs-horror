@@ -2,9 +2,11 @@ using UnityEngine;
 using UHFPS.Tools;
 using UHFPS.Scriptable;
 using Newtonsoft.Json.Linq;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime
 {
+    [Summary("Lớp cơ sở (Base Class) cho tất cả các vật phẩm của người chơi. Xử lý hoạt ảnh, phát hiện va chạm với tường và các hiệu ứng rung lắc/chuyển động.")]
     public abstract class PlayerItemBehaviour : MonoBehaviour, ISaveableCustom
     {
         private Animator animator;
@@ -19,37 +21,55 @@ namespace UHFPS.Runtime
         private Quaternion defaultMotionRot;
         private Vector3 defaultMotionPos;
 
+        [Header("Features")]
+        [Tooltip("Kích hoạt tính năng phát hiện va chạm tường (đẩy vật phẩm lại khi đứng gần tường).")]
         public bool EnableWallDetection = true;
+        [Tooltip("Kích hoạt cấu hình chuyển động (Motion Preset).")]
         public bool EnableMotionPreset = true;
+        [Tooltip("Kích hoạt nhận các chuyển động bên ngoài tác động vào (ví dụ: rung lắc khi trúng đòn).")]
         public bool EnableExternalMotion = true;
 
-        // wall detection
+        [Header("Wall Detection")]
+        [Tooltip("Transform sẽ bị đẩy lùi khi phát hiện va chạm tường (thường là transform chứa mô hình vật phẩm).")]
         public Transform WallHitTransform;
+        [Tooltip("Lớp mạng (LayerMask) được coi là tường/vật cản.")]
         public LayerMask WallHitMask;
+        [Tooltip("Khoảng cách tối đa để tia (Ray) phát hiện tường.")]
         public float WallHitRayDistance = 0.5f;
+        [Tooltip("Bán kính của tia quét (SphereCast) phát hiện tường.")]
         public float WallHitRayRadius = 0.3f;
+        [Tooltip("Độ mạnh của lực đẩy lùi khi va chạm tường.")]
         public float WallHitAmount = 1f;
+        [Tooltip("Thời gian mượt (Smooth time) khi đẩy lùi vật phẩm.")]
         public float WallHitTime = 0.2f;
+        [Tooltip("Độ lệch (Offset) vị trí gốc của tia quét.")]
         public Vector3 WallHitRayOffset;
+        [Tooltip("Hiển thị vùng quét tia (Gizmos) trong Editor.")]
         public bool ShowRayGizmos = true;
 
-        // item motion
+        [Header("Item Motion")]
+        [Tooltip("Đối tượng hòa trộn các chuyển động của vật phẩm.")]
         public MotionBlender MotionBlender = new();
+        [Tooltip("Cấu hình chuyển động định sẵn (ScriptableObject) cho vật phẩm này.")]
         public MotionPreset MotionPreset;
 
-        // external motions
+        [Header("External Motions")]
+        [Tooltip("Danh sách các cấu hình chuyển động bên ngoài tác động (External Motions).")]
         public ExternalMotions ExternalMotions = new();
 
+        [field: Header("References")]
         /// <summary>
         /// The pivot point of the item object that will be used for the motion preset effects.
         /// </summary>
         [field: SerializeField]
+        [field: Tooltip("Điểm tựa (Pivot) của vật phẩm, được sử dụng làm gốc cho các hiệu ứng chuyển động.")]
         public Transform MotionPivot { get; set; }
 
         /// <summary>
         /// The object of the item which will be enabled or disabled, usually a child object.
         /// </summary>
         [field: SerializeField]
+        [field: Tooltip("Game Object đại diện cho mô hình vật phẩm, sẽ được bật/tắt (Enable/Disable) khi trang bị hoặc cất đi.")]
         public GameObject ItemObject { get; set; }
 
         /// <summary>

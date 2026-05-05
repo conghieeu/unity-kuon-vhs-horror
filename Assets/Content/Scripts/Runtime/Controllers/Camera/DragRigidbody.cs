@@ -1,37 +1,57 @@
 using UnityEngine;
 using UHFPS.Input;
 using System;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime
 {
     [RequireComponent(typeof(InteractController))]
+    [Summary("Điều khiển việc kéo, nhấc và ném các vật thể vật lý (Rigidbody) trong game.")]
     public class DragRigidbody : PlayerComponent, IReticleProvider
     {
         public enum HoldTypeEnum { Press, Hold }
         public enum DragTypeEnum { WeightedVelocity, FixedVelocity }
 
+        [Tooltip("Cách thức giữ vật: Press (Nhấn để giữ/nhấn lại để thả) hoặc Hold (Giữ nút để giữ/nhả nút để thả).")]
         public HoldTypeEnum HoldType = HoldTypeEnum.Press;
+        [Tooltip("Loại di chuyển vật thể: WeightedVelocity (di chuyển mượt mà có tính toán trọng lượng) hoặc FixedVelocity (cố định vị trí nhanh chóng).")]
         public DragTypeEnum DragType = DragTypeEnum.WeightedVelocity;
 
+        [Tooltip("Cấu hình nút bấm hiển thị hướng dẫn khi kéo vật.")]
         public ControlsContext[] ControlsContexts;
 
+        [Tooltip("Hiển thị con trỏ (Reticle) dạng bàn tay khi có thể nắm vật.")]
         public bool ShowGrabReticle = true;
+        [Tooltip("Cấu hình icon con trỏ khi có thể nắm.")]
         public Reticle GrabHand;
+        [Tooltip("Cấu hình icon con trỏ khi đang giữ vật.")]
         public Reticle HoldHand;
 
+        [Tooltip("Chế độ nội suy Rigidbody khi đang giữ vật (giúp di chuyển mượt hơn).")]
         public RigidbodyInterpolation Interpolate = RigidbodyInterpolation.Interpolate;
+        [Tooltip("Chế độ phát hiện va chạm khi đang giữ vật (ngăn xuyên tường).")]
         public CollisionDetectionMode CollisionDetection = CollisionDetectionMode.ContinuousDynamic;
+        [Tooltip("Khóa xoay vật thể khi đang được kéo.")]
         public bool FreezeRotation = false;
 
+        [Tooltip("Độ mạnh của lực kéo vật thể về vị trí trước camera.")]
         public float DragStrength = 10f;
+        [Tooltip("Lực ném vật thể đi.")]
         public float ThrowStrength = 10f;
+        [Tooltip("Tốc độ xoay vật thể (khi nhấn giữ phím xoay).")]
         public float RotateSpeed = 1f;
+        [Tooltip("Tốc độ phóng to/thu nhỏ vật thể (kéo lại gần/ra xa bằng cuộn chuột).")]
         public float ZoomSpeed = 1f;
 
+        [Tooltip("Giữ vật thể tại vị trí chính xác mà người chơi đã click chuột vào.")]
         public bool HitpointOffset = true;
+        [Tooltip("Cho phép vật thể đang được giữ va chạm với người chơi.")]
         public bool PlayerCollision = false;
+        [Tooltip("Cho phép kéo gần/ra xa vật thể khi đang giữ.")]
         public bool ObjectZooming = true;
+        [Tooltip("Cho phép xoay vật thể khi đang giữ.")]
         public bool ObjectRotating = true;
+        [Tooltip("Cho phép ném vật thể đi khi đang giữ.")]
         public bool ObjectThrowing = true;
 
         private GameManager gameManager;

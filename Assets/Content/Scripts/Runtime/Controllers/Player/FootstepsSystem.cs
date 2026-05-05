@@ -6,27 +6,38 @@ using static UHFPS.Scriptable.SurfaceDefinitionSet;
 namespace UHFPS.Runtime
 {
     [RequireComponent(typeof(AudioSource))]
+    [Summary("Hệ thống quản lý tiếng bước chân của nhân vật dựa trên bề mặt di chuyển (Surface).")]
     public class FootstepsSystem : PlayerComponent
     {
         public enum FootstepStyleEnum { Timed, HeadBob, Animation }
 
+        [Tooltip("Bộ dữ liệu định nghĩa các loại bề mặt (đất, gỗ, kim loại...) và âm thanh tương ứng.")]
         public SurfaceDefinitionSet SurfaceDefinitionSet;
+        [Tooltip("Cách thức phát tiếng bước chân: Timed (theo thời gian), HeadBob (theo nhịp lắc đầu), Animation (theo sự kiện animation).")]
         public FootstepStyleEnum FootstepStyle;
+        [Tooltip("Cách phát hiện bề mặt: dùng Collider hoặc Texture.")]
         public SurfaceDetection SurfaceDetection;
+        [Tooltip("LayerMask dùng để nhận diện bề mặt đất/sàn nhà.")]
         public LayerMask FootstepsMask;
 
+        [Tooltip("Vận tốc tối thiểu của người chơi để phát tiếng bước chân.")]
         public float StepPlayerVelocity = 0.1f;
+        [Tooltip("Thời gian tối thiểu ở trên không để phát tiếng nhảy.")]
         public float JumpStepAirTime = 0.1f;
 
+        [Tooltip("Thời gian giữa các bước chân khi đi bộ (dùng cho chế độ Timed).")]
         public float WalkStepTime = 1f;
+        [Tooltip("Thời gian giữa các bước chân khi chạy (dùng cho chế độ Timed).")]
         public float RunStepTime = 1f;
+        [Tooltip("Thời gian chờ tối thiểu để phát tiếng chạm đất.")]
         public float LandStepTime = 1f;
         [Range(-1f, 1f)]
+        [Tooltip("Mức sóng (Wave) của HeadBob kích hoạt tiếng bước chân (dùng cho chế độ HeadBob).")]
         public float HeadBobStepWave = -0.9f;
 
-        [Range(0, 1)] public float WalkingVolume = 1f;
-        [Range(0, 1)] public float RunningVolume = 1f;
-        [Range(0, 1)] public float LandVolume = 1f;
+        [Range(0, 1)] [Tooltip("Âm lượng tiếng bước chân khi đi bộ.")] public float WalkingVolume = 1f;
+        [Range(0, 1)] [Tooltip("Âm lượng tiếng bước chân khi chạy.")] public float RunningVolume = 1f;
+        [Range(0, 1)] [Tooltip("Âm lượng tiếng chạm đất khi rơi xuống.")] public float LandVolume = 1f;
 
         public SurfaceDefinition CurrentSurface;
 

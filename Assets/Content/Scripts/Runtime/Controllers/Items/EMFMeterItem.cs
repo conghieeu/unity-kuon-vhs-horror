@@ -6,45 +6,83 @@ using System;
 using UnityEngine;
 using UHFPS.Tools;
 using TMPro;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime
 {
+    [Summary("Điều khiển vật phẩm Máy đo điện từ trường (EMF Meter), giúp dò tìm điểm bất thường (Anomaly).")]
     public class EMFMeterItem : PlayerItemBehaviour
     {
+        [Header("Indicators")]
+        [Tooltip("Danh sách các đèn báo hiệu mức độ EMF trên máy đo.")]
         public List<SkinnedMeshRenderer> Indicators = new();
+        [Tooltip("Từ khóa Shader để bật/tắt phát sáng (Emission) cho đèn báo.")]
         public string EmissionKeyword = "_EMISSION";
 
+        [Tooltip("Vật liệu (Material) màn hình hiển thị của máy đo.")]
         public RendererMaterial Display;
+        [Tooltip("Canvas chứa Text hiển thị giá trị đo được.")]
         public GameObject DisplayCanvas;
 
+        [Tooltip("Văn bản TextMeshPro hiển thị số Milligauss.")]
         public TMP_Text MilligaussText;
+        [Tooltip("Định dạng hiển thị giá trị Milligauss.")]
         public string DisplayFormat = "<mspace=0.5em>{0}</mspace>.<mspace=0.5em>{1}</mspace>";
 
+        [Header("Detection")]
+        [Tooltip("Lớp mạng (LayerMask) chứa các đối tượng có điểm bất thường (Anomaly).")]
         public LayerMask DetectionMask;
+        [Tooltip("Bán kính vùng phát hiện điểm bất thường.")]
         public float DetectionRadius;
 
+        [Header("EMF Settings")]
+        [Tooltip("Giá trị Milligauss tối đa máy có thể hiển thị.")]
         public float MaxMilligaussValue = 20f;
-        [Range(0f, 1f)] public float AnomalyDotRangeCompensation = 0.5f;
-        [Range(0f, 1f)] public float MinAnomalyDirection = 0.2f;
+        [Range(0f, 1f)]
+        [Tooltip("Hệ số bù trừ hướng góc để tính toán mức độ hiển thị khi mục tiêu ở rìa camera.")]
+        public float AnomalyDotRangeCompensation = 0.5f;
+        [Range(0f, 1f)]
+        [Tooltip("Góc nhìn tối thiểu để bắt đầu phát hiện điểm bất thường.")]
+        public float MinAnomalyDirection = 0.2f;
+        [Tooltip("Tốc độ cập nhật giá trị Milligauss trên màn hình.")]
         public float MilligaussUpdateSpeed = 10f;
+        [Tooltip("Tốc độ cập nhật phần thập phân của giá trị Milligauss.")]
         public float DecimalPartUpdateSpeed = 10f;
 
+        [Header("Noise Settings")]
+        [Tooltip("Bật tiếng nhiễu nền khi không phát hiện ra EMF.")]
         public bool EnableNoise = true;
+        [Tooltip("Mức độ nhiễu nền cơ bản.")]
         public float BackgroundNoise = 0.85f;
+        [Tooltip("Biên độ dao động của nhiễu nền.")]
         public float NoiseAmount = 1.0f;
+        [Tooltip("Tốc độ thay đổi của tiếng nhiễu nền.")]
         public float NoiseSpeed = 1.0f;
 
+        [Header("Audio Settings")]
+        [Tooltip("Bật tiếng bíp của máy đo.")]
         public bool EneableReaderBeep = true;
+        [Tooltip("Bật thay đổi cao độ (pitch) tiếng bíp khi mức EMF tăng cao.")]
         public bool EneablePitchedBeep = true;
+        [Tooltip("Nguồn phát âm thanh tiếng bíp của máy đo.")]
         public AudioSource ReaderAudio;
+        [Tooltip("Mức độ đèn báo tối thiểu để bắt đầu phát tiếng bíp.")]
         public int ReaderStartLevel = 1;
+        [Tooltip("Giới hạn cao độ của tiếng bíp (Min-Max).")]
         public MinMax ReaderPitchLimits = new(1f, 1.2f);
+        [Tooltip("Tốc độ cập nhật thay đổi cao độ tiếng bíp.")]
         public float ReaderBeepSpeed = 15f;
 
+        [Header("Animations")]
+        [Tooltip("Tên trạng thái hoạt ảnh khi lấy máy đo ra.")]
         public string EMFDrawState = "EMFDraw";
+        [Tooltip("Tên trạng thái hoạt ảnh khi cất máy đo đi.")]
         public string EMFHideState = "EMFHide";
+        [Tooltip("Tham số Trigger gọi hoạt ảnh cất máy đo.")]
         public string EMFHideTrigger = "Hide";
 
+        [Header("Debug")]
+        [Tooltip("Hiển thị bán kính quét (Gizmos) trong Editor.")]
         public bool ShowRadiusDebug;
 
         private float targetPitch;

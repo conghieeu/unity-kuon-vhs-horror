@@ -4,12 +4,18 @@ using UHFPS.Scriptable;
 
 namespace UHFPS.Runtime.States
 {
+    [Summary("Cấu hình trạng thái trượt dốc (Sliding) cho người chơi.")]
     public class SlidingStateAsset : PlayerStateAsset
     {
+        [Tooltip("Độ ma sát/tốc độ khi trượt (càng cao trượt càng nhanh).")]
         public float SlidingFriction = 2f;
+        [Tooltip("Tốc độ thay đổi gia tốc trượt.")]
         public float SpeedChange = 2f;
+        [Tooltip("Tốc độ chuyển đổi chuyển động từ đi/chạy sang trượt.")]
         public float MotionChange = 2f;
+        [Tooltip("Khả năng điều hướng khi đang trượt dốc.")]
         public float SlideControlChange = 2f;
+        [Tooltip("Cho phép điều khiển người chơi sang trái/phải khi trượt dốc.")]
         public bool SlideControl = true;
 
         public override FSMPlayerState InitState(PlayerStateMachine machine, PlayerStatesGroup group)

@@ -9,27 +9,28 @@ namespace UHFPS.Runtime
     [ThunderWire.Attributes.Summary("Cấu hình vật thể có thể xoay (Ví dụ: Van nước, Núm vặn).")]
     public class DynamicRotable : DynamicObjectType
     {
-        // limits
-        [Tooltip("The maximum limit at which rotable can be rotated.")]
+        [Header("Limits")]
+        [Tooltip("Giới hạn xoay tối đa của vật thể (tính bằng độ).")]
         public float rotationLimit = 360;
-        [Tooltip("The axis around which to rotate.")]
+        [Tooltip("Trục không gian mà vật thể sẽ xoay quanh.")]
         public Axis rotateAroundAxis = Axis.Z;
 
         // rotable properties
-        [Tooltip("The curve that defines the rotable speed for modifier. 0 = start to 1 = end.")]
+        [Header("Rotable Properties")]
+        [Tooltip("Đường cong Animation xác định tốc độ xoay. (0 = bắt đầu, 1 = kết thúc).")]
         public AnimationCurve rotateCurve = new(new(0, 1), new(1, 1));
-        [Tooltip("Defines the rotation speed.")]
+        [Tooltip("Tốc độ xoay tự động (áp dụng khi không dùng chuột).")]
         public float rotationSpeed = 2f;
-        [Tooltip("Mouse multiplier to adjust mouse input.")]
+        [Tooltip("Hệ số nhân tốc độ chuột để điều chỉnh lực xoay khi dùng chuột.")]
         public float mouseMultiplier = 1f;
-        [Tooltip("Defines the damping of the rotable object.")]
+        [Tooltip("Độ cản của lực xoay (làm mượt chuyển động xoay).")]
         public float damping = 1f;
 
-        [Tooltip("Hold use button to rotate the object.")]
+        [Tooltip("Yêu cầu giữ phím tương tác để tiếp tục xoay vật thể.")]
         public bool holdToRotate = true;
-        [Tooltip("When the maximum limit is reached, lock the rotable object.")]
+        [Tooltip("Tự động khóa vật thể lại khi đạt đến giới hạn xoay tối đa.")]
         public bool lockOnRotate = false;
-        [Tooltip("Show the rotable gizmos to visualize the limits.")]
+        [Tooltip("Hiển thị vùng quét giới hạn (Gizmos) trong Editor.")]
         public bool showGizmos = true;
 
         // private

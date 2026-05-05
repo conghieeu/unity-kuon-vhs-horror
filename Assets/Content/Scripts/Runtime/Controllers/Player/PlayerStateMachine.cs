@@ -12,6 +12,7 @@ namespace UHFPS.Runtime
 {
     [RequireComponent(typeof(CharacterController))]
     [Docs("https://docs.twgamesdev.com/uhfps/guides/state-machines/adding-player-states")]
+    [Summary("Máy trạng thái hữu hạn (FSM) quản lý hành vi di chuyển cốt lõi của người chơi.")]
     public class PlayerStateMachine : PlayerComponent
     {
         #region Getters / Setters
@@ -90,54 +91,78 @@ namespace UHFPS.Runtime
         [Serializable]
         public sealed class BasicSettings
         {
+            [Tooltip("Tốc độ đi bộ.")]
             public float WalkSpeed = 3;
+            [Tooltip("Tốc độ chạy.")]
             public float RunSpeed = 7;
+            [Tooltip("Tốc độ di chuyển khi ngồi.")]
             public float CrouchSpeed = 2;
+            [Tooltip("Chiều cao của cú nhảy.")]
             public float JumpHeight = 1;
         }
 
         [Serializable]
         public sealed class ControllerFeatures
         {
+            [Tooltip("Kích hoạt hệ thống thể lực (Stamina).")]
             public bool EnableStamina = false;
+            [Tooltip("Bật chế độ bấm phím một lần để chạy (thay vì giữ).")]
             public bool RunToggle = false;
+            [Tooltip("Bật chế độ bấm phím một lần để ngồi (thay vì giữ).")]
             public bool CrouchToggle = false;
+            [Tooltip("Chuẩn hóa di chuyển (để tránh di chuyển chéo nhanh hơn đi thẳng).")]
             public bool NormalizeMovement = false;
         }
 
         [Serializable]
         public sealed class SlidingSettings
         {
+            [Tooltip("LayerMask định nghĩa các bề mặt có thể trượt.")]
             public LayerMask SlidingMask;
+            [Tooltip("Độ dài tia raycast kiểm tra độ dốc.")]
             public float SlideRayLength = 1f;
+            [Tooltip("Góc nghiêng tối đa để có thể đứng yên (vượt quá sẽ bị trượt).")]
             public float SlopeLimit = 45f;
         }
 
         [Serializable]
         public sealed class StaminaSettings
         {
+            [Tooltip("Lượng thể lực tiêu hao khi nhảy.")]
             public float JumpExhaustion = 1f;
+            [Tooltip("Tốc độ tiêu hao thể lực khi chạy.")]
             public float RunExhaustionSpeed = 1f;
+            [Tooltip("Tốc độ phục hồi thể lực.")]
             public float StaminaRegenSpeed = 1f;
+            [Tooltip("Thời gian chờ trước khi bắt đầu phục hồi thể lực sau khi ngừng chạy/nhảy.")]
             public float RegenerateAfter = 2f;
         }
 
         [Serializable]
         public sealed class ControllerSettings
         {
+            [Tooltip("Lực hấp dẫn tác động lên người chơi.")]
             public float BaseGravity = -9.81f;
+            [Tooltip("Khối lượng của người chơi (ảnh hưởng đến các lực tác động).")]
             public float PlayerWeight = 70f;
+            [Tooltip("Độ lệch Skin Width (thêm vào skinWidth của CharacterController).")]
             public float SkinWidthOffset = 0.05f;
+            [Tooltip("Bán kính vùng kiểm tra dưới chân người chơi.")]
             public float FeetRadius = 0.1f;
+            [Tooltip("Hệ số chống giật nảy (Anti-Bump) khi di chuyển xuống dốc.")]
             public float AntiBumpFactor = 4.5f;
+            [Tooltip("Hệ số bật ra khi va vào tường.")]
             public float WallRicochet = 0.1f;
+            [Tooltip("Độ mượt khi chuyển đổi giữa các trạng thái (ví dụ: Đứng -> Ngồi).")]
             public float StateChangeSmooth = 1.35f;
         }
 
         [Serializable]
         public sealed class ControllerState
         {
+            [Tooltip("Chiều cao của CharacterController.")]
             public float ControllerHeight;
+            [Tooltip("Vị trí tương đối của Camera so với CharacterController.")]
             public Vector3 CameraOffset;
         }
 
@@ -150,25 +175,45 @@ namespace UHFPS.Runtime
 
         public enum PositionOffset { Ground, Feet, Center, Head }
 
+        [Header("States Configuration")]
+        [Tooltip("Tập hợp các trạng thái của người chơi (PlayerStatesGroup).")]
         public PlayerStatesGroup StatesAsset;
+        [Tooltip("Bản sao của StatesAsset dùng trong Runtime để tránh thay đổi file gốc.")]
         public PlayerStatesGroup StatesAssetRuntime;
 
+        [Header("Player Settings")]
+        [Tooltip("LayerMask định nghĩa các bề mặt người chơi có thể đứng lên.")]
         public LayerMask SurfaceMask;
+        [Tooltip("Vị trí gốc (Offset) của Character Controller (Ground, Feet, Center, Head).")]
         public PositionOffset ControllerOffset;
 
+        [Tooltip("Cài đặt tốc độ cơ bản của người chơi.")]
         public BasicSettings PlayerBasicSettings;
+        [Tooltip("Cài đặt các tính năng bổ sung của người chơi (thể lực, chạy/ngồi bấm một lần...).")]
         public ControllerFeatures PlayerFeatures;
+        [Tooltip("Cài đặt trượt trên bề mặt dốc.")]
         public SlidingSettings PlayerSliding;
+        [Tooltip("Cài đặt hệ thống thể lực (Stamina).")]
         public StaminaSettings PlayerStamina;
+        [Tooltip("Cài đặt Character Controller cơ bản (trọng lực, khối lượng, chống va chạm).")]
         public ControllerSettings PlayerControllerSettings;
 
+        [Header("State Profiles")]
+        [Tooltip("Cấu hình Controller khi đứng.")]
         public ControllerState StandingState;
+        [Tooltip("Cấu hình Controller khi ngồi.")]
         public ControllerState CrouchingState;
+        [Tooltip("Danh sách các cấu hình Controller tùy chỉnh khác.")]
         public List<ControllerState> CustomStates = new();
 
+        [Header("Gizmos Settings")]
+        [Tooltip("Vẽ Gizmos người chơi trong Editor.")]
         public bool DrawPlayerGizmos = true;
+        [Tooltip("Vẽ dạng lưới (Wireframe) hay dạng khối.")]
         public bool DrawPlayerWireframe = true;
+        [Tooltip("Độ bù (offset) tỷ lệ khi vẽ Gizmos.")]
         public float ScaleOffset = 0f;
+        [Tooltip("Màu sắc của Gizmos.")]
         public Color GizmosColor = Color.white;
 
         public Vector2 Input;

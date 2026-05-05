@@ -1,13 +1,16 @@
 using System;
 using UnityEngine;
 using Newtonsoft.Json.Linq;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime
 {
     [Serializable]
+    [Summary("Lớp cơ sở trừu tượng (Abstract Base Class) cho tất cả các kiểu Dynamic Object (có thể mở, kéo, xoay, v.v.). Định nghĩa các phương thức và thuộc tính chung.")]
     public abstract class DynamicObjectType
     {
         [field: SerializeField]
+        [field: Tooltip("Tham chiếu đến script DynamicObject chính chứa đối tượng này.")]
         public DynamicObject DynamicObject { get; internal set; }
 
         public bool IsHolding { get; protected set; }

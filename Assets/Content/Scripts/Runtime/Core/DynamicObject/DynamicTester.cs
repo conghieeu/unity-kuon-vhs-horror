@@ -7,16 +7,25 @@ using UHFPS.Runtime;
 using TMPro;
 using static UHFPS.Runtime.DynamicObject;
 
-    [ThunderWire.Attributes.Summary("Dùng để kiểm tra và giả lập các thông số chuyển động của Dynamic Object trong Editor.")]
+    [Summary("Dùng để kiểm tra và giả lập các thông số chuyển động của Dynamic Object trong Editor.")]
     public class DynamicTester : MonoBehaviour
 {
+    [Header("Testing Parameters")]
+    [Tooltip("Transform mục tiêu cần kiểm tra chuyển động.")]
     public Transform target;
+    [Tooltip("Kiểu Transform (Local hay World) sẽ được sử dụng để xoay/di chuyển.")]
     public TransformType transformType;
+    [Tooltip("Giới hạn mở (Min-Max góc xoay/khoảng cách di chuyển).")]
     public MinMax openLimits;
+    [Tooltip("Góc độ bắt đầu (khởi tạo).")]
     public float startingAngle;
+    [Tooltip("Trục bản lề (Hinge Axis) dùng để xoay.")]
     public Axis targetHinge = Axis.Y;
+    [Tooltip("Trục hướng về phía trước (Forward Axis) của mục tiêu.")]
     public Axis targetForward = Axis.Z;
+    [Tooltip("Tốc độ mở (áp dụng khi kiểm tra giả lập).")]
     public float openSpeed = 1f;
+    [Tooltip("Sử dụng trục toàn cầu (Global Axis) thay vì trục địa phương (Local Axis).")]
     public bool globalAxis;
 
     private float currentAngle;

@@ -8,64 +8,72 @@ using TMPro;
 namespace UHFPS.Runtime
 {
     [Serializable]
-    [ThunderWire.Attributes.Summary("Cấu hình vật thể có thể mở (Ví dụ: Cửa xoay, Nắp hộp).")]
+    [ThunderWire.Attributes.Summary("Cấu hình vật thể có thể mở xoay (Ví dụ: Cửa xoay, Nắp hộp, Tủ cánh màng).")]
     public class DynamicOpenable : DynamicObjectType
     {
-        // limits
-        [Tooltip("Limits that define the minimum/maximum angle at which the openable can be opened.")]
+        [Header("Limits")]
+        [Tooltip("Giới hạn góc mở tối thiểu/tối đa của vật thể.")]
         public MinMax openLimits;
-        [Tooltip("Angle at which an openable is opened when the game is started.")]
+        [Tooltip("Góc độ mở ban đầu khi trò chơi bắt đầu.")]
         public float startingAngle;
-        [Tooltip("Usually the axis that defines the higne joint. Most likely the Y-axis.")]
+        [Tooltip("Trục bản lề (Hinge Axis) của vật thể. Thường là trục Y.")]
         public Axis targetHinge = Axis.Y;
-        [Tooltip("Usually the axis that defines the openable forward or model extend direction. Most likely the Z-axis.")]
+        [Tooltip("Trục hướng về phía trước (Forward Axis) của vật thể. Thường là trục Z.")]
         public Axis targetForward = Axis.Z;
-        [Tooltip("Usually the axis that determines the open direction of the frame. The direction is used to determine in which direction the door should open. Most likely the Z-axis.")]
+        [Tooltip("Trục hướng về phía trước của khung cửa (Frame). Xác định hướng mở của cửa. Thường là trục Z.")]
         public Axis frameForward = Axis.Z;
 
-        [Tooltip("Use local axes instead of global axes (can be useful in some situations).")]
+        [Tooltip("Sử dụng các trục địa phương (Local Axes) thay vì trục toàn cầu (Global Axes).")]
         public bool useLocalAxes;
-        [Tooltip("Flip the starting angle when the limits are inversed (the red arrow is on the other side).")]
+        [Tooltip("Đảo ngược góc độ bắt đầu (khi mũi tên đỏ nằm ở hướng ngược lại).")]
         public bool startingAngleFlip;
-        [Tooltip("Mirror the direction around the hinge axis.")]
+        [Tooltip("Phản chiếu (Mirror) hướng xoay quanh trục bản lề.")]
         public bool targetHingeMirror;
-        [Tooltip("Mirror the direction around the forward axis.")]
+        [Tooltip("Phản chiếu (Mirror) hướng xoay quanh trục phía trước.")]
         public bool targetForwardMirror;
 
         // openable properties
-        [Tooltip("The curve that defines the opening speed for modifier. 0 = start to 1 = end.")]
+        [Header("Openable Properties")]
+        [Tooltip("Đường cong Animation (Curve) định nghĩa tốc độ mở cửa. (0 = bắt đầu, 1 = kết thúc).")]
         public AnimationCurve openCurve = new(new(0, 1), new(1, 1));
-        [Tooltip("The curve that defines the closing speed for modifier. 0 = start to 1 = end.")]
+        [Tooltip("Đường cong Animation (Curve) định nghĩa tốc độ đóng cửa. (0 = bắt đầu, 1 = kết thúc).")]
         public AnimationCurve closeCurve = new(new(0, 1), new(1, 1));
 
-        [Tooltip("Defines the open/close speed of the openable.")]
+        [Tooltip("Tốc độ mở/đóng của vật thể.")]
         public float openSpeed = 1f;
-        [Tooltip("Defines the damping of an openable joint.")]
+        [Tooltip("Độ cản (Damper) của khớp nối (Joint) khi dùng cơ chế Vật lý.")]
         public float damper = 1f;
-        [Tooltip("Defines the minimum volume at which the open/close motion sound will be played.")]
+        [Tooltip("Mức âm lượng tối thiểu để phát âm thanh ma sát (Drag sound) khi kéo thả cửa.")]
         public float dragSoundPlay = 0.2f;
 
-        [Tooltip("Flip the open direction, for example when the openable is already opened or the open limits are flipped.")]
+        [Tooltip("Đảo ngược hướng mở cửa (ví dụ khi cửa đã mở sẵn hoặc giới hạn mở bị đảo ngược).")]
         public bool flipOpenDirection = false;
-        [Tooltip("Defines if the openable can be opened on both sides.")]
+        [Tooltip("Cho phép mở cửa về cả hai phía (đẩy ra và kéo vào).")]
         public bool bothSidesOpen = false;
-        [Tooltip("Allows to use drag sounds.")]
+        [Tooltip("Phát âm thanh kéo/đẩy ma sát (khi tương tác bằng chuột).")]
         public bool dragSounds = false;
-        [Tooltip("Play sound when the openable is closed.")]
+        [Tooltip("Phát âm thanh khi cửa đóng lại.")]
         public bool playCloseSound = true;
-        [Tooltip("Flip the mouse drag direction.")]
+        [Tooltip("Đảo ngược hướng kéo chuột.")]
         public bool flipMouse = false;
-        [Tooltip("Flip open min/max limits. Usually when open/close sounds are inversed.")]
+        [Tooltip("Đảo ngược giới hạn min/max. Thường dùng khi âm thanh đóng/mở bị ngược.")]
         public bool flipAngle = false;
-        [Tooltip("Show the openable gizmos to visualize the limits.")]
+        [Tooltip("Hiển thị vùng quét giới hạn (Gizmos) trong Editor.")]
         public bool showGizmos = true;
 
+        [Header("Locked Motion")]
+        [Tooltip("Áp dụng chuyển động rung lắc khi cửa bị khóa và người chơi cố mở.")]
         public bool useLockedMotion = false;
+        [Tooltip("Mẫu chuyển động rung lắc khi cửa bị khóa.")]
         public AnimationCurve lockedPattern = new(new Keyframe(0, 0), new Keyframe(1, 0));
+        [Tooltip("Cường độ chuyển động rung lắc.")]
         public float lockedMotionAmount;
+        [Tooltip("Thời gian chuyển động rung lắc (giây).")]
         public float lockedMotionTime;
 
         // sounds
+        [Header("Sounds")]
+        [Tooltip("Âm thanh ma sát khi kéo/đẩy cửa.")]
         public SoundClip dragSound;
 
         // private

@@ -2,13 +2,16 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using Newtonsoft.Json.Linq;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime
 {
     [Serializable]
+    [Summary("Lớp cơ sở trừu tượng cho các loại câu đố cần gạt (Levers Puzzle).")]
     public abstract class LeversPuzzleType
     {
         [field: SerializeField]
+        [field: Tooltip("Tham chiếu đến script câu đố cần gạt chính.")]
         public LeversPuzzle LeversPuzzle { get; internal set; }
 
         protected List<LeversPuzzleLever> Levers => LeversPuzzle.Levers;

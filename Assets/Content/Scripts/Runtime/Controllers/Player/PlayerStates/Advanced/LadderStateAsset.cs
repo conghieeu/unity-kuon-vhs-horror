@@ -5,28 +5,41 @@ using UHFPS.Tools;
 
 namespace UHFPS.Runtime.States
 {
+    [Summary("Cấu hình trạng thái leo thang (Ladder).")]
     public class LadderStateAsset : PlayerStateAsset
     {
+        [Tooltip("Hành động (Input) để thoát khỏi thang.")]
         public ControlsContext ControlExit;
 
         [Header("Speed")]
+        [Tooltip("Tốc độ khi leo trên thang.")]
         public float OnLadderSpeed = 1.5f;
+        [Tooltip("Tốc độ di chuyển tự động tới thang khi bắt đầu.")]
         public float ToLadderSpeed = 3f;
+        [Tooltip("Tốc độ di chuyển theo đường cong Bezier khi leo lên/xuống đỉnh thang.")]
         public float BezierLadderSpeed = 3f;
+        [Tooltip("Tốc độ tính toán đường cong Bezier.")]
         public float BezierEvalSpeed = 1f;
 
         [Header("Distances")]
+        [Tooltip("Khoảng cách bắt đầu tính là đã bám vào thang.")]
         public float OnLadderDistance = 0.1f;
+        [Tooltip("Khoảng cách bắt đầu tính là đã kết thúc leo thang.")]
         public float EndLadderDistance = 0.1f;
 
         [Header("Settings")]
+        [Tooltip("Góc tối đa so với hướng trước mặt để cho phép leo xuống thang.")]
         public float LadderFrontAngle = 10f;
+        [Tooltip("Độ lệch tâm của người chơi so với thang.")]
         public float PlayerCenterOffset = 0.5f;
+        [Tooltip("Độ lệch bù trừ từ mặt đất lên thang.")]
         public float GroundToLadderOffset = 0.1f;
 
         [Header("Sounds")]
-        [Range(0f, 1f)] public float FootstepsVolume = 1f;
+        [Range(0f, 1f)] [Tooltip("Âm lượng tiếng bước chân khi leo thang.")] public float FootstepsVolume = 1f;
+        [Tooltip("Thời gian giữa các bước leo thang.")]
         public float LadderStepTime = 0.5f;
+        [Tooltip("Danh sách âm thanh tiếng bước chân khi leo thang.")]
         public AudioClip[] LadderFootsteps;
 
         public override FSMPlayerState InitState(PlayerStateMachine machine, PlayerStatesGroup group)

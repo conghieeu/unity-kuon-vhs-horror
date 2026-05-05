@@ -5,50 +5,92 @@ using UnityEngine.UI;
 using UHFPS.Input;
 using UHFPS.Tools;
 using Newtonsoft.Json.Linq;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime
 {
+    [Summary("Điều khiển vật phẩm Máy Quay Phim (Camera), bao gồm các chức năng quay phim, quay đêm (Night Vision), thu phóng và quản lý pin.")]
     public class CameraItem : PlayerItemBehaviour
     {
+        [Header("Camera Settings")]
+        [Tooltip("Vật phẩm Pin trong Inventory dùng để nạp lại năng lượng cho máy quay.")]
         public ItemGuid BatteryInventoryItem;
+        [Tooltip("Nguồn phát âm thanh (AudioSource) của máy quay.")]
         public AudioSource CameraAudio;
+        [Tooltip("Đèn rọi của máy quay (dùng khi bật Night Vision).")]
         public Light CameraLight;
 
+        [Header("Night Vision Settings")]
+        [Tooltip("Thành phần Post-Processing dùng để tạo hiệu ứng quay đêm (Night Vision).")]
         public VolumeComponentReferecne NVComponent;
+        [Tooltip("Tỉ lệ phần trăm pin ban đầu của máy quay.")]
         public Percentage BatteryPercentage = 100;
+        [Tooltip("Mức phần trăm cảnh báo pin yếu.")]
         public Percentage BatteryLowPercent = 20;
+        [Tooltip("Máy quay có tiêu hao pin khi không bật Night Vision hay không? (Nếu true, chỉ hao pin khi bật NV).")]
         public bool NoNVDrainBattery = false;
+        [Tooltip("Trạng thái mặc định của Night Vision khi bắt đầu game.")]
         public bool InitialNVState = false;
 
+        [Header("Battery Settings")]
+        [Tooltip("Tốc độ hao pin khi bật Night Vision.")]
         public float HighBatteryDrainSpeed = 2f;
+        [Tooltip("Tốc độ hao pin bình thường (khi tắt Night Vision).")]
         public float LowBatteryDrainSpeed = 1f;
 
+        [Tooltip("Cường độ sáng tối đa của đèn máy quay.")]
         public float LightIntensity = 1f;
+        [Tooltip("Màu sắc của biểu tượng pin khi đầy.")]
         public Color BatteryFullColor = Color.white;
+        [Tooltip("Màu sắc của biểu tượng pin khi yếu.")]
         public Color BatteryLowColor = Color.red;
 
+        [Header("Zoom Settings")]
+        [Tooltip("Tầm xa của đèn rọi khi thu phóng máy quay tối đa.")]
         public float LightZoomRange = 24;
+        [Tooltip("Góc nhìn (FOV) khi thu phóng máy quay tối đa.")]
         public float CameraZoomFOV = 30f;
+        [Tooltip("Tốc độ thu phóng của máy quay.")]
         public float CameraZoomSpeed = 5f;
 
+        [Header("Audio Channels")]
+        [Tooltip("Kích hoạt kênh hiển thị âm lượng thanh gạt trái/phải.")]
         public bool EnableChannels = true;
+        [Tooltip("Độ dài dữ liệu âm thanh lấy mẫu.")]
         public int SampleDataLength = 1024;
+        [Tooltip("Độ trễ số khung hình giữa các lần cập nhật UI âm lượng.")]
         public int FrameDelay = 10;
+        [Tooltip("Giá trị RMS tối đa để tính toán mức độ âm lượng.")]
         public float MaxRMSValue = 0.1f;
 
+        [Header("Animations")]
+        [Tooltip("Tên trạng thái hoạt ảnh khi lấy máy quay ra.")]
         public string CameraShow = "CameraShow";
+        [Tooltip("Tên trạng thái hoạt ảnh khi cất máy quay đi.")]
         public string CameraHide = "CameraHide";
+        [Tooltip("Tên trạng thái hoạt ảnh khi thay pin máy quay.")]
         public string CameraReload = "CameraReload";
 
+        [Header("Fades")]
+        [Tooltip("Thời gian bù trừ (offset) để làm mờ dần khi mở máy quay.")]
         public float CameraShowFadeOffset = 0.35f;
+        [Tooltip("Thời gian bù trừ (offset) để làm mờ dần khi cất máy quay.")]
         public float CameraHideFadeOffset = 0.1f;
+        [Tooltip("Tốc độ làm mờ (Fade In) màn hình khi mở máy quay.")]
         public float CameraShowFadeSpeed = 3f;
+        [Tooltip("Tốc độ làm mờ (Fade Out) màn hình khi cất máy quay.")]
         public float CameraHideFadeSpeed = 3f;
 
+        [Header("Sounds")]
+        [Tooltip("Âm thanh khi trang bị máy quay.")]
         public SoundClip CameraEquip;
+        [Tooltip("Âm thanh khi cất máy quay.")]
         public SoundClip CameraUnequip;
+        [Tooltip("Âm thanh khi bắt đầu thu phóng máy quay (Zoom In).")]
         public SoundClip CameraZoomIn;
+        [Tooltip("Âm thanh khi nhả thu phóng máy quay (Zoom Out).")]
         public SoundClip CameraZoomOut;
+        [Tooltip("Âm thanh khi bật/tắt chế độ Night Vision.")]
         public SoundClip CameraNVSwitch;
 
         private GameManager gameManager;

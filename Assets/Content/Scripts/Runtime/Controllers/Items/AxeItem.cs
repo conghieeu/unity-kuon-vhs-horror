@@ -3,37 +3,65 @@ using UnityEngine;
 using UHFPS.Input;
 using UHFPS.Tools;
 using UHFPS.Scriptable;
+using ThunderWire.Attributes;
 using static UHFPS.Scriptable.SurfaceDefinitionSet;
 
 namespace UHFPS.Runtime
 {
     [RequireComponent(typeof(AudioSource))]
+    [Summary("Điều khiển vật phẩm Rìu, cho phép người chơi tấn công cận chiến và gây sát thương.")]
     public class AxeItem : PlayerItemBehaviour
     {
+        [Header("Surface Settings")]
+        [Tooltip("Tập hợp định nghĩa các loại bề mặt khi bị rìu chém trúng.")]
         public SurfaceDefinitionSet SurfaceDefinitionSet;
+        [Tooltip("Phương pháp phát hiện bề mặt khi chém trúng.")]
         public SurfaceDetection SurfaceDetection;
+        [Tooltip("Thẻ (Tag) dùng để nhận diện bề mặt là da thịt (kẻ địch).")]
         public Tag FleshTag;
 
+        [Header("Attack Setup")]
+        [Tooltip("Lớp mạng (LayerMask) sẽ bị rìu chém trúng.")]
         public LayerMask RaycastMask;
+        [Tooltip("Góc độ chém của rìu.")]
         public MinMax AttackAngle;
+        [Tooltip("Tầm đánh của rìu (Khoảng cách từ người chơi tới mục tiêu).")]
         public MinMax AttackRange;
+        [Tooltip("Số lượng tia (Raycast) được bắn ra để phát hiện va chạm trong một lần chém.")]
         public uint RaycastCount = 11;
+        [Tooltip("Thời gian trễ trước khi tia va chạm đầu tiên được bắn ra (khớp với hoạt ảnh chém).")]
         public float AttackDelay;
+        [Tooltip("Thời gian trễ giữa mỗi tia va chạm được bắn ra.")]
         public float RaycastDelay;
+        [Tooltip("Hiển thị đường đạn (Gizmos) của các tia chém trong Editor để dễ gỡ lỗi.")]
         public bool ShowAttackGizmos;
 
+        [Header("Damage")]
+        [Tooltip("Sát thương gây ra ngẫu nhiên trong khoảng (Min-Max) mỗi lần chém trúng.")]
         public MinMaxInt AttackDamage;
+        [Tooltip("Thời gian chờ tối thiểu giữa mỗi lần chém tiếp theo.")]
         public float NextAttackTime;
 
+        [Header("Animations")]
+        [Tooltip("Tên trạng thái hoạt ảnh khi rút rìu ra.")]
         public string DrawState = "AxeDraw";
+        [Tooltip("Tên trạng thái hoạt ảnh khi cất rìu đi.")]
         public string HideState = "AxeHide";
+        [Tooltip("Tên trạng thái hoạt ảnh khi rìu ở trạng thái nghỉ chờ.")]
         public string IdleState = "AxeIdle";
 
+        [Header("Triggers")]
+        [Tooltip("Tham số Trigger gọi hoạt ảnh cất rìu.")]
         public string HideTrigger = "Hide";
+        [Tooltip("Tham số Trigger gọi hoạt ảnh chém rìu.")]
         public string AttackTrigger = "Attack";
 
+        [Header("Sounds")]
+        [Tooltip("Âm thanh phát ra khi rút rìu.")]
         public SoundClip AxeDraw;
+        [Tooltip("Âm thanh phát ra khi cất rìu.")]
         public SoundClip AxeHide;
+        [Tooltip("Âm thanh phát ra khi chém rìu vào không khí.")]
         public SoundClip AxeSlash;
 
         private AudioSource audioSource;

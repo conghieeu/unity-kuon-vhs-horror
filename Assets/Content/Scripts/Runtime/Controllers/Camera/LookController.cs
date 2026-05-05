@@ -3,30 +3,45 @@ using System.Collections;
 using UnityEngine;
 using UHFPS.Input;
 using UHFPS.Tools;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime
 {
+    [Summary("Điều khiển góc nhìn của Camera (chuột/joystick).")]
     public class LookController : PlayerComponent
     {
         public enum ForwardStyle { RootForward, LookForward }
 
+        [Tooltip("Cách xác định hướng 'phía trước' (Forward): dựa theo Root của Player hoặc theo hướng nhìn của Camera.")]
         public ForwardStyle PlayerForward = ForwardStyle.LookForward;
 
+        [Tooltip("Khóa và ẩn con trỏ chuột khi chơi.")]
         public bool LockCursor;
+        [Tooltip("Làm mượt chuyển động xoay camera.")]
         public bool SmoothLook;
 
+        [Tooltip("Độ nhạy trục X (ngang).")]
         public float SensitivityX = 2f;
+        [Tooltip("Độ nhạy trục Y (dọc).")]
         public float SensitivityY = 2f;
+        [Tooltip("Hệ số nhân độ nhạy trục X.")]
         public float MultiplierX = 1f;
+        [Tooltip("Hệ số nhân độ nhạy trục Y.")]
         public float MultiplierY = 1f;
 
+        [Tooltip("Thời gian làm mượt (Smooth Time).")]
         public float SmoothTime = 5f;
+        [Tooltip("Hệ số nhân thời gian làm mượt.")]
         public float SmoothMultiplier = 2f;
 
+        [Tooltip("Giới hạn góc nhìn ngang (trái/phải).")]
         public MinMax HorizontalLimits = new(-360, 360);
+        [Tooltip("Giới hạn góc nhìn dọc (lên/xuống).")]
         public MinMax VerticalLimits = new(-80, 90);
 
+        [Tooltip("Độ lệch bù (Offset) hiện tại của góc nhìn.")]
         public Vector2 LookOffset;
+        [Tooltip("Góc xoay hiện tại của Camera.")]
         public Vector2 LookRotation;
 
         private bool blockLook;

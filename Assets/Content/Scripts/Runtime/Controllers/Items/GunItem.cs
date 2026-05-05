@@ -7,9 +7,11 @@ using UHFPS.Tools;
 using UHFPS.Scriptable;
 using Newtonsoft.Json.Linq;
 using static UHFPS.Scriptable.SurfaceDefinitionSet;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime
 {
+    [Summary("Điều khiển vật phẩm Súng, hỗ trợ bắn bán tự động/tự động, quản lý đạn, độ giật và tương tác bề mặt.")]
     public class GunItem : PlayerItemBehaviour
     {
         public enum WeaponTypeEnum { Semi, Auto }
@@ -138,16 +140,28 @@ namespace UHFPS.Runtime
             public SoundClip ShootSound;
         }
 
+        [Header("Gun General")]
+        [Tooltip("Tên của khẩu súng hiển thị trong logic.")]
         public string GunName = "Pistol";
+        [Tooltip("Loại vũ khí: Semi (Bán tự động) hoặc Auto (Tự động).")]
         public WeaponTypeEnum WeaponType;
+        [Tooltip("Lớp mạng (LayerMask) sẽ bị trúng đạn.")]
         public LayerMask RaycastMask;
         
+        [Header("Surface Settings")]
+        [Tooltip("Tập hợp định nghĩa các loại bề mặt khi bị bắn trúng.")]
         public SurfaceDefinitionSet SurfaceDefinitionSet;
+        [Tooltip("Phương pháp phát hiện bề mặt khi đạn chạm mục tiêu.")]
         public SurfaceDetection SurfaceDetection;
+        [Tooltip("Thẻ (Tag) dùng để nhận diện bề mặt là da thịt (kẻ địch).")]
         public Tag FleshTag;
 
+        [Header("Inventory GUIDs")]
+        [Tooltip("Mã GUID của súng trong Inventory.")]
         public ItemGuid GunInventoryItem;
+        [Tooltip("Mã GUID của đạn tương ứng trong Inventory.")]
         public ItemGuid AmmoInventoryItem;
+        [Tooltip("Mã GUID của phụ kiện đèn pin trong Inventory.")]
         public ItemGuid FlashlightAttachmentItem;
 
         public BaseSettings baseSettings;

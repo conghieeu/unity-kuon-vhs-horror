@@ -7,16 +7,23 @@ using ThunderWire.Attributes;
 namespace UHFPS.Runtime
 {
     [Docs("https://docs.twgamesdev.com/uhfps/guides/motion-controller")]
+    [Summary("Điều khiển việc pha trộn và áp dụng các hiệu ứng chuyển động (Motion) lên tay và đầu của nhân vật.")]
     public class MotionController : PlayerComponent
     {
         public MotionBlender MotionBlender = new();
 
+        [Tooltip("Transform áp dụng chuyển động cho hai tay (Hands).")]
         public Transform HandsMotionTransform;
+        [Tooltip("Transform áp dụng chuyển động cho góc nhìn (Head/Camera).")]
         public Transform HeadMotionTransform;
+        [Tooltip("ScriptableObject chứa các cài đặt cấu hình chuyển động có sẵn.")]
         public MotionPreset MotionPreset;
 
+        [Tooltip("Có làm giảm dần/tắt hiệu ứng chuyển động khi cần thiết không.")]
         public bool MotionSuppress = true;
+        [Tooltip("Tốc độ tắt dần hiệu ứng chuyển động.")]
         public float MotionSuppressSpeed = 2f;
+        [Tooltip("Tốc độ khôi phục hiệu ứng chuyển động.")]
         public float MotionResetSpeed = 2f;
 
         /// <summary>

@@ -5,17 +5,25 @@ using UHFPS.Scriptable;
 
 namespace UHFPS.Runtime.States
 {
+    [Summary("Cấu hình trạng thái đu dây (Zipline) cho người chơi.")]
     public class ZiplineStateAsset : PlayerStateAsset
     {
+        [Tooltip("Hành động (Input) để thoát khỏi trạng thái đu dây.")]
         public ControlsContext ControlExit;
 
+        [Tooltip("Tốc độ nội suy (bezier evaluation) trên đường đu dây.")]
         public float EvaluationSpeed = 0.1f;
+        [Tooltip("Tốc độ di chuyển thực tế trên đường đu dây.")]
         public float ZiplineSpeed = 0.1f;
+        [Tooltip("Giá trị đánh giá (0-1) để kết thúc đu dây.")]
         public float ZiplineEndEval = 0.95f;
 
         [Header("Sounds")]
+        [Tooltip("Âm thanh khi bắt đầu đu dây.")]
         public SoundClip ZiplineEnter;
+        [Tooltip("Âm thanh khi kết thúc đu dây.")]
         public SoundClip ZiplineExit;
+        [Tooltip("Âm thanh đang trượt trên dây.")]
         public SoundClip ZiplineSliding;
 
         public override FSMPlayerState InitState(PlayerStateMachine machine, PlayerStatesGroup group)

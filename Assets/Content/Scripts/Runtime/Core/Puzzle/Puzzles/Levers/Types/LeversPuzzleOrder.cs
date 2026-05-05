@@ -1,11 +1,15 @@
 using Newtonsoft.Json.Linq;
 using System;
+using UnityEngine;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime
 {
     [Serializable]
+    [Summary("Loại câu đố cần gạt theo thứ tự (người chơi phải kéo các cần gạt theo đúng thứ tự quy định).")]
     public class LeversPuzzleOrder : LeversPuzzleType
     {
+        [Tooltip("Thứ tự kéo cần gạt đúng (ví dụ: '0123' tương ứng với kéo cần 0, sau đó 1, 2, 3).")]
         public string LeversOrder = "";
 
         private string currentOrder = "";

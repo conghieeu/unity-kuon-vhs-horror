@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace UHFPS.Runtime.States
 {
+    [Summary("Trạng thái người chơi khi đang trốn (ẩn nấp) trong một Hiding Place.")]
     public class HidingStateAsset : PlayerStateAsset
     {
         public override FSMPlayerState InitState(PlayerStateMachine machine, PlayerStatesGroup group)

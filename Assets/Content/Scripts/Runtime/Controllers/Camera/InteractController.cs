@@ -7,27 +7,41 @@ using static UHFPS.Runtime.InteractableItem;
 namespace UHFPS.Runtime
 {
     [InspectorHeader("Interact Controller")]
+    [Summary("Quản lý việc tương tác với các vật thể trong môi trường (Interact, Examine, Loot).")]
     public class InteractController : PlayerComponent
     {
         [Header("Raycast")]
+        [Tooltip("Khoảng cách tối đa để có thể tương tác với vật thể.")]
         public float RaycastRange = 3f;
+        [Tooltip("Khoảng cách giữ vật thể (khi dùng DragRigidbody).")]
         public float HoldDistance = 4f;
+        [Tooltip("Thời gian cần thiết để tạo Hold Point khi giữ vật.")]
         public float HoldPointCreationTime = 0.5f;
+        [Tooltip("Các Layer bị bỏ qua khi bắn tia Raycast tương tác.")]
         public LayerMask CullLayers;
+        [Tooltip("Layer chứa các vật thể có thể tương tác.")]
         public Layer InteractLayer;
 
         [Header("Settings")]
+        [Tooltip("Hiển thị chữ báo hiệu đã nhặt (Looted) vật phẩm.")]
         public bool ShowLootedText;
+        [Tooltip("Hiển thị Icon mặc định khi nhặt vật phẩm (thay vì Icon riêng của vật phẩm đó).")]
         public bool ShowDefaultPickupIcon;
+        [Tooltip("Icon mặc định khi nhặt vật phẩm.")]
         public Sprite DefaultPickupIcon;
 
         [Header("Interact Settings")]
+        [Tooltip("Tham chiếu phím bấm để Tương tác/Sử dụng.")]
         public InputReference UseAction;
+        [Tooltip("Tham chiếu phím bấm để Kiểm tra (Examine).")]
         public InputReference ExamineAction;
 
         [Header("Interact Texts")]
+        [Tooltip("Nội dung text hiển thị cho hành động Tương tác (có hỗ trợ Localization).")]
         public GString InteractText;
+        [Tooltip("Nội dung text hiển thị cho hành động Kiểm tra (có hỗ trợ Localization).")]
         public GString ExamineText;
+        [Tooltip("Nội dung text hiển thị khi nhặt được vật phẩm (có hỗ trợ Localization).")]
         public GString LootText;
 
         public GameObject RaycastObject => raycastObject;

@@ -1,10 +1,13 @@
 using System.Collections.Generic;
 using UnityEngine;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime
 {
+    [Summary("Cung cấp các hàm tiện ích để điều khiển Animator thông qua Unity Events (Ví dụ: ToggleBool, SetBoolTrue).")]
     public class AnimatorEvents : MonoBehaviour
     {
+        [Tooltip("Animator mà script này sẽ điều khiển.")]
         public Animator Animator;
 
         private readonly List<string> toggledParameters = new();

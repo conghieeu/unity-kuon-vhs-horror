@@ -9,24 +9,26 @@ namespace UHFPS.Runtime
     [ThunderWire.Attributes.Summary("Cấu hình vật thể có thể kéo (Ví dụ: Ngăn kéo tủ, Cửa lùa).")]
     public class DynamicPullable : DynamicObjectType
     {
-        [Tooltip("Limits that define the minimum/maximum position in which the pullable can be pulled.")]
+        [Header("Limits")]
+        [Tooltip("Giới hạn vị trí tối thiểu/tối đa để có thể kéo vật thể.")]
         public MinMax openLimits;
-        [Tooltip("The axis in which the object is to be pulled.")]
+        [Tooltip("Trục không gian mà vật thể sẽ di chuyển dọc theo.")]
         public Axis pullAxis = Axis.Z;
 
         // pullable properties
-        [Tooltip("The curve that defines the pull speed for modifier. 0 = start to 1 = end.")]
+        [Header("Pullable Properties")]
+        [Tooltip("Đường cong Animation xác định tốc độ kéo. (0 = bắt đầu, 1 = kết thúc).")]
         public AnimationCurve openCurve = new(new(0, 1), new(1, 1));
-        [Tooltip("Defines the pulling speed.")]
+        [Tooltip("Tốc độ kéo mở (áp dụng cho Dynamic hoặc phím tắt).")]
         public float openSpeed = 1f;
-        [Tooltip("Defines the damping of the pullable object.")]
+        [Tooltip("Độ cản của lực kéo (làm mượt chuyển động khi kéo bằng chuột).")]
         public float damping = 1f;
-        [Tooltip("Defines the minimum mouse input at which to play the drag sound.")]
+        [Tooltip("Khoảng cách di chuyển chuột tối thiểu để bắt đầu phát âm thanh kéo.")]
         public float dragSoundPlay = 0.2f;
 
-        [Tooltip("Enable pull sound when dragging the pullable with mouse.")]
+        [Tooltip("Cho phép phát âm thanh khi kéo vật thể bằng chuột.")]
         public bool dragSounds = true;
-        [Tooltip("Flip the mouse drag direction.")]
+        [Tooltip("Đảo ngược hướng kéo chuột.")]
         public bool flipMouse = false;
 
         // private

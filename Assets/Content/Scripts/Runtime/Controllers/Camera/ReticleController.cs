@@ -9,23 +9,32 @@ namespace UHFPS.Runtime
     [Serializable]
     public sealed class Reticle
     {
+        [Tooltip("Hình ảnh icon của con trỏ.")]
         public Sprite Sprite;
+        [Tooltip("Màu sắc của con trỏ.")]
         public Color Color = Color.white;
+        [Tooltip("Kích thước của con trỏ (width, height).")]
         public Vector2 Size = Vector2.one;
     }
 
     [InspectorHeader("Reticle Controller", space = false)]
     [RequireComponent(typeof(InteractController))]
+    [Summary("Quản lý việc hiển thị và thay đổi con trỏ (Reticle/Crosshair) dựa trên đối tượng mà người chơi đang nhìn vào.")]
     public class ReticleController : MonoBehaviour
     {
         [Header("Interact")]
+        [Tooltip("Con trỏ mặc định khi không nhìn vào vật thể nào.")]
         public Reticle DefaultReticle;
+        [Tooltip("Con trỏ hiển thị khi có thể tương tác với vật thể.")]
         public Reticle InteractReticle;
+        [Tooltip("Bật chế độ mượt mà khi thay đổi kích thước/màu sắc con trỏ.")]
         public bool DynamicReticle = true;
+        [Tooltip("Thời gian làm mượt chuyển đổi con trỏ.")]
         public float ChangeTime = 0.05f;
 
         [Header("Custom Reticles")]
         [RequireInterface(typeof(IReticleProvider))]
+        [Tooltip("Danh sách các nhà cung cấp con trỏ tùy chỉnh (thường là scriptable object hoặc script khác cung cấp IReticleProvider).")]
         public Object[] ReticleProviders;
 
         private InteractController interactController;

@@ -2,9 +2,11 @@ using System.Collections;
 using UnityEngine;
 using UHFPS.Tools;
 using Newtonsoft.Json.Linq;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime
 {
+    [Summary("Điều khiển vật phẩm Đèn lồng (Lantern), cung cấp nguồn sáng với hiệu ứng nhấp nháy, vung vẩy và quản lý nhiên liệu.")]
     public class LanternItem : PlayerItemBehaviour
     {
         [System.Serializable]
@@ -14,44 +16,82 @@ namespace UHFPS.Runtime
             public float HandleVariationSpeed;
         }
 
+        [Header("Lantern Settings")]
+        [Tooltip("Vật phẩm Nhiên liệu trong Inventory dùng để nạp lại đèn lồng.")]
         public ItemGuid FuelInventoryItem;
+        [Tooltip("Transform gốc của tay cầm đèn lồng.")]
         public Transform HandleBone;
+        [Tooltip("Nguồn sáng chính của đèn lồng.")]
         public Light LanternLight;
+        [Tooltip("Renderer hiển thị ngọn lửa bên trong đèn lồng.")]
         public MeshRenderer LanternFlame;
+        [Tooltip("Giới hạn góc độ xoay của tay cầm (Min-Max).")]
         public MinMax HandleLimits;
+        [Tooltip("Trục xoay của tay cầm.")]
         public Axis HandleAxis;
 
+        [Tooltip("Thời gian để tay cầm xoay theo trọng lực.")]
         public float HandleGravityTime = 0.2f;
+        [Tooltip("Góc xoay hướng về phía trước của tay cầm.")]
         public float HandleForwardAngle = -90f;
+        [Tooltip("Tốc độ thay đổi cường độ sáng của ngọn lửa.")]
         public float FlameChangeSpeed = 1f;
+        [Tooltip("Cường độ sáng cơ bản của ngọn lửa.")]
         public float FlameLightIntensity = 1f;
+        [Tooltip("Mức nhiên liệu bắt đầu làm mờ (Alpha fade) ngọn lửa.")]
         public float FlameAlphaFadeStart = 0.2f;
 
+        [Tooltip("Giới hạn độ nhấp nháy của ngọn lửa (Min-Max).")]
         public MinMax FlameFlickerLimits;
+        [Tooltip("Tốc độ nhấp nháy của ngọn lửa.")]
         public float FlameFlickerSpeed;
 
+        [Header("Handle Variation")]
+        [Tooltip("Độ dao động của tay cầm khi đứng yên.")]
         public HandleVariationStruct HandleIdleVariation;
+        [Tooltip("Độ dao động của tay cầm khi đi bộ.")]
         public HandleVariationStruct HandleWalkVariation;
+        [Tooltip("Thời gian hòa trộn giữa các trạng thái dao động.")]
         public float VariationBlendTime;
+        [Tooltip("Sử dụng dao động tay cầm hay không?")]
         public bool UseHandleVariation;
 
+        [Header("Fuel Settings")]
+        [Tooltip("Kích hoạt nếu muốn đèn lồng không bao giờ cạn nhiên liệu.")]
         public bool InfiniteFuel = false;
+        [Tooltip("Thời gian nạp lại nhiên liệu (tính bằng giây).")]
         public float FuelReloadTime = 2f;
+        [Tooltip("Thời lượng nhiên liệu tối đa (tính bằng giây).")]
         public ushort FuelLife = 320;
+        [Tooltip("Tỉ lệ phần trăm nhiên liệu ban đầu.")]
         public Percentage FuelPercentage = 100;
 
+        [Header("Animations")]
+        [Tooltip("Trạng thái hoạt ảnh khi lấy đèn lồng ra.")]
         public string LanternDrawState = "LanternDraw";
+        [Tooltip("Trạng thái hoạt ảnh khi cất đèn lồng đi.")]
         public string LanternHideState = "LanternHide";
+        [Tooltip("Trạng thái hoạt ảnh bắt đầu nạp nhiên liệu.")]
         public string LanternReloadStartState = "Lantern_Reload_Start";
+        [Tooltip("Trạng thái hoạt ảnh kết thúc nạp nhiên liệu.")]
         public string LanternReloadEndState = "Lantern_Reload_End";
+        [Tooltip("Trạng thái hoạt ảnh khi đèn lồng ở trạng thái nghỉ.")]
         public string LanternIdleState = "LanternIdle";
 
+        [Header("Triggers")]
+        [Tooltip("Tham số Trigger gọi hoạt ảnh cất đèn lồng.")]
         public string LanternHideTrigger = "Hide";
+        [Tooltip("Tham số Trigger gọi hoạt ảnh nạp nhiên liệu.")]
         public string LanternReloadTrigger = "Reload";
+        [Tooltip("Tham số Trigger gọi hoạt ảnh kết thúc nạp nhiên liệu.")]
         public string LanternReloadEndTrigger = "ReloadEnd";
 
+        [Header("Sounds")]
+        [Tooltip("Âm thanh khi lấy đèn lồng ra.")]
         public SoundClip LanternDraw;
+        [Tooltip("Âm thanh khi cất đèn lồng đi.")]
         public SoundClip LanternHide;
+        [Tooltip("Âm thanh khi nạp nhiên liệu.")]
         public SoundClip LanternReload;
 
         private AudioSource audioSource;

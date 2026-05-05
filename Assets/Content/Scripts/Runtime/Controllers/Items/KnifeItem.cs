@@ -3,42 +3,73 @@ using UnityEngine;
 using UHFPS.Input;
 using UHFPS.Tools;
 using UHFPS.Scriptable;
+using ThunderWire.Attributes;
 using static UHFPS.Scriptable.SurfaceDefinitionSet;
 
 namespace UHFPS.Runtime
 {
     [RequireComponent(typeof(AudioSource))]
+    [Summary("Điều khiển vật phẩm Dao găm (Pocket Knife), cho phép người chơi chém và gây sát thương cận chiến.")]
     public class KnifeItem : PlayerItemBehaviour
     {
+        [Header("Surface Settings")]
+        [Tooltip("Tập hợp định nghĩa bề mặt khi bị dao chém trúng.")]
         public SurfaceDefinitionSet SurfaceDefinitionSet;
+        [Tooltip("Phương pháp phát hiện bề mặt khi chém trúng.")]
         public SurfaceDetection SurfaceDetection;
+        [Tooltip("Thẻ (Tag) nhận diện bề mặt da thịt (kẻ địch).")]
         public Tag FleshTag;
 
+        [Header("Attack Setup")]
+        [Tooltip("Lớp mạng (LayerMask) bị dao chém trúng.")]
         public LayerMask RaycastMask;
+        [Tooltip("Góc độ chém của dao.")]
         public MinMax AttackAngle;
+        [Tooltip("Tầm đánh của dao (Khoảng cách từ người chơi tới mục tiêu).")]
         public MinMax AttackRange;
+        [Tooltip("Số lượng tia (Raycast) bắn ra để phát hiện va chạm trong một lần chém.")]
         public uint RaycastCount = 10;
+        [Tooltip("Thời gian trễ giữa mỗi tia va chạm bắn ra.")]
         public float RaycastDelay;
+        [Tooltip("Hiển thị đường chém (Gizmos) trong Editor.")]
         public bool ShowAttackGizmos;
 
+        [Header("Damage")]
+        [Tooltip("Sát thương gây ra ngẫu nhiên (Min-Max) mỗi lần chém trúng.")]
         public MinMaxInt AttackDamage;
+        [Tooltip("Thời gian chờ tối thiểu giữa mỗi lần chém.")]
         public float NextAttackDelay;
         [Range(0f, 1f)]
+        [Tooltip("Độ trễ (bù trừ) khi kết thúc hoạt ảnh chém.")]
         public float AttackTimeOffset = 0f;
 
+        [Header("Animations")]
+        [Tooltip("Trạng thái hoạt ảnh rút dao ra.")]
         public string DrawState = "KnifeDraw";
+        [Tooltip("Trạng thái hoạt ảnh cất dao đi.")]
         public string HideState = "KnifeHide";
+        [Tooltip("Trạng thái hoạt ảnh khi dao ở trạng thái nghỉ.")]
         public string IdleState = "KnifeIdle";
 
+        [Tooltip("Trạng thái hoạt ảnh chém từ phải sang trái.")]
         public string SlashRState = "KnifeSlash_R";
+        [Tooltip("Trạng thái hoạt ảnh chém từ trái sang phải.")]
         public string SlashLState = "KnifeSlash_L";
 
+        [Header("Triggers")]
+        [Tooltip("Tham số Boolean điều khiển trạng thái tấn công.")]
         public string AttackBool = "Attack";
+        [Tooltip("Tham số Trigger gọi hoạt ảnh chém dao.")]
         public string SlashTrigger = "Slash";
+        [Tooltip("Tham số Trigger gọi hoạt ảnh cất dao.")]
         public string HideTrigger = "Hide";
 
+        [Header("Sounds")]
+        [Tooltip("Âm thanh khi rút dao.")]
         public SoundClip KnifeDraw;
+        [Tooltip("Âm thanh khi cất dao.")]
         public SoundClip KnifeHide;
+        [Tooltip("Âm thanh khi chém dao vào không khí.")]
         public SoundClip KnifeSlash;
 
         private AudioSource audioSource;

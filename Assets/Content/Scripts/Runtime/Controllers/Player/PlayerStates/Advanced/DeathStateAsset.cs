@@ -4,11 +4,16 @@ using UHFPS.Tools;
 
 namespace UHFPS.Runtime.States
 {
+    [Summary("Cấu hình trạng thái khi người chơi chết (Death).")]
     public class DeathStateAsset : PlayerStateAsset
     {
+        [Tooltip("Vị trí của Camera khi nhân vật ngã gục.")]
         public Vector3 DeathCameraPosition;
+        [Tooltip("Góc quay của Camera khi nhân vật ngã gục.")]
         public Vector3 DeathCameraRotation;
+        [Tooltip("Ngưỡng bắt đầu xoay góc nhìn (0 - 1) trong quá trình ngã.")]
         public float RotationChangeStart = 0.7f;
+        [Tooltip("Thời gian chuyển đổi góc nhìn khi chết.")]
         public float DeathChangeTime = 0.3f;
 
         public override FSMPlayerState InitState(PlayerStateMachine machine, PlayerStatesGroup group)

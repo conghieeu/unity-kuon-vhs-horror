@@ -3,34 +3,60 @@ using UnityEngine;
 using UnityEngine.UI;
 using UHFPS.Tools;
 using Newtonsoft.Json.Linq;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime
 {
+    [Summary("Điều khiển vật phẩm Đèn Pin, cung cấp nguồn sáng cơ động và quản lý pin.")]
     public class FlashlightItem : PlayerItemBehaviour
     {
+        [Header("Flashlight Settings")]
+        [Tooltip("Vật phẩm Pin trong Inventory dùng để nạp lại năng lượng cho đèn pin.")]
         public ItemGuid BatteryInventoryItem;
+        [Tooltip("Nguồn phát sáng của đèn pin.")]
         public Light FlashlightLight;
+        [Tooltip("Cường độ sáng tối đa của đèn pin.")]
         public float LightIntensity = 1f;
 
+        [Header("Battery Settings")]
+        [Tooltip("Kích hoạt nếu muốn đèn pin không bao giờ cạn pin.")]
         public bool InfiniteBattery = false;
+        [Tooltip("Thời lượng pin tối đa của đèn pin (tính bằng giây).")]
         public ushort BatteryLife = 320;
+        [Tooltip("Tỉ lệ phần trăm pin ban đầu của đèn pin.")]
         public Percentage BatteryPercentage = 100;
+        [Tooltip("Mức phần trăm cảnh báo pin yếu.")]
         public Percentage BatteryLowPercent = 20;
+        [Tooltip("Thời gian trễ (offset) để đèn bật lại sau khi thay pin.")]
         public float ReloadLightEnableOffset = 1f;
+        [Tooltip("Màu sắc của biểu tượng pin khi đầy.")]
         public Color BatteryFullColor = Color.white;
+        [Tooltip("Màu sắc của biểu tượng pin khi yếu.")]
         public Color BatteryLowColor = Color.red;
 
+        [Header("Animations")]
+        [Tooltip("Tên trạng thái hoạt ảnh khi lấy đèn pin ra.")]
         public string FlashlightDrawState = "FlashlightDraw";
+        [Tooltip("Tên trạng thái hoạt ảnh khi cất đèn pin đi.")]
         public string FlashlightHideState = "FlashlightHide";
+        [Tooltip("Tên trạng thái hoạt ảnh khi thay pin.")]
         public string FlashlightReloadState = "FlashlightReload";
+        [Tooltip("Tên trạng thái hoạt ảnh khi đèn pin ở trạng thái nghỉ.")]
         public string FlashlightIdleState = "FlashlightIdle";
 
+        [Header("Triggers")]
+        [Tooltip("Tham số Trigger gọi hoạt ảnh cất đèn pin.")]
         public string FlashlightHideTrigger = "Hide";
+        [Tooltip("Tham số Trigger gọi hoạt ảnh thay pin.")]
         public string FlashlightReloadTrigger = "Reload";
 
+        [Tooltip("Thời gian cắt ngắn (trim) phần đuôi của hoạt ảnh cất đèn pin.")]
         public float FlashlightHideTrim = 0.5f;
 
+        [Header("Sounds")]
+        [Tooltip("Âm thanh khi bật đèn pin.")]
         public SoundClip FlashlightClickOn;
+        [Tooltip("Âm thanh khi tắt đèn pin.")]
         public SoundClip FlashlightClickOff;
 
         private AudioSource audioSource;

@@ -1,36 +1,65 @@
 using System.Collections;
 using UnityEngine;
 using UHFPS.Tools;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime
 {
+    [Summary("Điều khiển vật phẩm Bật lửa (Lighter), cho phép tạo nguồn sáng nhỏ với khả năng tắt lửa ngẫu nhiên.")]
     public class LighterItem : PlayerItemBehaviour
     {
+        [Header("Lighter Settings")]
+        [Tooltip("Nguồn sáng chính từ ngọn lửa bật lửa.")]
         public Light FlameLight;
+        [Tooltip("Nguồn sáng tạm thời khi đánh tia lửa.")]
         public Light SparkLight;
+        [Tooltip("Hệ thống hạt (Particle System) tạo hiệu ứng tia lửa.")]
         public ParticleSystem SparkParticle;
+        [Tooltip("Renderer hiển thị ngọn lửa.")]
         public MeshRenderer FlameRenderer;
 
+        [Tooltip("Thời gian hiển thị tia lửa (tính bằng giây).")]
         public float SparkLightTime;
-        [Range(0f, 1f)] public float FlameIgniteProbability = 0.5f;
-        [Range(0f, 1f)] public float FlameExtinguishProbability = 0.5f;
+        [Range(0f, 1f)]
+        [Tooltip("Tỉ lệ phần trăm bật lửa thành công trong mỗi lần bật.")]
+        public float FlameIgniteProbability = 0.5f;
+        [Range(0f, 1f)]
+        [Tooltip("Tỉ lệ phần trăm ngọn lửa bị tắt ngẫu nhiên.")]
+        public float FlameExtinguishProbability = 0.5f;
+        [Tooltip("Khoảng thời gian ngẫu nhiên (Min-Max) để ngọn lửa bị tắt.")]
         public MinMax FlameExtinguishTimeRange;
+        [Tooltip("Kích hoạt tính năng ngọn lửa bị tắt ngẫu nhiên.")]
         public bool EnableFlameExtinguishing;
 
+        [Tooltip("Giới hạn mức độ nhấp nháy của ngọn lửa (Min-Max).")]
         public MinMax FlameFlickerLimits;
+        [Tooltip("Tốc độ nhấp nháy của ngọn lửa.")]
         public float FlameFlickerSpeed;
+        [Tooltip("Cường độ sáng cơ bản của ngọn lửa.")]
         public float FlameLightIntensity = 1f;
 
+        [Header("Animations")]
+        [Tooltip("Trạng thái hoạt ảnh khi lấy bật lửa ra.")]
         public string LighterDrawState = "LighterDraw";
+        [Tooltip("Trạng thái hoạt ảnh khi cất bật lửa đi.")]
         public string LighterHideState = "LighterHide";
+        [Tooltip("Trạng thái hoạt ảnh khi bắt đầu bật lửa.")]
         public string LighterIgniteStartState = "LighterIgniteStart";
+        [Tooltip("Trạng thái hoạt ảnh khi đánh tia lửa.")]
         public string LighterIgniteSparkState = "LighterIgniteSpark";
+        [Tooltip("Trạng thái hoạt ảnh khi giữ ngọn lửa cháy.")]
         public string LighterIgniteHoldState = "LighterIgniteHold";
 
+        [Header("Triggers")]
+        [Tooltip("Tham số Trigger gọi hoạt ảnh cất bật lửa.")]
         public string LighterHideTrigger = "Hide";
+        [Tooltip("Tham số Trigger gọi hoạt ảnh đánh tia lửa.")]
         public string LighterSparkTrigger = "Spark";
+        [Tooltip("Tham số Boolean điều khiển việc giữ ngọn lửa cháy.")]
         public string LighterHoldTrigger = "Hold";
 
+        [Header("Sounds")]
+        [Tooltip("Âm thanh khi bật bật lửa (đánh tia lửa).")]
         public SoundClip LighterFlick;
 
         private AudioSource audioSource;

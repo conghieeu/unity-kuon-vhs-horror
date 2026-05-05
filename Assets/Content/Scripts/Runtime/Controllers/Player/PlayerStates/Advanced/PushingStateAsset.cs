@@ -6,11 +6,15 @@ using static UHFPS.Runtime.MovableObject;
 
 namespace UHFPS.Runtime.States
 {
+    [Summary("Cấu hình trạng thái đẩy vật thể (Pushing).")]
     public class PushingStateAsset : PlayerStateAsset
     {
+        [Tooltip("Hành động (Input) để ngừng đẩy vật thể.")]
         public ControlsContext ControlExit;
 
+        [Tooltip("Thời gian di chuyển tự động vào vị trí đẩy.")]
         public float ToMovableTime;
+        [Tooltip("Tốc độ đẩy vật thể.")]
         public float PushingSpeed;
 
         public override FSMPlayerState InitState(PlayerStateMachine machine, PlayerStatesGroup group)

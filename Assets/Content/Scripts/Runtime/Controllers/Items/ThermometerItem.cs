@@ -4,33 +4,57 @@ using System;
 using UnityEngine;
 using TMPro;
 using Newtonsoft.Json.Linq;
+using ThunderWire.Attributes;
 
 namespace UHFPS.Runtime
 {
+    [Summary("Điều khiển vật phẩm Nhiệt kế (Thermometer), đo và hiển thị nhiệt độ của môi trường hoặc đối tượng bất thường.")]
     public class ThermometerItem : PlayerItemBehaviour
     {
+        [Header("Display Settings")]
+        [Tooltip("Canvas chứa giao diện hiển thị trên màn hình nhiệt kế.")]
         public GameObject DisplayCanvas;
+        [Tooltip("Thành phần Text (TextMeshPro) hiển thị giá trị nhiệt độ.")]
         public TMP_Text Temperature;
+        [Tooltip("Định dạng chuỗi hiển thị cho giá trị nhiệt độ (ví dụ: số nguyên và số thập phân).")]
         public string DisplayFormat = "<mspace=0.5em>{0}</mspace>.<mspace=0.5em>{1}</mspace>";
 
+        [Tooltip("Vật liệu (Material) của màn hình hiển thị nhiệt độ.")]
         public RendererMaterial Display;
+        [Tooltip("Từ khóa Shader bật phát sáng (Emission) khi màn hình đang bật.")]
         public string EmissionKeyword = "_EMISSION";
 
+        [Header("Temperature Settings")]
+        [Tooltip("Khởi tạo nhiệt độ cơ bản khi bắt đầu trò chơi.")]
         public bool SetBaseTemp = true;
+        [Tooltip("Nhiệt độ cơ bản (mặc định) của môi trường (độ C).")]
         public float BaseTemperature = 26f;
 
+        [Header("Detection Settings")]
+        [Tooltip("Lớp mạng (LayerMask) của đối tượng phát nhiệt cần đo.")]
         public LayerMask RaycastMask;
+        [Tooltip("Khoảng cách tối đa (tia Raycast) để quét và đo nhiệt độ đối tượng.")]
         public float RaycastDistance;
 
+        [Header("Simulation Settings")]
+        [Tooltip("Khoảng thời gian (interval) làm mới nhiệt độ hiển thị.")]
         public float TempGetInterval;
+        [Tooltip("Biên độ biến đổi (Noise) ngẫu nhiên làm nhiệt độ hiển thị thay đổi tự nhiên.")]
         public float TempNoiseScale;
+        [Tooltip("Tốc độ thay đổi của độ nhiễu (Noise).")]
         public float TempNoiseSpeed;
 
+        [Tooltip("Tốc độ tăng nhiệt độ trên màn hình để tiệm cận giá trị thực.")]
         public float TempGainSpeed;
+        [Tooltip("Tốc độ giảm nhiệt độ trên màn hình để tiệm cận giá trị thực.")]
         public float TempDropSpeed;
 
+        [Header("Animations")]
+        [Tooltip("Tên trạng thái hoạt ảnh khi lấy nhiệt kế ra.")]
         public string ThermometerDrawState = "ThermometerDraw";
+        [Tooltip("Tên trạng thái hoạt ảnh khi cất nhiệt kế đi.")]
         public string ThermometerHideState = "ThermometerHide";
+        [Tooltip("Tham số Trigger gọi hoạt ảnh cất nhiệt kế.")]
         public string ThermometerHideTrigger = "Hide";
 
         private float tempInterval;

@@ -9,46 +9,47 @@ namespace UHFPS.Runtime
     [ThunderWire.Attributes.Summary("Cấu hình vật thể có thể bật/tắt (Ví dụ: Công tắc đèn, Cần gạt).")]
     public class DynamicSwitchable : DynamicObjectType
     {
-        // limits
-        [Tooltip("Limits that define the minimum/maximum angle at which the switchable can be switched.")]
+        [Header("Limits")]
+        [Tooltip("Giới hạn góc tối thiểu/tối đa mà công tắc có thể di chuyển.")]
         public MinMax switchLimits;
-        [Tooltip("Angle at which an switchable is switched when the game is started.")]
+        [Tooltip("Góc độ ban đầu của công tắc khi trò chơi bắt đầu.")]
         public float startingAngle;
-        [Tooltip("Usually the axis that defines the higne joint. Most likely the Y-axis.")]
+        [Tooltip("Trục bản lề (Hinge Axis) của công tắc. Thường là trục Y.")]
         public Axis targetHinge = Axis.Y;
-        [Tooltip("Usually the axis that defines the switch forward or model extend direction. Most likely the X-axis.")]
+        [Tooltip("Trục hướng về phía trước của công tắc. Thường là trục X.")]
         public Axis targetForward = Axis.X;
 
-        [Tooltip("Use local axes instead of global axes (can be useful in some situations).")]
+        [Tooltip("Sử dụng các trục địa phương (Local Axes) thay vì trục toàn cầu (Global Axes).")]
         public bool useLocalAxes;
-        [Tooltip("Flip the starting angle when the limits are inversed (the red arrow is on the other side).")]
+        [Tooltip("Đảo ngược góc độ bắt đầu (khi mũi tên đỏ nằm ở hướng ngược lại).")]
         public bool startingAngleFlip;
-        [Tooltip("Mirror the direction around the hinge axis.")]
+        [Tooltip("Phản chiếu (Mirror) hướng xoay quanh trục bản lề.")]
         public bool targetHingeMirror;
-        [Tooltip("Mirror the direction around the forward axis.")]
+        [Tooltip("Phản chiếu (Mirror) hướng xoay quanh trục phía trước.")]
         public bool targetForwardMirror;
 
         // switchable properties
-        [Tooltip("Handle parent object, usually the base object where the child is handle of switchable.")]
+        [Header("Switchable Properties")]
+        [Tooltip("Transform chứa (cha) của tay cầm công tắc (Handle). Thường là phần đế của công tắc.")]
         public Transform rootObject;
-        [Tooltip("The curve that defines the switch on speed for modifier. 0 = start to 1 = end.")]
+        [Tooltip("Đường cong Animation định nghĩa tốc độ khi bật công tắc lên. (0 = bắt đầu, 1 = kết thúc).")]
         public AnimationCurve switchOnCurve = new(new(0, 1), new(1, 1));
-        [Tooltip("The curve that defines the switch off speed for modifier. 0 = start to 1 = end.")]
+        [Tooltip("Đường cong Animation định nghĩa tốc độ khi tắt công tắc đi. (0 = bắt đầu, 1 = kết thúc).")]
         public AnimationCurve switchOffCurve = new(new(0, 1), new(1, 1));
-        [Tooltip("Defines the switch speed of the switchable.")]
+        [Tooltip("Tốc độ gạt công tắc (Bật/Tắt).")]
         public float switchSpeed = 1f;
-        [Tooltip("Defines the damping of an switchable joint.")]
+        [Tooltip("Độ cản (Damper) của khớp nối (Joint) khi dùng cơ chế Vật lý.")]
         public float damping = 1f;
 
-        [Tooltip("Flip the switch direction, for example when the switchable is already switched on or the switch limits are flipped.")]
+        [Tooltip("Đảo ngược hướng gạt công tắc, ví dụ khi công tắc đã được bật sẵn.")]
         public bool flipSwitchDirection = false;
-        [Tooltip("Flip the mouse drag direction.")]
+        [Tooltip("Đảo ngược hướng kéo thả bằng chuột.")]
         public bool flipMouse = false;
-        [Tooltip("Flip switch min/max limits. Usually when switch sound is inversed.")]
+        [Tooltip("Đảo ngược giới hạn min/max. Thường dùng khi âm thanh gạt bị ngược.")]
         public bool flipAngle = false;
-        [Tooltip("Lock switchable when switched.")]
+        [Tooltip("Khóa công tắc lại sau khi đã gạt thành công một lần.")]
         public bool lockOnSwitch = true;
-        [Tooltip("Show the switchable gizmos to visualize the limits.")]
+        [Tooltip("Hiển thị vùng quét giới hạn (Gizmos) trong Editor.")]
         public bool showGizmos = true;
 
         // private
