@@ -12,9 +12,9 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
-  productName: kuon
-  defaultCursor: {fileID: 0}
+  companyName: MADs
+  productName: Dont Sleep
+  defaultCursor: {fileID: 2800000, guid: 4090f25221222ea4f98578e9e0ecd468, type: 3}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_ShowUnitySplashScreen: 1
@@ -40,10 +40,10 @@ PlayerSettings:
     width: 1
     height: 1
   m_SplashScreenLogos:
+  - logo: {fileID: 21300000, guid: 536374a5adf6d2d48a1f7fc84f1c60b5, type: 3}
+    duration: 2
   - logo: {fileID: 10404, guid: 0000000000000000f000000000000000, type: 0}
-    duration: 2
-  - logo: {fileID: 21300000, guid: 35251861ea0a4a545b07d20709c5511e, type: 3}
-    duration: 2
+    duration: 10
   m_VirtualRealitySplashScreen: {fileID: 0}
   m_HolographicTrackingLossScreen: {fileID: 0}
   defaultScreenWidth: 1920
@@ -304,7 +304,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: f93527d50d3a73646826caabf177bbd5, type: 3}
+      m_Icon: {fileID: 2800000, guid: 4090f25221222ea4f98578e9e0ecd468, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
@@ -635,7 +635,7 @@ PlayerSettings:
   - libSceS3DConversion.prx
   ps4attribVROutputEnabled: 0
   monoEnv: 
-  splashScreenBackgroundSourceLandscape: {fileID: 0}
+  splashScreenBackgroundSourceLandscape: {fileID: 21300000, guid: f984bdc3d618bcf4a9cd8e6e6b991e7f, type: 3}
   splashScreenBackgroundSourcePortrait: {fileID: 0}
   blurSplashScreenBackground: 1
   spritePackerPolicy: 

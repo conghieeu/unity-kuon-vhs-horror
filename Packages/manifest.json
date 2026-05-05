@@ -14,6 +14,7 @@
     "com.unity.nuget.newtonsoft-json": "3.2.2",
     "com.unity.probuilder": "6.0.9",
     "com.unity.render-pipelines.universal": "17.3.0",
+    "com.unity.services.cloud-build": "2.0.7",
     "com.unity.timeline": "1.8.12",
     "com.unity.ugui": "2.0.0",
     "com.unity.visualscripting": "1.9.11",
